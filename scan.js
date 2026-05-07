@@ -1,0 +1,159 @@
+// scan.js — Run axe-core against each site in sites.json, write results.js for the dashboard.
+//
+// Usage:
+//   node scan.js              # scan all sites in sites.json
+//   node scan.js --only=OTI   # scan only the named site (smoke test)
+//
+// Output: results.js (a JS file that assigns window.SCAN_DATA = {...})
+//   We use a JS file rather than JSON so the dashboard works on file:// without a server.
+
+import { readFile, writeFile } from "node:fs/promises";
+import puppeteer from "puppeteer";
+import { AxePuppeteer } from "@axe-core/puppeteer";
+
+// NYC Digital Design System mandates WCAG 2.2 AA. Tags below cover that
+// (axe applies AA rules transitively — wcag22aa rules are the *additions*
+// in 2.2, so we also need 2.0/2.1 A and AA tags to get the full AA suite).
+const WCAG_TAGS = ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"];
+
+// Tier rule: red if any critical/serious; yellow if any moderate/minor; green if zero.
+function tierFor(counts) {
+  if (counts.critical > 0 || counts.serious > 0) return "red";
+  if (counts.moderate > 0 || counts.minor > 0) return "yellow";
+  return "green";
+}
+
+function countByImpact(violations) {
+  const counts = { critical: 0, serious: 0, moderate: 0, minor: 0 };
+  for (const v of violations) {
+    // Each violation has many `nodes` (occurrences). Count occurrences, not rules.
+    const impact = v.impact ?? "minor";
+    if (counts[impact] !== undefined) counts[impact] += v.nodes.length;
+  }
+  return counts;
+}
+
+// Strip the axe result down to what the dashboard actually renders, to keep results.js small.
+function slimViolations(violations) {
+  return violations.map((v) => ({
+    id: v.id,
+    impact: v.impact,
+    description: v.description,
+    help: v.help,
+    helpUrl: v.helpUrl,
+    tags: v.tags.filter((t) => t.startsWith("wcag")),
+    nodes: v.nodes.map((n) => ({
+      target: n.target, // CSS selector(s) — array
+      html: n.html.length > 240 ? n.html.slice(0, 240) + "…" : n.html,
+      failureSummary: n.failureSummary,
+    })),
+  }));
+}
+
+async function scanSite(browser, site) {
+  const start = Date.now();
+  const page = await browser.newPage();
+  try {
+    await page.setViewport({ width: 1280, height: 900 });
+    const response = await page.goto(site.url, { waitUntil: "networkidle2", timeout: 60_000 });
+
+    // Catch HTTP errors (404, 5xx). Without this, scanning a broken URL silently
+    // returns "no violations" because the error page has trivial markup.
+    const status = response?.status() ?? 0;
+    if (status >= 400) {
+      throw new Error(`HTTP ${status}`);
+    }
+
+    const result = await new AxePuppeteer(page).withTags(WCAG_TAGS).analyze();
+    const violations = slimViolations(result.violations);
+    const counts = countByImpact(result.violations);
+
+    return {
+      name: site.name,
+      url: site.url,
+      tier: tierFor(counts),
+      counts,
+      total_violations: violations.reduce((sum, v) => sum + v.nodes.length, 0),
+      distinct_rules: violations.length,
+      violations,
+      scan_ms: Date.now() - start,
+      error: null,
+    };
+  } catch (err) {
+    return {
+      name: site.name,
+      url: site.url,
+      tier: "error",
+      counts: { critical: 0, serious: 0, moderate: 0, minor: 0 },
+      total_violations: 0,
+      distinct_rules: 0,
+      violations: [],
+      scan_ms: Date.now() - start,
+      error: err.message,
+    };
+  } finally {
+    await page.close();
+  }
+}
+
+function parseArgs(argv) {
+  const out = { only: null };
+  for (const a of argv.slice(2)) {
+    if (a.startsWith("--only=")) out.only = a.slice("--only=".length);
+  }
+  return out;
+}
+
+async function main() {
+  const { only } = parseArgs(process.argv);
+  const all = JSON.parse(await readFile("sites.json", "utf8"));
+  const sites = only ? all.filter((s) => s.name === only) : all;
+
+  if (sites.length === 0) {
+    console.error(`No sites matched. --only=${only} not found in sites.json.`);
+    process.exit(1);
+  }
+
+  console.log(`Scanning ${sites.length} site(s) against WCAG 2.2 AA…`);
+
+  const browser = await puppeteer.launch({
+    headless: true,
+    // Same flags Lighthouse uses; keeps things stable on CI/Linux.
+    args: ["--no-sandbox", "--disable-dev-shm-usage"],
+  });
+
+  const results = [];
+  for (const site of sites) {
+    process.stdout.write(`  ${site.name.padEnd(10)} ${site.url} … `);
+    const r = await scanSite(browser, site);
+    if (r.error) {
+      console.log(`ERROR (${r.error})`);
+    } else {
+      console.log(`${r.tier.toUpperCase().padEnd(6)} ${r.total_violations} issues / ${r.distinct_rules} rules / ${r.scan_ms}ms`);
+    }
+    results.push(r);
+  }
+
+  await browser.close();
+
+  const payload = {
+    scanned_at: new Date().toISOString(),
+    wcag_target: "WCAG 2.2 AA",
+    engine: "axe-core (via @axe-core/puppeteer)",
+    sites: results,
+  };
+
+  // Write as JS so the dashboard loads via <script src> with no server.
+  // Pretty-printed for git diffs and readability.
+  const js = `// Auto-generated by scan.js — do not edit by hand.\nwindow.SCAN_DATA = ${JSON.stringify(payload, null, 2)};\n`;
+  await writeFile("dashboard/results.js", js);
+  // Also write the JSON for anyone who'd rather pipe it into other tools.
+  await writeFile("results.json", JSON.stringify(payload, null, 2) + "\n");
+
+  console.log(`\nDone. Wrote dashboard/results.js and results.json.`);
+}
+
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});

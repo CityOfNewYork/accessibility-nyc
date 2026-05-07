@@ -1,0 +1,19 @@
+{
+  "name": "accessibility-nyc",
+  "version": "0.1.0",
+  "description": "POC accessibility scanner + dashboard for NYC agency websites, using axe-core under the hood.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "scan": "node scan.js",
+    "dashboard": "npx --yes serve dashboard",
+    "test": "node test/check-engine.js"
+  },
+  "dependencies": {
+    "@axe-core/puppeteer": "^4.10.0",
+    "puppeteer": "^24.15.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

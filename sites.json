@@ -1,0 +1,7 @@
+[
+  { "name": "NYC.gov", "url": "https://www.nyc.gov" },
+  { "name": "OTI",  "url": "https://www.nyc.gov/content/oti/pages/home" },
+  { "name": "MOPD", "url": "https://www.nyc.gov/site/mopd/index.page" },
+  { "name": "DOF",  "url": "https://www.nyc.gov/site/finance/index.page" },
+  { "name": "DOT",  "url": "https://www.nyc.gov/content/dot/pages/home" }
+]

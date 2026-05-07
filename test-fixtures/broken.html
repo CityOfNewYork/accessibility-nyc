@@ -1,0 +1,33 @@
+<!doctype html>
+<!-- Deliberately broken page used to verify the scanner catches obvious issues.
+     If a scan against this lands in `red` with multiple distinct rules firing,
+     the engine + tag filter are wired up correctly. -->
+<html>
+<head>
+  <title>Broken on purpose</title>
+</head>
+<body>
+  <!-- Missing alt text -->
+  <img src="https://placehold.co/200x100" />
+
+  <!-- Empty button (no accessible name) -->
+  <button></button>
+
+  <!-- Link with no text -->
+  <a href="https://example.com"></a>
+
+  <!-- Form input with no label -->
+  <input type="text" />
+
+  <!-- Insufficient color contrast: light grey on white -->
+  <p style="color: #ccc; background: #fff;">Hard to read text</p>
+
+  <!-- Heading order skip: h1 then h4 -->
+  <h1>Top level heading</h1>
+  <h4>Skipped to h4</h4>
+
+  <!-- Duplicate id -->
+  <div id="dup">first</div>
+  <div id="dup">second</div>
+</body>
+</html>

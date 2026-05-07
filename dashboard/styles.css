@@ -1,0 +1,163 @@
+/* Minimal styling on top of Pico.css. Tier colors come from a small palette
+   that maps directly to axe's impact levels. */
+
+:root {
+  --tier-red:    #c0392b;
+  --tier-yellow: #d4a017;
+  --tier-green:  #2e7d32;
+  --tier-error:  #6c757d;
+  --critical:    #b71c1c;
+  --serious:     #e65100;
+  --moderate:    #d4a017;
+  --minor:       #0277bd;
+}
+
+/* Tier pills — used both on overview and per-site detail header */
+.tier {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 0.02em;
+}
+.tier.red    { background: var(--tier-red); }
+.tier.yellow { background: var(--tier-yellow); color: #222; }
+.tier.green  { background: var(--tier-green); }
+.tier.error  { background: var(--tier-error); }
+
+/* Top strip on overview */
+.overview-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+.overview-summary .stat {
+  padding: 1rem;
+  background: var(--pico-card-background-color);
+  border: 1px solid var(--pico-card-border-color);
+  border-radius: var(--pico-border-radius);
+}
+.overview-summary .stat .num {
+  font-size: 2rem;
+  font-weight: 700;
+  display: block;
+  line-height: 1;
+}
+.overview-summary .stat .lbl {
+  font-size: 0.85rem;
+  color: var(--pico-muted-color);
+}
+
+/* Site cards grid */
+.site-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+.site-card {
+  display: block;
+  padding: 1.1rem;
+  background: var(--pico-card-background-color);
+  border: 1px solid var(--pico-card-border-color);
+  border-radius: var(--pico-border-radius);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.site-card:hover { border-color: var(--pico-primary); transform: translateY(-2px); }
+.site-card h3 { margin: 0 0 0.25rem; font-size: 1.1rem; }
+.site-card .url { font-size: 0.8rem; color: var(--pico-muted-color); word-break: break-all; }
+.site-card .impact-row {
+  display: flex; gap: 0.5rem; flex-wrap: wrap;
+  margin: 0.75rem 0;
+  font-size: 0.85rem;
+}
+.site-card .impact {
+  padding: 0.1rem 0.5rem;
+  border-radius: 4px;
+  background: var(--pico-secondary-background);
+  white-space: nowrap;
+}
+.site-card .impact.has-critical { background: var(--critical); color: white; }
+.site-card .impact.has-serious  { background: var(--serious);  color: white; }
+.site-card .impact.has-moderate { background: var(--moderate); color: #222; }
+.site-card .impact.has-minor    { background: var(--minor);    color: white; }
+.site-card .top-rule { font-size: 0.85rem; color: var(--pico-muted-color); margin: 0; }
+
+/* Per-site detail */
+.detail-header {
+  display: flex; justify-content: space-between; align-items: baseline;
+  flex-wrap: wrap; gap: 0.5rem;
+  margin: 1rem 0 0.5rem;
+}
+.detail-header h2 { margin: 0; }
+.detail-meta { font-size: 0.85rem; color: var(--pico-muted-color); }
+.back-link { font-size: 0.9rem; text-decoration: none; }
+
+/* Violation cards (detail view) */
+.violation {
+  margin: 0.75rem 0;
+  border: 1px solid var(--pico-card-border-color);
+  border-radius: var(--pico-border-radius);
+  padding: 0.8rem 1rem;
+}
+.violation summary {
+  cursor: pointer;
+  display: flex; gap: 0.5rem; align-items: baseline; flex-wrap: wrap;
+}
+.violation .rule-id { font-family: var(--pico-font-family-monospace); font-weight: 600; }
+.violation .rule-impact {
+  font-size: 0.75rem;
+  padding: 0.05rem 0.4rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.violation .rule-impact.critical { background: var(--critical); color: white; }
+.violation .rule-impact.serious  { background: var(--serious);  color: white; }
+.violation .rule-impact.moderate { background: var(--moderate); color: #222; }
+.violation .rule-impact.minor    { background: var(--minor);    color: white; }
+.violation .rule-tag {
+  font-size: 0.75rem;
+  padding: 0.05rem 0.4rem;
+  border-radius: 3px;
+  background: var(--pico-secondary-background);
+  font-family: var(--pico-font-family-monospace);
+}
+.violation .count {
+  font-size: 0.85rem;
+  color: var(--pico-muted-color);
+  margin-left: auto;
+}
+.violation .desc { margin: 0.5rem 0 0.25rem; }
+.violation .nodes {
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none !important;
+  font-family: var(--pico-font-family-monospace);
+  font-size: 0.8rem;
+}
+.violation .nodes li {
+  list-style: none;
+  padding: 0.4rem 0.6rem;
+  margin: 0.25rem 0;
+  background: var(--pico-secondary-background);
+  border-radius: 4px;
+  word-break: break-all;
+}
+.violation .nodes li::marker { content: ""; }
+.violation .nodes .selector { color: var(--pico-primary); }
+.violation .nodes .html { color: var(--pico-muted-color); margin-top: 0.2rem; display: block; }
+
+/* Error state */
+.error-banner {
+  padding: 0.75rem 1rem;
+  background: var(--pico-secondary-background);
+  border-left: 4px solid var(--tier-error);
+  border-radius: 4px;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}

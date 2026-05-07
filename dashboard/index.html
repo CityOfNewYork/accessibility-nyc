@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NYC Accessibility Scan</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container">
+    <hgroup>
+      <h1>NYC Accessibility Scan</h1>
+      <p>Open-source POC. <strong>Floor check, not a certification</strong> &mdash; automated tools catch ~30&ndash;57% of WCAG issues; the rest needs manual review.</p>
+    </hgroup>
+  </header>
+
+  <main id="app" class="container">
+    <p aria-busy="true">Loading scan results&hellip;</p>
+  </main>
+
+  <footer class="container">
+    <small id="footer-meta"></small>
+  </footer>
+
+  <script src="results.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

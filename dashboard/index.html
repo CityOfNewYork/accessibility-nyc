@@ -4,23 +4,39 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NYC Accessibility Scan</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="container">
-    <hgroup>
-      <h1>NYC Accessibility Scan</h1>
-      <p>Open-source POC. <strong>Floor check, not a certification</strong> &mdash; automated tools catch ~30&ndash;57% of WCAG issues; the rest needs manual review.</p>
-    </hgroup>
+  <div class="masthead-stripe" aria-hidden="true"></div>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="masthead-eyebrow">NYC · Office of Technology &amp; Innovation · Digital Accessibility</div>
+      <div class="masthead-grid">
+        <div class="masthead-title-block">
+          <h1 class="masthead-title">Accessibility Scan</h1>
+          <p class="masthead-subtitle">Automated WCAG&nbsp;2.2&nbsp;AA evaluation of selected NYC agency homepages.</p>
+        </div>
+        <dl class="masthead-meta" id="masthead-meta">
+          <div><dt>Last scan</dt><dd id="meta-scanned-at">&mdash;</dd></div>
+          <div><dt>Engine</dt><dd>axe-core</dd></div>
+          <div><dt>Standard</dt><dd>WCAG&nbsp;2.2&nbsp;AA</dd></div>
+        </dl>
+      </div>
+    </div>
   </header>
 
-  <main id="app" class="container">
-    <p aria-busy="true">Loading scan results&hellip;</p>
+  <main id="app" class="page">
+    <p class="loading" aria-busy="true">Loading scan results&hellip;</p>
   </main>
 
-  <footer class="container">
-    <small id="footer-meta"></small>
+  <footer class="page-footer">
+    <div class="page-footer-inner">
+      <small id="footer-meta"></small>
+      <small>Internal proof of concept &middot; data is publicly observable</small>
+    </div>
   </footer>
 
   <script src="results.js"></script>

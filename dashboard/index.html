@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NYC Accessibility Scan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="masthead-stripe" aria-hidden="true"></div>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="masthead-eyebrow">NYC · Office of Technology &amp; Innovation · Digital Accessibility</div>
+      <div class="masthead-grid">
+        <div class="masthead-title-block">
+          <h1 class="masthead-title">Accessibility Scan</h1>
+          <p class="masthead-subtitle">Automated WCAG&nbsp;2.2&nbsp;AA scan of NYC agency websites and applications.</p>
+        </div>
+        <dl class="masthead-meta" id="masthead-meta">
+          <div><dt>Engine</dt><dd>axe-core</dd></div>
+          <div><dt>Standard</dt><dd>WCAG&nbsp;2.2&nbsp;AA</dd></div>
+        </dl>
+      </div>
+    </div>
+  </header>
+
+  <main id="app" class="page">
+    <p class="loading" aria-busy="true">Loading scan results&hellip;</p>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer-inner">
+      <small id="footer-meta"></small>
+      <small>Floor check against WCAG&nbsp;2.2&nbsp;AA &middot; data is publicly observable</small>
+    </div>
+  </footer>
+
+  <script src="results.js"></script>
+  <script src="history.js"></script>
+  <script src="rule-info.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

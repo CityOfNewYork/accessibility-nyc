@@ -1,0 +1,5 @@
+node_modules/
+.DS_Store
+*.log
+.claude/
+aging-finder-brief.md

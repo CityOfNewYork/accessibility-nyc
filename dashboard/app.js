@@ -570,10 +570,25 @@
     }).catch(() => {});
   }
 
-  // One occurrence of a rule failure: selector + HTML snippet + per-node
-  // failure summary + deep link to the live page. Shared between the
-  // single-page and multi-page rendering paths.
-  function renderNode(n, pageUrl) {
+  // axe's failureSummary is either generic boilerplate ("Fix any of the
+  // following:" + static conditions, identical on every occurrence — see
+  // sharedFailureSummary) or element-specific measurements (contrast ratios,
+  // pixel sizes). We drop the generic case entirely (the plain-language
+  // explanation + the "How to fix" link cover it) and, for the specific case,
+  // strip axe's wrapper line and keep just the measured detail.
+  function distillFailure(summary) {
+    return String(summary)
+      .split("\n")
+      .map((l) => l.trim())
+      .filter((l) => l && !/^Fix (any|all) of the following:?$/i.test(l))
+      .join(" · ");
+  }
+
+  // One occurrence of a rule failure: selector + HTML snippet + deep link to the
+  // live page, plus the element-specific failure detail when showFailure is set
+  // (generic, shared summaries are suppressed here and handled at the finding
+  // level). Shared between the single-page and multi-page rendering paths.
+  function renderNode(n, pageUrl, showFailure = true) {
     const selector = Array.isArray(n.target) ? n.target.join(" ") : String(n.target);
 
     return el("li", { class: "v-node" },
@@ -604,10 +619,19 @@
         )
       ),
       el("pre", { class: "v-node-html" }, el("code", {}, n.html || "")),
-      n.failureSummary
-        ? el("p", { class: "v-node-failure" }, n.failureSummary)
+      showFailure && n.failureSummary
+        ? el("p", { class: "v-node-failure" }, distillFailure(n.failureSummary))
         : null
     );
+  }
+
+  // The failure summary is generic (rule-level boilerplate) when it's identical
+  // across every occurrence; in that case we suppress it. When it differs, it's
+  // carrying per-element measurements worth showing on each occurrence.
+  function sharedFailureSummary(nodes) {
+    const summaries = nodes.map((n) => n.failureSummary).filter(Boolean);
+    if (summaries.length === 0) return null;
+    return summaries.every((s) => s === summaries[0]) ? summaries[0] : null;
   }
 
   function explanationBlock(ruleId) {
@@ -665,20 +689,29 @@
       : null;
     const nPages = g.pages.length;
 
+    // Suppress the per-occurrence failure summary when it's generic boilerplate
+    // (identical across every occurrence); show it only when it varies, i.e.
+    // carries element-specific measurements.
+    const showFailure = !sharedFailureSummary(g.pages.flatMap((p) => p.nodes || []));
+
     const NODE_LIMIT_PER_PAGE = 5;
     const pageItems = g.pages.map((p) => {
       const shown = (p.nodes || []).slice(0, NODE_LIMIT_PER_PAGE);
       const remaining = (p.nodes || []).length - shown.length;
-      return el("li", { class: "v-page-group" },
-        el("div", { class: "v-page-header" },
+      // Collapsed by default: you scan the page headers (label · count · url)
+      // and expand a page to see its occurrences. The url stays a working link
+      // inside the summary — stopPropagation keeps clicking it from toggling.
+      return el("details", { class: "v-page-group" },
+        el("summary", { class: "v-page-header" },
           el("div", { class: "v-page-label" }, p.label),
           el("div", { class: "v-page-meta" },
             `${fmtNum(p.count)} occurrence${p.count === 1 ? "" : "s"} · `,
-            el("a", { href: p.url, target: "_blank", rel: "noopener" }, p.url)
+            el("a", { href: p.url, target: "_blank", rel: "noopener",
+              onclick: (e) => e.stopPropagation() }, p.url)
           )
         ),
         el("ul", { class: "v-nodes" },
-          shown.map((n) => renderNode(n, p.url)),
+          shown.map((n) => renderNode(n, p.url, showFailure)),
           remaining > 0
             ? el("li", { class: "v-nodes-more" },
                 `+ ${fmtNum(remaining)} more occurrence${remaining === 1 ? "" : "s"} on this page`)
@@ -717,7 +750,7 @@
         el("p", { class: "v-occurrences-label" },
           `Affected page${nPages === 1 ? "" : "s"} (${nPages})`
         ),
-        el("ul", { class: "v-page-groups" }, pageItems)
+        el("div", { class: "v-page-groups" }, pageItems)
       )
     );
   }
@@ -882,8 +915,9 @@
       ? "WCAG " + wcagTag.replace("wcag", "").split("").join(".")
       : null;
 
+    const showFailure = !sharedFailureSummary(v.nodes);
     const NODE_LIMIT = 10;
-    const occurrences = v.nodes.slice(0, NODE_LIMIT).map((n) => renderNode(n, pageUrl));
+    const occurrences = v.nodes.slice(0, NODE_LIMIT).map((n) => renderNode(n, pageUrl, showFailure));
     if (v.nodes.length > NODE_LIMIT) {
       occurrences.push(
         el("li", { class: "v-nodes-more" }, `+ ${fmtNum(v.nodes.length - NODE_LIMIT)} more occurrence${v.nodes.length - NODE_LIMIT === 1 ? "" : "s"}`)

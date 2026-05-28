@@ -10,6 +10,19 @@
   const app = document.getElementById("app");
   const footerMeta = document.getElementById("footer-meta");
 
+  // A single visually-hidden polite live region. Status changes that are only
+  // conveyed visually elsewhere — "Copied", search match counts — are mirrored
+  // here so assistive tech announces them. One shared node; we clear then set
+  // so identical consecutive messages still re-announce.
+  const liveRegion = el("div", { class: "sr-only", role: "status", "aria-live": "polite" });
+  document.body.appendChild(liveRegion);
+  let announceTimer = null;
+  function announce(msg) {
+    liveRegion.textContent = "";
+    clearTimeout(announceTimer);
+    announceTimer = setTimeout(() => { liveRegion.textContent = msg; }, 60);
+  }
+
   if (!data || !Array.isArray(data.sites)) {
     app.innerHTML = `<div class="error-banner">
       <p class="error-banner-label">No scan data</p>
@@ -331,10 +344,16 @@
     function update() {
       if (!query.trim()) {
         body.replaceChildren(tableBlock);
+        announce("");
         return;
       }
       if (!index) index = buildSearchIndex(data);
-      body.replaceChildren(renderSearchResults(searchAll(index, query), query));
+      const matches = searchAll(index, query);
+      const total = matches.pages.length + matches.sites.length + matches.rules.length;
+      announce(total === 0
+        ? `No matches for ${query}`
+        : `${fmtNum(total)} result${total === 1 ? "" : "s"} for ${query}`);
+      body.replaceChildren(renderSearchResults(matches, query));
     }
 
     const searchInput = el("input", {
@@ -478,9 +497,13 @@
 
   // ---- per-site detail ------------------------------------------------------
 
+  // The short subtitle shown under the axe help text, both collapsed and
+  // expanded. Deliberately uses `title` (a one-line gloss) rather than `plain`
+  // — `plain` is the fuller "What this means" line in the expanded card, and
+  // printing it here too would duplicate it verbatim within one finding.
   function ruleExplain(v) {
     const info = (window.RULE_INFO || {})[v.id];
-    return (info && info.plain) ? el("p", { class: "v-explain" }, info.plain) : null;
+    return (info && info.title) ? el("p", { class: "v-explain" }, info.title) : null;
   }
 
   // A devtools one-liner that scrolls to the failing element and flashes it
@@ -492,6 +515,41 @@
     return `(()=>{const e=document.querySelector(${s});if(!e){alert('Element not found on this page: '+${s});return}e.scrollIntoView({block:'center',behavior:'smooth'});const o=e.style.outline,f=e.style.outlineOffset;e.style.outline='3px solid #ff3b30';e.style.outlineOffset='3px';setTimeout(()=>{e.style.outline=o;e.style.outlineOffset=f},3000)})()`;
   }
 
+  // A finding (one rule on the current site/page route) is addressable by a URL
+  // fragment so it can be pasted into a ticket. Rule ids are already kebab-case
+  // and hash-safe; they appear at most once per route, so the id is unique.
+  function findingDomId(ruleId) {
+    return `rule-${ruleId}`;
+  }
+
+  function permalinkButton(ruleId) {
+    return el("button", {
+      type: "button",
+      class: "v-permalink",
+      title: "Copy a direct link to this finding — paste into a ticket",
+      onclick: (e) => {
+        const url = `${location.origin}${location.pathname}${location.search}#${findingDomId(ruleId)}`;
+        copyToClipboard(url, e.currentTarget);
+      },
+    }, "Copy link");
+  }
+
+  // On load (and on hashchange), open and scroll to the finding named in the URL
+  // fragment, briefly highlighting it so a ticket link lands the reader on the
+  // exact row.
+  function applyHashTarget() {
+    const id = decodeURIComponent(location.hash.replace(/^#/, ""));
+    if (!id) return;
+    const target = document.getElementById(id);
+    if (!target) return;
+    if (target.tagName === "DETAILS") target.open = true;
+    requestAnimationFrame(() => {
+      target.scrollIntoView({ block: "start", behavior: "smooth" });
+      target.classList.add("is-link-target");
+      setTimeout(() => target.classList.remove("is-link-target"), 2000);
+    });
+  }
+
   function copyToClipboard(text, btn) {
     if (!navigator.clipboard) return;
     navigator.clipboard.writeText(text).then(() => {
@@ -499,6 +557,7 @@
       btn.dataset.origLabel = orig;
       btn.textContent = "Copied";
       btn.classList.add("is-copied");
+      announce(`${orig} — copied to clipboard`);
       setTimeout(() => {
         btn.textContent = orig;
         btn.classList.remove("is-copied");
@@ -623,7 +682,7 @@
       );
     });
 
-    return el("details", { class: "violation" },
+    return el("details", { class: "violation", id: findingDomId(v.id) },
       el("summary", {},
         el("span", { class: `v-impact imp-${v.impact}` }, v.impact),
         el("div", { class: "v-headline" },
@@ -643,9 +702,12 @@
       ),
       el("div", { class: "v-body" },
         explanationBlock(v.id),
-        el("a", { class: "v-fix", href: v.helpUrl, target: "_blank", rel: "noopener" },
-          "How to fix",
-          el("span", { class: "v-fix-arrow" }, "→")
+        el("div", { class: "v-actions-row" },
+          el("a", { class: "v-fix", href: v.helpUrl, target: "_blank", rel: "noopener" },
+            "How to fix",
+            el("span", { class: "v-fix-arrow" }, "→")
+          ),
+          permalinkButton(v.id)
         ),
         el("p", { class: "v-occurrences-label" },
           `Affected page${nPages === 1 ? "" : "s"} (${nPages})`
@@ -685,7 +747,17 @@
       fill: true,
     }));
 
-    const canvas = el("canvas", { width: "800", height: "260" });
+    // Canvas is opaque to assistive tech, so describe the chart as an image:
+    // the span of scans plus the latest reading per severity. Screen-reader
+    // users get the same takeaway a sighted user reads off the lines.
+    const latest = datasets
+      .map((d) => `${d.data[d.data.length - 1]} ${d.label.toLowerCase()}`)
+      .join(", ");
+    const chartAlt = entries.length === 1
+      ? `Trend chart for ${siteName}. One scan on ${labels[0]}: ${latest} occurrences.`
+      : `Trend chart for ${siteName}: occurrences by severity across ${entries.length} scans, ${labels[0]} to ${labels[labels.length - 1]}. Latest scan: ${latest}.`;
+
+    const canvas = el("canvas", { width: "800", height: "260", role: "img", "aria-label": chartAlt });
     const wrap = el("section", { class: "history-chart" },
       sectionEyebrow("Trend", "Occurrences by severity over time"),
       canvas
@@ -813,7 +885,7 @@
       );
     }
 
-    return el("details", { class: "violation" },
+    return el("details", { class: "violation", id: findingDomId(v.id) },
       el("summary", {},
         el("span", { class: `v-impact imp-${v.impact}` }, v.impact),
         el("div", { class: "v-headline" },
@@ -831,9 +903,12 @@
       ),
       el("div", { class: "v-body" },
         explanationBlock(v.id),
-        el("a", { class: "v-fix", href: v.helpUrl, target: "_blank", rel: "noopener" },
-          "How to fix",
-          el("span", { class: "v-fix-arrow" }, "→")
+        el("div", { class: "v-actions-row" },
+          el("a", { class: "v-fix", href: v.helpUrl, target: "_blank", rel: "noopener" },
+            "How to fix",
+            el("span", { class: "v-fix-arrow" }, "→")
+          ),
+          permalinkButton(v.id)
         ),
         el("p", { class: "v-occurrences-label" },
           v.nodes.length === 1 ? "Occurrence" : `Occurrences (${fmtNum(Math.min(v.nodes.length, 10))} of ${fmtNum(v.nodes.length)})`
@@ -941,4 +1016,7 @@
   if (pageParam) renderPageDetail(pageParam);
   else if (siteParam) renderDetail(siteParam);
   else renderOverview();
+
+  applyHashTarget();
+  window.addEventListener("hashchange", applyHashTarget);
 })();

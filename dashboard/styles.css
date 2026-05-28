@@ -40,6 +40,19 @@
 
 html, body { margin: 0; padding: 0; }
 
+/* visually hidden, but available to assistive tech (live regions, etc.) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
 body {
   font-family: var(--font-sans);
   font-size: 15px;
@@ -604,6 +617,40 @@ a:focus-visible {
   transition: transform 0.15s ease;
 }
 .v-fix:hover .v-fix-arrow { transform: translateX(2px); }
+
+.v-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.v-permalink {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  padding: 7px 12px;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  background: var(--surface);
+  cursor: pointer;
+  transition: border-color 0.1s ease, color 0.1s ease, background 0.1s ease;
+}
+.v-permalink:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.v-permalink.is-copied {
+  background: var(--accent);
+  color: var(--surface);
+  border-color: var(--accent);
+}
+
+/* brief highlight when arrived at via a deep link */
+.violation.is-link-target {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
 
 /* plain-language explanation (content from rule-info.js) */
 .v-plain {

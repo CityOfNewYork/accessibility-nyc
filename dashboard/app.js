@@ -698,16 +698,17 @@
     const pageItems = g.pages.map((p) => {
       const shown = (p.nodes || []).slice(0, NODE_LIMIT_PER_PAGE);
       const remaining = (p.nodes || []).length - shown.length;
-      // Collapsed by default: you scan the page headers (label · count · url)
-      // and expand a page to see its occurrences. The url stays a working link
-      // inside the summary — stopPropagation keeps clicking it from toggling.
+      // Collapsed by default: you scan the page headers (label · count · open)
+      // and expand a page to see its occurrences. The label already shows the
+      // path, so the meta links out with a compact "Open ↗" rather than
+      // repeating the full URL; stopPropagation keeps the link from toggling.
       return el("details", { class: "v-page-group" },
         el("summary", { class: "v-page-header" },
-          el("div", { class: "v-page-label" }, p.label),
+          el("div", { class: "v-page-label", title: p.label }, p.label),
           el("div", { class: "v-page-meta" },
             `${fmtNum(p.count)} occurrence${p.count === 1 ? "" : "s"} · `,
             el("a", { href: p.url, target: "_blank", rel: "noopener",
-              onclick: (e) => e.stopPropagation() }, p.url)
+              title: p.url, onclick: (e) => e.stopPropagation() }, "Open ↗")
           )
         ),
         el("ul", { class: "v-nodes" },
@@ -1052,6 +1053,9 @@
   const params = new URLSearchParams(location.search);
   const pageParam = params.get("page");
   const siteParam = params.get("site");
+  // Detail/page views are text-heavy (findings, explanations) and read better
+  // at a tighter measure; the overview keeps the full width for its wide table.
+  app.classList.toggle("page-narrow", !!(pageParam || siteParam));
   if (pageParam) renderPageDetail(pageParam);
   else if (siteParam) renderDetail(siteParam);
   else renderOverview();

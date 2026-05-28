@@ -379,9 +379,10 @@
     );
   }
 
-  // Render the search results panel. Three sections (pages / sites / rules);
-  // each capped so the panel stays scannable. Page rows are the primary hit —
-  // clicking jumps to the per-page detail view.
+  // Render the search results panel. Three sections (sites / pages / rules);
+  // each capped so the panel stays scannable. Sites lead so a site-name query
+  // isn't buried under its own pages; page rows are the primary hit for a
+  // URL/path query and click through to the per-page detail view.
   function renderSearchResults(matches, query) {
     const PAGE_LIMIT = 25;
     const RULE_LIMIT = 10;
@@ -393,12 +394,45 @@
         el("p", { class: "search-empty-title" }, "No scanned page matches"),
         el("p", { class: "search-empty-body" },
           `Nothing matched "${query}" across pages, sites, or rules. ` +
-          `The URL may not have been included in the last crawl (current cap: 150–1000 pages per site). Try a shorter path or a different keyword.`
+          `The URL may not have been included in the last crawl (current cap: 1000 pages per site). Try a shorter path or a different keyword.`
         )
       );
     }
 
     const sections = [];
+
+    // Sites first: a site-name query (e.g. "OTI") matches every one of that
+    // site's pages by siteName, which would otherwise bury the single site
+    // result under a flood of page rows. A URL/path query matches no site
+    // name, so pages still lead in that case.
+    if (matches.sites.length) {
+      const shown = matches.sites.slice(0, SITE_LIMIT);
+      sections.push(el("section", { class: "search-section" },
+        el("h3", { class: "search-section-title" },
+          "Sites",
+          el("span", { class: "search-section-count" },
+            ` — ${matches.sites.length} match${matches.sites.length === 1 ? "" : "es"}`)
+        ),
+        el("ul", { class: "search-result-list" },
+          shown.map((s) => {
+            const href = `?site=${encodeURIComponent(s.name)}`;
+            return el("li", {},
+              el("a", { class: "search-result", href },
+                el("span", { class: `search-result-tier tier-pill ${tierClass[s.tier] || "tier-error"}` }, tierLabel[s.tier] || s.tier),
+                el("div", { class: "search-result-body" },
+                  el("div", { class: "search-result-label" }, s.name),
+                  el("div", { class: "search-result-url" }, s.url)
+                ),
+                el("div", { class: "search-result-meta" },
+                  `${s.pageCount} page${s.pageCount === 1 ? "" : "s"} · ${fmtNum(s.totalViolations)} occurrence${s.totalViolations === 1 ? "" : "s"}`
+                ),
+                el("span", { class: "search-result-arrow", "aria-hidden": "true" }, "›")
+              )
+            );
+          })
+        )
+      ));
+    }
 
     if (matches.pages.length) {
       const shown = matches.pages.slice(0, PAGE_LIMIT);
@@ -431,35 +465,6 @@
             ? el("li", { class: "search-result-more" },
                 `+ ${fmtNum(matches.pages.length - PAGE_LIMIT)} more page matches not shown — refine your query`)
             : null
-        )
-      ));
-    }
-
-    if (matches.sites.length) {
-      const shown = matches.sites.slice(0, SITE_LIMIT);
-      sections.push(el("section", { class: "search-section" },
-        el("h3", { class: "search-section-title" },
-          "Sites",
-          el("span", { class: "search-section-count" },
-            ` — ${matches.sites.length} match${matches.sites.length === 1 ? "" : "es"}`)
-        ),
-        el("ul", { class: "search-result-list" },
-          shown.map((s) => {
-            const href = `?site=${encodeURIComponent(s.name)}`;
-            return el("li", {},
-              el("a", { class: "search-result", href },
-                el("span", { class: `search-result-tier tier-pill ${tierClass[s.tier] || "tier-error"}` }, tierLabel[s.tier] || s.tier),
-                el("div", { class: "search-result-body" },
-                  el("div", { class: "search-result-label" }, s.name),
-                  el("div", { class: "search-result-url" }, s.url)
-                ),
-                el("div", { class: "search-result-meta" },
-                  `${s.pageCount} page${s.pageCount === 1 ? "" : "s"} · ${fmtNum(s.totalViolations)} occurrence${s.totalViolations === 1 ? "" : "s"}`
-                ),
-                el("span", { class: "search-result-arrow", "aria-hidden": "true" }, "›")
-              )
-            );
-          })
         )
       ));
     }

@@ -758,5 +758,63 @@
         "count": 1
       }
     ]
+  },
+  {
+    "date": "2026-05-28T22:05:14.044Z",
+    "site": "OTI",
+    "pages": 161,
+    "crawlComplete": true,
+    "rules": [
+      {
+        "id": "role-img-alt",
+        "impact": "serious",
+        "count": 168
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 50
+      },
+      {
+        "id": "aria-prohibited-attr",
+        "impact": "serious",
+        "count": 19
+      },
+      {
+        "id": "button-name",
+        "impact": "critical",
+        "count": 15
+      },
+      {
+        "id": "frame-title",
+        "impact": "serious",
+        "count": 9
+      },
+      {
+        "id": "link-name",
+        "impact": "serious",
+        "count": 3
+      },
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "count": 3
+      },
+      {
+        "id": "list",
+        "impact": "serious",
+        "count": 1
+      },
+      {
+        "id": "aria-allowed-attr",
+        "impact": "critical",
+        "count": 9
+      },
+      {
+        "id": "aria-required-children",
+        "impact": "critical",
+        "count": 1
+      }
+    ]
   }
 ]

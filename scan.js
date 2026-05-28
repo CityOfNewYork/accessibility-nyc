@@ -4,7 +4,7 @@
 //   node scan.js                 # scan all sites; BFS-crawl those with "crawl": true
 //   node scan.js --only=OTI      # scan only the named site (smoke test)
 //   node scan.js --no-crawl      # homepage only for every site (fast smoke test)
-//   node scan.js --max-pages=25  # cap pages per crawled site (default 150)
+//   node scan.js --max-pages=25  # cap pages per crawled site (default 1000)
 //   node scan.js --max-depth=3   # cap link-hops from the homepage (default 5)
 //
 // Output: results.js (a JS file that assigns window.SCAN_DATA = {...})
@@ -17,7 +17,7 @@ import { AxePuppeteer } from "@axe-core/puppeteer";
 const WCAG_TAGS = ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"];
 // Crawl bounds (override per run with --max-pages / --max-depth). A crawl is a
 // breadth-first walk from the homepage, scoped by the site's pathPrefix.
-const DEFAULT_MAX_PAGES = 150;
+const DEFAULT_MAX_PAGES = 1000;
 const DEFAULT_MAX_DEPTH = 5;
 // On a long crawl, flush partial results to disk every this many pages so an
 // interrupted run still leaves valid, saved progress (see writeResults).

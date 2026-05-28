@@ -24,7 +24,7 @@ npm install
 ```bash
 npm run scan                  # scan everything in sites.json
 node scan.js --only=OTI       # scan a single site (smoke test)
-node scan.js --max-pages=1000 # raise the per-site crawl cap (default 150)
+node scan.js --max-pages=150  # lower the per-site crawl cap (default 1000)
 ```
 
 This writes:

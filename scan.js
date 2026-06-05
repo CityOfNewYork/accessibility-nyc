@@ -23,6 +23,12 @@ const DEFAULT_MAX_DEPTH = 5;
 // interrupted run still leaves valid, saved progress (see writeResults).
 const CHECKPOINT_EVERY = 25;
 
+// Set in main() to the bundled Chrome's UA with "Headless" stripped out, so the
+// scanner presents as a normal desktop Chrome. Sites can serve a degraded or
+// blocked response to the default headless UA; a standard UA gives the scan the
+// same page a real user would see.
+let USER_AGENT = null;
+
 // Query/hash-stripped href — the identity the crawl de-dupes pages on, so a
 // page reachable by several URLs (or via the post-redirect homepage URL) is
 // scanned exactly once.
@@ -122,6 +128,7 @@ async function scanPage(browser, url, pathPrefix) {
   const start = Date.now();
   const page = await browser.newPage();
   try {
+    if (USER_AGENT) await page.setUserAgent(USER_AGENT);
     await page.setViewport({ width: 1280, height: 900 });
     const response = await page.goto(url, { waitUntil: "networkidle2", timeout: 60_000 });
 
@@ -359,6 +366,7 @@ async function main() {
     headless: true,
     args: ["--no-sandbox", "--disable-dev-shm-usage"],
   });
+  USER_AGENT = (await browser.userAgent()).replace("HeadlessChrome", "Chrome");
 
   const results = [];
   for (const site of sites) {

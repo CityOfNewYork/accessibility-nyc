@@ -1,0 +1,70 @@
+name: Weekly accessibility scan
+
+# Re-crawls every site each week, commits the refreshed scan data back to main
+# (history.json accumulates the trend chart across runs), then redeploys the
+# dashboard. Pushes made with GITHUB_TOKEN don't trigger deploy-pages.yml, so we
+# deploy here in the same job rather than relying on the push to fan out.
+
+on:
+  schedule:
+    # Fridays 09:17 UTC (~04:17 EST / 05:17 EDT) — overnight in NYC: gentle on the
+    # target sites, clear of the Monday crunch, and an odd minute off the hour to dodge
+    # GitHub's top-of-hour scheduler congestion. Cron is fixed UTC (no DST shift); the
+    # overnight window absorbs the ~1hr seasonal drift. Change the cron to reschedule.
+    - cron: "17 9 * * 5"
+  workflow_dispatch:
+
+permissions:
+  contents: write # commit the refreshed scan data
+  pages: write # deploy the dashboard
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Crawl sites
+        run: node scan.js
+
+      # A finder-app failure shouldn't block the site crawl from publishing.
+      - name: Scan finder apps
+        run: node scan-finders.mjs
+        continue-on-error: true
+
+      - name: Commit refreshed scan data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results.json history.json dashboard/results.js dashboard/history.js
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Weekly scan: refresh accessibility results"
+            git pull --rebase --autostash origin main
+            git push
+          fi
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dashboard
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -3,3 +3,5 @@ node_modules/
 *.log
 .claude/
 aging-finder-brief.md
+browserstack-screenshots/
+tool-comparison.md

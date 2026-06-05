@@ -68,3 +68,12 @@ jobs:
           path: dashboard
       - id: deployment
         uses: actions/deploy-pages@v4
+
+      # Render a per-site summary on the run page (the deploy URL is passed so the
+      # report links to the live dashboard). always() so it shows even if an
+      # earlier step failed.
+      - name: Write run summary
+        if: always()
+        env:
+          DASHBOARD_URL: ${{ steps.deployment.outputs.page_url }}
+        run: node report-summary.mjs

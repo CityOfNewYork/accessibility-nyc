@@ -1281,5 +1281,73 @@
         "count": 1
       }
     ]
+  },
+  {
+    "date": "2026-06-11T19:26:50.647Z",
+    "site": "NYC 311",
+    "pages": 8,
+    "crawlComplete": true,
+    "rules": [
+      {
+        "id": "aria-progressbar-name",
+        "impact": "serious",
+        "count": 1
+      },
+      {
+        "id": "aria-prohibited-attr",
+        "impact": "serious",
+        "count": 6
+      },
+      {
+        "id": "aria-required-children",
+        "impact": "critical",
+        "count": 2
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 3
+      },
+      {
+        "id": "input-button-name",
+        "impact": "critical",
+        "count": 8
+      },
+      {
+        "id": "link-name",
+        "impact": "serious",
+        "count": 12
+      },
+      {
+        "id": "aria-required-parent",
+        "impact": "critical",
+        "count": 8
+      },
+      {
+        "id": "listitem",
+        "impact": "serious",
+        "count": 3
+      },
+      {
+        "id": "link-in-text-block",
+        "impact": "serious",
+        "count": 2
+      },
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "count": 27
+      },
+      {
+        "id": "aria-allowed-attr",
+        "impact": "critical",
+        "count": 6
+      },
+      {
+        "id": "select-name",
+        "impact": "critical",
+        "count": 1
+      }
+    ]
   }
 ]

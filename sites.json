@@ -4,6 +4,7 @@
   { "name": "MOPD", "url": "https://www.nyc.gov/site/mopd/index.page", "crawl": true, "pathPrefix": "/site/mopd" },
   { "name": "DOF",  "url": "https://www.nyc.gov/site/finance/index.page", "crawl": true, "pathPrefix": "/site/finance" },
   { "name": "NYC Aging", "url": "https://www.nyc.gov/site/dfta/index.page", "crawl": true, "pathPrefix": "/site/dfta" },
+  { "name": "NYC 311", "url": "https://portal.311.nyc.gov/", "crawl": true },
   { "name": "Aging Service Finder", "url": "https://a125-egovt.nyc.gov/AgingService/", "app": true },
   { "name": "Aging Activities Finder", "url": "https://dftavirtualprogramfinder.cityofnewyork.us/", "app": true },
   { "name": "DOE School Search", "url": "https://schoolsearch.schools.nyc/", "app": true },

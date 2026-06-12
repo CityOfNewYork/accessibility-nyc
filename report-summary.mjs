@@ -10,7 +10,7 @@
 
 import { readFile, appendFile } from "node:fs/promises";
 
-const TIER_EMOJI = { red: "🔴", yellow: "🟡", green: "🟢", error: "⚠️" };
+const TIER_EMOJI = { red: "🔴", orange: "🟠", yellow: "🟡", green: "🟢", error: "⚠️" };
 
 // A history entry's total violation count is the sum of its per-rule counts.
 const historyTotal = (entry) => (entry.rules || []).reduce((s, r) => s + r.count, 0);

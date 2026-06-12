@@ -44,7 +44,8 @@ const norm = (href) => {
 };
 
 function tierFor(counts) {
-  if (counts.critical > 0 || counts.serious > 0) return "red";
+  if (counts.critical > 0) return "red";
+  if (counts.serious > 0) return "orange";
   if (counts.moderate > 0 || counts.minor > 0) return "yellow";
   return "green";
 }

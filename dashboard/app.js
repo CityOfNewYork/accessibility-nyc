@@ -77,13 +77,15 @@
   }
 
   const tierLabel = {
-    red:    "Needs work",
+    red:    "Critical issues",
+    orange: "Serious issues",
     yellow: "Some issues",
     green:  "Clean",
     error:  "Scan error",
   };
   const tierClass = {
     red:    "tier-red",
+    orange: "tier-orange",
     yellow: "tier-amber",
     green:  "tier-green",
     error:  "tier-error",
@@ -157,14 +159,19 @@
     } catch { return url; }
   }
 
-  // Derive a per-page tier from its impact counts. Same thresholds as scan.js
-  // (mirrored — site-level tier already lives on each site object, but pages
-  // have only `counts`, so we compute it here on demand).
-  function pageTierFromCounts(counts) {
+  // Derive a tier from impact counts. Same thresholds as scan.js (mirrored).
+  // Sites are re-derived here too (not read from the stored site.tier) so the
+  // tier ladder can change without waiting for the next scan to rewrite data.
+  function tierFromCounts(counts) {
     if (!counts) return "green";
-    if (counts.critical > 0 || counts.serious > 0) return "red";
+    if (counts.critical > 0) return "red";
+    if (counts.serious > 0) return "orange";
     if (counts.moderate > 0 || counts.minor > 0) return "yellow";
     return "green";
+  }
+
+  function siteTier(s) {
+    return s.tier === "error" ? "error" : tierFromCounts(s.counts);
   }
 
   function siteViolations(site) {
@@ -181,7 +188,7 @@
     const sites = data.sites.map((s) => ({
       name: s.name,
       url: s.url,
-      tier: s.tier,
+      tier: siteTier(s),
       pageCount: s.pages ? s.pages.length : 1,
       totalViolations: s.total_violations,
     }));
@@ -195,7 +202,7 @@
           siteName: site.name,
           url: p.url,
           label,
-          tier: pageTierFromCounts(p.counts),
+          tier: tierFromCounts(p.counts),
           occurrences: occ,
           ruleCount: (p.violations || []).length,
         });
@@ -255,10 +262,10 @@
 
   function renderOverview() {
     const sites = data.sites;
-    const tiers = { red: 0, yellow: 0, green: 0, error: 0 };
+    const tiers = { red: 0, orange: 0, yellow: 0, green: 0, error: 0 };
     let totalIssues = 0, totalRules = 0;
     for (const s of sites) {
-      tiers[s.tier]++;
+      tiers[siteTier(s)]++;
       totalIssues += s.total_violations;
       totalRules += s.distinct_rules;
     }
@@ -267,7 +274,8 @@
     const summary = el("section", { class: "summary-strip" },
       summaryCell("Sites scanned", String(sites.length), pageCount > sites.length ? `${pageCount} pages total` : null),
       summaryCell("Rules failed", String(totalRules), `${fmtNum(totalIssues)} total occurrences`),
-      summaryCell("Needs work", String(tiers.red), null, "is-red"),
+      summaryCell("Critical issues", String(tiers.red), null, "is-red"),
+      summaryCell("Serious issues", String(tiers.orange), null, "is-orange"),
       summaryCell("Some issues", String(tiers.yellow), null, "is-amber"),
       summaryCell("Clean", String(tiers.green), tiers.error ? `${tiers.error} scan error${tiers.error === 1 ? "" : "s"}` : null, "is-green"),
     );
@@ -297,7 +305,7 @@
           el("a", { class: "site-name", href: link }, s.name),
           el("div", { class: "site-url" }, s.url)
         ),
-        el("td", {}, tierPill(s.tier)),
+        el("td", {}, tierPill(siteTier(s))),
         el("td", { class: "numeric" }, String(numPages)),
         el("td", { class: "numeric" }, s.error ? "—" : String(s.distinct_rules)),
         el("td", {},
@@ -1066,7 +1074,7 @@
       el("div", {},
         el("div", { class: "detail-header-titlerow" },
           el("h2", { class: "detail-header-title" }, site.name),
-          tierPill(site.tier)
+          tierPill(siteTier(site))
         ),
         el("div", { class: "detail-header-url" },
           el("a", { href: site.url, target: "_blank", rel: "noopener" }, site.url)
@@ -1233,7 +1241,7 @@
       try { return new URL(page.url).pathname.replace(/\/$/, "") || "/"; }
       catch { return page.url; }
     })();
-    const tier = pageTierFromCounts(page.counts);
+    const tier = tierFromCounts(page.counts);
     const violations = page.violations || [];
     const occurrences = violations.reduce((sum, v) => sum + v.nodes.length, 0);
 

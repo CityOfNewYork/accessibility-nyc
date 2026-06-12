@@ -23,6 +23,8 @@
 
   --tier-red-bg:    #b50909;
   --tier-red-soft:  #f8e1e1;
+  --tier-orange-bg:  #9c4a06; /* = --imp-serious: tier "serious, no critical" */
+  --tier-orange-soft:#f8e9da;
   --tier-amber-bg:  #8b5e1a;
   --tier-amber-soft:#faecca;
   --tier-green-bg:  #1d6f17;
@@ -204,7 +206,7 @@ a:focus-visible {
 
 .summary-strip {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   background: var(--surface);
   border: 1px solid var(--rule);
   margin: 0 0 28px;
@@ -230,8 +232,9 @@ a:focus-visible {
   line-height: 1;
   color: var(--ink);
 }
-.summary-cell-value.is-red   { color: var(--tier-red-bg); }
-.summary-cell-value.is-amber { color: var(--tier-amber-bg); }
+.summary-cell-value.is-red    { color: var(--tier-red-bg); }
+.summary-cell-value.is-orange { color: var(--tier-orange-bg); }
+.summary-cell-value.is-amber  { color: var(--tier-amber-bg); }
 .summary-cell-value.is-green { color: var(--tier-green-bg); }
 .summary-cell-sub {
   font-size: 12px;
@@ -408,6 +411,7 @@ a:focus-visible {
   flex: none;
 }
 .tier-pill.tier-red    { color: var(--tier-red-bg);    background: var(--tier-red-soft); }
+.tier-pill.tier-orange { color: var(--tier-orange-bg); background: var(--tier-orange-soft); }
 .tier-pill.tier-amber  { color: var(--tier-amber-bg);  background: var(--tier-amber-soft); }
 .tier-pill.tier-green  { color: var(--tier-green-bg);  background: var(--tier-green-soft); }
 .tier-pill.tier-error  { color: var(--tier-error-bg);  background: var(--tier-error-soft); }

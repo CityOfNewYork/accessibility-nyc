@@ -7,7 +7,7 @@ An open-source scanner and dashboard that runs [axe-core](https://github.com/deq
 ## What it does
 
 - Scans every URL in `sites.json` with axe-core, filtered to **WCAG 2.2 AA** — the standard required of City agencies by Local Law 26 of 2016 and adopted as the current version in the 2025 NYC Digital Accessibility Report from OTI and MOPD.
-- Tiers each site **red / yellow / green** by max violation severity.
+- Tiers each site **red / orange / yellow / green** by max violation severity (orange = serious issues remain but every critical issue is resolved).
 - Crawls multi-page sites breadth-first (per-site `crawl: true` flag); drives single-page apps through their real interaction states (`scan-finders.mjs`).
 - Writes a static dashboard (`dashboard/index.html`) that needs no server to view — just open the file. Views: overview → per-site → per-page, with search across pages, sites, and rules.
 

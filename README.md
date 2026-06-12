@@ -1,4 +1,4 @@
-# NYC Accessibility Scan
+# NYC Accessibility Scanner
 
 An open-source scanner and dashboard that runs [axe-core](https://github.com/dequelabs/axe-core) against a list of NYC agency websites and renders a tiered scorecard.
 

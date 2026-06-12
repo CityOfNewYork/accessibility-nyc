@@ -576,6 +576,9 @@ a:focus-visible {
 .v-impact.imp-serious  { background: var(--imp-serious-soft); color: var(--imp-serious); }
 .v-impact.imp-moderate { background: var(--tier-amber-soft); color: var(--imp-moderate); }
 .v-impact.imp-minor    { background: var(--accent-soft);     color: var(--imp-minor); }
+/* Page-view chips: a page's worst severity, or its clean/error state. */
+.v-impact.imp-clean    { background: var(--tier-green-soft); color: var(--tier-green-bg); }
+.v-impact.imp-error    { background: var(--surface-3);       color: var(--ink-subtle); }
 
 .v-headline {
   display: flex;

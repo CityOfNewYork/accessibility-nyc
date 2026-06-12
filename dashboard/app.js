@@ -1073,15 +1073,139 @@
     );
   }
 
+  // ---- page grouping ---------------------------------------------------------
+
+  // A page is addressable the same way a finding is, so a ticket can link
+  // straight to one page's row in the by-page view. Paths are unique within a
+  // site after the crawl's query/hash normalization.
+  function pageDomId(url) {
+    let path;
+    try { path = new URL(url).pathname; } catch { path = url; }
+    return "page-" + (path.replace(/[^a-z0-9-]+/gi, "-").replace(/^-+|-+$/g, "") || "home");
+  }
+
+  // Highest-severity impact present on a page; null when the page is clean.
+  function pageMaxImpact(counts) {
+    if (!counts) return null;
+    for (const k of ["critical", "serious", "moderate", "minor"]) if (counts[k] > 0) return k;
+    return null;
+  }
+
+  // One group per page, worst pages first; clean pages are kept (sorted last)
+  // so the view answers "what state is every page in", not just "which pages
+  // are broken".
+  function groupByPage(pages) {
+    const order = { critical: 0, serious: 1, moderate: 2, minor: 3 };
+    const groups = pages.map((p, i) => {
+      const violations = [...(p.violations || [])].sort((a, b) => {
+        const oa = order[a.impact] ?? 99, ob = order[b.impact] ?? 99;
+        if (oa !== ob) return oa - ob;
+        return b.nodes.length - a.nodes.length;
+      });
+      return {
+        url: p.url,
+        label: p.label || pageLabel(p.url, i === 0),
+        tier: p.error ? "error" : tierFromCounts(p.counts),
+        impact: pageMaxImpact(p.counts),
+        error: p.error || null,
+        violations,
+        total: violations.reduce((s, v) => s + v.nodes.length, 0),
+      };
+    });
+    return groups.sort((a, b) => {
+      const oa = a.impact ? order[a.impact] : 90, ob = b.impact ? order[b.impact] : 90;
+      if (oa !== ob) return oa - ob;
+      return b.total - a.total;
+    });
+  }
+
+  function renderGroupedByPage(pages) {
+    return el("div", { class: "violations-list" },
+      groupByPage(pages).map((g) => renderPageGroup(g))
+    );
+  }
+
+  function renderPageGroup(g) {
+    const nRules = g.violations.length;
+    const domId = pageDomId(g.url);
+
+    const NODE_LIMIT_PER_RULE = 5;
+    const ruleItems = g.violations.map((v) => {
+      const showFailure = !sharedFailureSummary(v.nodes);
+      const shown = v.nodes.slice(0, NODE_LIMIT_PER_RULE);
+      const remaining = v.nodes.length - shown.length;
+      return el("details", { class: "v-page-group" },
+        el("summary", { class: "v-page-header" },
+          el("div", { class: "v-page-label", title: v.id }, v.help),
+          el("div", { class: "v-page-meta" },
+            `${v.impact} · ${fmtNum(v.nodes.length)} occurrence${v.nodes.length === 1 ? "" : "s"}`
+          )
+        ),
+        el("ul", { class: "v-nodes" },
+          shown.map((n) => renderNode(n, g.url, showFailure)),
+          remaining > 0
+            ? el("li", { class: "v-nodes-more" },
+                `+ ${fmtNum(remaining)} more occurrence${remaining === 1 ? "" : "s"} of this rule`)
+            : null
+        )
+      );
+    });
+
+    const body = g.error
+      ? el("p", { class: "v-occurrences-label" }, `Scan error: ${g.error}`)
+      : nRules === 0
+      ? el("p", { class: "v-occurrences-label" },
+          "No automated violations on this page — manual review still applies.")
+      : el("div", {},
+          el("p", { class: "v-occurrences-label" },
+            `Failed rule${nRules === 1 ? "" : "s"} (${nRules})`),
+          el("div", { class: "v-page-groups" }, ruleItems)
+        );
+
+    return el("details", { class: "violation", id: domId },
+      el("summary", {},
+        el("span", { class: `v-impact imp-${g.impact || (g.error ? "error" : "clean")}` },
+          g.impact || (g.error ? "error" : "clean")),
+        el("div", { class: "v-headline" },
+          el("p", { class: "v-help" }, g.label),
+          el("div", { class: "v-meta" },
+            el("span", { class: "v-pages-badge" },
+              g.error ? "scan error"
+                : `${nRules} rule${nRules === 1 ? "" : "s"} failed`)
+          )
+        ),
+        el("div", { class: "v-count" },
+          el("strong", {}, fmtNum(g.total)), " ",
+          g.total === 1 ? "occurrence" : "occurrences"
+        )
+      ),
+      el("div", { class: "v-body" },
+        el("div", { class: "v-actions-row" },
+          el("a", { class: "v-fix", href: `?page=${encodeURIComponent(g.url)}` },
+            "Full page report",
+            el("span", { class: "v-fix-arrow" }, "→")
+          ),
+          el("a", { class: "v-fix", href: g.url, target: "_blank", rel: "noopener" },
+            "Open page",
+            el("span", { class: "v-fix-arrow" }, "↗")
+          ),
+          permalinkButton(domId)
+        ),
+        body
+      )
+    );
+  }
+
   // The rule view answers "what's wrong"; the component view answers "what do
-  // we fix". Both render the same occurrences — only the grouping differs.
+  // we fix"; the page view answers "where do we stand, page by page". All
+  // render the same occurrences — only the grouping differs.
   function viewToggle(siteName, view) {
     // In-place switch: pushState + re-render rather than a navigation, so the
     // page doesn't reload. Real hrefs are kept for middle-click / copy-link,
     // and popstate (back/forward) re-routes.
     const mk = (val, label) => el("a", {
       class: "view-toggle-btn" + (view === val ? " is-active" : ""),
-      href: `?site=${encodeURIComponent(siteName)}` + (val === "components" ? "&view=components" : ""),
+      href: `?site=${encodeURIComponent(siteName)}` + (val === "rules" ? "" : `&view=${val}`),
       "aria-current": view === val ? "page" : null,
       onclick: (e) => {
         if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
@@ -1089,12 +1213,13 @@
         if (view === val) return;
         history.pushState(null, "", e.currentTarget.getAttribute("href"));
         route();
-        announce(label === "By rule" ? "Findings grouped by rule" : "Findings grouped by component");
+        announce(`Findings grouped ${label.toLowerCase()}`);
       },
     }, label);
     return el("nav", { class: "view-toggle", "aria-label": "Group findings" },
       mk("rules", "By rule"),
-      mk("components", "By component")
+      mk("components", "By component"),
+      mk("pages", "By page")
     );
   }
 
@@ -1232,8 +1357,8 @@
       return;
     }
 
-    const view = new URLSearchParams(location.search).get("view") === "components"
-      ? "components" : "rules";
+    const viewParam = new URLSearchParams(location.search).get("view");
+    const view = viewParam === "components" || viewParam === "pages" ? viewParam : "rules";
 
     const findingsLabel = view === "components"
       ? (() => {
@@ -1241,6 +1366,12 @@
           const critical = groups.filter((g) => g.v.impact === "critical").length;
           return `${groups.length} component${groups.length === 1 ? "" : "s"}` +
             (critical ? ` · ${critical} with critical issues` : "") +
+            ` · ${fmtNum(site.total_violations)} occurrence${site.total_violations === 1 ? "" : "s"}`;
+        })()
+      : view === "pages"
+      ? (() => {
+          const affected = pages.filter((p) => (p.violations || []).length > 0).length;
+          return `${affected} of ${numPages} page${numPages === 1 ? "" : "s"} with violations` +
             ` · ${fmtNum(site.total_violations)} occurrence${site.total_violations === 1 ? "" : "s"}`;
         })()
       : numPages > 1
@@ -1262,6 +1393,12 @@
         domId: componentDomId(g.key), label: g.component, impact: g.v.impact, count: g.total,
       }))));
       children.push(renderGroupedByComponent(pages, numPages));
+    } else if (view === "pages") {
+      const groups = groupByPage(pages);
+      children.push(distributionBar(groups.filter((g) => g.total > 0).map((g) => ({
+        domId: pageDomId(g.url), label: g.label, impact: g.impact, count: g.total,
+      }))));
+      children.push(renderGroupedByPage(pages));
     } else if (numPages > 1) {
       const groups = groupByRule(pages);
       children.push(distributionBar(groups.map((g) => ({

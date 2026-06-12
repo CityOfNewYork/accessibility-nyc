@@ -33,6 +33,7 @@ function parseArgs(argv) {
 // Identical filter to scan.js sameOriginLinks — keep these in sync.
 function extractLinks(page, base, prefix) {
   return page.evaluate((base, prefix) => {
+    const BINARY = /\.(pdf|docx?|xlsx?|pptx?|zip|jpe?g|png|gif|mp[34]|geojson|json|csv|xml|kmz?)$/i;
     const origin = new URL(base).origin;
     const self = new URL(base);
     self.search = "";
@@ -51,6 +52,7 @@ function extractLinks(page, base, prefix) {
           href !== selfHref &&
           u.protocol.startsWith("http") &&
           !u.search &&
+          !BINARY.test(u.pathname) &&
           (!prefix || u.pathname.startsWith(prefix))
         ) {
           seen.add(href);

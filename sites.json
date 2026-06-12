@@ -3,10 +3,29 @@
   { "name": "OTI",  "url": "https://www.nyc.gov/content/oti/pages/home", "crawl": true, "pathPrefix": "/content/oti" },
   { "name": "MOPD", "url": "https://www.nyc.gov/site/mopd/index.page", "crawl": true, "pathPrefix": "/site/mopd" },
   { "name": "DOF",  "url": "https://www.nyc.gov/site/finance/index.page", "crawl": true, "pathPrefix": "/site/finance" },
+  { "name": "DOT",  "url": "https://www.nyc.gov/html/dot/html/home/home.shtml", "crawl": true, "pathPrefix": "/html/dot" },
   { "name": "NYC Aging", "url": "https://www.nyc.gov/site/dfta/index.page", "crawl": true, "pathPrefix": "/site/dfta" },
   { "name": "NYC 311", "url": "https://portal.311.nyc.gov/", "crawl": true },
   { "name": "Aging Service Finder", "url": "https://a125-egovt.nyc.gov/AgingService/", "app": true },
   { "name": "Aging Activities Finder", "url": "https://dftavirtualprogramfinder.cityofnewyork.us/", "app": true },
   { "name": "DOE School Search", "url": "https://schoolsearch.schools.nyc/", "app": true },
-  { "name": "Food Help Finder", "url": "https://finder.nyc.gov/foodhelp/", "app": true }
+  { "name": "Food Help Finder", "url": "https://finder.nyc.gov/foodhelp/", "app": true },
+  { "name": "Golden Set", "url": "https://www.nyc.gov", "pages": [
+    "https://www.nyc.gov",
+    "https://www.nyc.gov/main/events",
+    "https://www.nyc.gov/main/services/snap-benefits",
+    "https://www.nyc.gov/main/your-government/agency-directory",
+    "https://www.nyc.gov/main/forms/website-feedback",
+    "https://www.nyc.gov/site/mopd/index.page",
+    "https://www.nyc.gov/site/mopd/events/deaf-awareness-month.page",
+    "https://www.nyc.gov/site/mopd/laws/laws.page",
+    "https://www.nyc.gov/site/mopd/publications/publications.page",
+    "https://www.nyc.gov/site/mopd/about/contact.page",
+    "https://www.nyc.gov/site/mopd/initiatives/asl-direct.page",
+    "https://www.nyc.gov/html/dot/html/home/home.shtml",
+    "https://www.nyc.gov/html/dot/html/contact/contact-form-map.shtml",
+    "https://www.nyc.gov/html/dot/html/pedestrians/summerstreets.shtml",
+    "https://www.nyc.gov/html/dot/html/motorist/atis.shtml",
+    "https://www.nyc.gov/html/dot/html/motorist/weektraf.shtml"
+  ] }
 ]

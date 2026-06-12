@@ -84,6 +84,20 @@ function slimViolations(violations) {
   }));
 }
 
+// Slim axe's "incomplete" (needs-review) results down to enough to count and
+// locate: id, impact, node count, first few selectors. axe computes these for
+// free and they can't be backfilled into old scans, but the raw array is far
+// too noisy to display — so we store it and keep it OUT of counts, tier,
+// total_violations, distinct_rules, and history.
+function slimIncomplete(incomplete) {
+  return incomplete.map((v) => ({
+    id: v.id,
+    impact: v.impact,
+    nodes: v.nodes.length,
+    targets: v.nodes.slice(0, 3).map((n) => n.target),
+  }));
+}
+
 // Collect same-origin links from the page. If pathPrefix is given, only links
 // whose pathname starts with it are kept — this keeps the crawl inside the
 // target site (e.g. "/main") instead of wandering into other agencies' subsites
@@ -91,8 +105,13 @@ function slimViolations(violations) {
 // Links with a query string are skipped: on nyc.gov these are transient
 // event-detail pages (?permalinkName=…) that change week to week and would
 // make scans non-reproducible.
+// Binary/document links (.pdf, .doc, images, …) are skipped too: axe would
+// scan Chrome's viewer shell rather than the document, producing artifact
+// violations — on legacy /html/ sites PDFs can otherwise eat most of the
+// crawl budget (142 of DOT's first 250 URLs).
 function sameOriginLinks(page, baseUrl, pathPrefix) {
   return page.evaluate((base, prefix) => {
+    const BINARY = /\.(pdf|docx?|xlsx?|pptx?|zip|jpe?g|png|gif|mp[34]|geojson|json|csv|xml|kmz?)$/i;
     const origin = new URL(base).origin;
     // Normalize the page's own resolved URL (strip query/hash) so a nav link
     // back to it — e.g. "/main" when the homepage redirected to "/main?/" —
@@ -114,6 +133,7 @@ function sameOriginLinks(page, baseUrl, pathPrefix) {
           href !== selfHref &&
           u.protocol.startsWith("http") &&
           !u.search &&
+          !BINARY.test(u.pathname) &&
           (!prefix || u.pathname.startsWith(prefix))
         ) {
           seen.add(href);
@@ -151,6 +171,7 @@ async function scanPage(browser, url, pathPrefix) {
       total_violations: violations.reduce((sum, v) => sum + v.nodes.length, 0),
       distinct_rules: violations.length,
       violations,
+      incomplete: slimIncomplete(result.incomplete),
       scan_ms: Date.now() - start,
       error: null,
       _links: links,
@@ -164,6 +185,7 @@ async function scanPage(browser, url, pathPrefix) {
       total_violations: 0,
       distinct_rules: 0,
       violations: [],
+      incomplete: [],
       scan_ms: Date.now() - start,
       error: err.message,
       _links: [],
@@ -204,6 +226,24 @@ function assembleSite(site, pages, crawlComplete) {
 // `checkpoint`, if given, is awaited with a partial site record every
 // CHECKPOINT_EVERY pages so a long crawl survives an interruption.
 async function scanSite(browser, site, crawlEnabled, { maxPages, maxDepth }, checkpoint) {
+  // Fixed-list sites: `"pages": [url, …]` in sites.json scans exactly those
+  // URLs, no crawl. Used for curated sets that span multiple sites (so they
+  // have no single homepage to walk from).
+  if (Array.isArray(site.pages)) {
+    const pages = [];
+    for (const url of site.pages) {
+      const { _links, ...result } = await scanPage(browser, url, null);
+      pages.push(result);
+      if (pages.length > 1) {
+        console.log(
+          `${"".padEnd(12)} └ ${url} … ` +
+            (result.error ? `ERROR (${result.error})` : `${result.tier.toUpperCase().padEnd(6)} ${result.total_violations} issues / ${result.scan_ms}ms`)
+        );
+      }
+    }
+    return assembleSite(site, pages, true);
+  }
+
   const homepage = await scanPage(browser, site.url, site.pathPrefix);
   const { _links: homeLinks, ...homeRest } = homepage;
   const pages = [homeRest];

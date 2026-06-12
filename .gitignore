@@ -2,8 +2,5 @@ node_modules/
 .DS_Store
 *.log
 .claude/
-aging-finder-brief.md
-browserstack-screenshots/
-browserstack/
-skill-audit/
-tool-comparison.md
+# Local working files — anything in internal/ stays out of the repo.
+internal/

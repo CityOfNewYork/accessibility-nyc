@@ -226,6 +226,87 @@
     };
   }
 
+  // Intake for "add this site to the scan" requests. Submissions must not
+  // be publicly readable, so this is a form whose responses only the scan
+  // team can see — not a public issue tracker. The link itself is open so
+  // any agency can submit without a sign-in gate. Empty string hides the
+  // request CTA.
+  const SITE_REQUEST_URL = "https://forms.gle/7f2mSt4bxSt75P8x7";
+
+  // Interpret a search query as a URL, if it looks like one. Accepts bare
+  // hostnames ("finance.nyc.gov/page") by assuming https.
+  function parseQueryUrl(q) {
+    const s = q.trim();
+    if (!/^https?:\/\//i.test(s) && !/^[a-z0-9-]+(\.[a-z0-9-]+)+([/?#]|$)/i.test(s)) return null;
+    try { return new URL(/^https?:\/\//i.test(s) ? s : "https://" + s); } catch { return null; }
+  }
+
+  // Decide which scanned property a URL falls under, if any. Several "sites"
+  // are path-scoped sections of the shared www.nyc.gov host (/site/finance/,
+  // /content/oti/, /main/), so neither the hostname nor the configured entry
+  // URL can disambiguate "scanned site, page not crawled" from "not scanned
+  // at all". The crawled URLs themselves can: index the prefixes the crawl
+  // actually visited (host, host/seg1, host/seg1/seg2) and classify a missed
+  // URL by the deepest prefix it shares with a real crawled page.
+  // Returns { kind: "page-missing", site } | { kind: "unscanned", host } |
+  // null (query isn't URL-shaped).
+  let crawlPrefixes = null;
+  function buildCrawlPrefixes() {
+    const map = new Map(); // prefix -> Set of site names
+    const add = (key, name) => {
+      let set = map.get(key);
+      if (!set) map.set(key, (set = new Set()));
+      set.add(name);
+    };
+    for (const site of data.sites) {
+      for (const p of site.pages || [site]) {
+        let u;
+        try { u = new URL(p.url); } catch { continue; }
+        const host = u.hostname.replace(/^www\./, "").toLowerCase();
+        const segs = u.pathname.toLowerCase().split("/").filter(Boolean);
+        add(host, site.name);
+        // A page at the host root means the whole host is this site's, so a
+        // path-prefix miss there still counts as the site (e.g. any
+        // portal.311.nyc.gov path). Hosts only seen at deeper paths
+        // (finder.nyc.gov/foodhelp/) don't claim sibling apps.
+        if (segs.length === 0) add(host + "//rooted", site.name);
+        if (segs.length >= 1) add(`${host}/${segs[0]}`, site.name);
+        if (segs.length >= 2) add(`${host}/${segs[0]}/${segs[1]}`, site.name);
+      }
+    }
+    return map;
+  }
+
+  function classifySearchedUrl(query) {
+    const u = parseQueryUrl(query);
+    if (!u) return null;
+    if (!crawlPrefixes) crawlPrefixes = buildCrawlPrefixes();
+
+    const host = u.hostname.replace(/^www\./, "").toLowerCase();
+    const segs = u.pathname.toLowerCase().split("/").filter(Boolean);
+    // A prefix identifies a site only when exactly one site crawled under it
+    // (host-level prefixes like www.nyc.gov are shared by several sites).
+    const uniqueSite = (key) => {
+      const set = crawlPrefixes.get(key);
+      if (!set || set.size !== 1) return null;
+      const name = set.values().next().value;
+      return data.sites.find((s) => s.name === name) || null;
+    };
+
+    const site =
+      (segs.length >= 2 && uniqueSite(`${host}/${segs[0]}/${segs[1]}`)) ||
+      (segs.length >= 1 && uniqueSite(`${host}/${segs[0]}`)) ||
+      (crawlPrefixes.has(host + "//rooted") && uniqueSite(host));
+    if (site) return { kind: "page-missing", site };
+
+    // Name the unscanned thing precisely: on a host we do scan parts of,
+    // that's the section (www.nyc.gov/site/hpd); otherwise the host itself.
+    const section = crawlPrefixes.has(host) && segs.length
+      ? `${u.hostname}/${segs.slice(0, 2).join("/")}`
+      : u.hostname;
+    return { kind: "unscanned", host: section };
+  }
+
   // Case-insensitive substring search across pages, sites, rules.
   function searchAll(index, query) {
     const q = query.trim().toLowerCase();
@@ -398,12 +479,51 @@
 
     const totalHits = matches.pages.length + matches.sites.length + matches.rules.length;
     if (totalHits === 0) {
+      // A miss means different things depending on what was searched: a URL
+      // on a scanned site (the crawl just didn't reach that page), a URL on
+      // a property we don't scan at all (offer to request it), or a keyword
+      // that simply matched nothing.
+      const urlMatch = classifySearchedUrl(query);
+
+      if (urlMatch && urlMatch.kind === "page-missing") {
+        const s = urlMatch.site;
+        const nPages = s.pages ? s.pages.length : 1;
+        return el("div", { class: "search-empty" },
+          el("p", { class: "search-empty-title" }, "Page not in the last crawl"),
+          el("p", { class: "search-empty-body" },
+            `This URL is part of ${s.name}, which is scanned (${fmtNum(nPages)} page${nPages === 1 ? "" : "s"} in the last run), ` +
+            `but the crawl didn't reach this page — crawls start at the homepage and are capped at 1,000 pages per site.`
+          ),
+          el("a", { class: "search-empty-cta", href: `?site=${encodeURIComponent(s.name)}` },
+            `View ${s.name} results`)
+        );
+      }
+
+      if (urlMatch && urlMatch.kind === "unscanned") {
+        return el("div", { class: "search-empty" },
+          el("p", { class: "search-empty-title" }, "This site isn't scanned yet"),
+          el("p", { class: "search-empty-body" },
+            `${urlMatch.host} isn't one of the ${data.sites.length} properties currently in the weekly scan.`
+          ),
+          SITE_REQUEST_URL
+            ? el("a", { class: "search-empty-cta", href: SITE_REQUEST_URL, target: "_blank", rel: "noopener" },
+                "Request this site be added")
+            : null
+        );
+      }
+
+      // Keyword misses get the request CTA too: people searching "nypd"
+      // know what they want without knowing the URL.
       return el("div", { class: "search-empty" },
         el("p", { class: "search-empty-title" }, "No scanned page matches"),
         el("p", { class: "search-empty-body" },
           `Nothing matched "${query}" across pages, sites, or rules. ` +
-          `The URL may not have been included in the last crawl (current cap: 1000 pages per site). Try a shorter path or a different keyword.`
-        )
+          `Try a different keyword — or if the site you're looking for isn't in the scan yet, request it.`
+        ),
+        SITE_REQUEST_URL
+          ? el("a", { class: "search-empty-cta", href: SITE_REQUEST_URL, target: "_blank", rel: "noopener" },
+              "Request a site be added")
+          : null
       );
     }
 

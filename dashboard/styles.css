@@ -1245,6 +1245,18 @@ a:focus-visible {
   max-width: 70ch;
   line-height: 1.5;
 }
+.search-empty-cta {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--surface);
+  background: var(--accent);
+  text-decoration: none;
+  border-radius: 2px;
+}
+.search-empty-cta:hover { background: var(--accent-deep); }
 
 /* ---------- per-page detail header tweaks ----------------------------- */
 

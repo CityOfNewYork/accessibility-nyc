@@ -30,10 +30,15 @@
   --tier-error-bg:  #5d6168;
   --tier-error-soft:#e7eaed;
 
-  --imp-critical: #7d0606;
-  --imp-serious:  #b50909;
-  --imp-moderate: #8b5e1a;
-  --imp-minor:    #436b95;
+  /* Severity is a heat ramp with one hot endpoint: critical is the only
+     true red on the dashboard. Serious is rust — still urgent, no longer
+     an alarm. (Red works by scarcity; most of our data is critical/serious,
+     so two reds meant a wall of red.) */
+  --imp-critical:     #7d0606;
+  --imp-serious:      #9c4a06;
+  --imp-serious-soft: #f8e9da;
+  --imp-moderate:     #8b5e1a;
+  --imp-minor:        #436b95;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -260,6 +265,57 @@ a:focus-visible {
   font-variant-numeric: tabular-nums;
 }
 
+/* ---------- findings view toggle (rule / component grouping) ---------- */
+
+/* The findings header is a section-eyebrow with the view toggle living
+   inside the bordered row, so the rule spans the full width and the toggle
+   shares the line instead of hanging past it. The top/bottom margins match
+   the page's section rhythm (detail header 24, methodology 28) — without
+   them the row sits flush against the trend chart above. */
+.findings-head {
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 8px;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+.findings-head .section-eyebrow-sub {
+  margin-left: auto;
+}
+.view-toggle {
+  display: flex;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+.view-toggle-btn {
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 4px 12px;
+  background: var(--surface);
+  color: var(--ink-muted);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.1s ease, color 0.1s ease;
+}
+.view-toggle-btn + .view-toggle-btn {
+  border-left: 1px solid var(--rule);
+}
+.view-toggle-btn:hover {
+  color: var(--accent);
+}
+.view-toggle-btn.is-active {
+  background: var(--ink);
+  color: var(--surface);
+}
+.v-component-name {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
 /* ---------- sites table (overview) ------------------------------------ */
 
 .sites-table-wrap {
@@ -342,7 +398,6 @@ a:focus-visible {
   letter-spacing: 0.01em;
   white-space: nowrap;
   line-height: 1.3;
-  border: 1px solid currentColor;
 }
 .tier-pill::before {
   content: "";
@@ -359,31 +414,29 @@ a:focus-visible {
 
 /* ---------- impact chip (overview impact-by-severity) ----------------- */
 
+/* Mirrors the detail-card severity treatment: critical is the one filled
+   element; the rest are tints with dark same-hue text. */
 .impact-chip {
   display: inline-flex;
   align-items: baseline;
   gap: 5px;
-  padding: 2px 7px;
+  padding: 2px 8px;
   border-radius: 2px;
   font-size: 12px;
   font-weight: 600;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
-  border: 1px solid currentColor;
-  background: var(--surface);
   line-height: 1.3;
 }
 .impact-chip .lbl {
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
 }
-.impact-chip.imp-critical { color: var(--imp-critical); }
-.impact-chip.imp-serious  { color: var(--imp-serious); }
-.impact-chip.imp-moderate { color: var(--imp-moderate); }
-.impact-chip.imp-minor    { color: var(--imp-minor); }
-.impact-chip.imp-none     { color: var(--ink-subtle); border-style: dashed; }
+.impact-chip.imp-critical { background: var(--imp-critical);   color: var(--surface); }
+.impact-chip.imp-serious  { background: var(--imp-serious-soft); color: var(--imp-serious); }
+.impact-chip.imp-moderate { background: var(--tier-amber-soft); color: var(--imp-moderate); }
+.impact-chip.imp-minor    { background: var(--accent-soft);     color: var(--imp-minor); }
+.impact-chip.imp-none     { background: var(--surface-3);       color: var(--ink-subtle); }
 
 /* ---------- per-site detail header ------------------------------------ */
 
@@ -502,23 +555,23 @@ a:focus-visible {
   border-bottom: 1px solid var(--rule);
 }
 
+/* Critical keeps the filled treatment — the single loudest element on the
+   page is reserved for the worst severity. Everything below it is a tint
+   with dark text of the same hue (all pairs hold WCAG AA at this size). */
 .v-impact {
-  font-size: 10.5px;
+  font-size: 11.5px;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
   padding: 4px 8px;
   border-radius: 2px;
-  color: var(--surface);
   white-space: nowrap;
   text-align: center;
   align-self: start;
   margin-top: 2px;
 }
-.v-impact.imp-critical { background: var(--imp-critical); }
-.v-impact.imp-serious  { background: var(--imp-serious); }
-.v-impact.imp-moderate { background: var(--imp-moderate); }
-.v-impact.imp-minor    { background: var(--imp-minor); }
+.v-impact.imp-critical { background: var(--imp-critical); color: var(--surface); }
+.v-impact.imp-serious  { background: var(--imp-serious-soft); color: var(--imp-serious); }
+.v-impact.imp-moderate { background: var(--tier-amber-soft); color: var(--imp-moderate); }
+.v-impact.imp-minor    { background: var(--accent-soft);     color: var(--imp-minor); }
 
 .v-headline {
   display: flex;
@@ -547,35 +600,33 @@ a:focus-visible {
   flex-wrap: wrap;
   align-items: center;
 }
+/* Meta chips: one emphasis device each — a tint, no border. The rule id
+   keeps mono (it is code); the rest are UI metadata and read in sans. */
 .v-rule-id {
   font-family: var(--font-mono);
   font-weight: 500;
   color: var(--ink);
   background: var(--surface-3);
-  padding: 1px 7px;
+  padding: 2px 8px;
   border-radius: 2px;
   font-size: 11.5px;
-  border: 1px solid var(--rule);
 }
 .v-wcag {
-  font-family: var(--font-mono);
   font-size: 11.5px;
-  padding: 1px 7px;
+  padding: 2px 8px;
   border-radius: 2px;
   background: var(--accent-soft);
   color: var(--accent-deep);
   font-weight: 600;
-  border: 1px solid var(--accent-soft);
 }
 
 .v-pages-badge {
   font-size: 11.5px;
-  padding: 1px 7px;
+  padding: 2px 8px;
   border-radius: 2px;
   background: var(--surface-3);
   color: var(--ink-muted);
   font-weight: 600;
-  border: 1px solid var(--rule);
 }
 
 .v-count {
@@ -591,10 +642,55 @@ a:focus-visible {
   font-size: 14px;
 }
 
+/* 100%-stacked distribution bar above the findings list. Segment widths are
+   flex-grow proportions (no percentage math vs. the 2px gaps); colors are
+   the solid severity palette, as on the trend chart. */
+.dist-bar {
+  display: flex;
+  gap: 2px;
+  height: 26px;
+  margin: 0 0 16px;
+}
+.dist-seg {
+  border: 0;
+  padding: 0;
+  min-width: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 1px;
+}
+.dist-seg:hover,
+.dist-seg:focus-visible { filter: brightness(0.96); }
+.dist-seg-label {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 500;
+  color: inherit;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 7px;
+}
+/* The bar's message is size (how much one fix clears); severity rides along
+   as a tint + thin baseline instead of solid fill — solid severity fills made
+   the bar the most saturated element on the page. */
+.dist-seg.seg-critical { background: var(--tier-red-soft);    color: var(--imp-critical); border-bottom: 3px solid var(--imp-critical); }
+.dist-seg.seg-serious  { background: var(--imp-serious-soft); color: var(--imp-serious);  border-bottom: 3px solid var(--imp-serious); }
+.dist-seg.seg-moderate { background: var(--tier-amber-soft);  color: var(--imp-moderate); border-bottom: 3px solid var(--imp-moderate); }
+.dist-seg.seg-minor    { background: var(--accent-soft);      color: var(--imp-minor);    border-bottom: 3px solid var(--imp-minor); }
+.dist-seg.seg-other    { background: var(--surface-3);        border-bottom: 3px solid var(--rule); cursor: default; }
+
 .v-body {
   padding: 18px 20px 22px;
   background: var(--surface);
   display: grid;
+  /* minmax(0, …) caps the track at the card width; without it, long nowrap
+     page labels push the auto track to their min-content width and the whole
+     body spills out of the card */
+  grid-template-columns: minmax(0, 1fr);
   gap: 14px;
 }
 .v-fix {
@@ -659,7 +755,6 @@ a:focus-visible {
 /* plain-language explanation (content from rule-info.js) */
 .v-plain {
   background: var(--surface-2);
-  border: 1px solid var(--rule);
   border-left: 3px solid var(--accent);
   padding: 13px 18px;
   display: grid;
@@ -673,9 +768,7 @@ a:focus-visible {
   align-items: baseline;
 }
 .v-plain-tag {
-  font-size: 10.5px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-size: 12px;
   font-weight: 700;
   color: var(--accent);
 }
@@ -685,10 +778,11 @@ a:focus-visible {
   color: var(--ink);
 }
 
+/* Sentence case: section eyebrows are the one uppercase-letterspaced level
+   on the page; repeating that treatment on every card label is what made
+   the old layout read as shouting. */
 .v-occurrences-label {
-  font-size: 10.5px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-size: 12px;
   color: var(--ink-muted);
   font-weight: 700;
   margin: 0;
@@ -748,13 +842,12 @@ a:focus-visible {
   align-items: baseline;
   gap: 16px;
   padding: 9px 14px;
-  background: var(--surface-3);
   cursor: pointer;
   list-style: none;
 }
 .v-page-header::-webkit-details-marker { display: none; }
 .v-page-header::marker { content: ""; }
-.v-page-header:hover { background: var(--surface-2); }
+.v-page-header:hover { background: var(--surface-3); }
 .v-page-group[open] > .v-page-header { border-bottom: 1px solid var(--rule); }
 .v-page-label {
   flex: 1 1 0;
@@ -776,10 +869,10 @@ a:focus-visible {
 .v-page-group[open] .v-page-label::before { content: "▾"; }
 .v-page-meta {
   flex: 0 0 auto;
-  font-family: var(--font-mono);
-  font-size: 11.5px;
+  font-size: 12px;
   color: var(--ink-muted);
   white-space: nowrap;
+  font-variant-numeric: tabular-nums;
 }
 .v-page-meta a {
   color: var(--ink-muted);

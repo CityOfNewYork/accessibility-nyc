@@ -527,13 +527,13 @@
     return `rule-${ruleId}`;
   }
 
-  function permalinkButton(ruleId) {
+  function permalinkButton(domId) {
     return el("button", {
       type: "button",
       class: "v-permalink",
       title: "Copy a direct link to this finding — paste into a ticket",
       onclick: (e) => {
-        const url = `${location.origin}${location.pathname}${location.search}#${findingDomId(ruleId)}`;
+        const url = `${location.origin}${location.pathname}${location.search}#${domId}`;
         copyToClipboard(url, e.currentTarget);
       },
     }, "Copy link");
@@ -652,7 +652,7 @@
   // Collapse violations across all pages by rule id. The same rule firing on
   // 10 pages is one finding ("appears on 10 of 11 pages"), not 10 problems —
   // this is what makes the count read honestly.
-  function renderGroupedByRule(pages, totalPages) {
+  function groupByRule(pages) {
     const byRule = new Map();
     pages.forEach((p, i) => {
       // App-driven scans (scan-finders.mjs) supply a human label per
@@ -670,14 +670,16 @@
     });
 
     const order = { critical: 0, serious: 1, moderate: 2, minor: 3 };
-    const groups = [...byRule.values()].sort((a, b) => {
+    return [...byRule.values()].sort((a, b) => {
       const oa = order[a.v.impact] ?? 99, ob = order[b.v.impact] ?? 99;
       if (oa !== ob) return oa - ob;
       return b.total - a.total;
     });
+  }
 
+  function renderGroupedByRule(pages, totalPages) {
     return el("div", { class: "violations-list" },
-      groups.map((g) => renderRuleGroup(g, totalPages))
+      groupByRule(pages).map((g) => renderRuleGroup(g, totalPages))
     );
   }
 
@@ -746,13 +748,225 @@
             "How to fix",
             el("span", { class: "v-fix-arrow" }, "→")
           ),
-          permalinkButton(v.id)
+          permalinkButton(findingDomId(v.id))
         ),
         el("p", { class: "v-occurrences-label" },
           `Affected page${nPages === 1 ? "" : "s"} (${nPages})`
         ),
         el("div", { class: "v-page-groups" }, pageItems)
       )
+    );
+  }
+
+  // ---- component grouping (experimental) ------------------------------------
+
+  // Identify the code component an occurrence lives in. nyc.gov's new CMS (AEM)
+  // marks every component with a `cmp-*` class, so that class IS the component
+  // name when present. Otherwise fall back to tag + sorted classes. Coarse on
+  // purpose: a bare tag with no classes can merge distinct defects into one
+  // group — acceptable for an experiment in remediation-sized grouping, where
+  // one group usually maps to one template-level fix.
+  function componentFingerprint(html) {
+    const cmp = String(html).match(/cmp-[a-z0-9_-]+/i);
+    if (cmp) return cmp[0];
+    const tag = (String(html).match(/^<([a-z0-9-]+)/i) || [, "element"])[1].toLowerCase();
+    const cls = (String(html).match(/class="([^"]*)"/) || [, ""])[1]
+      .split(/\s+/).filter(Boolean).sort().slice(0, 3);
+    return cls.length ? `${tag}.${cls.join(".")}` : `<${tag}>`;
+  }
+
+  // Cluster every occurrence across all pages by (rule × component fingerprint).
+  // The same failing search button on 800 pages is one component, not 800
+  // problems — the component is the unit of fixing, the way a rule is the unit
+  // of understanding.
+  function groupByComponent(pages) {
+    const byComponent = new Map();
+    pages.forEach((p, i) => {
+      const label = p.label || pageLabel(p.url, i === 0);
+      for (const v of p.violations || []) {
+        for (const n of v.nodes || []) {
+          const component = componentFingerprint(n.html);
+          const key = `${v.id}|${component}`;
+          let g = byComponent.get(key);
+          if (!g) {
+            g = { v, component, key, total: 0, pages: new Map() };
+            byComponent.set(key, g);
+          }
+          g.total++;
+          let pg = g.pages.get(p.url);
+          if (!pg) {
+            pg = { url: p.url, label, count: 0, nodes: [] };
+            g.pages.set(p.url, pg);
+          }
+          pg.count++;
+          pg.nodes.push(n);
+        }
+      }
+    });
+
+    const order = { critical: 0, serious: 1, moderate: 2, minor: 3 };
+    return [...byComponent.values()]
+      .map((g) => ({ ...g, pages: [...g.pages.values()] }))
+      .sort((a, b) => {
+        const oa = order[a.v.impact] ?? 99, ob = order[b.v.impact] ?? 99;
+        if (oa !== ob) return oa - ob;
+        return b.total - a.total;
+      });
+  }
+
+  function componentDomId(key) {
+    return "component-" + key.replace(/[^a-z0-9-]+/gi, "-").replace(/^-+|-+$/g, "");
+  }
+
+  function renderGroupedByComponent(pages, totalPages) {
+    return el("div", { class: "violations-list" },
+      groupByComponent(pages).map((g) => renderComponentGroup(g, totalPages))
+    );
+  }
+
+  // One 100%-stacked bar above the findings list: each segment is one
+  // finding's share of all occurrences on the site, colored by severity and
+  // ordered like the list below (severity, then size). Clicking a segment
+  // opens and scrolls to its card. Slivers under 1% pool into a gray tail
+  // so the bar stays readable.
+  function distributionBar(items) {
+    const total = items.reduce((s, it) => s + it.count, 0);
+    if (!total || items.length < 2) return null;
+
+    const segs = items.filter((it) => (it.count / total) * 100 >= 1);
+    const rest = items.length - segs.length;
+    const restCount = total - segs.reduce((s, it) => s + it.count, 0);
+
+    const nodes = segs.map((it) => {
+      const pct = Math.round((it.count / total) * 100);
+      const detail = `${it.label} — ${fmtNum(it.count)} occurrence${it.count === 1 ? "" : "s"} (${pct}%)`;
+      return el("button", {
+        type: "button",
+        class: `dist-seg seg-${it.impact}`,
+        style: `flex: ${it.count} 1 0`,
+        title: detail,
+        "aria-label": `${detail}. Jump to finding.`,
+        onclick: () => {
+          const target = document.getElementById(it.domId);
+          if (!target) return;
+          target.open = true;
+          target.scrollIntoView({ block: "start", behavior: "smooth" });
+          target.classList.add("is-link-target");
+          setTimeout(() => target.classList.remove("is-link-target"), 2000);
+        },
+      },
+        pct >= 9 ? el("span", { class: "dist-seg-label" }, `${it.label} · ${pct}%`) : null
+      );
+    });
+
+    if (restCount > 0) {
+      nodes.push(el("div", {
+        class: "dist-seg seg-other",
+        style: `flex: ${restCount} 1 0`,
+        title: `${rest} smaller finding${rest === 1 ? "" : "s"} — ${fmtNum(restCount)} occurrences (${Math.round((restCount / total) * 100)}%)`,
+      }));
+    }
+
+    return el("div", {
+      class: "dist-bar",
+      role: "group",
+      "aria-label": "Each finding's share of all occurrences on this site",
+    }, nodes);
+  }
+
+  function renderComponentGroup(g, totalPages) {
+    const v = g.v;
+    const wcagTag = v.tags.find((t) => /^wcag\d{2,3}$/.test(t));
+    const wcagLabel = wcagTag
+      ? "WCAG " + wcagTag.replace("wcag", "").split("").join(".")
+      : null;
+    const nPages = g.pages.length;
+    const domId = componentDomId(g.key);
+
+    const showFailure = !sharedFailureSummary(g.pages.flatMap((p) => p.nodes || []));
+
+    const NODE_LIMIT_PER_PAGE = 5;
+    const pageItems = g.pages.map((p) => {
+      const shown = (p.nodes || []).slice(0, NODE_LIMIT_PER_PAGE);
+      const remaining = (p.nodes || []).length - shown.length;
+      return el("details", { class: "v-page-group" },
+        el("summary", { class: "v-page-header" },
+          el("div", { class: "v-page-label", title: p.label }, p.label),
+          el("div", { class: "v-page-meta" },
+            `${fmtNum(p.count)} occurrence${p.count === 1 ? "" : "s"} · `,
+            el("a", { href: p.url, target: "_blank", rel: "noopener",
+              title: p.url, onclick: (e) => e.stopPropagation() }, "Open ↗")
+          )
+        ),
+        el("ul", { class: "v-nodes" },
+          shown.map((n) => renderNode(n, p.url, showFailure)),
+          remaining > 0
+            ? el("li", { class: "v-nodes-more" },
+                `+ ${fmtNum(remaining)} more occurrence${remaining === 1 ? "" : "s"} on this page`)
+            : null
+        )
+      );
+    });
+
+    return el("details", { class: "violation", id: domId },
+      el("summary", {},
+        el("span", { class: `v-impact imp-${v.impact}` }, v.impact),
+        el("div", { class: "v-headline" },
+          el("p", { class: "v-help" },
+            el("code", { class: "v-component-name" }, g.component)
+          ),
+          el("p", { class: "v-explain" }, v.help),
+          el("div", { class: "v-meta" },
+            el("span", { class: "v-rule-id" }, v.id),
+            wcagLabel ? el("span", { class: "v-wcag" }, wcagLabel) : null,
+            el("span", { class: "v-pages-badge" },
+              `on ${nPages} of ${totalPages} page${totalPages === 1 ? "" : "s"}`)
+          )
+        ),
+        el("div", { class: "v-count" },
+          el("strong", {}, fmtNum(g.total)), " ",
+          g.total === 1 ? "occurrence" : "occurrences"
+        )
+      ),
+      el("div", { class: "v-body" },
+        explanationBlock(v.id),
+        el("div", { class: "v-actions-row" },
+          el("a", { class: "v-fix", href: v.helpUrl, target: "_blank", rel: "noopener" },
+            "How to fix",
+            el("span", { class: "v-fix-arrow" }, "→")
+          ),
+          permalinkButton(domId)
+        ),
+        el("p", { class: "v-occurrences-label" },
+          `Affected page${nPages === 1 ? "" : "s"} (${nPages})`
+        ),
+        el("div", { class: "v-page-groups" }, pageItems)
+      )
+    );
+  }
+
+  // The rule view answers "what's wrong"; the component view answers "what do
+  // we fix". Both render the same occurrences — only the grouping differs.
+  function viewToggle(siteName, view) {
+    // In-place switch: pushState + re-render rather than a navigation, so the
+    // page doesn't reload. Real hrefs are kept for middle-click / copy-link,
+    // and popstate (back/forward) re-routes.
+    const mk = (val, label) => el("a", {
+      class: "view-toggle-btn" + (view === val ? " is-active" : ""),
+      href: `?site=${encodeURIComponent(siteName)}` + (val === "components" ? "&view=components" : ""),
+      "aria-current": view === val ? "page" : null,
+      onclick: (e) => {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+        e.preventDefault();
+        if (view === val) return;
+        history.pushState(null, "", e.currentTarget.getAttribute("href"));
+        route();
+        announce(label === "By rule" ? "Findings grouped by rule" : "Findings grouped by component");
+      },
+    }, label);
+    return el("nav", { class: "view-toggle", "aria-label": "Group findings" },
+      mk("rules", "By rule"),
+      mk("components", "By component")
     );
   }
 
@@ -769,11 +983,15 @@
       return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
     });
     const severities = ["critical", "serious", "moderate", "minor"];
+    // Lines carry the data; fills are whispers. Saturated area fill was the
+    // single biggest mass of red on the page and encoded nothing the lines
+    // don't. Serious is rust (matches --imp-serious) — critical is the only
+    // true red on the dashboard.
     const colors = {
-      critical: { line: "rgb(125, 6, 6)",   fill: "rgba(125, 6, 6, 0.15)" },
-      serious:  { line: "rgb(181, 9, 9)",   fill: "rgba(181, 9, 9, 0.15)" },
-      moderate: { line: "rgb(139, 94, 26)", fill: "rgba(139, 94, 26, 0.12)" },
-      minor:    { line: "rgb(67, 107, 149)", fill: "rgba(67, 107, 149, 0.10)" },
+      critical: { line: "rgb(125, 6, 6)",    fill: "rgba(125, 6, 6, 0.07)" },
+      serious:  { line: "rgb(156, 74, 6)",   fill: "rgba(156, 74, 6, 0.07)" },
+      moderate: { line: "rgb(139, 94, 26)",  fill: "rgba(139, 94, 26, 0.06)" },
+      minor:    { line: "rgb(67, 107, 149)", fill: "rgba(67, 107, 149, 0.05)" },
     };
     const datasets = severities.map((sev) => ({
       label: sev.charAt(0).toUpperCase() + sev.slice(1),
@@ -886,16 +1104,41 @@
       return;
     }
 
-    const findingsLabel = numPages > 1
+    const view = new URLSearchParams(location.search).get("view") === "components"
+      ? "components" : "rules";
+
+    const findingsLabel = view === "components"
+      ? (() => {
+          const groups = groupByComponent(pages);
+          const critical = groups.filter((g) => g.v.impact === "critical").length;
+          return `${groups.length} component${groups.length === 1 ? "" : "s"}` +
+            (critical ? ` · ${critical} with critical issues` : "") +
+            ` · ${fmtNum(site.total_violations)} occurrence${site.total_violations === 1 ? "" : "s"}`;
+        })()
+      : numPages > 1
       ? `${site.distinct_rules} rule${site.distinct_rules === 1 ? "" : "s"} failed across ${numPages} pages · ${fmtNum(site.total_violations)} occurrence${site.total_violations === 1 ? "" : "s"}`
       : `${allViolations.length} rule${allViolations.length === 1 ? "" : "s"} failed · ${fmtNum(site.total_violations)} occurrence${site.total_violations === 1 ? "" : "s"}`;
 
     const historyChart = renderHistoryChart(site.name);
     const children = [back, header, methodologyCallout(false)];
     if (historyChart) children.push(historyChart);
-    children.push(sectionEyebrow("Findings", findingsLabel));
+    children.push(el("div", { class: "section-eyebrow findings-head" },
+      el("h2", { class: "section-eyebrow-title" }, "Findings"),
+      el("p", { class: "section-eyebrow-sub" }, findingsLabel),
+      viewToggle(site.name, view)
+    ));
 
-    if (numPages > 1) {
+    if (view === "components") {
+      const groups = groupByComponent(pages);
+      children.push(distributionBar(groups.map((g) => ({
+        domId: componentDomId(g.key), label: g.component, impact: g.v.impact, count: g.total,
+      }))));
+      children.push(renderGroupedByComponent(pages, numPages));
+    } else if (numPages > 1) {
+      const groups = groupByRule(pages);
+      children.push(distributionBar(groups.map((g) => ({
+        domId: findingDomId(g.v.id), label: g.v.id, impact: g.v.impact, count: g.total,
+      }))));
       children.push(renderGroupedByRule(pages, numPages));
     } else {
       const order = { critical: 0, serious: 1, moderate: 2, minor: 3 };
@@ -904,10 +1147,14 @@
         if (oa !== ob) return oa - ob;
         return b.nodes.length - a.nodes.length;
       });
+      children.push(distributionBar(sorted.map((v) => ({
+        domId: findingDomId(v.id), label: v.id, impact: v.impact, count: v.nodes.length,
+      }))));
       children.push(el("div", { class: "violations-list" }, sorted.map((v) => renderViolation(v, site.url))));
     }
 
-    app.replaceChildren(...children);
+    // distributionBar returns null when there's nothing worth charting
+    app.replaceChildren(...children.filter(Boolean));
   }
 
   function renderViolation(v, pageUrl) {
@@ -948,7 +1195,7 @@
             "How to fix",
             el("span", { class: "v-fix-arrow" }, "→")
           ),
-          permalinkButton(v.id)
+          permalinkButton(findingDomId(v.id))
         ),
         el("p", { class: "v-occurrences-label" },
           v.nodes.length === 1 ? "Occurrence" : `Occurrences (${fmtNum(Math.min(v.nodes.length, 10))} of ${fmtNum(v.nodes.length)})`
@@ -1050,15 +1297,20 @@
 
   footerMeta.textContent = `Engine: ${data.engine} · Target: ${data.wcag_target} · Last scan: ${fmtDate(data.scanned_at)}`;
 
-  const params = new URLSearchParams(location.search);
-  const pageParam = params.get("page");
-  const siteParam = params.get("site");
-  // Detail/page views are text-heavy (findings, explanations) and read better
-  // at a tighter measure; the overview keeps the full width for its wide table.
-  app.classList.toggle("page-narrow", !!(pageParam || siteParam));
-  if (pageParam) renderPageDetail(pageParam);
-  else if (siteParam) renderDetail(siteParam);
-  else renderOverview();
+  function route() {
+    const params = new URLSearchParams(location.search);
+    const pageParam = params.get("page");
+    const siteParam = params.get("site");
+    // Detail/page views are text-heavy (findings, explanations) and read better
+    // at a tighter measure; the overview keeps the full width for its wide table.
+    app.classList.toggle("page-narrow", !!(pageParam || siteParam));
+    if (pageParam) renderPageDetail(pageParam);
+    else if (siteParam) renderDetail(siteParam);
+    else renderOverview();
+  }
+
+  route();
+  window.addEventListener("popstate", route);
 
   applyHashTarget();
   window.addEventListener("hashchange", applyHashTarget);

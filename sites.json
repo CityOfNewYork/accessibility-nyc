@@ -10,6 +10,13 @@
   { "name": "Aging Activities Finder", "url": "https://dftavirtualprogramfinder.cityofnewyork.us/", "app": true },
   { "name": "DOE School Search", "url": "https://schoolsearch.schools.nyc/", "app": true },
   { "name": "Food Help Finder", "url": "https://finder.nyc.gov/foodhelp/", "app": true },
+  { "name": "Accessibility Scanner", "url": "https://cityofnewyork.github.io/accessibility-nyc/", "pages": [
+    "https://cityofnewyork.github.io/accessibility-nyc/",
+    "https://cityofnewyork.github.io/accessibility-nyc/?site=OTI",
+    "https://cityofnewyork.github.io/accessibility-nyc/?site=OTI&view=components",
+    "https://cityofnewyork.github.io/accessibility-nyc/?site=OTI&view=pages",
+    "https://cityofnewyork.github.io/accessibility-nyc/?page=https%3A%2F%2Fwww.nyc.gov%2Fcontent%2Foti%2Fpages%2Fhome"
+  ] },
   { "name": "Golden Set", "url": "https://www.nyc.gov", "pages": [
     "https://www.nyc.gov",
     "https://www.nyc.gov/main/events",

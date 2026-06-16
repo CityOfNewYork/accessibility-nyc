@@ -2101,5 +2101,25 @@
         "count": 1
       }
     ]
+  },
+  {
+    "date": "2026-06-16T18:40:42.957Z",
+    "site": "Accessibility Scanner",
+    "pages": 1,
+    "crawlComplete": true,
+    "rules": []
+  },
+  {
+    "date": "2026-06-16T18:53:28.534Z",
+    "site": "Accessibility Scanner",
+    "pages": 5,
+    "crawlComplete": true,
+    "rules": [
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "count": 12
+      }
+    ]
   }
 ]

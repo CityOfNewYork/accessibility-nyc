@@ -666,11 +666,8 @@ a:focus-visible {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  cursor: pointer;
   border-radius: 1px;
 }
-.dist-seg:hover,
-.dist-seg:focus-visible { filter: brightness(0.96); }
 .dist-seg-label {
   font-family: var(--font-mono);
   font-size: 10.5px;

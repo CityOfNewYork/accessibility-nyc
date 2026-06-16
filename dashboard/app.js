@@ -154,8 +154,11 @@
   function pageLabel(url, isHome) {
     if (isHome) return "Homepage";
     try {
-      const p = new URL(url).pathname.replace(/\/$/, "");
-      return p || "/";
+      const u = new URL(url);
+      const path = u.pathname.replace(/\/$/, "") || "/";
+      // Keep the query string: SPA routes (and some server pages) differ only
+      // by it, so dropping it collapses distinct pages to identical labels.
+      return path + u.search;
     } catch { return url; }
   }
 
@@ -968,20 +971,13 @@
     const nodes = segs.map((it) => {
       const pct = Math.round((it.count / total) * 100);
       const detail = `${it.label} — ${fmtNum(it.count)} occurrence${it.count === 1 ? "" : "s"} (${pct}%)`;
-      return el("button", {
-        type: "button",
+      // Visualization only, not a control: proportional segments are routinely
+      // narrower than the 24px minimum target size (WCAG 2.5.8). The findings
+      // list below is the equivalent, full-size way to reach each finding.
+      return el("div", {
         class: `dist-seg seg-${it.impact}`,
         style: `flex: ${it.count} 1 0`,
         title: detail,
-        "aria-label": `${detail}. Jump to finding.`,
-        onclick: () => {
-          const target = document.getElementById(it.domId);
-          if (!target) return;
-          target.open = true;
-          target.scrollIntoView({ block: "start", behavior: "smooth" });
-          target.classList.add("is-link-target");
-          setTimeout(() => target.classList.remove("is-link-target"), 2000);
-        },
       },
         pct >= 9 ? el("span", { class: "dist-seg-label" }, `${it.label} · ${pct}%`) : null
       );

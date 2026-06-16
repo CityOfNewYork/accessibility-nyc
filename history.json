@@ -2023,5 +2023,83 @@
         "count": 4
       }
     ]
+  },
+  {
+    "date": "2026-06-16T13:46:08.946Z",
+    "site": "Golden Set",
+    "pages": 16,
+    "crawlComplete": true,
+    "rules": [
+      {
+        "id": "aria-required-attr",
+        "impact": "critical",
+        "count": 5
+      },
+      {
+        "id": "image-alt",
+        "impact": "critical",
+        "count": 5
+      },
+      {
+        "id": "aria-hidden-focus",
+        "impact": "serious",
+        "count": 6
+      },
+      {
+        "id": "link-name",
+        "impact": "serious",
+        "count": 3
+      },
+      {
+        "id": "list",
+        "impact": "serious",
+        "count": 8
+      },
+      {
+        "id": "select-name",
+        "impact": "critical",
+        "count": 2
+      },
+      {
+        "id": "aria-prohibited-attr",
+        "impact": "serious",
+        "count": 9
+      },
+      {
+        "id": "button-name",
+        "impact": "critical",
+        "count": 8
+      },
+      {
+        "id": "meta-viewport",
+        "impact": "moderate",
+        "count": 1
+      },
+      {
+        "id": "frame-title",
+        "impact": "serious",
+        "count": 1
+      },
+      {
+        "id": "label",
+        "impact": "critical",
+        "count": 1
+      },
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "count": 27
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 10
+      },
+      {
+        "id": "nested-interactive",
+        "impact": "serious",
+        "count": 1
+      }
+    ]
   }
 ]

@@ -2658,5 +2658,58 @@
         "count": 1
       }
     ]
+  },
+  {
+    "date": "2026-06-22T22:35:48.892Z",
+    "site": "OTI",
+    "pages": 40,
+    "crawlComplete": false,
+    "rules": [
+      {
+        "id": "role-img-alt",
+        "impact": "serious",
+        "count": 46
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 22
+      },
+      {
+        "id": "aria-prohibited-attr",
+        "impact": "serious",
+        "count": 10
+      },
+      {
+        "id": "button-name",
+        "impact": "critical",
+        "count": 11
+      },
+      {
+        "id": "frame-title",
+        "impact": "serious",
+        "count": 5
+      },
+      {
+        "id": "link-name",
+        "impact": "serious",
+        "count": 2
+      },
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "count": 1
+      },
+      {
+        "id": "list",
+        "impact": "serious",
+        "count": 1
+      },
+      {
+        "id": "aria-allowed-attr",
+        "impact": "critical",
+        "count": 1
+      }
+    ]
   }
 ]

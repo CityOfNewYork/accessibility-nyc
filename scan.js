@@ -29,6 +29,30 @@ const CHECKPOINT_EVERY = 25;
 // same page a real user would see.
 let USER_AGENT = null;
 
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+// Transient Puppeteer/axe failures that mean "the frame tree moved under us
+// mid-run" rather than "this page is broken." Pages that inject third-party
+// tracking iframes (mPulse/boomerang, Facebook Pixel, etc.) attach and detach
+// frames after networkidle2, so axe's per-frame injection can lose the race on
+// the first pass and throw — a retry once the frames settle succeeds. Matched
+// against err.message to decide whether scanPage retries instead of erroring.
+const TRANSIENT_FRAME_ERROR =
+  /not ready|detached|Execution context was destroyed|Target closed|frame got detached|Cannot find context/i;
+
+// Run axe against a settled page, retrying when a third-party frame detaches
+// mid-injection. Each retry waits a beat for the frame tree to settle first.
+async function analyzeWithRetry(page, attempts = 3) {
+  for (let attempt = 1; ; attempt++) {
+    try {
+      return await new AxePuppeteer(page).withTags(WCAG_TAGS).analyze();
+    } catch (err) {
+      if (attempt >= attempts || !TRANSIENT_FRAME_ERROR.test(err.message)) throw err;
+      await sleep(750 * attempt);
+    }
+  }
+}
+
 // Query/hash-stripped href — the identity the crawl de-dupes pages on, so a
 // page reachable by several URLs (or via the post-redirect homepage URL) is
 // scanned exactly once.
@@ -158,7 +182,7 @@ async function scanPage(browser, url, pathPrefix) {
       throw new Error(`HTTP ${status}`);
     }
 
-    const result = await new AxePuppeteer(page).withTags(WCAG_TAGS).analyze();
+    const result = await analyzeWithRetry(page);
     const violations = slimViolations(result.violations);
     const counts = countByImpact(result.violations);
     const links = await sameOriginLinks(page, page.url(), pathPrefix);

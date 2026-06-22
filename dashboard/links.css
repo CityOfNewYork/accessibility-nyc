@@ -1,0 +1,112 @@
+/* links.css — styles for the link-health shadow dashboard (links.html).
+   Reuses the design tokens and several components from styles.css; only the
+   link-row list is bespoke. Goal: one scannable line per link, no spillover. */
+
+/* Overview table: lighten the zero cells, right-align counts. */
+.lh-num { text-align: right; font-variant-numeric: tabular-nums; }
+.lh-zero { color: var(--ink-subtle); }
+.lh-total { text-align: right; color: var(--ink-muted); font-variant-numeric: tabular-nums; }
+
+.lh-note {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink-muted);
+  margin: 14px 0 22px;
+  max-width: 70ch;
+}
+
+/* Each lane (Broken / Needs review) is a bordered list; one item per link. */
+.lh-list {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  border: 1px solid var(--rule);
+  background: var(--surface);
+}
+.lh-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--rule);
+}
+.lh-item:last-child { border-bottom: none; }
+
+/* Top line: status pill · truncated URL (ellipsis, never wraps) · kind. */
+.lh-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.lh-url {
+  flex: 1 1 0;
+  min-width: 0;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.lh-url a { color: var(--ink); text-decoration: none; }
+.lh-url a:hover { text-decoration: underline; }
+.lh-kind {
+  flex: 0 0 auto;
+  font-size: 11px;
+  color: var(--ink-subtle);
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
+}
+.lh-via {
+  flex: 0 0 auto;
+  font-size: 10.5px;
+  color: var(--ink-subtle);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 1px 5px;
+}
+
+.lh-text {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--ink-muted);
+  overflow-wrap: anywhere;
+}
+.lh-redirect {
+  margin: 3px 0 0;
+  font-size: 12px;
+  color: var(--ink-subtle);
+  font-family: var(--font-mono);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* "Linked from N pages" — collapsed by default (mirrors the a11y dashboard's
+   <details> occurrence pattern) so a 25-page footer link is one quiet line. */
+.lh-sources { margin-top: 6px; }
+.lh-sources > summary {
+  list-style: none;
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--ink-muted);
+}
+.lh-sources > summary::-webkit-details-marker { display: none; }
+.lh-sources > summary::before {
+  content: "▸";
+  display: inline-block;
+  width: 0.9em;
+  font-size: 9px;
+  color: var(--ink-subtle);
+}
+.lh-sources[open] > summary::before { content: "▾"; }
+.lh-sources ul {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+}
+.lh-sources li {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+.lh-sources li a { color: var(--ink-muted); text-decoration: none; }
+.lh-sources li a:hover { text-decoration: underline; color: var(--ink); }
+.lh-sources-more { color: var(--ink-subtle); font-style: italic; }

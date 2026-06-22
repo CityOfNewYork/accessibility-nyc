@@ -6,6 +6,7 @@
 //   node scan.js --no-crawl      # homepage only for every site (fast smoke test)
 //   node scan.js --max-pages=25  # cap pages per crawled site (default 1000)
 //   node scan.js --max-depth=3   # cap link-hops from the homepage (default 5)
+//   node scan.js --collect-links # also write link-manifest.json (for check-links.mjs)
 //
 // Output: results.js (a JS file that assigns window.SCAN_DATA = {...})
 //   We use a JS file rather than JSON so the dashboard works on file:// without a server.
@@ -28,6 +29,23 @@ const CHECKPOINT_EVERY = 25;
 // blocked response to the default headless UA; a standard UA gives the scan the
 // same page a real user would see.
 let USER_AGENT = null;
+
+// Set in main() from --collect-links. When on, every page's full set of links
+// (internal, external, and binary/document) is captured into LINK_MANIFEST for
+// the broken-link checker (check-links.mjs). This is purely additive: the
+// accessibility results written to results.js / results.json are unchanged.
+let COLLECT_LINKS = false;
+// site name -> [{ url, links: [{ href, text, kind }] }], built during a
+// --collect-links run and written to link-manifest.json at the end.
+const LINK_MANIFEST = new Map();
+
+// Record a page's full link inventory into the manifest. No-op unless
+// --collect-links is set (the _allLinks arrays are empty otherwise anyway).
+function recordLinks(siteName, pageUrl, links) {
+  if (!COLLECT_LINKS) return;
+  if (!LINK_MANIFEST.has(siteName)) LINK_MANIFEST.set(siteName, []);
+  LINK_MANIFEST.get(siteName).push({ url: pageUrl, links });
+}
 
 // Query/hash-stripped href — the identity the crawl de-dupes pages on, so a
 // page reachable by several URLs (or via the post-redirect homepage URL) is
@@ -145,6 +163,41 @@ function sameOriginLinks(page, baseUrl, pathPrefix) {
   }, baseUrl, pathPrefix);
 }
 
+// Collect EVERY link on the page for the broken-link checker — internal,
+// external, and binary/document links alike. Unlike sameOriginLinks (which
+// feeds the crawl frontier and so is deliberately narrow), this is the raw
+// inventory we later validate over HTTP. Returns { href, text, kind }:
+//   kind = "internal" (same origin) | "external" (other http(s) origin)
+//        | "binary" (PDF/doc/image/etc., by extension)
+// mailto:/tel:/javascript: and pure #fragment links are skipped — nothing to
+// HTTP-check. Query strings are kept (real external links carry them).
+function allLinks(page, baseUrl) {
+  return page.evaluate((base) => {
+    const BINARY = /\.(pdf|docx?|xlsx?|pptx?|zip|jpe?g|png|gif|mp[34]|geojson|json|csv|xml|kmz?)$/i;
+    const origin = new URL(base).origin;
+    const seen = new Set();
+    const links = [];
+    for (const a of document.querySelectorAll("a[href]")) {
+      try {
+        const u = new URL(a.href, base);
+        if (!u.protocol.startsWith("http")) continue; // skip mailto:/tel:/javascript:
+        u.hash = "";
+        const href = u.href;
+        if (seen.has(href)) continue;
+        seen.add(href);
+        const kind = BINARY.test(u.pathname)
+          ? "binary"
+          : u.origin === origin
+            ? "internal"
+            : "external";
+        const text = (a.textContent || "").replace(/\s+/g, " ").trim().slice(0, 120);
+        links.push({ href, text, kind });
+      } catch {}
+    }
+    return links;
+  }, baseUrl);
+}
+
 async function scanPage(browser, url, pathPrefix) {
   const start = Date.now();
   const page = await browser.newPage();
@@ -162,6 +215,7 @@ async function scanPage(browser, url, pathPrefix) {
     const violations = slimViolations(result.violations);
     const counts = countByImpact(result.violations);
     const links = await sameOriginLinks(page, page.url(), pathPrefix);
+    const allLinksOnPage = COLLECT_LINKS ? await allLinks(page, page.url()) : [];
 
     return {
       url,
@@ -175,6 +229,7 @@ async function scanPage(browser, url, pathPrefix) {
       scan_ms: Date.now() - start,
       error: null,
       _links: links,
+      _allLinks: allLinksOnPage,
     };
   } catch (err) {
     return {
@@ -189,6 +244,7 @@ async function scanPage(browser, url, pathPrefix) {
       scan_ms: Date.now() - start,
       error: err.message,
       _links: [],
+      _allLinks: [],
     };
   } finally {
     await page.close();
@@ -232,8 +288,9 @@ async function scanSite(browser, site, crawlEnabled, { maxPages, maxDepth }, che
   if (Array.isArray(site.pages)) {
     const pages = [];
     for (const url of site.pages) {
-      const { _links, ...result } = await scanPage(browser, url, null);
+      const { _links, _allLinks, ...result } = await scanPage(browser, url, null);
       pages.push(result);
+      recordLinks(site.name, result.final_url ?? url, _allLinks);
       if (pages.length > 1) {
         console.log(
           `${"".padEnd(12)} └ ${url} … ` +
@@ -245,8 +302,9 @@ async function scanSite(browser, site, crawlEnabled, { maxPages, maxDepth }, che
   }
 
   const homepage = await scanPage(browser, site.url, site.pathPrefix);
-  const { _links: homeLinks, ...homeRest } = homepage;
+  const { _links: homeLinks, _allLinks: homeAllLinks, ...homeRest } = homepage;
   const pages = [homeRest];
+  recordLinks(site.name, homeRest.final_url ?? site.url, homeAllLinks);
   let crawlComplete = !site.crawl || !crawlEnabled ? true : false;
 
   if (crawlEnabled && site.crawl && !homepage.error) {
@@ -275,8 +333,9 @@ async function scanSite(browser, site, crawlEnabled, { maxPages, maxDepth }, che
 
       process.stdout.write(`${"".padEnd(12)} └ d${depth} ${url} … `);
       const result = await scanPage(browser, url, site.pathPrefix);
-      const { _links, ...pageResult } = result;
+      const { _links, _allLinks, ...pageResult } = result;
       pages.push(pageResult);
+      recordLinks(site.name, pageResult.final_url ?? url, _allLinks);
       if (result.error) {
         console.log(`ERROR (${result.error})`);
       } else {
@@ -302,10 +361,11 @@ async function scanSite(browser, site, crawlEnabled, { maxPages, maxDepth }, che
 }
 
 function parseArgs(argv) {
-  const out = { only: null, crawl: true, maxPages: DEFAULT_MAX_PAGES, maxDepth: DEFAULT_MAX_DEPTH };
+  const out = { only: null, crawl: true, maxPages: DEFAULT_MAX_PAGES, maxDepth: DEFAULT_MAX_DEPTH, collectLinks: false };
   for (const a of argv.slice(2)) {
     if (a.startsWith("--only=")) out.only = a.slice("--only=".length);
     else if (a === "--no-crawl") out.crawl = false;
+    else if (a === "--collect-links") out.collectLinks = true;
     else if (a.startsWith("--max-pages=")) out.maxPages = Number(a.slice("--max-pages=".length));
     else if (a.startsWith("--max-depth=")) out.maxDepth = Number(a.slice("--max-depth=".length));
   }
@@ -376,7 +436,8 @@ async function writeResults(all, results) {
 }
 
 async function main() {
-  const { only, crawl, maxPages, maxDepth } = parseArgs(process.argv);
+  const { only, crawl, maxPages, maxDepth, collectLinks } = parseArgs(process.argv);
+  COLLECT_LINKS = collectLinks;
   const all = JSON.parse(await readFile("sites.json", "utf8"));
   // "app": true entries (the finder web-apps) can't be link-crawled — their
   // content is gated behind form submits / SPA interaction. scan-finders.mjs
@@ -434,6 +495,25 @@ async function main() {
   // results all along; this is the authoritative one.
   const mergedSites = await writeResults(all, results);
   await recordHistory(results);
+
+  // When --collect-links was set, emit the link inventory for check-links.mjs.
+  // Only the sites scanned THIS run are included (so `--only=OTI --collect-links`
+  // yields an OTI-only manifest); check-links.mjs validates whatever it finds.
+  if (COLLECT_LINKS) {
+    const manifest = {
+      collected_at: new Date().toISOString(),
+      sites: results.map((r) => ({
+        name: r.name,
+        url: r.url,
+        pages: LINK_MANIFEST.get(r.name) ?? [],
+      })),
+    };
+    await writeFile("link-manifest.json", JSON.stringify(manifest, null, 2) + "\n");
+    const totalLinks = manifest.sites.reduce(
+      (sum, s) => sum + s.pages.reduce((n, p) => n + p.links.length, 0), 0
+    );
+    console.log(`Wrote link-manifest.json — ${totalLinks} link(s) across ${manifest.sites.length} site(s).`);
+  }
   const scannedNames = new Set(results.map((r) => r.name));
   const cached = mergedSites.filter((s) => !scannedNames.has(s.name)).map((s) => s.name);
 

@@ -6,6 +6,8 @@
   "type": "module",
   "scripts": {
     "scan": "node scan.js",
+    "collect-links": "node scan.js --collect-links",
+    "check-links": "node check-links.mjs",
     "dashboard": "npx --yes serve dashboard",
     "test": "node test/check-engine.js"
   },

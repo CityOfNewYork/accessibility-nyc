@@ -636,6 +636,37 @@ a:focus-visible {
   font-weight: 600;
 }
 
+/* Findings the desktop pass never rendered (only detected at the mobile
+   viewport). Neutral like the pages badge — it's scan metadata, and severity
+   keeps sole ownership of color on the page. */
+.v-mobile-badge {
+  font-size: 11.5px;
+  padding: 2px 8px;
+  border-radius: 2px;
+  background: var(--surface-3);
+  color: var(--ink-muted);
+  font-weight: 600;
+}
+
+/* Actions column: the button row, with the viewport annotation captioned
+   beneath it — multiline selectors leave that space empty anyway. The
+   annotation is deliberately not chip/button-shaped so it doesn't read as a
+   fourth action next to Copy selector / locate script / Open page. */
+.v-node-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+.v-node-viewport {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--ink-muted);
+  white-space: nowrap;
+}
+
 .v-count {
   font-variant-numeric: tabular-nums;
   font-size: 12.5px;

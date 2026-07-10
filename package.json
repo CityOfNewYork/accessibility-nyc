@@ -9,7 +9,7 @@
     "collect-links": "node scan.js --collect-links",
     "check-links": "node check-links.mjs",
     "dashboard": "npx --yes serve dashboard",
-    "test": "node test/check-engine.js"
+    "test": "node test/check-merge.js && node test/check-engine.js"
   },
   "dependencies": {
     "@axe-core/puppeteer": "^4.10.0",

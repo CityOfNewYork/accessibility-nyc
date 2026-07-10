@@ -9,6 +9,7 @@ An open-source scanner and dashboard that runs [axe-core](https://github.com/deq
 ## What it does
 
 - Scans every URL in `sites.json` with axe-core, filtered to **WCAG 2.2 AA** — the standard required of City agencies by Local Law 26 of 2016 and adopted as the current version in the 2025 NYC Digital Accessibility Report from OTI and MOPD.
+- Scans each page at **two viewports** — desktop (1280×900) and mobile (390×844) — because mobile-breakpoint DOM (hamburger menus, collapsed nav) never renders in a desktop-only scan and rules like `target-size` are viewport-sensitive. Findings present at both widths are deduplicated; findings only the mobile pass can see are tagged and badged "mobile only" in the dashboard (`--no-mobile` skips the second pass).
 - Tiers each site **red / orange / yellow / green** by max violation severity (orange = serious issues remain but every critical issue is resolved).
 - Crawls multi-page sites breadth-first (per-site `crawl: true` flag), skipping links to PDFs and other non-HTML files; drives single-page apps through their real interaction states (`scan-finders.mjs`); scans fixed page lists (per-site `pages: [...]`) for curated sets that span sites, like the Golden Set.
 - Writes a static dashboard (`dashboard/index.html`) that needs no server to view — just open the file. Views: overview → per-site → per-page, with findings groupable **by rule, by component, or by page**, and search across pages, sites, and rules.
@@ -27,6 +28,7 @@ npm install
 npm run scan                  # scan everything in sites.json
 node scan.js --only=OTI       # scan a single site (smoke test)
 node scan.js --max-pages=150  # lower the per-site crawl cap (default 1000)
+node scan.js --no-mobile      # desktop pass only (matches pre-mobile scan output)
 ```
 
 This writes:
@@ -53,7 +55,7 @@ All three work — the dashboard loads its data via `<script src="results.js">` 
 npm test
 ```
 
-Scans `test-fixtures/broken.html` (a deliberately broken page) and asserts that axe catches the obvious violations — `image-alt`, `button-name`, `link-name`, `label`, `color-contrast`, `html-has-lang`. Useful for confirming the engine is wired up correctly after dependency upgrades.
+Runs two checks: `test/check-merge.js` unit-tests the desktop/mobile viewport dedup (`mergeViewportViolations`), and `test/check-engine.js` scans `test-fixtures/broken.html` (a deliberately broken page) asserting that axe catches the obvious violations — `image-alt`, `button-name`, `link-name`, `label`, `color-contrast`, `html-has-lang`. Useful for confirming the engine is wired up correctly after dependency upgrades.
 
 ## Editing the site list
 
@@ -85,7 +87,8 @@ accessibility-nyc/
 │   ├── styles.css
 │   └── results.js             # generated; window.SCAN_DATA = {...}
 ├── test/
-│   └── check-engine.js
+│   ├── check-engine.js
+│   └── check-merge.js
 ├── test-fixtures/
 │   └── broken.html
 └── package.json

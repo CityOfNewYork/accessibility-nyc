@@ -719,33 +719,45 @@
   // live page, plus the element-specific failure detail when showFailure is set
   // (generic, shared summaries are suppressed here and handled at the finding
   // level). Shared between the single-page and multi-page rendering paths.
-  function renderNode(n, pageUrl, showFailure = true) {
+  // `viewports` is the occurrence's effective viewports, resolved by the caller
+  // (node ?? violation); callers pass null when the whole card already carries
+  // the mobile-only badge, so rows only badge inside mixed cards — where a
+  // desktop-width locate script would otherwise point at a hidden element.
+  function renderNode(n, pageUrl, showFailure = true, viewports = null) {
     const selector = Array.isArray(n.target) ? n.target.join(" ") : String(n.target);
 
     return el("li", { class: "v-node" },
       el("div", { class: "v-node-row" },
         el("code", { class: "v-node-selector" }, selector),
-        el("div", { class: "v-node-actions" },
-          el("button", {
-            type: "button",
-            class: "v-node-btn",
-            title: "Copy CSS selector to clipboard",
-            onclick: (e) => copyToClipboard(selector, e.currentTarget),
-          }, "Copy selector"),
-          el("button", {
-            type: "button",
-            class: "v-node-btn",
-            title: "Copy a devtools one-liner. Open the page, then paste in the console to scroll to and highlight this element.",
-            onclick: (e) => copyToClipboard(buildLocateScript(selector), e.currentTarget),
-          }, "Copy locate script"),
-          pageUrl
-            ? el("a", {
-                class: "v-node-btn",
-                href: pageUrl,
-                target: "_blank",
-                rel: "noopener",
-                title: "Open page in a new tab",
-              }, "Open page ↗")
+        el("div", { class: "v-node-side" },
+          el("div", { class: "v-node-actions" },
+            el("button", {
+              type: "button",
+              class: "v-node-btn",
+              title: "Copy CSS selector to clipboard",
+              onclick: (e) => copyToClipboard(selector, e.currentTarget),
+            }, "Copy selector"),
+            el("button", {
+              type: "button",
+              class: "v-node-btn",
+              title: "Copy a devtools one-liner. Open the page, then paste in the console to scroll to and highlight this element.",
+              onclick: (e) => copyToClipboard(buildLocateScript(selector), e.currentTarget),
+            }, "Copy locate script"),
+            pageUrl
+              ? el("a", {
+                  class: "v-node-btn",
+                  href: pageUrl,
+                  target: "_blank",
+                  rel: "noopener",
+                  title: "Open page in a new tab",
+                }, "Open page ↗")
+              : null
+          ),
+          isMobileOnly(viewports)
+            ? el("span", {
+                class: "v-node-viewport",
+                title: "This element only renders at the mobile viewport (390px) — to locate it in a browser, narrow the window below the mobile breakpoint",
+              }, "mobile only")
             : null
         )
       ),
@@ -780,6 +792,20 @@
     );
   }
 
+  // A finding is "mobile only" when the scanner saw it exclusively at the
+  // mobile viewport — DOM the desktop pass never rendered. Records from
+  // before the mobile pass carry no viewports field and never badge.
+  function isMobileOnly(viewports) {
+    return Array.isArray(viewports) && viewports.length === 1 && viewports[0] === "mobile";
+  }
+
+  function mobileOnlyBadge() {
+    return el("span", {
+      class: "v-mobile-badge",
+      title: "Only detected at the mobile viewport (390px) — invisible to a desktop-width scan",
+    }, "mobile only");
+  }
+
   // Collapse violations across all pages by rule id. The same rule firing on
   // 10 pages is one finding ("appears on 10 of 11 pages"), not 10 problems —
   // this is what makes the count read honestly.
@@ -792,11 +818,14 @@
       for (const v of p.violations || []) {
         let g = byRule.get(v.id);
         if (!g) {
-          g = { v, pages: [], total: 0 };
+          g = { v, pages: [], total: 0, mobileOnly: true };
           byRule.set(v.id, g);
         }
-        g.pages.push({ url: p.url, label, count: v.nodes.length, nodes: v.nodes });
+        g.pages.push({ url: p.url, label, count: v.nodes.length, nodes: v.nodes, viewports: v.viewports });
         g.total += v.nodes.length;
+        // Badge only when EVERY page's instance is mobile-only. g.v is the
+        // first-seen violation, so viewports must be checked per instance.
+        g.mobileOnly = g.mobileOnly && isMobileOnly(v.viewports);
       }
     });
 
@@ -845,7 +874,8 @@
           )
         ),
         el("ul", { class: "v-nodes" },
-          shown.map((n) => renderNode(n, p.url, showFailure)),
+          shown.map((n) => renderNode(n, p.url, showFailure,
+            g.mobileOnly ? null : (n.viewports ?? p.viewports))),
           remaining > 0
             ? el("li", { class: "v-nodes-more" },
                 `+ ${fmtNum(remaining)} more occurrence${remaining === 1 ? "" : "s"} on this page`)
@@ -863,6 +893,7 @@
           el("div", { class: "v-meta" },
             el("span", { class: "v-rule-id" }, v.id),
             wcagLabel ? el("span", { class: "v-wcag" }, wcagLabel) : null,
+            g.mobileOnly ? mobileOnlyBadge() : null,
             el("span", { class: "v-pages-badge" },
               `on ${nPages} of ${totalPages} page${totalPages === 1 ? "" : "s"}`)
           )
@@ -920,13 +951,17 @@
           const key = `${v.id}|${component}`;
           let g = byComponent.get(key);
           if (!g) {
-            g = { v, component, key, total: 0, pages: new Map() };
+            g = { v, component, key, total: 0, pages: new Map(), mobileOnly: true };
             byComponent.set(key, g);
           }
           g.total++;
+          // Nodes carry their own viewports only when they differ from the
+          // violation's (mixed findings) — resolve per node, then require
+          // every occurrence of the component to be mobile-only.
+          g.mobileOnly = g.mobileOnly && isMobileOnly(n.viewports ?? v.viewports);
           let pg = g.pages.get(p.url);
           if (!pg) {
-            pg = { url: p.url, label, count: 0, nodes: [] };
+            pg = { url: p.url, label, count: 0, nodes: [], viewports: v.viewports };
             g.pages.set(p.url, pg);
           }
           pg.count++;
@@ -1023,7 +1058,8 @@
           )
         ),
         el("ul", { class: "v-nodes" },
-          shown.map((n) => renderNode(n, p.url, showFailure)),
+          shown.map((n) => renderNode(n, p.url, showFailure,
+            g.mobileOnly ? null : (n.viewports ?? p.viewports))),
           remaining > 0
             ? el("li", { class: "v-nodes-more" },
                 `+ ${fmtNum(remaining)} more occurrence${remaining === 1 ? "" : "s"} on this page`)
@@ -1043,6 +1079,7 @@
           el("div", { class: "v-meta" },
             el("span", { class: "v-rule-id" }, v.id),
             wcagLabel ? el("span", { class: "v-wcag" }, wcagLabel) : null,
+            g.mobileOnly ? mobileOnlyBadge() : null,
             el("span", { class: "v-pages-badge" },
               `on ${nPages} of ${totalPages} page${totalPages === 1 ? "" : "s"}`)
           )
@@ -1138,7 +1175,7 @@
           )
         ),
         el("ul", { class: "v-nodes" },
-          shown.map((n) => renderNode(n, g.url, showFailure)),
+          shown.map((n) => renderNode(n, g.url, showFailure, n.viewports ?? v.viewports)),
           remaining > 0
             ? el("li", { class: "v-nodes-more" },
                 `+ ${fmtNum(remaining)} more occurrence${remaining === 1 ? "" : "s"} of this rule`)
@@ -1227,6 +1264,15 @@
       .sort((a, b) => a.date.localeCompare(b.date));
     if (entries.length === 0) return null;
 
+    // First scan that included the mobile-viewport pass. The chart marks it
+    // because counts jump there for tool reasons (an added pass), not because
+    // the site changed. No marker when the site has no earlier desktop-only
+    // scans to compare against.
+    const mobileIdx = entries.findIndex(
+      (e) => Array.isArray(e.viewports) && e.viewports.includes("mobile")
+    );
+    const showMobileLine = mobileIdx > 0;
+
     const labels = entries.map((e) => {
       const d = new Date(e.date);
       return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
@@ -1259,9 +1305,12 @@
     const latest = datasets
       .map((d) => `${d.data[d.data.length - 1]} ${d.label.toLowerCase()}`)
       .join(", ");
-    const chartAlt = entries.length === 1
+    let chartAlt = entries.length === 1
       ? `Trend chart for ${siteName}. One scan on ${labels[0]}: ${latest} occurrences.`
       : `Trend chart for ${siteName}: occurrences by severity across ${entries.length} scans, ${labels[0]} to ${labels[labels.length - 1]}. Latest scan: ${latest}.`;
+    if (showMobileLine) {
+      chartAlt += ` Mobile-viewport scanning was added on ${labels[mobileIdx]}; the increase at that point reflects the added scan pass, not site changes.`;
+    }
 
     const canvas = el("canvas", { width: "800", height: "260", role: "img", "aria-label": chartAlt });
     const wrap = el("section", { class: "history-chart" },
@@ -1269,10 +1318,38 @@
       canvas
     );
 
+    // Dashed vertical marker at the scan where the mobile pass was added.
+    // Drawn by a small inline plugin: the page loads only core Chart.js (no
+    // annotation plugin, no build step).
+    const mobileShipLine = {
+      id: "mobileShipLine",
+      afterDatasetsDraw(chart) {
+        const x = chart.scales.x.getPixelForValue(mobileIdx);
+        const { top, bottom, right } = chart.chartArea;
+        const ctx = chart.ctx;
+        ctx.save();
+        ctx.setLineDash([4, 4]);
+        ctx.strokeStyle = "rgba(86, 92, 99, 0.55)";
+        ctx.beginPath();
+        ctx.moveTo(x, top);
+        ctx.lineTo(x, bottom);
+        ctx.stroke();
+        ctx.setLineDash([]);
+        ctx.font = "10px " + getComputedStyle(document.body).fontFamily;
+        ctx.fillStyle = "rgba(86, 92, 99, 0.9)";
+        // Flip the label to the left of the line when it would run off the
+        // right edge (the marker usually sits at a recent scan).
+        ctx.textAlign = x > right - 130 ? "right" : "left";
+        ctx.fillText("mobile scanning added", x + (ctx.textAlign === "left" ? 5 : -5), top + 10);
+        ctx.restore();
+      },
+    };
+
     requestAnimationFrame(() => {
       new Chart(canvas, {
         type: "line",
         data: { labels, datasets },
+        plugins: showMobileLine ? [mobileShipLine] : [],
         options: {
           responsive: true,
           maintainAspectRatio: false,
@@ -1426,7 +1503,8 @@
 
     const showFailure = !sharedFailureSummary(v.nodes);
     const NODE_LIMIT = 10;
-    const occurrences = v.nodes.slice(0, NODE_LIMIT).map((n) => renderNode(n, pageUrl, showFailure));
+    const occurrences = v.nodes.slice(0, NODE_LIMIT).map((n) => renderNode(n, pageUrl, showFailure,
+      isMobileOnly(v.viewports) ? null : (n.viewports ?? v.viewports)));
     if (v.nodes.length > NODE_LIMIT) {
       occurrences.push(
         el("li", { class: "v-nodes-more" }, `+ ${fmtNum(v.nodes.length - NODE_LIMIT)} more occurrence${v.nodes.length - NODE_LIMIT === 1 ? "" : "s"}`)
@@ -1441,7 +1519,8 @@
           ruleExplain(v),
           el("div", { class: "v-meta" },
             el("span", { class: "v-rule-id" }, v.id),
-            wcagLabel ? el("span", { class: "v-wcag" }, wcagLabel) : null
+            wcagLabel ? el("span", { class: "v-wcag" }, wcagLabel) : null,
+            isMobileOnly(v.viewports) ? mobileOnlyBadge() : null
           )
         ),
         el("div", { class: "v-count" },

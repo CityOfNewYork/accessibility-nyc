@@ -7,6 +7,7 @@
 //   node scan.js --max-pages=25  # cap pages per crawled site (default 1000)
 //   node scan.js --max-depth=3   # cap link-hops from the homepage (default 5)
 //   node scan.js --collect-links # also write link-manifest.json (for check-links.mjs)
+//   node scan.js --no-mobile     # desktop pass only (output matches pre-mobile scans)
 //
 // Output: results.js (a JS file that assigns window.SCAN_DATA = {...})
 //   We use a JS file rather than JSON so the dashboard works on file:// without a server.
@@ -16,6 +17,14 @@ import puppeteer from "puppeteer";
 import { AxePuppeteer } from "@axe-core/puppeteer";
 
 const WCAG_TAGS = ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"];
+// Each page gets two axe passes, one per viewport: a desktop-only scan never
+// renders DOM behind mobile breakpoints (hamburger menus, collapsed nav), and
+// viewport-sensitive rules like target-size only fire realistically at a
+// phone width. The mobile pass keeps the desktop USER_AGENT on purpose —
+// nyc.gov sites are responsive (CSS breakpoints), not UA-adaptive, and a
+// familiar UA gives the WAF no new reason to serve a different page.
+const DESKTOP_VIEWPORT = { width: 1280, height: 900 };
+const MOBILE_VIEWPORT = { width: 390, height: 844, isMobile: true, hasTouch: true };
 // Crawl bounds (override per run with --max-pages / --max-depth). A crawl is a
 // breadth-first walk from the homepage, scoped by the site's pathPrefix.
 const DEFAULT_MAX_PAGES = 1000;
@@ -35,6 +44,10 @@ let USER_AGENT = null;
 // the broken-link checker (check-links.mjs). This is purely additive: the
 // accessibility results written to results.js / results.json are unchanged.
 let COLLECT_LINKS = false;
+// Set in main() from --no-mobile. When off, pages get the desktop pass only
+// and no viewports fields are emitted — the output is deliberately
+// indistinguishable from pre-mobile-pass (legacy) records.
+let MOBILE_ENABLED = true;
 // site name -> [{ url, links: [{ href, text, kind }] }], built during a
 // --collect-links run and written to link-manifest.json at the end.
 const LINK_MANIFEST = new Map();
@@ -100,6 +113,90 @@ function slimViolations(violations) {
       failureSummary: n.failureSummary,
     })),
   }));
+}
+
+// Node identity across the two axe passes. Primary key: the exact target
+// selector path, stringified (axe targets are arrays, nested for
+// iframe/shadow DOM). But axe regenerates selectors per pass and its choice
+// of disambiguating attributes is unstable — the same iframe came back as
+// iframe[title=…][height=…][allowfullscreen=""] on the desktop pass and
+// iframe[title=…][height=…][width="640"] on the mobile pass — so the same
+// node can miss on the exact key and get double-counted. Fallback key:
+// the target path with attribute selectors ([…]) stripped, which keeps the
+// stable structural parts (tags, classes, ids, :nth-child). The fallback is
+// only trusted when it is unambiguous — if two nodes share a stripped key,
+// attributes were the real distinguishing feature and merging would be a
+// guess, so we keep them separate (over-count beats mis-merge).
+function normTargetKey(target) {
+  const strip = (t) =>
+    Array.isArray(t) ? t.map(strip) : String(t).replace(/\[[^\]]*\]/g, "");
+  return JSON.stringify(target.map(strip));
+}
+
+// Merge desktop + mobile slim violation arrays into one deduplicated array.
+// Key: rule id; within a rule, node identity per normTargetKey above.
+// Desktop wins the node html/failureSummary when a node appears at both
+// widths (responsive DOM can differ). Every merged violation gets
+// viewports: ["desktop"] | ["mobile"] | ["desktop", "mobile"] — the union
+// across its nodes; a node keeps its own viewports field only when it
+// differs from the violation's, so readers resolve a node's viewports as
+// (node.viewports ?? violation.viewports). Exported for test/check-merge.js.
+export function mergeViewportViolations(desktop, mobile) {
+  const AMBIGUOUS = Symbol("ambiguous");
+  const byRule = new Map();
+  for (const v of desktop) {
+    byRule.set(v.id, {
+      ...v,
+      nodes: v.nodes.map((n) => ({ ...n, viewports: ["desktop"] })),
+    });
+  }
+  for (const v of mobile) {
+    const existing = byRule.get(v.id);
+    if (!existing) {
+      byRule.set(v.id, {
+        ...v,
+        nodes: v.nodes.map((n) => ({ ...n, viewports: ["mobile"] })),
+      });
+      continue;
+    }
+    const byTarget = new Map();
+    const byNorm = new Map();
+    const index = (node) => {
+      byTarget.set(JSON.stringify(node.target), node);
+      const nk = normTargetKey(node.target);
+      byNorm.set(nk, byNorm.has(nk) ? AMBIGUOUS : node);
+    };
+    for (const node of existing.nodes) index(node);
+    for (const n of v.nodes) {
+      const exact = byTarget.get(JSON.stringify(n.target));
+      const norm = byNorm.get(normTargetKey(n.target));
+      // The fallback may only bridge the two passes: distinct nodes within
+      // one axe pass are distinct elements even when only attributes tell
+      // them apart, so never fold a mobile node into an already-mobile one.
+      const fallback =
+        norm !== AMBIGUOUS && norm && !norm.viewports.includes("mobile") ? norm : undefined;
+      const match = exact ?? fallback;
+      if (match) {
+        if (!match.viewports.includes("mobile")) match.viewports.push("mobile");
+      } else {
+        const added = { ...n, viewports: ["mobile"] };
+        existing.nodes.push(added);
+        index(added);
+      }
+    }
+  }
+  return [...byRule.values()].map((v) => {
+    const union = [];
+    if (v.nodes.some((n) => n.viewports.includes("desktop"))) union.push("desktop");
+    if (v.nodes.some((n) => n.viewports.includes("mobile"))) union.push("mobile");
+    v.viewports = union;
+    for (const n of v.nodes) {
+      // Node viewports are always a subset of the union (both desktop-first),
+      // so equal length means identical — drop the redundant copy.
+      if (n.viewports.length === union.length) delete n.viewports;
+    }
+    return v;
+  });
 }
 
 // Slim axe's "incomplete" (needs-review) results down to enough to count and
@@ -203,7 +300,7 @@ async function scanPage(browser, url, pathPrefix) {
   const page = await browser.newPage();
   try {
     if (USER_AGENT) await page.setUserAgent(USER_AGENT);
-    await page.setViewport({ width: 1280, height: 900 });
+    await page.setViewport(DESKTOP_VIEWPORT);
     const response = await page.goto(url, { waitUntil: "networkidle2", timeout: 60_000 });
 
     const status = response?.status() ?? 0;
@@ -212,10 +309,34 @@ async function scanPage(browser, url, pathPrefix) {
     }
 
     const result = await new AxePuppeteer(page).withTags(WCAG_TAGS).analyze();
-    const violations = slimViolations(result.violations);
-    const counts = countByImpact(result.violations);
+    // Links are collected at the desktop width, before the viewport switch —
+    // mobile CSS can hide nav links the crawl frontier needs.
     const links = await sameOriginLinks(page, page.url(), pathPrefix);
     const allLinksOnPage = COLLECT_LINKS ? await allLinks(page, page.url()) : [];
+
+    let violations = slimViolations(result.violations);
+    const viewportsScanned = ["desktop"];
+    if (MOBILE_ENABLED) {
+      // Second pass on the same loaded page: switching the viewport
+      // re-evaluates media queries and fires resize handlers (enough for
+      // responsive CSS and typical nav JS), but page JS that branched only at
+      // load won't re-init — a known V1 limitation. No second goto: cheaper,
+      // and no extra traffic for the WAF to judge.
+      try {
+        await page.setViewport(MOBILE_VIEWPORT);
+        await page.evaluate(
+          () => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)))
+        );
+        await new Promise((r) => setTimeout(r, 500));
+        const mobileResult = await new AxePuppeteer(page).withTags(WCAG_TAGS).analyze();
+        violations = mergeViewportViolations(violations, slimViolations(mobileResult.violations));
+        viewportsScanned.push("mobile");
+      } catch (err) {
+        console.warn(`    mobile pass failed for ${url}: ${err.message} — keeping desktop results`);
+        violations = violations.map((v) => ({ ...v, viewports: ["desktop"] }));
+      }
+    }
+    const counts = countByImpact(violations);
 
     return {
       url,
@@ -225,7 +346,10 @@ async function scanPage(browser, url, pathPrefix) {
       total_violations: violations.reduce((sum, v) => sum + v.nodes.length, 0),
       distinct_rules: violations.length,
       violations,
+      // incomplete stays desktop-only in V1 — it is display-only (kept out of
+      // counts/tier/history), so a second needs-review list isn't worth the merge.
       incomplete: slimIncomplete(result.incomplete),
+      ...(MOBILE_ENABLED ? { viewports_scanned: viewportsScanned } : {}),
       scan_ms: Date.now() - start,
       error: null,
       _links: links,
@@ -247,7 +371,10 @@ async function scanPage(browser, url, pathPrefix) {
       _allLinks: [],
     };
   } finally {
-    await page.close();
+    // close() can itself throw (e.g. the CDP connection died mid-scan) — and a
+    // throw here would replace the error record from the catch above and kill
+    // the whole run instead of just this page.
+    await page.close().catch(() => {});
   }
 }
 
@@ -361,11 +488,12 @@ async function scanSite(browser, site, crawlEnabled, { maxPages, maxDepth }, che
 }
 
 function parseArgs(argv) {
-  const out = { only: null, crawl: true, maxPages: DEFAULT_MAX_PAGES, maxDepth: DEFAULT_MAX_DEPTH, collectLinks: false };
+  const out = { only: null, crawl: true, maxPages: DEFAULT_MAX_PAGES, maxDepth: DEFAULT_MAX_DEPTH, collectLinks: false, mobile: true };
   for (const a of argv.slice(2)) {
     if (a.startsWith("--only=")) out.only = a.slice("--only=".length);
     else if (a === "--no-crawl") out.crawl = false;
     else if (a === "--collect-links") out.collectLinks = true;
+    else if (a === "--no-mobile") out.mobile = false;
     else if (a.startsWith("--max-pages=")) out.maxPages = Number(a.slice("--max-pages=".length));
     else if (a.startsWith("--max-depth=")) out.maxDepth = Number(a.slice("--max-depth=".length));
   }
@@ -373,7 +501,11 @@ function parseArgs(argv) {
 }
 
 // Append a rule-level snapshot for each freshly-scanned site to history.json.
-// Each entry is { date, site, pages, rules: [{ id, impact, count }] }.
+// Each entry is { date, site, pages, crawlComplete, viewports, rules: [{ id,
+// impact, count }] }. `viewports` records the scan configuration so the
+// dashboard's trend chart can mark where mobile scanning began (counts jump
+// there for tool reasons, not site reasons); entries from before the mobile
+// pass simply lack the key.
 async function recordHistory(freshSites) {
   let history = [];
   try {
@@ -394,6 +526,7 @@ async function recordHistory(freshSites) {
       site: site.name,
       pages: pages.length,
       crawlComplete: site.crawlComplete ?? null,
+      viewports: MOBILE_ENABLED ? ["desktop", "mobile"] : ["desktop"],
       rules: Object.values(byRule),
     });
   }
@@ -436,8 +569,9 @@ async function writeResults(all, results) {
 }
 
 async function main() {
-  const { only, crawl, maxPages, maxDepth, collectLinks } = parseArgs(process.argv);
+  const { only, crawl, maxPages, maxDepth, collectLinks, mobile } = parseArgs(process.argv);
   COLLECT_LINKS = collectLinks;
+  MOBILE_ENABLED = mobile;
   const all = JSON.parse(await readFile("sites.json", "utf8"));
   // "app": true entries (the finder web-apps) can't be link-crawled — their
   // content is gated behind form submits / SPA interaction. scan-finders.mjs
@@ -525,7 +659,10 @@ async function main() {
   console.log(`Wrote ${mergedSites.length} site(s) / ${totalPages} page(s) to dashboard/results.js and results.json.`);
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+// Guarded so tests can import mergeViewportViolations without starting a scan.
+if (process.argv[1]?.endsWith("scan.js")) {
+  main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}

@@ -1,7 +1,7 @@
 {
   "name": "accessibility-nyc",
   "version": "0.1.0",
-  "description": "POC accessibility scanner + dashboard for NYC agency websites, using axe-core under the hood.",
+  "description": "WCAG 2.2 AA accessibility scanner + dashboard for NYC agency websites, using axe-core under the hood.",
   "private": true,
   "type": "module",
   "scripts": {

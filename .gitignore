@@ -4,3 +4,7 @@ node_modules/
 .claude/
 # Local working files — anything in internal/ stays out of the repo.
 internal/
+# Regenerable intermediates: the crawl manifest (input to check-links.mjs) and
+# the JSON twin of dashboard/links-data.js (which is what the dashboard serves).
+link-manifest.json
+link-results.json

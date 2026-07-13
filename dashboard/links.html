@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NYC Link Health (preview)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="links.css" />
+</head>
+<body>
+  <div class="masthead-stripe" aria-hidden="true"></div>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="masthead-eyebrow">NYC · Office of Technology &amp; Innovation · Preview</div>
+      <div class="masthead-grid">
+        <div class="masthead-title-block">
+          <h1 class="masthead-title">Link Health</h1>
+          <p class="masthead-subtitle">Broken-link check of NYC agency websites. A preview, <strong>separate from the WCAG&nbsp;2.2&nbsp;AA accessibility scan</strong> &mdash; a clean link report is not an accessibility result.</p>
+        </div>
+        <dl class="masthead-meta" id="masthead-meta">
+          <div><dt>Checks</dt><dd>HTTP status</dd></div>
+          <div><dt>Scope</dt><dd>Link health</dd></div>
+        </dl>
+      </div>
+    </div>
+  </header>
+
+  <main id="app" class="page">
+    <p class="loading" aria-busy="true">Loading link results&hellip;</p>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer-inner">
+      <small id="footer-meta"></small>
+      <small>Link-health preview &middot; not a WCAG conformance check &middot; data is publicly observable</small>
+    </div>
+  </footer>
+
+  <script src="links-data.js"></script>
+  <script src="links-app.js"></script>
+</body>
+</html>

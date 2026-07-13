@@ -352,7 +352,7 @@ async function scanPage(browser, url, pathPrefix) {
           () => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)))
         );
         await new Promise((r) => setTimeout(r, 500));
-        const mobileResult = await new AxePuppeteer(page).withTags(WCAG_TAGS).analyze();
+        const mobileResult = await analyzeWithRetry(page);
         violations = mergeViewportViolations(violations, slimViolations(mobileResult.violations));
         viewportsScanned.push("mobile");
       } catch (err) {

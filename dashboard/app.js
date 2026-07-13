@@ -646,9 +646,12 @@
   // with a red outline. Text-fragment URLs are unreliable on enterprise/SPA
   // sites (entity differences, async content, force-load-at-top); a snippet
   // the engineer pastes into the live page's console always works.
+  // Visually hidden targets (zero-size box, parked off-screen at x:-9999,
+  // display:none/visibility:hidden) are common in a11y findings — an outline
+  // on those flashes nothing, so explain and log the element instead.
   function buildLocateScript(selector) {
     const s = JSON.stringify(selector);
-    return `(()=>{const e=document.querySelector(${s});if(!e){alert('Element not found on this page: '+${s});return}e.scrollIntoView({block:'center',behavior:'smooth'});const o=e.style.outline,f=e.style.outlineOffset;e.style.outline='3px solid #ff3b30';e.style.outlineOffset='3px';setTimeout(()=>{e.style.outline=o;e.style.outlineOffset=f},3000)})()`;
+    return `(()=>{const e=document.querySelector(${s});if(!e){alert('Element not found on this page: '+${s});return}const r=e.getBoundingClientRect(),c=getComputedStyle(e);if(r.width<2||r.height<2||r.right<=0||r.left>=document.documentElement.clientWidth||c.display==='none'||c.visibility==='hidden'){console.log('Visually hidden element:',e);alert('Element found, but it is visually hidden (zero-size, off-screen, or display:none) — nothing will highlight. It is logged to the console; inspect it there.');return}e.scrollIntoView({block:'center',behavior:'smooth'});const o=e.style.outline,f=e.style.outlineOffset;e.style.outline='3px solid #ff3b30';e.style.outlineOffset='3px';setTimeout(()=>{e.style.outline=o;e.style.outlineOffset=f},3000)})()`;
   }
 
   // A finding (one rule on the current site/page route) is addressable by a URL

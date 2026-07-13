@@ -4495,5 +4495,27 @@
         "count": 1
       }
     ]
+  },
+  {
+    "date": "2026-07-13T20:12:50.764Z",
+    "site": "PIT Crew",
+    "pages": 1,
+    "crawlComplete": true,
+    "viewports": [
+      "desktop",
+      "mobile"
+    ],
+    "rules": [
+      {
+        "id": "aria-hidden-focus",
+        "impact": "serious",
+        "count": 1
+      },
+      {
+        "id": "aria-prohibited-attr",
+        "impact": "serious",
+        "count": 2
+      }
+    ]
   }
 ]

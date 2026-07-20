@@ -356,6 +356,115 @@ async function scanActivitiesFinder(browser, site) {
   return assembleSite(site, states);
 }
 
+// ---- Summer in NYC: client-side questionnaire wizard → activities map ------
+// "Get Started" opens an in-place SPA questionnaire (age slider, audience
+// radios, interest checkboxes, neighborhood search) that keeps the same URL for
+// every step, so a link crawl only ever sees the splash screen. We click
+// through and run axe at each state. The final "See activities" stays disabled
+// until the location field is filled from its autocomplete, which then reveals
+// the results map + activity list — the app's real payload.
+async function scanSummerFinder(browser, site) {
+  const page = await browser.newPage();
+  await page.setViewport({ width: 1280, height: 900 });
+  const states = [];
+  try {
+    // ① Splash — the marketing landing state, before the wizard opens.
+    await page.goto(site.url, { waitUntil: "networkidle2", timeout: 60_000 });
+    await sleep(1500);
+    states.push(await captureState(page, "Splash — landing"));
+
+    // ② Open the wizard. "Get Started" is a <button> with an onclick handler
+    //    (no href / navigation), so the URL never changes from here on.
+    const start = await handleByText(page, "button", "Get Started");
+    if (!start) {
+      console.log('     ! "Get Started" not found — only the splash was scanned');
+      return assembleSite(site, states);
+    }
+    await clickAndSettle(page, start, 1800);
+
+    // ③ Walk the questionnaire. Each step advances on "Continue" (which works
+    //    on the wizard's defaults); the final location step swaps that button
+    //    for "See activities". Cap the loop so a UI change can't spin forever.
+    for (let step = 1; step <= 8; step++) {
+      // Label each state by its visible prompt ("How old are you?", …); the h1
+      // is a constant "Questionnaire", so pull the first meaningful heading.
+      const prompt = await page.evaluate(() => {
+        const main = document.querySelector("main") || document.body;
+        return [...main.querySelectorAll("h1,h2,h3,legend")]
+          .map((e) => e.textContent.replace(/\s+/g, " ").trim())
+          .find(
+            (t) =>
+              t &&
+              !/^questionnaire$/i.test(t) &&
+              !/page footer|translate|adding activities/i.test(t)
+          );
+      });
+      states.push(await captureState(page, `Questionnaire — ${prompt || `step ${step}`}`));
+
+      const next = await handleByText(page, "button", "Continue");
+      if (!next) break; // reached the final (location) step — no "Continue"
+      await clickAndSettle(page, next, 1800);
+    }
+
+    // ④ Location step + results. Fill the neighborhood/zip search and accept the
+    //    first autocomplete suggestion (ArrowDown+Enter) — that enables "See
+    //    activities", which renders the activities map + list.
+    const search = await page.$('input[type="search"]');
+    if (search) {
+      await search.click();
+      await search.type("10007", { delay: 60 });
+      await sleep(2000);
+      await page.keyboard.press("ArrowDown");
+      await page.keyboard.press("Enter");
+      await sleep(1500);
+    } else {
+      console.log("     ! location search box not found — can't reach results");
+    }
+    const see = await handleByText(page, "button", "See activities");
+    if (see) {
+      await clickAndSettle(page, see, 4000);
+      const h1 = await page.$eval("h1", (h) => h.textContent.trim()).catch(() => "?");
+      console.log(`     → results state: "${h1}"`);
+      states.push(await captureState(page, "Results — activities map + list"));
+
+      // ⑤ Filters dialog — the "Filters" button opens a role="dialog" modal with
+      //    its own form (select, search, checkboxes). Scan it, then Escape back
+      //    to the results view so the next state starts clean.
+      const filters = await handleByText(page, "button", "Filters");
+      if (filters) {
+        await clickAndSettle(page, filters, 1200);
+        if (await page.$('[role="dialog"]')) {
+          states.push(await captureState(page, "Results — filters dialog"));
+          await page.keyboard.press("Escape");
+          await sleep(800);
+        } else {
+          console.log('     ! "Filters" did not open a dialog — skipping that state');
+        }
+      } else {
+        console.log('     ! "Filters" button not found — skipping that state');
+      }
+
+      // ⑥ Expanded activity — "View events near you" expands a result card inline
+      //    (aria-expanded, ~2.5× the DOM), revealing event listings axe otherwise
+      //    never sees on the collapsed list.
+      const expand = await handleByText(page, "button", "View events near you");
+      if (expand) {
+        await clickAndSettle(page, expand, 1500);
+        states.push(await captureState(page, "Results — expanded activity"));
+      } else {
+        console.log('     ! no "View events near you" card to expand — skipping');
+      }
+    } else {
+      console.log('     ! "See activities" not enabled — results state not reached');
+    }
+  } catch (err) {
+    console.log(`     ! Summer finder flow error: ${err.message}`);
+  } finally {
+    await page.close();
+  }
+  return assembleSite(site, states);
+}
+
 // ---- driver ----------------------------------------------------------------
 
 function parseArgs(argv) {
@@ -403,6 +512,7 @@ async function main() {
     if (host.includes("a125-egovt")) r = await scanServiceFinder(browser, site);
     else if (host.includes("schoolsearch")) r = await scanSchoolSearch(browser, site);
     else if (host.includes("finder.nyc.gov")) r = await scanFoodHelpFinder(browser, site);
+    else if (new URL(site.url).pathname.startsWith("/content/summer")) r = await scanSummerFinder(browser, site);
     else r = await scanActivitiesFinder(browser, site);
     console.log(
       `   ── ${r.tier.toUpperCase()} ${r.total_violations} issues / ` +

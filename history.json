@@ -5193,5 +5193,18 @@
         "count": 1
       }
     ]
+  },
+  {
+    "date": "2026-07-20T21:56:41.529Z",
+    "site": "Summer",
+    "pages": 8,
+    "crawlComplete": true,
+    "rules": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 1
+      }
+    ]
   }
 ]

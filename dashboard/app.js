@@ -1315,10 +1315,10 @@
       chartAlt += ` Mobile-viewport scanning was added on ${labels[mobileIdx]}; the increase at that point reflects the added scan pass, not site changes.`;
     }
 
-    const canvas = el("canvas", { width: "800", height: "260", role: "img", "aria-label": chartAlt });
+    const canvas = el("canvas", { role: "img", "aria-label": chartAlt });
     const wrap = el("section", { class: "history-chart" },
       sectionEyebrow("Trend", "Occurrences by severity over time"),
-      canvas
+      el("div", { class: "history-chart-canvas" }, canvas)
     );
 
     // Dashed vertical marker at the scan where the mobile pass was added.
@@ -1356,6 +1356,11 @@
         options: {
           responsive: true,
           maintainAspectRatio: false,
+          // No reveal animation. It bought nothing on a static history chart,
+          // and the animator could stop after an early frame — leaving the
+          // canvas painted with points still bunched at the left edge even
+          // though the chart's own geometry was correct.
+          animation: false,
           scales: {
             x: { grid: { display: false } },
             y: { stacked: true, beginAtZero: true, ticks: { precision: 0 } },
@@ -1419,17 +1424,23 @@
       return;
     }
 
+    // Built before the clean-site branch below: a site that scanned clean has
+    // the most useful trend of all (how it got to zero), so the chart shows
+    // there too — including when every scan is flat at zero.
+    const historyChart = renderHistoryChart(site.name);
+
     const allViolations = siteViolations(site);
     if (allViolations.length === 0) {
-      app.replaceChildren(back, header,
+      app.replaceChildren(...[back, header,
         methodologyCallout(false),
+        historyChart,
         el("div", { class: "empty-state" },
           el("p", { class: "empty-state-title" }, "No automated violations found"),
           el("p", { class: "empty-state-body" },
             "Floor check passed against WCAG 2.2 AA. Manual review and assistive-technology testing are still required to confirm full compliance — automated scanners detect only a portion of accessibility failures."
           )
         )
-      );
+      ].filter(Boolean));
       return;
     }
 
@@ -1454,7 +1465,6 @@
       ? `${site.distinct_rules} rule${site.distinct_rules === 1 ? "" : "s"} failed across ${numPages} pages · ${fmtNum(site.total_violations)} occurrence${site.total_violations === 1 ? "" : "s"}`
       : `${allViolations.length} rule${allViolations.length === 1 ? "" : "s"} failed · ${fmtNum(site.total_violations)} occurrence${site.total_violations === 1 ? "" : "s"}`;
 
-    const historyChart = renderHistoryChart(site.name);
     const children = [back, header, methodologyCallout(false)];
     if (historyChart) children.push(historyChart);
     children.push(el("div", { class: "section-eyebrow findings-head" },

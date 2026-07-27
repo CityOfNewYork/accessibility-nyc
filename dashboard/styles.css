@@ -526,8 +526,14 @@ a:focus-visible {
   padding: 20px 24px;
   margin-bottom: 0;
 }
-.history-chart canvas {
-  max-height: 260px;
+/* Chart.js runs responsive + maintainAspectRatio:false, which sizes the canvas
+   from its container. The container needs a definite height of its own —
+   sizing the canvas directly makes the canvas define the height it is being
+   measured against, so Chart.js resizes the bitmap after the first paint and
+   the chart is left garbled. */
+.history-chart-canvas {
+  position: relative;
+  height: 260px;
 }
 
 /* ---------- violations list ------------------------------------------- */

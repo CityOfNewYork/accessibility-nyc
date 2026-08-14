@@ -7695,13 +7695,14 @@
   {
     "date": "2026-08-14T11:05:12.713Z",
     "site": "NYC 311",
-    "pages": 1,
+    "pages": 0,
     "crawlComplete": false,
     "viewports": [
       "desktop",
       "mobile"
     ],
-    "rules": []
+    "error": "Navigation timeout of 60000 ms exceeded",
+    "rules": null
   },
   {
     "date": "2026-08-14T11:05:12.713Z",

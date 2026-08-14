@@ -117,13 +117,13 @@
       detailed
         ? el("p", { class: "methodology-body" },
             "This is a ", el("strong", {}, "floor check, not a certification"),
-            ". Automated tools detect roughly 30–57% of WCAG failures. Meaningful alt text, focus order, screen-reader operability, and cognitive clarity require manual review and assistive-technology testing. Sites are evaluated against ",
+            ". Automated tools detect roughly 30–40% of WCAG failures. Meaningful alt text, focus order, and screen-reader operability require manual testing and human judgement. Sites are evaluated against ",
             el("strong", {}, "WCAG 2.2 AA"),
             ", required of City agencies by Local Law 26 of 2016 and adopted as the current version by OTI and MOPD in the 2025 Digital Accessibility Report.")
         : el("p", { class: "methodology-body" },
             "Automated scan against ",
             el("strong", {}, "WCAG 2.2 AA"),
-            ". Catches roughly 30–57% of failures; the remainder requires manual review and assistive-technology testing.")
+            ". Catches roughly 30–40% of failures; the remainder requires manual testing and human judgement.")
     );
   }
 
@@ -173,8 +173,27 @@
     return "green";
   }
 
+  // A failed scan has zero counts, which is indistinguishable from a clean one
+  // by counts alone — so the error signal has to win before counts are read, at
+  // both the site and the page level. Stored tiers are checked too, but not
+  // trusted: scan.js used to write a counts-derived tier onto errored sites.
   function siteTier(s) {
-    return s.tier === "error" ? "error" : tierFromCounts(s.counts);
+    if (s.tier === "error" || s.error || siteScanError(s)) return "error";
+    return tierFromCounts(s.counts);
+  }
+
+  function pageTier(p) {
+    return p.error ? "error" : tierFromCounts(p.counts);
+  }
+
+  // The error a site should report as its own: its top-level one, or — for a
+  // crawled site where nothing came back — the first page failure. A site with
+  // some pages scanned still has real findings to show, so it isn't an error.
+  function siteScanError(s) {
+    if (s.error) return s.error;
+    const pages = s.pages || [];
+    if (pages.length > 0 && pages.every((p) => p.error)) return pages[0].error;
+    return null;
   }
 
   function siteViolations(site) {
@@ -205,7 +224,7 @@
           siteName: site.name,
           url: p.url,
           label,
-          tier: tierFromCounts(p.counts),
+          tier: pageTier(p),
           occurrences: occ,
           ruleCount: (p.violations || []).length,
         });
@@ -1141,7 +1160,7 @@
       return {
         url: p.url,
         label: p.label || pageLabel(p.url, i === 0),
-        tier: p.error ? "error" : tierFromCounts(p.counts),
+        tier: pageTier(p),
         impact: pageMaxImpact(p.counts),
         error: p.error || null,
         violations,
@@ -1262,10 +1281,17 @@
   function renderHistoryChart(siteName) {
     const history = window.HISTORY_DATA;
     if (!history || !window.Chart) return null;
+    // Failed scans (rules: null) are kept so they can be drawn as gaps —
+    // connecting straight across them would imply we measured a week we
+    // didn't. Partial crawls are still dropped: their counts are real but
+    // understated, which is worse than absent.
     const entries = history
-      .filter((h) => h.site === siteName && h.crawlComplete)
+      .filter((h) => h.site === siteName && (h.crawlComplete || h.rules === null))
       .sort((a, b) => a.date.localeCompare(b.date));
-    if (entries.length === 0) return null;
+    const measured = entries.filter((e) => e.rules !== null);
+    // Nothing but failures is not a trend — a site whose every scan errored has
+    // no line to draw, so the caller falls back to no chart at all.
+    if (measured.length === 0) return null;
 
     // First scan that included the mobile-viewport pass. The chart marks it
     // because counts jump there for tool reasons (an added pass), not because
@@ -1294,23 +1320,37 @@
     const datasets = severities.map((sev) => ({
       label: sev.charAt(0).toUpperCase() + sev.slice(1),
       data: entries.map((e) =>
-        e.rules.filter((r) => r.impact === sev).reduce((s, r) => s + r.count, 0)
+        e.rules === null
+          ? null
+          : e.rules.filter((r) => r.impact === sev).reduce((s, r) => s + r.count, 0)
       ),
       backgroundColor: colors[sev].fill,
       borderColor: colors[sev].line,
       borderWidth: 2,
       fill: true,
+      // Explicit though it matches Chart.js's default: a null datapoint must
+      // break the line, not interpolate across the week we failed to scan.
+      spanGaps: false,
     }));
 
     // Canvas is opaque to assistive tech, so describe the chart as an image:
     // the span of scans plus the latest reading per severity. Screen-reader
     // users get the same takeaway a sighted user reads off the lines.
+    // Read from the last scan that produced numbers, not the last entry — the
+    // most recent entry may be a failure, which has no reading to report.
+    const lastRead = entries.reduce((idx, e, i) => (e.rules === null ? idx : i), 0);
+    const failed = entries.length - measured.length;
     const latest = datasets
-      .map((d) => `${d.data[d.data.length - 1]} ${d.label.toLowerCase()}`)
+      .map((d) => `${d.data[lastRead]} ${d.label.toLowerCase()}`)
       .join(", ");
-    let chartAlt = entries.length === 1
-      ? `Trend chart for ${siteName}. One scan on ${labels[0]}: ${latest} occurrences.`
-      : `Trend chart for ${siteName}: occurrences by severity across ${entries.length} scans, ${labels[0]} to ${labels[labels.length - 1]}. Latest scan: ${latest}.`;
+    let chartAlt = measured.length === 1
+      ? `Trend chart for ${siteName}. One scan on ${labels[lastRead]}: ${latest} occurrences.`
+      : `Trend chart for ${siteName}: occurrences by severity across ${measured.length} scans, ${labels[0]} to ${labels[labels.length - 1]}. Most recent reading, ${labels[lastRead]}: ${latest}.`;
+    if (failed > 0) {
+      chartAlt += failed === 1
+        ? ` 1 scan in this period failed and is shown as a gap in the lines.`
+        : ` ${failed} scans in this period failed and are shown as gaps in the lines.`;
+    }
     if (showMobileLine) {
       chartAlt += ` Mobile-viewport scanning was added on ${labels[mobileIdx]}; the increase at that point reflects the added scan pass, not site changes.`;
     }
@@ -1395,6 +1435,7 @@
 
     const pages = site.pages || [site];
     const numPages = pages.length;
+    const scanError = siteScanError(site);
 
     const header = el("section", { class: "detail-header" },
       el("div", {},
@@ -1406,7 +1447,7 @@
           el("a", { href: site.url, target: "_blank", rel: "noopener" }, site.url)
         )
       ),
-      site.error
+      scanError
         ? null
         : el("div", { class: "detail-header-stats" },
             statBlock(fmtNum(site.total_violations), "Violations"),
@@ -1416,18 +1457,28 @@
           )
     );
 
-    if (site.error) {
-      app.replaceChildren(back, header, el("div", { class: "error-banner" },
+    // Built before the branches below: neither a clean scan nor a failed one
+    // has findings to list, and in both cases the trend is the only thing left
+    // worth showing. A site that scanned clean has the most useful trend of all
+    // (how it got to zero); a site we couldn't reach this week still has every
+    // prior week of history, which is exactly the context for reading the
+    // failure.
+    const historyChart = renderHistoryChart(site.name);
+
+    if (scanError) {
+      // historyChart is null for a site with no prior scans (a first-run
+      // failure), and replaceChildren rejects null — so filter, as the
+      // clean-site branch below does.
+      app.replaceChildren(...[back, header, el("div", { class: "error-banner" },
         el("p", { class: "error-banner-label" }, "Scan error"),
-        el("p", { class: "error-banner-body" }, site.error)
-      ));
+        el("p", { class: "error-banner-body" }, scanError),
+        el("p", { class: "error-banner-body" },
+          "No pages were scanned, so this site has no result — clean or otherwise." +
+          (historyChart ? " The trend below is unchanged from the last successful scan." : "")
+        )
+      ), historyChart].filter(Boolean));
       return;
     }
-
-    // Built before the clean-site branch below: a site that scanned clean has
-    // the most useful trend of all (how it got to zero), so the chart shows
-    // there too — including when every scan is flat at zero.
-    const historyChart = renderHistoryChart(site.name);
 
     const allViolations = siteViolations(site);
     if (allViolations.length === 0) {
@@ -1586,7 +1637,7 @@
       try { return new URL(page.url).pathname.replace(/\/$/, "") || "/"; }
       catch { return page.url; }
     })();
-    const tier = tierFromCounts(page.counts);
+    const tier = pageTier(page);
     const violations = page.violations || [];
     const occurrences = violations.reduce((sum, v) => sum + v.nodes.length, 0);
 
@@ -1605,18 +1656,33 @@
           el("a", { href: page.url, target: "_blank", rel: "noopener" }, page.url)
         )
       ),
-      el("div", { class: "detail-header-stats" },
-        statBlock(fmtNum(occurrences), occurrences === 1 ? "Occurrence" : "Occurrences"),
-        statBlock(fmtNum(violations.length), violations.length === 1 ? "Rule failed" : "Rules failed"),
-        page.scan_ms ? statBlock(fmtDuration(page.scan_ms), "Scan time") : null
-      )
+      page.error
+        ? null
+        : el("div", { class: "detail-header-stats" },
+            statBlock(fmtNum(occurrences), occurrences === 1 ? "Occurrence" : "Occurrences"),
+            statBlock(fmtNum(violations.length), violations.length === 1 ? "Rule failed" : "Rules failed"),
+            page.scan_ms ? statBlock(fmtDuration(page.scan_ms), "Scan time") : null
+          )
     );
 
     const children = [
       el("div", { class: "detail-back-row" }, overviewBack, siteBack),
       header,
-      methodologyCallout(false),
     ];
+
+    if (page.error) {
+      children.push(el("div", { class: "error-banner" },
+        el("p", { class: "error-banner-label" }, "Scan error"),
+        el("p", { class: "error-banner-body" }, page.error),
+        el("p", { class: "error-banner-body" },
+          "This page was never checked, so it has no result — clean or otherwise."
+        )
+      ));
+      app.replaceChildren(...children);
+      return;
+    }
+
+    children.push(methodologyCallout(false));
 
     if (violations.length === 0) {
       children.push(el("div", { class: "empty-state" },

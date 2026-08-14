@@ -410,18 +410,27 @@ function assembleSite(site, pages, crawlComplete) {
     (acc, p) => addCounts(acc, p.counts),
     { critical: 0, serious: 0, moderate: 0, minor: 0 }
   );
+  // A page that failed to scan contributes zero counts, so a site where nothing
+  // came back looks identical to a clean one by counts alone. Tier it as an
+  // error instead: a site we never reached has no result to report, and
+  // "clean" would overstate what the scan actually established.
+  const allFailed = pages.length > 0 && pages.every((p) => p.error);
   return {
     name: site.name,
     url: site.url,
     scanned_at: new Date().toISOString(),
-    tier: tierFor(counts),
+    tier: allFailed ? "error" : tierFor(counts),
     counts,
     total_violations: pages.reduce((sum, p) => sum + p.total_violations, 0),
     distinct_rules: new Set(pages.flatMap((p) => p.violations.map((v) => v.id))).size,
     pages,
     scan_ms: pages.reduce((sum, p) => sum + p.scan_ms, 0),
-    error: pages.length === 1 && pages[0].error ? pages[0].error : null,
-    crawlComplete: crawlComplete ?? null,
+    error: allFailed ? pages[0].error : null,
+    // A scan that reached nothing is never "complete", whatever the caller
+    // passed. Two call sites hand in a hard-coded true (fixed-list sites, and
+    // sites with crawling off), so without this a non-crawling site that timed
+    // out would be recorded as a finished scan with zero findings.
+    crawlComplete: allFailed ? false : crawlComplete ?? null,
   };
 }
 
@@ -526,7 +535,8 @@ function parseArgs(argv) {
 
 // Append a rule-level snapshot for each freshly-scanned site to history.json.
 // Each entry is { date, site, pages, crawlComplete, viewports, rules: [{ id,
-// impact, count }] }. `viewports` records the scan configuration so the
+// impact, count }] }; a scan that failed outright instead records `rules: null`
+// alongside an `error` message. `viewports` records the scan configuration so the
 // dashboard's trend chart can mark where mobile scanning began (counts jump
 // there for tool reasons, not site reasons); entries from before the mobile
 // pass simply lack the key.
@@ -537,6 +547,24 @@ async function recordHistory(freshSites) {
   } catch {}
   const date = new Date().toISOString();
   for (const site of freshSites) {
+    // A site we never reached has nothing to measure, and the three cases have
+    // to stay distinguishable: `rules: []` means we looked and found nothing,
+    // `rules: null` means we couldn't look, and no entry at all means we never
+    // tried. Writing [] here would read as "every finding fixed"; writing
+    // nothing would hide a site that fails every week. Record the attempt with
+    // the measurement explicitly absent — the dashboard plots null as a gap.
+    if (site.tier === "error") {
+      history.push({
+        date,
+        site: site.name,
+        pages: 0,
+        crawlComplete: false,
+        viewports: MOBILE_ENABLED ? ["desktop", "mobile"] : ["desktop"],
+        error: site.error,
+        rules: null,
+      });
+      continue;
+    }
     const byRule = {};
     const pages = site.pages || [site];
     for (const p of pages) {

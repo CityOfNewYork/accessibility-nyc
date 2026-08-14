@@ -4,7 +4,7 @@ An open-source scanner and dashboard that runs [axe-core](https://github.com/deq
 
 **Live dashboard: <https://cityofnewyork.github.io/accessibility-nyc/>** — published from this repo, refreshed with every scan commit.
 
-**This is a floor check, not a certification.** Automated tools catch ~30–57% of WCAG issues. The remaining ~50% — meaningful alt text, sensible focus order, screen-reader operability, cognitive clarity — requires manual review and assistive-technology testing.
+**This is a floor check, not a certification.** Automated tools catch ~30–40% of WCAG issues. Meaningful alt text, focus order, and screen-reader operability require manual testing and human judgement.
 
 ## What it does
 

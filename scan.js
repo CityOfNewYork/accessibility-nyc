@@ -8,6 +8,7 @@
 //   node scan.js --max-depth=3   # cap link-hops from the homepage (default 5)
 //   node scan.js --collect-links # also write link-manifest.json (for check-links.mjs)
 //   node scan.js --no-mobile     # desktop pass only (output matches pre-mobile scans)
+//   node scan.js --no-settle     # skip the lazy-load scroll pass (pre-settle behavior)
 //
 // Output: results.js (a JS file that assigns window.SCAN_DATA = {...})
 //   We use a JS file rather than JSON so the dashboard works on file:// without a server.
@@ -50,6 +51,56 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const TRANSIENT_FRAME_ERROR =
   /not ready|detached|Execution context was destroyed|Target closed|frame got detached|Cannot find context/i;
 
+// Lazy-loaded content is invisible to a scan that never scrolls, and the
+// resulting findings are worse than useless — they are wrong. YouTube's
+// channel-avatar <img> is the case that surfaced this: it ships with no src and
+// visibility:hidden until it scrolls into view, and the accessible name
+// computation excludes hidden nodes (https://www.w3.org/TR/accname-1.2/), so
+// axe saw a button with no name and reported a critical button-name violation
+// that no real user ever encounters.
+//
+// Step-scroll to the bottom so each step's IntersectionObservers fire, then
+// return to the top — the axe pass should start where a reader would. Bounded
+// three ways: step count, total elapsed time, and a growth guard that stops
+// once the page stops getting taller (an infinite-scroll page would otherwise
+// never finish).
+const SETTLE_MAX_STEPS = 12;
+const SETTLE_STEP_MS = 250;
+const SETTLE_MAX_MS = 5_000;
+
+async function settlePage(page) {
+  if (!SETTLE_ENABLED) return;
+  const started = Date.now();
+  try {
+    let lastHeight = -1;
+    for (let step = 0; step < SETTLE_MAX_STEPS; step++) {
+      if (Date.now() - started > SETTLE_MAX_MS) break;
+      const { height, atBottom } = await page.evaluate(() => {
+        const el = document.scrollingElement || document.documentElement;
+        el.scrollTop += window.innerHeight;
+        return {
+          height: el.scrollHeight,
+          atBottom: el.scrollTop + window.innerHeight >= el.scrollHeight - 2,
+        };
+      });
+      await sleep(SETTLE_STEP_MS);
+      // Done when we have reached the bottom and the page stopped growing.
+      // If it is still growing at the bottom, it is an infinite-scroll feed —
+      // the step/time bounds above are what stop us there.
+      if (atBottom && height === lastHeight) break;
+      lastHeight = height;
+    }
+    await page.evaluate(() => {
+      const el = document.scrollingElement || document.documentElement;
+      el.scrollTop = 0;
+    });
+    await sleep(SETTLE_STEP_MS);
+  } catch {
+    // A navigation or detached frame mid-settle is not a scan failure: the axe
+    // pass that follows reports whatever state the page actually ended up in.
+  }
+}
+
 // Run axe against a settled page, retrying when a third-party frame detaches
 // mid-injection. Each retry waits a beat for the frame tree to settle first.
 async function analyzeWithRetry(page, attempts = 3) {
@@ -72,6 +123,10 @@ let COLLECT_LINKS = false;
 // and no viewports fields are emitted — the output is deliberately
 // indistinguishable from pre-mobile-pass (legacy) records.
 let MOBILE_ENABLED = true;
+// Set in main() from --no-settle. When off, pages are scanned exactly where
+// they load, without the lazy-load scroll pass — the pre-settle behavior, kept
+// so an old scan can be reproduced for comparison.
+let SETTLE_ENABLED = true;
 // site name -> [{ url, links: [{ href, text, kind }] }], built during a
 // --collect-links run and written to link-manifest.json at the end.
 const LINK_MANIFEST = new Map();
@@ -98,18 +153,122 @@ const norm = (href) => {
   }
 };
 
-function tierFor(counts) {
+// Third-party embeds whose findings are reported but NOT counted — excluded
+// from counts, tiers, totals, and history. This is a deliberate case-by-case
+// allowlist, not a blanket "ignore cross-origin iframes" rule:
+//
+//   YouTube qualifies because it is ubiquitous across nyc.gov, its player
+//   markup churns week to week under us (over six consecutive weekly scans of
+//   one page with a single embed, the finding set changed four times — zero
+//   findings on 2026-07-24, three again on 2026-07-31), the findings are
+//   almost never actionable by the embedding agency, and a video's content is
+//   normally also on the page in another form.
+//
+// Other embeds — Tableau, Facebook, Maps — stay counted on purpose. An agency
+// may not realize an embedded dashboard carries issues, and unlike a video
+// those can gate content that exists nowhere else on the page.
+const EXCLUDED_EMBEDS = [
+  { vendor: "YouTube", host: /(^|\.)(youtube\.com|youtube-nocookie\.com)$/i },
+];
+
+export function excludedEmbedFor(src) {
+  let host;
+  try {
+    host = new URL(src).host;
+  } catch {
+    return null;
+  }
+  return EXCLUDED_EMBEDS.find((e) => e.host.test(host)) ?? null;
+}
+
+// Resolve axe's frame selectors to the URLs they actually point at. axe reports
+// a node inside an iframe as a target ARRAY — [frameSelector, …, elementSelector]
+// — whose first entry is a CSS selector valid in the top document. The selector
+// alone can't tell YouTube from Tableau (plenty are just `iframe[width="560"]`),
+// so look the element up and read its src. Returns selector -> resolved URL.
+async function embedFrameMap(page, violations) {
+  const selectors = [
+    ...new Set(
+      violations
+        .flatMap((v) => v.nodes)
+        .filter((n) => Array.isArray(n.target) && n.target.length > 1)
+        .map((n) => String(n.target[0]))
+    ),
+  ];
+  if (!selectors.length) return new Map();
+  const resolved = await page
+    .evaluate(
+      (sels) =>
+        sels.map((sel) => {
+          try {
+            const el = document.querySelector(sel);
+            const src = (el && (el.src || el.getAttribute("src"))) || "";
+            return [sel, src ? new URL(src, location.href).href : ""];
+          } catch {
+            // An axe selector that no longer resolves (the frame moved between
+            // the axe run and now) simply goes untagged and stays counted.
+            return [sel, ""];
+          }
+        }),
+      selectors
+    )
+    .catch(() => []);
+  return new Map(resolved);
+}
+
+// Tag every violation node sitting inside an excluded embed. Tagged nodes stay
+// in the results — the dashboard renders them in their own "Third-party embeds"
+// section — but every counting path skips them, so they cannot move a tier.
+export function tagEmbedNodes(violations, frameMap) {
+  for (const v of violations) {
+    for (const n of v.nodes) {
+      if (!Array.isArray(n.target) || n.target.length < 2) continue;
+      const src = frameMap.get(String(n.target[0]));
+      const embed = src ? excludedEmbedFor(src) : null;
+      if (embed) n.embed = { vendor: embed.vendor, url: src };
+    }
+  }
+  return violations;
+}
+
+// Inventory the excluded embeds on the page, whether or not they produced a
+// finding. The dashboard's banner is advice about the embed itself ("make sure
+// essential information is also on the page in another form"), which holds
+// regardless of what axe found — and tying it to findings would make it blink
+// on and off week to week as YouTube ships player changes.
+async function pageEmbeds(page) {
+  const srcs = await page
+    .evaluate(() => [...document.querySelectorAll("iframe[src]")].map((el) => el.src))
+    .catch(() => []);
+  const found = new Map();
+  for (const src of srcs) {
+    const embed = excludedEmbedFor(src);
+    if (embed && !found.has(src)) found.set(src, { vendor: embed.vendor, url: src });
+  }
+  return [...found.values()];
+}
+
+// The nodes of a violation that count toward the score. Every total the
+// dashboard and history report is built from this, so excluded-embed findings
+// stay visible without ever affecting a tier.
+export const countedNodes = (v) => v.nodes.filter((n) => !n.embed);
+const countedTotal = (violations) =>
+  violations.reduce((sum, v) => sum + countedNodes(v).length, 0);
+const embedTotal = (violations) =>
+  violations.reduce((sum, v) => sum + v.nodes.filter((n) => n.embed).length, 0);
+
+export function tierFor(counts) {
   if (counts.critical > 0) return "red";
   if (counts.serious > 0) return "orange";
   if (counts.moderate > 0 || counts.minor > 0) return "yellow";
   return "green";
 }
 
-function countByImpact(violations) {
+export function countByImpact(violations) {
   const counts = { critical: 0, serious: 0, moderate: 0, minor: 0 };
   for (const v of violations) {
     const impact = v.impact ?? "minor";
-    if (counts[impact] !== undefined) counts[impact] += v.nodes.length;
+    if (counts[impact] !== undefined) counts[impact] += countedNodes(v).length;
   }
   return counts;
 }
@@ -332,13 +491,20 @@ async function scanPage(browser, url, pathPrefix) {
       throw new Error(`HTTP ${status}`);
     }
 
+    // Settle before axe runs, not after: lazy-loaded content that never enters
+    // the viewport is scanned in its pre-load state, which produces findings
+    // about placeholder markup no user ever sees.
+    await settlePage(page);
     const result = await analyzeWithRetry(page);
     // Links are collected at the desktop width, before the viewport switch —
-    // mobile CSS can hide nav links the crawl frontier needs.
+    // mobile CSS can hide nav links the crawl frontier needs. Settling first
+    // also means lazily-rendered links make it into the crawl frontier.
     const links = await sameOriginLinks(page, page.url(), pathPrefix);
     const allLinksOnPage = COLLECT_LINKS ? await allLinks(page, page.url()) : [];
+    const embeds = await pageEmbeds(page);
 
     let violations = slimViolations(result.violations);
+    violations = tagEmbedNodes(violations, await embedFrameMap(page, violations));
     const viewportsScanned = ["desktop"];
     if (MOBILE_ENABLED) {
       // Second pass on the same loaded page: switching the viewport
@@ -352,8 +518,17 @@ async function scanPage(browser, url, pathPrefix) {
           () => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)))
         );
         await new Promise((r) => setTimeout(r, 500));
+        // Settle again at the mobile width: the narrow layout is taller, so
+        // content that was already below the fold on desktop moves further
+        // down, and lazy-loading is re-triggered against the new viewport.
+        await settlePage(page);
         const mobileResult = await analyzeWithRetry(page);
-        violations = mergeViewportViolations(violations, slimViolations(mobileResult.violations));
+        let mobileViolations = slimViolations(mobileResult.violations);
+        mobileViolations = tagEmbedNodes(
+          mobileViolations,
+          await embedFrameMap(page, mobileViolations)
+        );
+        violations = mergeViewportViolations(violations, mobileViolations);
         viewportsScanned.push("mobile");
       } catch (err) {
         console.warn(`    mobile pass failed for ${url}: ${err.message} — keeping desktop results`);
@@ -367,8 +542,13 @@ async function scanPage(browser, url, pathPrefix) {
       final_url: page.url(),
       tier: tierFor(counts),
       counts,
-      total_violations: violations.reduce((sum, v) => sum + v.nodes.length, 0),
-      distinct_rules: violations.length,
+      total_violations: countedTotal(violations),
+      // A rule whose every node sits in an excluded embed is not a rule this
+      // page fails — it still appears in the embeds section, but it must not
+      // inflate the rule count the scorecard reports.
+      distinct_rules: violations.filter((v) => countedNodes(v).length > 0).length,
+      embed_violations: embedTotal(violations),
+      embeds,
       violations,
       // incomplete stays desktop-only in V1 — it is display-only (kept out of
       // counts/tier/history), so a second needs-review list isn't worth the merge.
@@ -387,6 +567,8 @@ async function scanPage(browser, url, pathPrefix) {
       counts: { critical: 0, serious: 0, moderate: 0, minor: 0 },
       total_violations: 0,
       distinct_rules: 0,
+      embed_violations: 0,
+      embeds: [],
       violations: [],
       incomplete: [],
       scan_ms: Date.now() - start,
@@ -422,7 +604,17 @@ function assembleSite(site, pages, crawlComplete) {
     tier: allFailed ? "error" : tierFor(counts),
     counts,
     total_violations: pages.reduce((sum, p) => sum + p.total_violations, 0),
-    distinct_rules: new Set(pages.flatMap((p) => p.violations.map((v) => v.id))).size,
+    distinct_rules: new Set(
+      pages.flatMap((p) =>
+        p.violations.filter((v) => countedNodes(v).length > 0).map((v) => v.id)
+      )
+    ).size,
+    // Reported alongside the score, never inside it: how many findings sit in
+    // excluded third-party embeds, and which embeds the site carries.
+    embed_violations: pages.reduce((sum, p) => sum + (p.embed_violations ?? 0), 0),
+    embed_vendors: [
+      ...new Set(pages.flatMap((p) => (p.embeds ?? []).map((e) => e.vendor))),
+    ],
     pages,
     scan_ms: pages.reduce((sum, p) => sum + p.scan_ms, 0),
     error: allFailed ? pages[0].error : null,
@@ -521,12 +713,13 @@ async function scanSite(browser, site, crawlEnabled, { maxPages, maxDepth }, che
 }
 
 function parseArgs(argv) {
-  const out = { only: null, crawl: true, maxPages: DEFAULT_MAX_PAGES, maxDepth: DEFAULT_MAX_DEPTH, collectLinks: false, mobile: true };
+  const out = { only: null, crawl: true, maxPages: DEFAULT_MAX_PAGES, maxDepth: DEFAULT_MAX_DEPTH, collectLinks: false, mobile: true, settle: true };
   for (const a of argv.slice(2)) {
     if (a.startsWith("--only=")) out.only = a.slice("--only=".length);
     else if (a === "--no-crawl") out.crawl = false;
     else if (a === "--collect-links") out.collectLinks = true;
     else if (a === "--no-mobile") out.mobile = false;
+    else if (a === "--no-settle") out.settle = false;
     else if (a.startsWith("--max-pages=")) out.maxPages = Number(a.slice("--max-pages=".length));
     else if (a.startsWith("--max-depth=")) out.maxDepth = Number(a.slice("--max-depth=".length));
   }
@@ -569,8 +762,12 @@ async function recordHistory(freshSites) {
     const pages = site.pages || [site];
     for (const p of pages) {
       for (const v of p.violations || []) {
+        // Excluded-embed nodes are absent from every other total; letting them
+        // into history would put them back into the trend chart by the side door.
+        const counted = countedNodes(v).length;
+        if (!counted) continue;
         if (!byRule[v.id]) byRule[v.id] = { id: v.id, impact: v.impact, count: 0 };
-        byRule[v.id].count += v.nodes.length;
+        byRule[v.id].count += counted;
       }
     }
     history.push({
@@ -579,6 +776,13 @@ async function recordHistory(freshSites) {
       pages: pages.length,
       crawlComplete: site.crawlComplete ?? null,
       viewports: MOBILE_ENABLED ? ["desktop", "mobile"] : ["desktop"],
+      // Scan configuration, recorded for the same reason `viewports` is: counts
+      // step at a methodology change for tool reasons, not site reasons, and the
+      // chart needs to be able to mark where. Settling finds MORE (lazy-loaded
+      // content is now scanned); embed exclusion counts FEWER. Both landed in
+      // the same scan, so the step is a net of two opposing shifts.
+      settled: SETTLE_ENABLED,
+      excludedEmbeds: EXCLUDED_EMBEDS.map((e) => e.vendor),
       rules: Object.values(byRule),
     });
   }
@@ -621,9 +825,10 @@ async function writeResults(all, results) {
 }
 
 async function main() {
-  const { only, crawl, maxPages, maxDepth, collectLinks, mobile } = parseArgs(process.argv);
+  const { only, crawl, maxPages, maxDepth, collectLinks, mobile, settle } = parseArgs(process.argv);
   COLLECT_LINKS = collectLinks;
   MOBILE_ENABLED = mobile;
+  SETTLE_ENABLED = settle;
   const all = JSON.parse(await readFile("sites.json", "utf8"));
   // "app": true entries (the finder web-apps) can't be link-crawled — their
   // content is gated behind form submits / SPA interaction. scan-finders.mjs
@@ -677,10 +882,14 @@ async function main() {
 
   await browser.close();
 
+  // History first, then the final write. writeResults regenerates
+  // dashboard/history.js from history.json, so appending this run's entry
+  // afterwards would leave the chart one scan behind — the run that just
+  // finished would not appear until the next one.
+  await recordHistory(results);
   // Final write. Checkpoints during the crawl have been flushing partial
   // results all along; this is the authoritative one.
   const mergedSites = await writeResults(all, results);
-  await recordHistory(results);
 
   // When --collect-links was set, emit the link inventory for check-links.mjs.
   // Only the sites scanned THIS run are included (so `--only=OTI --collect-links`
@@ -711,7 +920,7 @@ async function main() {
   console.log(`Wrote ${mergedSites.length} site(s) / ${totalPages} page(s) to dashboard/results.js and results.json.`);
 }
 
-// Guarded so tests can import mergeViewportViolations without starting a scan.
+// Guarded so tests can import the exported helpers without starting a scan.
 if (process.argv[1]?.endsWith("scan.js")) {
   main().catch((err) => {
     console.error(err);

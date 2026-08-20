@@ -202,6 +202,94 @@ a:focus-visible {
   font-weight: 600;
 }
 
+/* ---------- third-party embed advisory + findings ---------------------- */
+
+/* Same shape as the methodology callout, drained of accent colour. The grey
+   left rule is the point: this is context, not a score, and it must not read
+   as another severity next to the tier pills. */
+.embed-banner {
+  background: var(--surface-2);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--ink-subtle);
+  padding: 16px 22px;
+  margin: 0 0 28px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 22px;
+  align-items: start;
+}
+.embed-banner-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--ink-subtle);
+  white-space: nowrap;
+  padding-top: 3px;
+  border-right: 1px solid var(--rule);
+  padding-right: 22px;
+  align-self: stretch;
+}
+.embed-banner-body {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--ink-muted);
+  max-width: 78ch;
+}
+
+/* Collapsed by default and visually subordinate to the counted findings —
+   present for anyone who goes looking, never competing with the real score. */
+.embed-findings {
+  border: 1px solid var(--rule);
+  background: var(--surface-2);
+  margin: 32px 0 0;
+}
+.embed-findings-summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 14px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 14px;
+}
+.embed-findings-summary::-webkit-details-marker { display: none; }
+.embed-findings-summary::marker { content: ""; }
+.embed-findings-summary:hover { background: var(--surface-3); }
+.embed-findings[open] > .embed-findings-summary {
+  border-bottom: 1px solid var(--rule);
+}
+.embed-findings-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink-muted);
+}
+.embed-findings-title::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 8px;
+  color: var(--ink-subtle);
+  transition: transform 0.12s ease;
+}
+.embed-findings[open] > .embed-findings-summary .embed-findings-title::before {
+  transform: rotate(90deg);
+}
+.embed-findings-meta {
+  font-size: 12.5px;
+  color: var(--ink-subtle);
+  font-variant-numeric: tabular-nums;
+}
+.embed-findings-note {
+  margin: 0;
+  padding: 14px 20px 4px;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--ink-muted);
+  /* Single full-width column, so no measure cap — see .empty-state-body. */
+}
+.embed-findings .violations-list { padding: 12px 20px 20px; }
+
 /* ---------- summary strip --------------------------------------------- */
 
 .summary-strip {
@@ -1034,8 +1122,13 @@ a:focus-visible {
 .empty-state-body {
   margin: 0;
   font-size: 14.5px;
+  line-height: 1.55;
   color: var(--ink);
-  max-width: 70ch;
+  /* No measure cap here, unlike .methodology-body and .embed-banner-body.
+     Those sit in a two-column grid whose label column absorbs the leftover
+     width, so their cap is invisible; this callout is a single full-width
+     column, where the same cap just leaves a ragged gap against the box edge.
+     Line length is already bounded by the page's content column. */
 }
 
 .error-banner {
@@ -1275,11 +1368,11 @@ a:focus-visible {
   color: var(--ink);
   margin: 0 0 8px;
 }
+/* Same single-column shape as .empty-state — no measure cap, see there. */
 .search-empty-body {
   margin: 0;
   font-size: 14px;
   color: var(--ink-muted);
-  max-width: 70ch;
   line-height: 1.5;
 }
 .search-empty-cta {

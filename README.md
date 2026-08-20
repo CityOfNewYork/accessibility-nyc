@@ -11,6 +11,8 @@ An open-source scanner and dashboard that runs [axe-core](https://github.com/deq
 - Scans every URL in `sites.json` with axe-core, filtered to **WCAG 2.2 AA** — the standard required of City agencies by Local Law 26 of 2016 and adopted as the current version in the 2025 NYC Digital Accessibility Report from OTI and MOPD.
 - Scans each page at **two viewports** — desktop (1280×900) and mobile (390×844) — because mobile-breakpoint DOM (hamburger menus, collapsed nav) never renders in a desktop-only scan and rules like `target-size` are viewport-sensitive. Findings present at both widths are deduplicated; findings only the mobile pass can see are tagged and badged "mobile only" in the dashboard (`--no-mobile` skips the second pass).
 - Tiers each site **red / orange / yellow / green** by max violation severity (orange = serious issues remain but every critical issue is resolved).
+- **Settles lazy-loaded content before scanning** — step-scrolls each page to the bottom and back so content below the fold has actually loaded. Without this, placeholder markup is scanned in its pre-load state and produces findings no real user ever meets (`--no-settle` reproduces the old behavior).
+- **Reports third-party YouTube embed findings without counting them** — see [Third-party embeds](#third-party-embeds) below.
 - Crawls multi-page sites breadth-first (per-site `crawl: true` flag), skipping links to PDFs and other non-HTML files; drives single-page apps through their real interaction states (`scan-finders.mjs`); scans fixed page lists (per-site `pages: [...]`) for curated sets that span sites, like the Golden Set.
 - Writes a static dashboard (`dashboard/index.html`) that needs no server to view — just open the file. Views: overview → per-site → per-page, with findings groupable **by rule, by component, or by page**, and search across pages, sites, and rules.
 
@@ -29,6 +31,7 @@ npm run scan                  # scan everything in sites.json
 node scan.js --only=OTI       # scan a single site (smoke test)
 node scan.js --max-pages=150  # lower the per-site crawl cap (default 1000)
 node scan.js --no-mobile      # desktop pass only (matches pre-mobile scan output)
+node scan.js --no-settle      # skip the lazy-load scroll pass (matches pre-settle output)
 ```
 
 This writes:
@@ -55,7 +58,28 @@ All three work — the dashboard loads its data via `<script src="results.js">` 
 npm test
 ```
 
-Runs two checks: `test/check-merge.js` unit-tests the desktop/mobile viewport dedup (`mergeViewportViolations`), and `test/check-engine.js` scans `test-fixtures/broken.html` (a deliberately broken page) asserting that axe catches the obvious violations — `image-alt`, `button-name`, `link-name`, `label`, `color-contrast`, `html-has-lang`. Useful for confirming the engine is wired up correctly after dependency upgrades.
+Runs three checks: `test/check-merge.js` unit-tests the desktop/mobile viewport dedup (`mergeViewportViolations`), `test/check-embeds.js` unit-tests the third-party embed exclusion (findings inside a YouTube frame are never counted; findings on the `<iframe>` tag itself always are), and `test/check-engine.js` scans `test-fixtures/broken.html` (a deliberately broken page) asserting that axe catches the obvious violations — `image-alt`, `button-name`, `link-name`, `label`, `color-contrast`, `html-has-lang`. Useful for confirming the engine is wired up correctly after dependency upgrades.
+
+## Third-party embeds
+
+Some findings come from inside an embedded third-party widget — the agency's page contains an `<iframe>`, and the violation is in markup the vendor ships, not markup the agency wrote or can edit.
+
+**YouTube findings are reported but not counted.** They appear in a collapsed "Third-party embeds — not counted toward score" section on the site and page views, and any page carrying a YouTube embed shows a grey advisory. They are excluded from tiers, counts, totals, and the trend chart.
+
+This is a deliberate case-by-case allowlist (`EXCLUDED_EMBEDS` in `scan.js`), not a blanket "ignore cross-origin iframes" rule. YouTube qualifies because:
+
+- It is ubiquitous across nyc.gov.
+- Its player markup churns week to week under us. Across six consecutive weekly scans of one page carrying a single YouTube embed, the finding set changed four times — including dropping to zero on 2026-07-24 and returning to three findings on 2026-07-31. The findings track the player's release train, not the page.
+- The findings are not actionable by the embedding agency.
+- A video's content is normally also on the page in another form, which is what the advisory asks agencies to confirm.
+
+**Every other embed still counts.** Tableau, Facebook, Maps and the rest stay in the score on purpose: an agency may not realize an embedded dashboard carries issues, and unlike a video those can gate content that exists nowhere else on the page.
+
+**Findings on the `<iframe>` tag itself always count**, whatever the vendor. `frame-title` — a missing `title` attribute on the embed — is the agency's own markup and its own fix. The exclusion suppresses the vendor's mistakes, not the agency's mistakes about the vendor.
+
+### Reading the trend across this change
+
+Both the lazy-load settling and the embed exclusion landed in the same scan, and they push counts in opposite directions: settling finds **more** (lazy-loaded content is now scanned at all), exclusion counts **fewer**. History entries from this point carry `settled: true` and `excludedEmbeds: ["YouTube"]` so the chart can mark where the methodology changed — the same way `viewports` marks the mobile-scan cutover. A step in the trend at that date is a tool change, not a site change.
 
 ## Editing the site list
 
@@ -87,6 +111,7 @@ accessibility-nyc/
 │   ├── styles.css
 │   └── results.js             # generated; window.SCAN_DATA = {...}
 ├── test/
+│   ├── check-embeds.js
 │   ├── check-engine.js
 │   └── check-merge.js
 ├── test-fixtures/

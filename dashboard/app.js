@@ -31,6 +31,52 @@
     return;
   }
 
+  // ---- third-party embeds ---------------------------------------------------
+  //
+  // scan.js tags violation nodes that sit INSIDE an excluded third-party embed
+  // (currently YouTube) with `node.embed`. Those findings are reported but not
+  // counted: they never move a tier, a total, or the trend chart.
+  //
+  // Rather than teach a dozen renderers to filter, split the data once here.
+  // After this pass `page.violations` holds only counted findings — so every
+  // existing view, grouping, and search path is correct without change — and
+  // the excluded ones live on `page.embedViolations` for the one section that
+  // shows them. A rule with nodes on both sides appears in both, each with its
+  // own subset of nodes.
+  //
+  // Note what is NOT split out: findings on the <iframe> tag itself, like
+  // frame-title. Those have a single-element target (the agency's own markup),
+  // carry no `embed` tag, and stay counted — the agency wrote that tag.
+  function splitEmbedFindings(sites) {
+    for (const site of sites) {
+      for (const page of site.pages || [site]) {
+        const violations = page.violations || [];
+        if (!violations.some((v) => v.nodes.some((n) => n.embed))) {
+          page.embedViolations = [];
+          continue;
+        }
+        const counted = [];
+        const embedded = [];
+        for (const v of violations) {
+          const own = v.nodes.filter((n) => !n.embed);
+          const emb = v.nodes.filter((n) => n.embed);
+          if (own.length) counted.push({ ...v, nodes: own });
+          if (emb.length) embedded.push({ ...v, nodes: emb });
+        }
+        page.violations = counted;
+        page.embedViolations = embedded;
+      }
+    }
+  }
+  splitEmbedFindings(data.sites);
+
+  // Every excluded embed on a page, deduped by vendor. Present even when the
+  // embed produced no findings at all — the guidance is about the embed, not
+  // about what axe happened to catch this week.
+  function pageEmbedVendors(page) {
+    return [...new Set((page.embeds || []).map((e) => e.vendor))];
+  }
+
   // ---- helpers --------------------------------------------------------------
 
   function el(tag, attrs = {}, ...children) {
@@ -131,6 +177,75 @@
     return el("div", { class: "section-eyebrow" },
       el("h2", { class: "section-eyebrow-title" }, title),
       sub ? el("p", { class: "section-eyebrow-sub" }, sub) : null
+    );
+  }
+
+  // Grey advisory shown wherever an excluded embed appears. Deliberately not
+  // scored and deliberately not alarming: the action it asks for — put the
+  // essential information on the page in another form — is good practice
+  // whether or not the player currently trips a rule.
+  function embedBanner(vendors, scope) {
+    if (!vendors.length) return null;
+    const list =
+      vendors.length === 1
+        ? `a ${vendors[0]} embed`
+        : vendors.slice(0, -1).join(", ") + ` and ${vendors[vendors.length - 1]} embeds`;
+    const where = scope === "site" ? "on this site" : "on this page";
+    const yours = scope === "site" ? "your pages" : "your page";
+    return el("aside", { class: "embed-banner" },
+      el("div", { class: "embed-banner-label" }, "Third-party embed"),
+      el("p", { class: "embed-banner-body" },
+        `There is ${list} ${where} that may not fully meet accessibility guidelines. `,
+        `Be sure any essential information is also included in alternate forms on ${yours}.`
+      )
+    );
+  }
+
+  // Site-level rollup of the excluded findings: one entry per rule, with every
+  // page's nodes folded in, so the site view lists rules rather than repeating
+  // the same YouTube finding once per page that carries a video.
+  function siteEmbedFindings(pages) {
+    const byRule = new Map();
+    for (const p of pages) {
+      for (const v of p.embedViolations || []) {
+        const g = byRule.get(v.id);
+        if (g) g.nodes = g.nodes.concat(v.nodes);
+        else byRule.set(v.id, { ...v, nodes: [...v.nodes] });
+      }
+    }
+    return [...byRule.values()];
+  }
+
+  function siteEmbedVendors(pages) {
+    return [...new Set(pages.flatMap(pageEmbedVendors))];
+  }
+
+  // The excluded findings themselves, collapsed by default. Kept visible on
+  // purpose: suppressing them outright would mean someone running axe directly
+  // finds issues this dashboard never showed them, and we would own that.
+  function embedFindingsSection(violations, pageUrl) {
+    if (!violations.length) return null;
+    const occurrences = violations.reduce((sum, v) => sum + v.nodes.length, 0);
+    const vendors = [
+      ...new Set(violations.flatMap((v) => v.nodes.map((n) => n.embed && n.embed.vendor))),
+    ].filter(Boolean);
+    const order = { critical: 0, serious: 1, moderate: 2, minor: 3 };
+    const sorted = [...violations].sort((a, b) => {
+      const oa = order[a.impact] ?? 99, ob = order[b.impact] ?? 99;
+      if (oa !== ob) return oa - ob;
+      return b.nodes.length - a.nodes.length;
+    });
+    return el("details", { class: "embed-findings" },
+      el("summary", { class: "embed-findings-summary" },
+        el("span", { class: "embed-findings-title" }, "Third-party embeds — not counted toward score"),
+        el("span", { class: "embed-findings-meta" },
+          `${fmtNum(occurrences)} occurrence${occurrences === 1 ? "" : "s"} inside ${vendors.join(" / ")} · ${violations.length} rule${violations.length === 1 ? "" : "s"}`
+        )
+      ),
+      el("p", { class: "embed-findings-note" },
+        "These sit inside the embedded player's own markup, which the agency cannot edit. They are excluded from this site's tier, totals, and trend, and are listed here so nothing found is hidden."
+      ),
+      el("div", { class: "violations-list" }, sorted.map((v) => renderViolation(v, pageUrl)))
     );
   }
 
@@ -1480,17 +1595,26 @@
       return;
     }
 
+    const embedVendorsHere = siteEmbedVendors(pages);
+    const embedFindingsHere = siteEmbedFindings(pages);
+    const siteBanner = embedBanner(embedVendorsHere, "site");
+    const siteEmbedSection = embedFindingsSection(embedFindingsHere, site.url);
+
     const allViolations = siteViolations(site);
     if (allViolations.length === 0) {
+      // A site can pass its own floor check and still carry embed findings.
+      // Both belong here: the clean result is real, and so is the advisory.
       app.replaceChildren(...[back, header,
         methodologyCallout(false),
+        siteBanner,
         historyChart,
         el("div", { class: "empty-state" },
           el("p", { class: "empty-state-title" }, "No automated violations found"),
           el("p", { class: "empty-state-body" },
             "Floor check passed against WCAG 2.2 AA. Manual review and assistive-technology testing are still required to confirm full compliance — automated scanners detect only a portion of accessibility failures."
           )
-        )
+        ),
+        siteEmbedSection
       ].filter(Boolean));
       return;
     }
@@ -1517,6 +1641,7 @@
       : `${allViolations.length} rule${allViolations.length === 1 ? "" : "s"} failed · ${fmtNum(site.total_violations)} occurrence${site.total_violations === 1 ? "" : "s"}`;
 
     const children = [back, header, methodologyCallout(false)];
+    if (siteBanner) children.push(siteBanner);
     if (historyChart) children.push(historyChart);
     children.push(el("div", { class: "section-eyebrow findings-head" },
       el("h2", { class: "section-eyebrow-title" }, "Findings"),
@@ -1554,6 +1679,8 @@
       }))));
       children.push(el("div", { class: "violations-list" }, sorted.map((v) => renderViolation(v, site.url))));
     }
+
+    if (siteEmbedSection) children.push(siteEmbedSection);
 
     // distributionBar returns null when there's nothing worth charting
     app.replaceChildren(...children.filter(Boolean));
@@ -1684,6 +1811,10 @@
 
     children.push(methodologyCallout(false));
 
+    const embedFindings = page.embedViolations || [];
+    const banner = embedBanner(pageEmbedVendors(page), "page");
+    if (banner) children.push(banner);
+
     if (violations.length === 0) {
       children.push(el("div", { class: "empty-state" },
         el("p", { class: "empty-state-title" }, "No automated violations on this page"),
@@ -1691,6 +1822,10 @@
           "Floor check passed for this URL against WCAG 2.2 AA. Manual review and assistive-technology testing are still required to confirm full compliance."
         )
       ));
+      // A page can be clean on its own markup and still carry embed findings —
+      // show them here too rather than only on the non-empty path.
+      const embedSection = embedFindingsSection(embedFindings, page.url);
+      if (embedSection) children.push(embedSection);
       app.replaceChildren(...children);
       return;
     }
@@ -1708,6 +1843,9 @@
       ),
       el("div", { class: "violations-list" }, sorted.map((v) => renderViolation(v, page.url)))
     );
+
+    const embedSection = embedFindingsSection(embedFindings, page.url);
+    if (embedSection) children.push(embedSection);
 
     app.replaceChildren(...children);
   }

@@ -7906,5 +7906,653 @@
         "count": 1
       }
     ]
+  },
+  {
+    "date": "2026-08-21T11:55:19.412Z",
+    "site": "NYC.gov",
+    "pages": 22,
+    "crawlComplete": true,
+    "viewports": [
+      "desktop",
+      "mobile"
+    ],
+    "settled": true,
+    "excludedEmbeds": [
+      "YouTube"
+    ],
+    "rules": [
+      {
+        "id": "aria-required-attr",
+        "impact": "critical",
+        "count": 22
+      },
+      {
+        "id": "image-alt",
+        "impact": "critical",
+        "count": 5
+      }
+    ]
+  },
+  {
+    "date": "2026-08-21T11:55:19.412Z",
+    "site": "OTI",
+    "pages": 163,
+    "crawlComplete": true,
+    "viewports": [
+      "desktop",
+      "mobile"
+    ],
+    "settled": true,
+    "excludedEmbeds": [
+      "YouTube"
+    ],
+    "rules": [
+      {
+        "id": "role-img-alt",
+        "impact": "serious",
+        "count": 496
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 46
+      },
+      {
+        "id": "frame-title",
+        "impact": "serious",
+        "count": 10
+      },
+      {
+        "id": "link-name",
+        "impact": "serious",
+        "count": 4
+      },
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "count": 6
+      },
+      {
+        "id": "list",
+        "impact": "serious",
+        "count": 1
+      },
+      {
+        "id": "aria-allowed-attr",
+        "impact": "critical",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "date": "2026-08-21T11:55:19.412Z",
+    "site": "PIT Crew",
+    "pages": 1,
+    "crawlComplete": true,
+    "viewports": [
+      "desktop",
+      "mobile"
+    ],
+    "settled": true,
+    "excludedEmbeds": [
+      "YouTube"
+    ],
+    "rules": []
+  },
+  {
+    "date": "2026-08-21T11:55:19.412Z",
+    "site": "MOPD",
+    "pages": 160,
+    "crawlComplete": true,
+    "viewports": [
+      "desktop",
+      "mobile"
+    ],
+    "settled": true,
+    "excludedEmbeds": [
+      "YouTube"
+    ],
+    "rules": [
+      {
+        "id": "aria-hidden-focus",
+        "impact": "serious",
+        "count": 158
+      },
+      {
+        "id": "link-name",
+        "impact": "serious",
+        "count": 178
+      },
+      {
+        "id": "list",
+        "impact": "serious",
+        "count": 10
+      },
+      {
+        "id": "select-name",
+        "impact": "critical",
+        "count": 164
+      },
+      {
+        "id": "meta-viewport",
+        "impact": "moderate",
+        "count": 27
+      },
+      {
+        "id": "image-alt",
+        "impact": "critical",
+        "count": 1
+      },
+      {
+        "id": "frame-title",
+        "impact": "serious",
+        "count": 1
+      },
+      {
+        "id": "aria-allowed-attr",
+        "impact": "critical",
+        "count": 2
+      },
+      {
+        "id": "listitem",
+        "impact": "serious",
+        "count": 30
+      },
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "count": 6
+      }
+    ]
+  },
+  {
+    "date": "2026-08-21T11:55:19.412Z",
+    "site": "DOF",
+    "pages": 595,
+    "crawlComplete": true,
+    "viewports": [
+      "desktop",
+      "mobile"
+    ],
+    "settled": true,
+    "excludedEmbeds": [
+      "YouTube"
+    ],
+    "rules": [
+      {
+        "id": "aria-hidden-focus",
+        "impact": "serious",
+        "count": 550
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 57
+      },
+      {
+        "id": "link-name",
+        "impact": "serious",
+        "count": 582
+      },
+      {
+        "id": "meta-viewport",
+        "impact": "moderate",
+        "count": 211
+      },
+      {
+        "id": "image-alt",
+        "impact": "critical",
+        "count": 4
+      },
+      {
+        "id": "select-name",
+        "impact": "critical",
+        "count": 59
+      },
+      {
+        "id": "aria-allowed-attr",
+        "impact": "critical",
+        "count": 41
+      },
+      {
+        "id": "frame-title",
+        "impact": "serious",
+        "count": 23
+      },
+      {
+        "id": "meta-refresh",
+        "impact": "critical",
+        "count": 20
+      },
+      {
+        "id": "input-button-name",
+        "impact": "critical",
+        "count": 3
+      },
+      {
+        "id": "list",
+        "impact": "serious",
+        "count": 27
+      },
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "count": 1
+      },
+      {
+        "id": "html-has-lang",
+        "impact": "serious",
+        "count": 425
+      },
+      {
+        "id": "label",
+        "impact": "critical",
+        "count": 469
+      },
+      {
+        "id": "aria-prohibited-attr",
+        "impact": "serious",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "date": "2026-08-21T11:55:19.412Z",
+    "site": "DOT",
+    "pages": 315,
+    "crawlComplete": true,
+    "viewports": [
+      "desktop",
+      "mobile"
+    ],
+    "settled": true,
+    "excludedEmbeds": [
+      "YouTube"
+    ],
+    "rules": [
+      {
+        "id": "aria-hidden-focus",
+        "impact": "serious",
+        "count": 8
+      },
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "count": 6645
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 44
+      },
+      {
+        "id": "frame-title",
+        "impact": "serious",
+        "count": 17
+      },
+      {
+        "id": "list",
+        "impact": "serious",
+        "count": 35
+      },
+      {
+        "id": "nested-interactive",
+        "impact": "serious",
+        "count": 22
+      },
+      {
+        "id": "aria-valid-attr-value",
+        "impact": "critical",
+        "count": 1
+      },
+      {
+        "id": "link-name",
+        "impact": "serious",
+        "count": 7
+      },
+      {
+        "id": "image-alt",
+        "impact": "critical",
+        "count": 8
+      },
+      {
+        "id": "label",
+        "impact": "critical",
+        "count": 2
+      },
+      {
+        "id": "select-name",
+        "impact": "critical",
+        "count": 2
+      },
+      {
+        "id": "aria-input-field-name",
+        "impact": "serious",
+        "count": 1
+      },
+      {
+        "id": "aria-prohibited-attr",
+        "impact": "serious",
+        "count": 4
+      }
+    ]
+  },
+  {
+    "date": "2026-08-21T11:55:19.412Z",
+    "site": "NYC Aging",
+    "pages": 151,
+    "crawlComplete": true,
+    "viewports": [
+      "desktop",
+      "mobile"
+    ],
+    "settled": true,
+    "excludedEmbeds": [
+      "YouTube"
+    ],
+    "rules": [
+      {
+        "id": "aria-hidden-focus",
+        "impact": "serious",
+        "count": 147
+      },
+      {
+        "id": "link-name",
+        "impact": "serious",
+        "count": 199
+      },
+      {
+        "id": "list",
+        "impact": "serious",
+        "count": 7
+      },
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "count": 27
+      },
+      {
+        "id": "select-name",
+        "impact": "critical",
+        "count": 139
+      },
+      {
+        "id": "meta-viewport",
+        "impact": "moderate",
+        "count": 74
+      },
+      {
+        "id": "valid-lang",
+        "impact": "serious",
+        "count": 3
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 10
+      },
+      {
+        "id": "image-alt",
+        "impact": "critical",
+        "count": 1
+      },
+      {
+        "id": "frame-title",
+        "impact": "serious",
+        "count": 5
+      }
+    ]
+  },
+  {
+    "date": "2026-08-21T11:55:19.412Z",
+    "site": "NYC 311",
+    "pages": 8,
+    "crawlComplete": true,
+    "viewports": [
+      "desktop",
+      "mobile"
+    ],
+    "settled": true,
+    "excludedEmbeds": [
+      "YouTube"
+    ],
+    "rules": [
+      {
+        "id": "input-button-name",
+        "impact": "critical",
+        "count": 8
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 2
+      },
+      {
+        "id": "aria-required-children",
+        "impact": "critical",
+        "count": 1
+      },
+      {
+        "id": "aria-required-parent",
+        "impact": "critical",
+        "count": 8
+      },
+      {
+        "id": "listitem",
+        "impact": "serious",
+        "count": 3
+      },
+      {
+        "id": "link-in-text-block",
+        "impact": "serious",
+        "count": 2
+      },
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "count": 27
+      },
+      {
+        "id": "aria-allowed-attr",
+        "impact": "critical",
+        "count": 6
+      },
+      {
+        "id": "select-name",
+        "impact": "critical",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "date": "2026-08-21T11:55:19.412Z",
+    "site": "Accessibility Scanner",
+    "pages": 5,
+    "crawlComplete": true,
+    "viewports": [
+      "desktop",
+      "mobile"
+    ],
+    "settled": true,
+    "excludedEmbeds": [
+      "YouTube"
+    ],
+    "rules": []
+  },
+  {
+    "date": "2026-08-21T11:55:19.412Z",
+    "site": "Golden Set",
+    "pages": 16,
+    "crawlComplete": true,
+    "viewports": [
+      "desktop",
+      "mobile"
+    ],
+    "settled": true,
+    "excludedEmbeds": [
+      "YouTube"
+    ],
+    "rules": [
+      {
+        "id": "aria-required-attr",
+        "impact": "critical",
+        "count": 5
+      },
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "count": 365
+      },
+      {
+        "id": "image-alt",
+        "impact": "critical",
+        "count": 3
+      },
+      {
+        "id": "aria-hidden-focus",
+        "impact": "serious",
+        "count": 6
+      },
+      {
+        "id": "link-name",
+        "impact": "serious",
+        "count": 8
+      },
+      {
+        "id": "list",
+        "impact": "serious",
+        "count": 8
+      },
+      {
+        "id": "select-name",
+        "impact": "critical",
+        "count": 8
+      },
+      {
+        "id": "meta-viewport",
+        "impact": "moderate",
+        "count": 1
+      },
+      {
+        "id": "frame-title",
+        "impact": "serious",
+        "count": 1
+      },
+      {
+        "id": "aria-valid-attr-value",
+        "impact": "critical",
+        "count": 1
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "date": "2026-08-21T11:57:32.544Z",
+    "site": "Summer",
+    "pages": 1,
+    "crawlComplete": true,
+    "rules": [
+      {
+        "id": "html-has-lang",
+        "impact": "serious",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "date": "2026-08-21T11:57:32.544Z",
+    "site": "Aging Service Finder",
+    "pages": 2,
+    "crawlComplete": true,
+    "rules": [
+      {
+        "id": "aria-allowed-attr",
+        "impact": "critical",
+        "count": 6
+      },
+      {
+        "id": "aria-input-field-name",
+        "impact": "serious",
+        "count": 6
+      },
+      {
+        "id": "aria-required-children",
+        "impact": "critical",
+        "count": 6
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 2
+      },
+      {
+        "id": "html-has-lang",
+        "impact": "serious",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-08-21T11:57:32.544Z",
+    "site": "Aging Activities Finder",
+    "pages": 2,
+    "crawlComplete": true,
+    "rules": [
+      {
+        "id": "image-alt",
+        "impact": "critical",
+        "count": 2
+      },
+      {
+        "id": "link-name",
+        "impact": "serious",
+        "count": 10
+      }
+    ]
+  },
+  {
+    "date": "2026-08-21T11:57:32.544Z",
+    "site": "DOE School Search",
+    "pages": 3,
+    "crawlComplete": true,
+    "rules": [
+      {
+        "id": "aria-hidden-focus",
+        "impact": "serious",
+        "count": 6
+      },
+      {
+        "id": "meta-viewport",
+        "impact": "moderate",
+        "count": 3
+      },
+      {
+        "id": "aria-required-children",
+        "impact": "critical",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "date": "2026-08-21T11:57:32.544Z",
+    "site": "Food Help Finder",
+    "pages": 2,
+    "crawlComplete": true,
+    "rules": [
+      {
+        "id": "link-name",
+        "impact": "serious",
+        "count": 3
+      },
+      {
+        "id": "list",
+        "impact": "serious",
+        "count": 1
+      }
+    ]
   }
 ]

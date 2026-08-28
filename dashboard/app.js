@@ -37,38 +37,52 @@
   // (currently YouTube) with `node.embed`. Those findings are reported but not
   // counted: they never move a tier, a total, or the trend chart.
   //
+  // scan.js also tags nodes covered by an active suppressions.json entry with
+  // `node.suppressed` — a finding a human checked and determined is wrong.
+  // Same handling: reported, never counted.
+  //
   // Rather than teach a dozen renderers to filter, split the data once here.
   // After this pass `page.violations` holds only counted findings — so every
   // existing view, grouping, and search path is correct without change — and
-  // the excluded ones live on `page.embedViolations` for the one section that
-  // shows them. A rule with nodes on both sides appears in both, each with its
-  // own subset of nodes.
+  // the excluded ones live on `page.embedViolations` / `page.suppressedViolations`
+  // for the sections that show them. A rule with nodes in more than one bucket
+  // appears in each, carrying only that bucket's nodes.
   //
   // Note what is NOT split out: findings on the <iframe> tag itself, like
   // frame-title. Those have a single-element target (the agency's own markup),
   // carry no `embed` tag, and stay counted — the agency wrote that tag.
-  function splitEmbedFindings(sites) {
+  function splitUncountedFindings(sites) {
     for (const site of sites) {
       for (const page of site.pages || [site]) {
         const violations = page.violations || [];
-        if (!violations.some((v) => v.nodes.some((n) => n.embed))) {
+        const hasUncounted = violations.some((v) =>
+          v.nodes.some((n) => n.embed || n.suppressed)
+        );
+        if (!hasUncounted) {
           page.embedViolations = [];
+          page.suppressedViolations = [];
           continue;
         }
         const counted = [];
         const embedded = [];
+        const suppressed = [];
         for (const v of violations) {
-          const own = v.nodes.filter((n) => !n.embed);
+          // An embed tag wins over a suppression tag if somehow both are
+          // present, so a node is only ever listed once.
           const emb = v.nodes.filter((n) => n.embed);
+          const sup = v.nodes.filter((n) => !n.embed && n.suppressed);
+          const own = v.nodes.filter((n) => !n.embed && !n.suppressed);
           if (own.length) counted.push({ ...v, nodes: own });
           if (emb.length) embedded.push({ ...v, nodes: emb });
+          if (sup.length) suppressed.push({ ...v, nodes: sup });
         }
         page.violations = counted;
         page.embedViolations = embedded;
+        page.suppressedViolations = suppressed;
       }
     }
   }
-  splitEmbedFindings(data.sites);
+  splitUncountedFindings(data.sites);
 
   // Every excluded embed on a page, deduped by vendor. Present even when the
   // embed produced no findings at all — the guidance is about the embed, not
@@ -218,6 +232,68 @@
 
   function siteEmbedVendors(pages) {
     return [...new Set(pages.flatMap(pageEmbedVendors))];
+  }
+
+  function siteSuppressedFindings(pages) {
+    const byRule = new Map();
+    for (const p of pages) {
+      for (const v of p.suppressedViolations || []) {
+        const g = byRule.get(v.id);
+        if (g) g.nodes = g.nodes.concat(v.nodes);
+        else byRule.set(v.id, { ...v, nodes: [...v.nodes] });
+      }
+    }
+    return [...byRule.values()];
+  }
+
+  // Verified false positives, collapsed, with each entry's written reason and
+  // verification date shown. The reason is the whole point: a suppression a
+  // reader cannot audit is indistinguishable from us hiding a number.
+  function suppressedFindingsSection(violations, pageUrl) {
+    if (!violations.length) return null;
+    const occurrences = violations.reduce((sum, v) => sum + v.nodes.length, 0);
+    const order = { critical: 0, serious: 1, moderate: 2, minor: 3 };
+    const sorted = [...violations].sort((a, b) => {
+      const oa = order[a.impact] ?? 99, ob = order[b.impact] ?? 99;
+      if (oa !== ob) return oa - ob;
+      return b.nodes.length - a.nodes.length;
+    });
+    // One card per rule, listing the distinct reasons behind it.
+    const reasonsFor = (v) => {
+      const seen = new Map();
+      for (const n of v.nodes) {
+        if (n.suppressed && !seen.has(n.suppressed.reason)) seen.set(n.suppressed.reason, n.suppressed);
+      }
+      return [...seen.values()];
+    };
+    return el("details", { class: "embed-findings suppressed-findings" },
+      el("summary", { class: "embed-findings-summary" },
+        el("span", { class: "embed-findings-title" }, "Verified false positives — not counted toward score"),
+        el("span", { class: "embed-findings-meta" },
+          `${fmtNum(occurrences)} occurrence${occurrences === 1 ? "" : "s"} · ${violations.length} rule${violations.length === 1 ? "" : "s"}`
+        )
+      ),
+      el("p", { class: "embed-findings-note" },
+        "Each of these was checked by hand and determined not to be a real barrier. They are excluded from this site's tier, totals, and trend, and listed here with the reason so the judgement can be reviewed. Every entry expires and is re-checked."
+      ),
+      el("div", { class: "violations-list" },
+        sorted.map((v) =>
+          el("div", { class: "suppressed-entry" },
+            renderViolation(v, pageUrl),
+            el("div", { class: "suppressed-reasons" },
+              reasonsFor(v).map((sup) =>
+                el("div", { class: "suppressed-reason" },
+                  el("p", { class: "suppressed-reason-text" }, sup.reason),
+                  el("p", { class: "suppressed-reason-meta" },
+                    `Verified ${sup.verified_on} · expires ${sup.expires}`
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
+    );
   }
 
   // The excluded findings themselves, collapsed by default. Kept visible on
@@ -1599,6 +1675,7 @@
     const embedFindingsHere = siteEmbedFindings(pages);
     const siteBanner = embedBanner(embedVendorsHere, "site");
     const siteEmbedSection = embedFindingsSection(embedFindingsHere, site.url);
+    const siteSuppressedSection = suppressedFindingsSection(siteSuppressedFindings(pages), site.url);
 
     const allViolations = siteViolations(site);
     if (allViolations.length === 0) {
@@ -1614,7 +1691,8 @@
             "Floor check passed against WCAG 2.2 AA. Manual review and assistive-technology testing are still required to confirm full compliance — automated scanners detect only a portion of accessibility failures."
           )
         ),
-        siteEmbedSection
+        siteEmbedSection,
+        siteSuppressedSection
       ].filter(Boolean));
       return;
     }
@@ -1681,6 +1759,7 @@
     }
 
     if (siteEmbedSection) children.push(siteEmbedSection);
+    if (siteSuppressedSection) children.push(siteSuppressedSection);
 
     // distributionBar returns null when there's nothing worth charting
     app.replaceChildren(...children.filter(Boolean));
@@ -1812,6 +1891,7 @@
     children.push(methodologyCallout(false));
 
     const embedFindings = page.embedViolations || [];
+    const suppressedFindings = page.suppressedViolations || [];
     const banner = embedBanner(pageEmbedVendors(page), "page");
     if (banner) children.push(banner);
 
@@ -1826,6 +1906,8 @@
       // show them here too rather than only on the non-empty path.
       const embedSection = embedFindingsSection(embedFindings, page.url);
       if (embedSection) children.push(embedSection);
+      const suppressedSection = suppressedFindingsSection(suppressedFindings, page.url);
+      if (suppressedSection) children.push(suppressedSection);
       app.replaceChildren(...children);
       return;
     }
@@ -1846,6 +1928,8 @@
 
     const embedSection = embedFindingsSection(embedFindings, page.url);
     if (embedSection) children.push(embedSection);
+    const suppressedSection = suppressedFindingsSection(suppressedFindings, page.url);
+    if (suppressedSection) children.push(suppressedSection);
 
     app.replaceChildren(...children);
   }

@@ -290,6 +290,36 @@ a:focus-visible {
 }
 .embed-findings .violations-list { padding: 12px 20px 20px; }
 
+/* Verified false positives reuse the embeds shell, with a warmer left rule so
+   the two uncounted sections are visibly different kinds of thing: one is
+   "not the agency's markup", the other is "we checked and this is wrong". */
+.suppressed-findings {
+  border-left: 3px solid var(--imp-moderate);
+}
+.suppressed-entry + .suppressed-entry {
+  margin-top: 14px;
+}
+.suppressed-reasons {
+  margin: 0 0 4px;
+  padding: 0 0 0 14px;
+  border-left: 2px solid var(--rule);
+}
+.suppressed-reason + .suppressed-reason {
+  margin-top: 10px;
+}
+.suppressed-reason-text {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.suppressed-reason-meta {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: var(--ink-subtle);
+  font-variant-numeric: tabular-nums;
+}
+
 /* ---------- summary strip --------------------------------------------- */
 
 .summary-strip {

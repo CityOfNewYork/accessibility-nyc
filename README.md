@@ -58,7 +58,7 @@ All three work — the dashboard loads its data via `<script src="results.js">` 
 npm test
 ```
 
-Runs four checks: `test/check-core-shared.js` fails the build if either scanner defines its own copy of a scoring rule instead of importing it from `scan-core.mjs` (see [Shared scoring rules](#shared-scoring-rules)), `test/check-merge.js` unit-tests the desktop/mobile viewport dedup (`mergeViewportViolations`), `test/check-embeds.js` unit-tests the third-party embed exclusion (findings inside a YouTube frame are never counted; findings on the `<iframe>` tag itself always are), and `test/check-engine.js` scans `test-fixtures/broken.html` (a deliberately broken page) asserting that axe catches the obvious violations — `image-alt`, `button-name`, `link-name`, `label`, `color-contrast`, `html-has-lang`. Useful for confirming the engine is wired up correctly after dependency upgrades.
+Runs five checks: `test/check-core-shared.js` fails the build if either scanner defines its own copy of a scoring rule instead of importing it from `scan-core.mjs` (see [Shared scoring rules](#shared-scoring-rules)), `test/check-merge.js` unit-tests the desktop/mobile viewport dedup (`mergeViewportViolations`), `test/check-embeds.js` unit-tests the third-party embed exclusion (findings inside a YouTube frame are never counted; findings on the `<iframe>` tag itself always are), `test/check-suppressions.js` unit-tests the verified-false-positive rules (required justification, mandatory expiry, narrow matching, fatal on a malformed file), and `test/check-engine.js` scans `test-fixtures/broken.html` (a deliberately broken page) asserting that axe catches the obvious violations — `image-alt`, `button-name`, `link-name`, `label`, `color-contrast`, `html-has-lang`. Useful for confirming the engine is wired up correctly after dependency upgrades.
 
 ## Shared scoring rules
 
@@ -91,6 +91,35 @@ This is a deliberate case-by-case allowlist (`EXCLUDED_EMBEDS` in `scan.js`), no
 
 Both the lazy-load settling and the embed exclusion landed in the same scan, and they push counts in opposite directions: settling finds **more** (lazy-loaded content is now scanned at all), exclusion counts **fewer**. History entries from this point carry `settled: true` and `excludedEmbeds: ["YouTube"]` so the chart can mark where the methodology changed — the same way `viewports` marks the mobile-scan cutover. A step in the trend at that date is a tool change, not a site change.
 
+## Verified false positives (`suppressions.json`)
+
+Sometimes axe reports a failure that isn't one. `suppressions.json` records findings a human checked and determined are wrong. This is a different thing from the embed allowlist above: that says *"this vendor's markup isn't the agency's problem"*; a suppression says *"this specific finding is not true."* So it is scoped tightly and it expires.
+
+The file is an array; a missing file means no suppressions. A **malformed file fails the scan** rather than being skipped — a suppression that silently fails to load leaves numbers that still look plausible.
+
+```json
+[
+  {
+    "site": "Summer",
+    "page": "https://www.nyc.gov/content/summer/pages/",
+    "rule": "color-contrast",
+    "selector": ".hero-banner h1",
+    "reason": "Verified false positive: axe computes contrast against the fallback background because the hero image paints over it. Measured 7.1:1 against the actual painted background.",
+    "verified_on": "2026-08-20",
+    "expires": "2027-02-20"
+  }
+]
+```
+
+Every field above is required. Use `pagePattern` instead of `page` for templated pages that repeat one false positive — `"pagePattern": "https://www.nyc.gov/content/summer/*"`, where only `*` is special. Set one or the other, never both.
+
+Four rules the implementation enforces:
+
+- **Suppressed is not deleted.** The finding stays in `results.json` and renders in a "Verified false positives" section with its reason attached. Anyone running axe themselves will find it, and the dashboard should already explain why we don't count it.
+- **Everything expires.** Past `expires` the entry stops applying, the finding counts again, and the scan prints a warning naming the entry. A false positive is a claim about one page at one moment; pages change and axe changes.
+- **Matching is narrow** — rule + page + element selector, never rule + site. Selectors are compared with attribute selectors stripped, because axe regenerates them unstably between runs. `"selector": "*"` widens to every node of that rule on that page, as an explicit choice.
+- **`reason` is mandatory.** The risk this feature carries is becoming a quiet way to make numbers look better. A written justification is what keeps it honest, and what an auditor would ask for.
+
 ## Editing the site list
 
 `sites.json` is a flat array of `{ name, url, crawl?, pathPrefix?, app?, pages? }`:
@@ -115,6 +144,7 @@ accessibility-nyc/
 ├── scan-finders.mjs           # interaction-driven scanner for app-style sites
 ├── scan-core.mjs              # shared scoring rules — both scanners import this
 ├── sites.json                 # editable URL list
+├── suppressions.json          # verified false positives (see above)
 ├── results.json               # scanner output (also written as dashboard/results.js)
 ├── dashboard/
 │   ├── index.html             # entry
@@ -125,7 +155,8 @@ accessibility-nyc/
 │   ├── check-core-shared.js
 │   ├── check-embeds.js
 │   ├── check-engine.js
-│   └── check-merge.js
+│   ├── check-merge.js
+│   └── check-suppressions.js
 ├── test-fixtures/
 │   └── broken.html
 └── package.json

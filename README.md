@@ -58,7 +58,17 @@ All three work — the dashboard loads its data via `<script src="results.js">` 
 npm test
 ```
 
-Runs three checks: `test/check-merge.js` unit-tests the desktop/mobile viewport dedup (`mergeViewportViolations`), `test/check-embeds.js` unit-tests the third-party embed exclusion (findings inside a YouTube frame are never counted; findings on the `<iframe>` tag itself always are), and `test/check-engine.js` scans `test-fixtures/broken.html` (a deliberately broken page) asserting that axe catches the obvious violations — `image-alt`, `button-name`, `link-name`, `label`, `color-contrast`, `html-has-lang`. Useful for confirming the engine is wired up correctly after dependency upgrades.
+Runs four checks: `test/check-core-shared.js` fails the build if either scanner defines its own copy of a scoring rule instead of importing it from `scan-core.mjs` (see [Shared scoring rules](#shared-scoring-rules)), `test/check-merge.js` unit-tests the desktop/mobile viewport dedup (`mergeViewportViolations`), `test/check-embeds.js` unit-tests the third-party embed exclusion (findings inside a YouTube frame are never counted; findings on the `<iframe>` tag itself always are), and `test/check-engine.js` scans `test-fixtures/broken.html` (a deliberately broken page) asserting that axe catches the obvious violations — `image-alt`, `button-name`, `link-name`, `label`, `color-contrast`, `html-has-lang`. Useful for confirming the engine is wired up correctly after dependency upgrades.
+
+## Shared scoring rules
+
+There are two scanners — `scan.js` (link crawler) and `scan-finders.mjs` (interaction-driven, for form-gated and SPA finder apps). They discover pages very differently, but once a page is loaded they must **measure it identically**: the dashboard merges their output into one `results.json` and one scorecard, so a tier has to mean the same thing whichever tool produced it.
+
+Everything that decides what counts, what a tier means, or what reaches history lives in **`scan-core.mjs`** and nowhere else — tiering, impact counting, embed tagging, page settling, slimming, and history rule-building. Both scanners import it.
+
+This is enforced, not remembered. `test/check-core-shared.js` fails the build if either scanner declares its own copy of a shared name. The previous mechanism was a comment reading "mirror scan.js — keep in sync", and it did not work: `scan-finders.mjs` had redefined `tierFor` so that serious-without-critical graded **red**, while `scan.js` graded the same counts **orange**.
+
+If you add a scoring helper, put it in `scan-core.mjs` and add its name to the `SHARED` list in that test.
 
 ## Third-party embeds
 
@@ -103,6 +113,7 @@ Different agencies have migrated at different times; if you get a `HTTP 404` dur
 accessibility-nyc/
 ├── scan.js                    # link-crawl scanner
 ├── scan-finders.mjs           # interaction-driven scanner for app-style sites
+├── scan-core.mjs              # shared scoring rules — both scanners import this
 ├── sites.json                 # editable URL list
 ├── results.json               # scanner output (also written as dashboard/results.js)
 ├── dashboard/
@@ -111,6 +122,7 @@ accessibility-nyc/
 │   ├── styles.css
 │   └── results.js             # generated; window.SCAN_DATA = {...}
 ├── test/
+│   ├── check-core-shared.js
 │   ├── check-embeds.js
 │   ├── check-engine.js
 │   └── check-merge.js

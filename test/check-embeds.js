@@ -1,4 +1,5 @@
-// test/check-embeds.js — unit test for the third-party embed exclusion (scan.js).
+// test/check-embeds.js — unit test for the third-party embed exclusion
+// (scan-core.mjs).
 //
 // The contract the dashboard and history depend on: findings INSIDE an excluded
 // embed (currently YouTube) are tagged and skipped by every counting path, so
@@ -13,7 +14,7 @@ import {
   countedNodes,
   excludedEmbedFor,
   tierFor,
-} from "../scan.js";
+} from "../scan-core.mjs";
 
 const failures = [];
 function check(name, cond) {

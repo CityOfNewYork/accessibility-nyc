@@ -21,71 +21,130 @@
 import { readFile, writeFile } from "node:fs/promises";
 import puppeteer from "puppeteer";
 import { AxePuppeteer } from "@axe-core/puppeteer";
+// Scoring and measurement are imported, never redefined here. This file used to
+// carry its own copies under a "keep in sync" comment and they drifted — its
+// tierFor graded a serious-but-not-critical site RED where scan.js graded the
+// same counts ORANGE. See scan-core.mjs.
+import {
+  WCAG_TAGS,
+  sleep,
+  settlePage,
+  tagEmbeds,
+  pageEmbeds,
+  countedTotal,
+  countedRules,
+  embedTotal,
+  tierFor,
+  countByImpact,
+  addCounts,
+  emptyCounts,
+  rulesForHistory,
+  slimViolations,
+  compileSuppressions,
+  tagSuppressions,
+  suppressedTotal,
+  EXCLUDED_EMBEDS,
+} from "./scan-core.mjs";
 
-// ---- shared axe helpers (mirror scan.js — keep in sync) ---------------------
-const WCAG_TAGS = ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"];
-
-function tierFor(counts) {
-  if (counts.critical > 0 || counts.serious > 0) return "red";
-  if (counts.moderate > 0 || counts.minor > 0) return "yellow";
-  return "green";
-}
-
-function countByImpact(violations) {
-  const counts = { critical: 0, serious: 0, moderate: 0, minor: 0 };
-  for (const v of violations) {
-    const impact = v.impact ?? "minor";
-    if (counts[impact] !== undefined) counts[impact] += v.nodes.length;
-  }
-  return counts;
-}
-
-function addCounts(a, b) {
-  return {
-    critical: a.critical + b.critical,
-    serious: a.serious + b.serious,
-    moderate: a.moderate + b.moderate,
-    minor: a.minor + b.minor,
-  };
-}
-
-function slimViolations(violations) {
-  return violations.map((v) => ({
-    id: v.id,
-    impact: v.impact,
-    description: v.description,
-    help: v.help,
-    helpUrl: v.helpUrl,
-    tags: v.tags.filter((t) => t.startsWith("wcag")),
-    nodes: v.nodes.map((n) => ({
-      target: n.target,
-      html: n.html.length > 240 ? n.html.slice(0, 240) + "…" : n.html,
-      failureSummary: n.failureSummary,
-    })),
-  }));
-}
-
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+// Compiled suppressions.json, loaded once in main(). Null means no file, which
+// is the normal state. Same contract as scan.js — see scan-core.mjs.
+let SUPPRESSIONS = null;
 
 // ---- state capture ---------------------------------------------------------
 
 // Run axe on the page's CURRENT (post-interaction) DOM and return a record
 // shaped like a scan.js "page", plus a human `label` for the state — a postback
 // app / SPA has no distinct URL per state for the dashboard to show.
-async function captureState(page, label) {
+// Read the marker that identifies which state we are actually looking at. The
+// h1 is what changes between a finder's steps, so it is the cheapest honest
+// answer to "is this the screen we think it is".
+async function stateMarker(page) {
+  return page
+    .$eval("h1", (h) => h.textContent.replace(/\s+/g, " ").trim())
+    .catch(() => "");
+}
+
+// Poll until the expected state is on screen. Interaction-driven apps have no
+// navigation to await — the URL never changes — so the alternative is a fixed
+// sleep, and a fixed sleep is how we ended up scanning a questionnaire step and
+// labelling it "Results".
+async function waitForState(page, expect, timeoutMs = 20_000) {
+  const deadline = Date.now() + timeoutMs;
+  let last = "";
+  for (;;) {
+    if (expect.h1) {
+      last = await stateMarker(page);
+      if (expect.h1.test(last)) return { ok: true, marker: last };
+    }
+    if (expect.selector) {
+      const found = await page.$(expect.selector);
+      if (found) return { ok: true, marker: await stateMarker(page) };
+    }
+    if (Date.now() > deadline) {
+      return {
+        ok: false,
+        marker: last,
+        why: expect.h1
+          ? `expected h1 matching ${expect.h1}, saw "${last}"`
+          : `expected an element matching ${expect.selector}, none appeared`,
+      };
+    }
+    await sleep(400);
+  }
+}
+
+// Wait for an element to disappear. Closing a modal is not instantaneous, and
+// clickAndSettle swallows click failures — so without this, the next click
+// lands on a still-open overlay and the state after it is silently wrong.
+async function waitForGone(page, selector, timeoutMs = 8_000) {
+  const deadline = Date.now() + timeoutMs;
+  while (Date.now() < deadline) {
+    if (!(await page.$(selector))) return true;
+    await sleep(300);
+  }
+  return false;
+}
+
+// `expect` (optional) asserts WHICH screen this is before axe runs. Without it
+// a flow that silently fails to advance produces a clean scan of the previous
+// screen — which reads as a pass and hides both the missing coverage and
+// whatever the real screen would have reported. A state that cannot be
+// confirmed is recorded as an ERROR, never as a result.
+async function captureState(page, label, expect = null) {
   const start = Date.now();
   try {
+    if (expect) {
+      const seen = await waitForState(page, expect);
+      if (!seen.ok) {
+        console.log(`     ✗ ${label.padEnd(36)} STATE NOT REACHED — ${seen.why}`);
+        return errorState(page, label, `State not reached: ${seen.why}`, start);
+      }
+    }
+    // Settle first, exactly as scan.js does: a finder's results list can lazy-
+    // load rows below the fold, and scanning them in their placeholder state
+    // reports findings no user ever meets.
+    await settlePage(page);
     const result = await new AxePuppeteer(page).withTags(WCAG_TAGS).analyze();
-    const violations = slimViolations(result.violations);
-    const counts = countByImpact(result.violations);
+    const violations = await tagEmbeds(page, slimViolations(result.violations));
+    tagSuppressions(violations, page.url(), SUPPRESSIONS);
+    const embeds = await pageEmbeds(page);
+    // countByImpact reads the embed tags, so counts must come from the tagged
+    // slim violations — not from the raw axe result, which has no tags.
+    const counts = countByImpact(violations);
     const rec = {
       url: page.url(),
       final_url: page.url(),
       label,
+      // Recorded on every state, asserted or not: if a flow ever mislabels a
+      // screen again, the evidence is in results.json instead of nowhere.
+      state_marker: await stateMarker(page),
       tier: tierFor(counts),
       counts,
-      total_violations: violations.reduce((s, v) => s + v.nodes.length, 0),
-      distinct_rules: violations.length,
+      total_violations: countedTotal(violations),
+      distinct_rules: countedRules(violations).length,
+      embed_violations: embedTotal(violations),
+      suppressed_violations: suppressedTotal(violations),
+      embeds,
       violations,
       scan_ms: Date.now() - start,
       error: null,
@@ -94,27 +153,33 @@ async function captureState(page, label) {
     return rec;
   } catch (err) {
     console.log(`     ✗ ${label.padEnd(36)} ERROR ${err.message}`);
-    return {
-      url: page.url(),
-      final_url: page.url(),
-      label,
-      tier: "error",
-      counts: { critical: 0, serious: 0, moderate: 0, minor: 0 },
-      total_violations: 0,
-      distinct_rules: 0,
-      violations: [],
-      scan_ms: Date.now() - start,
-      error: err.message,
-    };
+    return errorState(page, label, err.message, start);
   }
+}
+
+// A state we could not scan has no result — clean or otherwise. Shaped exactly
+// like a captured state so assembleSite and the dashboard need no special case.
+function errorState(page, label, message, start) {
+  return {
+    url: page.url(),
+    final_url: page.url(),
+    label,
+    tier: "error",
+    counts: emptyCounts(),
+    total_violations: 0,
+    distinct_rules: 0,
+    embed_violations: 0,
+    suppressed_violations: 0,
+    embeds: [],
+    violations: [],
+    scan_ms: Date.now() - start,
+    error: message,
+  };
 }
 
 // Roll per-state records up into a scan.js-shaped site object.
 function assembleSite(site, states) {
-  const counts = states.reduce(
-    (acc, s) => addCounts(acc, s.counts),
-    { critical: 0, serious: 0, moderate: 0, minor: 0 }
-  );
+  const counts = states.reduce((acc, s) => addCounts(acc, s.counts), emptyCounts());
   return {
     name: site.name,
     url: site.url,
@@ -122,7 +187,12 @@ function assembleSite(site, states) {
     tier: tierFor(counts),
     counts,
     total_violations: states.reduce((s, p) => s + p.total_violations, 0),
-    distinct_rules: new Set(states.flatMap((p) => p.violations.map((v) => v.id))).size,
+    distinct_rules: new Set(
+      states.flatMap((p) => countedRules(p.violations).map((v) => v.id))
+    ).size,
+    embed_violations: states.reduce((sum, p) => sum + (p.embed_violations ?? 0), 0),
+    suppressed_violations: states.reduce((sum, p) => sum + (p.suppressed_violations ?? 0), 0),
+    embed_vendors: [...new Set(states.flatMap((p) => (p.embeds ?? []).map((e) => e.vendor)))],
     pages: states,
     scan_ms: states.reduce((s, p) => s + p.scan_ms, 0),
     error: states.length > 0 && states.every((p) => p.error) ? states[0].error : null,
@@ -363,15 +433,41 @@ async function scanActivitiesFinder(browser, site) {
 // through and run axe at each state. The final "See activities" stays disabled
 // until the location field is filled from its autocomplete, which then reveals
 // the results map + activity list — the app's real payload.
+// The results view's own heading. Everything before it — splash and every
+// questionnaire step — renders under a constant "Questionnaire" h1, so this is
+// what distinguishes "we reached the activities map" from "we are still in the
+// wizard and about to record it as a clean results scan".
+const RESULTS_H1 = /Activities for You/i;
+
 async function scanSummerFinder(browser, site) {
   const page = await browser.newPage();
   await page.setViewport({ width: 1280, height: 900 });
+  // www.nyc.gov's WAF serves "Access Denied" to a stock HeadlessChrome agent,
+  // which leaves no splash and no logo to reset with. Mask it the same way
+  // scan.js does so we get the real app.
+  await page.setUserAgent((await browser.userAgent()).replace("HeadlessChrome", "Chrome"));
   const states = [];
   try {
     // ① Splash — the marketing landing state, before the wizard opens.
+    //    Once the screener has been completed, the app remembers and opens
+    //    straight to the activities map, so the splash (and every wizard step)
+    //    is unreachable by clicking forward. Its own logo — a button, NOT the
+    //    global nyc.gov logo above it, which navigates away — resets to the
+    //    screener, so click that whenever we don't land on the splash.
     await page.goto(site.url, { waitUntil: "networkidle2", timeout: 60_000 });
     await sleep(1500);
-    states.push(await captureState(page, "Splash — landing"));
+    if (!(await handleByText(page, "button", "Get Started"))) {
+      const logo = await page.$('button[aria-label="Go to home page"]');
+      if (logo) {
+        console.log("     · opened to the map (screener remembered) — resetting via the logo");
+        await clickAndSettle(page, logo, 2500);
+      } else {
+        console.log("     ! not on the splash and no logo button to reset with");
+      }
+    }
+    states.push(
+      await captureState(page, "Splash — landing", { selector: "button" })
+    );
 
     // ② Open the wizard. "Get Started" is a <button> with an onclick handler
     //    (no href / navigation), so the URL never changes from here on.
@@ -422,26 +518,42 @@ async function scanSummerFinder(browser, site) {
     }
     const see = await handleByText(page, "button", "See activities");
     if (see) {
-      await clickAndSettle(page, see, 4000);
-      const h1 = await page.$eval("h1", (h) => h.textContent.trim()).catch(() => "?");
-      console.log(`     → results state: "${h1}"`);
-      states.push(await captureState(page, "Results — activities map + list"));
+      // No navigation to await — "See activities" swaps the view in place — so
+      // the results state is identified by its own h1 rather than by a timer.
+      // A fixed sleep here previously captured the questionnaire step and
+      // recorded it as a clean "Results" scan.
+      await clickAndSettle(page, see, 1500);
+      states.push(
+        await captureState(page, "Results — activities map + list", { h1: RESULTS_H1 })
+      );
 
       // ⑤ Filters dialog — the "Filters" button opens a role="dialog" modal with
       //    its own form (select, search, checkboxes). Scan it, then Escape back
       //    to the results view so the next state starts clean.
-      const filters = await handleByText(page, "button", "Filters");
+      // The button is labelled "Filter activities". It was "Filters" when this
+      // flow was written, and the exact-match lookup silently skipped the state
+      // for however long ago it was renamed — hence both spellings, and hence
+      // the louder message when neither is found.
+      const filters =
+        (await handleByText(page, "button", "Filter activities")) ||
+        (await handleByText(page, "button", "Filters"));
       if (filters) {
         await clickAndSettle(page, filters, 1200);
-        if (await page.$('[role="dialog"]')) {
-          states.push(await captureState(page, "Results — filters dialog"));
-          await page.keyboard.press("Escape");
-          await sleep(800);
-        } else {
-          console.log('     ! "Filters" did not open a dialog — skipping that state');
+        states.push(
+          await captureState(page, "Results — filters dialog", {
+            selector: '[role="dialog"]',
+          })
+        );
+        await page.keyboard.press("Escape");
+        if (!(await waitForGone(page, '[role="dialog"]'))) {
+          console.log(
+            "     ! filters dialog did not close — later states would be scanned behind it"
+          );
         }
       } else {
-        console.log('     ! "Filters" button not found — skipping that state');
+        console.log(
+          '     ! no "Filter activities" / "Filters" button — the filters state was NOT scanned'
+        );
       }
 
       // ⑥ Expanded activity — "View events near you" expands a result card inline
@@ -450,9 +562,15 @@ async function scanSummerFinder(browser, site) {
       const expand = await handleByText(page, "button", "View events near you");
       if (expand) {
         await clickAndSettle(page, expand, 1500);
-        states.push(await captureState(page, "Results — expanded activity"));
+        states.push(
+          await captureState(page, "Results — expanded activity", {
+            selector: '[aria-expanded="true"]',
+          })
+        );
       } else {
-        console.log('     ! no "View events near you" card to expand — skipping');
+        console.log(
+          '     ! no "View events near you" card — the expanded state was NOT scanned'
+        );
       }
     } else {
       console.log('     ! "See activities" not enabled — results state not reached');
@@ -475,8 +593,21 @@ function parseArgs(argv) {
   return out;
 }
 
+// Same loader contract as scan.js: missing file is normal, malformed is fatal.
+async function loadSuppressions() {
+  let raw;
+  try {
+    raw = JSON.parse(await readFile("suppressions.json", "utf8"));
+  } catch (err) {
+    if (err.code === "ENOENT") return null;
+    throw new Error(`suppressions.json could not be read: ${err.message}`);
+  }
+  return compileSuppressions(raw);
+}
+
 async function main() {
   const { only } = parseArgs(process.argv);
+  SUPPRESSIONS = await loadSuppressions();
   const all = JSON.parse(await readFile("sites.json", "utf8"));
   const apps = all.filter((s) => s.app && (!only || s.name === only));
 
@@ -529,14 +660,19 @@ async function main() {
     try { history = JSON.parse(await readFile("history.json", "utf8")); } catch {}
     const date = new Date().toISOString();
     for (const site of results) {
-      const byRule = {};
-      for (const p of site.pages || []) {
-        for (const v of p.violations || []) {
-          if (!byRule[v.id]) byRule[v.id] = { id: v.id, impact: v.impact, count: 0 };
-          byRule[v.id].count += v.nodes.length;
-        }
-      }
-      history.push({ date, site: site.name, pages: site.pages.length, crawlComplete: true, rules: Object.values(byRule) });
+      history.push({
+        date,
+        site: site.name,
+        pages: site.pages.length,
+        crawlComplete: true,
+        // Same configuration keys scan.js records, so the trend chart can mark
+        // a methodology change on a finder the same way it does on a crawled
+        // site. No `viewports` key: this scanner is desktop-only, and entries
+        // without the key already read as desktop-only.
+        settled: true,
+        excludedEmbeds: EXCLUDED_EMBEDS.map((e) => e.vendor),
+        rules: rulesForHistory(site.pages || []),
+      });
     }
     await writeFile("history.json", JSON.stringify(history, null, 2) + "\n");
     const hjs = `// Auto-generated — do not edit by hand.\nwindow.HISTORY_DATA = ${JSON.stringify(history)};\n`;

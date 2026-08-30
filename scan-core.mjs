@@ -421,3 +421,24 @@ export async function settlePage(page, enabled = true) {
     // pass that follows reports whatever state the page actually ended up in.
   }
 }
+
+// ---- result assembly -------------------------------------------------------
+
+// Merge a run's fresh site records with the previous results.json, emitted in
+// sites.json order. A site not scanned this run keeps its last record, which is
+// what lets a single-site run leave every other site intact — and what keeps a
+// retired site's last scan on file after it stops being measured.
+//
+// `retired` is stamped here from sites.json rather than stored by the scanners,
+// so retiring or restoring a site takes effect without a rescan.
+export function mergeSitesWithPrior(all, fresh, prior) {
+  const freshByName = new Map(fresh.map((r) => [r.name, r]));
+  const priorByName = new Map(prior.map((r) => [r.name, r]));
+  return all
+    .map((s) => {
+      const rec = freshByName.get(s.name) ?? priorByName.get(s.name);
+      if (!rec) return null;
+      return s.retired ? { ...rec, retired: true } : rec;
+    })
+    .filter(Boolean);
+}

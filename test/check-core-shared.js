@@ -33,6 +33,7 @@ const SHARED = [
   "countedRules",
   "embedTotal",
   "rulesForHistory",
+  "mergeSitesWithPrior",
   "slimViolations",
   "slimIncomplete",
   "settlePage",

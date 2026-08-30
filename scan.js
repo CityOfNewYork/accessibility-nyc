@@ -32,6 +32,7 @@ import {
   addCounts,
   emptyCounts,
   rulesForHistory,
+  mergeSitesWithPrior,
   slimViolations,
   slimIncomplete,
   normTargetKey,
@@ -603,11 +604,7 @@ async function writeResults(all, results) {
   try {
     prior = JSON.parse(await readFile("results.json", "utf8")).sites ?? [];
   } catch {}
-  const freshByName = new Map(results.map((r) => [r.name, r]));
-  const priorByName = new Map(prior.map((r) => [r.name, r]));
-  const mergedSites = all
-    .map((s) => freshByName.get(s.name) ?? priorByName.get(s.name))
-    .filter(Boolean);
+  const mergedSites = mergeSitesWithPrior(all, results, prior);
 
   const payload = {
     scanned_at: new Date().toISOString(),
@@ -671,7 +668,12 @@ async function main() {
   // "app": true entries (the finder web-apps) can't be link-crawled — their
   // content is gated behind form submits / SPA interaction. scan-finders.mjs
   // drives those; scan.js skips them so a full run can't overwrite that data.
-  const matched = only ? all.filter((s) => s.name === only) : all;
+  // Retired sites are no longer measured: they stay in sites.json so their last
+  // scan survives in results.json, but a normal run skips them. Naming one with
+  // --only still scans it, which is the way back if a site is un-retired.
+  const matched = only
+    ? all.filter((s) => s.name === only)
+    : all.filter((s) => !s.retired);
   const sites = matched.filter((s) => !s.app);
   const skippedApps = matched.filter((s) => s.app).map((s) => s.name);
 

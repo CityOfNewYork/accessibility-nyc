@@ -31,6 +31,12 @@
     return;
   }
 
+  // Retired sites are no longer scanned. Their last scan and their history stay
+  // in the data files so nothing is lost, but the dashboard hides them: showing
+  // a scorecard that has stopped being refreshed would read as current.
+  // Retirement is set in sites.json and stamped onto the record at write time.
+  data.sites = data.sites.filter((s) => !s.retired);
+
   // ---- third-party embeds ---------------------------------------------------
   //
   // scan.js tags violation nodes that sit INSIDE an excluded third-party embed

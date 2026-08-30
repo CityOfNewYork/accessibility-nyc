@@ -39,6 +39,7 @@ import {
   addCounts,
   emptyCounts,
   rulesForHistory,
+  mergeSitesWithPrior,
   slimViolations,
   compileSuppressions,
   tagSuppressions,
@@ -609,7 +610,9 @@ async function main() {
   const { only } = parseArgs(process.argv);
   SUPPRESSIONS = await loadSuppressions();
   const all = JSON.parse(await readFile("sites.json", "utf8"));
-  const apps = all.filter((s) => s.app && (!only || s.name === only));
+  // Same retirement contract as scan.js: skipped by default, still reachable
+  // with --only= if a retired app is ever brought back.
+  const apps = all.filter((s) => s.app && (only ? s.name === only : !s.retired));
 
   if (apps.length === 0) {
     console.error(
@@ -685,12 +688,9 @@ async function main() {
   try {
     prior = JSON.parse(await readFile("results.json", "utf8")).sites ?? [];
   } catch {}
-  const freshByName = new Map(results.map((r) => [r.name, r]));
-  const priorByName = new Map(prior.map((r) => [r.name, r]));
-  const mergedSites = all
-    .map((s) => freshByName.get(s.name) ?? priorByName.get(s.name))
-    .filter(Boolean);
-  const cached = mergedSites.filter((s) => !freshByName.has(s.name)).map((s) => s.name);
+  const mergedSites = mergeSitesWithPrior(all, results, prior);
+  const scannedNames = new Set(results.map((r) => r.name));
+  const cached = mergedSites.filter((s) => !scannedNames.has(s.name)).map((s) => s.name);
 
   const payload = {
     scanned_at: new Date().toISOString(),
@@ -711,7 +711,11 @@ async function main() {
   console.log(`Wrote ${mergedSites.length} site(s) / ${totalPages} page(s) to dashboard/results.js and results.json.`);
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+// Guarded the same way scan.js is, so importing this module — from a test, or
+// to reuse a flow — does not launch a browser and overwrite results.json.
+if (process.argv[1]?.endsWith("scan-finders.mjs")) {
+  main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}

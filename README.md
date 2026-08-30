@@ -122,11 +122,27 @@ Four rules the implementation enforces:
 
 ## Editing the site list
 
-`sites.json` is a flat array of `{ name, url, crawl?, pathPrefix?, app?, pages? }`:
+`sites.json` is a flat array of `{ name, url, crawl?, pathPrefix?, app?, pages?, retired? }`:
 
 - `crawl: true` — breadth-first crawl from `url`, scoped by `pathPrefix`
 - `app: true` — interaction-driven scan via `scan-finders.mjs` (form-gated/SPA finders that can't be link-crawled)
-- `pages: [url, …]` — scan exactly these URLs, no crawl (used for curated cross-site sets like the Golden Set)
+- `pages: [url, …]` — scan exactly these URLs, no crawl (used for curated cross-site sets)
+- `retired: true` — stop scanning this site, and hide it from the dashboard
+
+### Retiring a site
+
+A retired entry stays in `sites.json`. That is what keeps its last scan in
+`results.json` and its rule history in `history.json` — both scanners rebuild
+their output in `sites.json` order and carry forward the record of any site they
+did not scan this run, so deleting the entry would drop the data with it.
+
+Neither scanner picks up a retired site in a normal run, and the dashboard filters
+it out, because a scorecard that has stopped being refreshed still reads as
+current. Naming one explicitly with `--only=` scans it anyway, which is the way
+back if a site is restored: drop the flag and rescan.
+
+A site's name is its key in `results.json` and `history.json`. Renaming it in
+`sites.json` alone orphans every earlier record, so rename it in all three.
 
 Note that NYC currently runs three CMS schemes side-by-side:
 

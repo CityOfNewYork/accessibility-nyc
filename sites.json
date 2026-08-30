@@ -2,15 +2,15 @@
   { "name": "NYC.gov", "url": "https://www.nyc.gov", "crawl": true, "pathPrefix": "/main" },
   { "name": "OTI",  "url": "https://www.nyc.gov/content/oti/pages/home", "crawl": true, "pathPrefix": "/content/oti" },
   { "name": "PIT Crew", "url": "https://www.nyc.gov/content/pitcrew/pages/home", "crawl": true, "pathPrefix": "/content/pitcrew" },
-  { "name": "Summer", "url": "https://www.nyc.gov/content/summer/pages/", "app": true },
+  { "name": "Summer in NYC", "url": "https://www.nyc.gov/content/summer/pages/", "app": true },
   { "name": "MOPD", "url": "https://www.nyc.gov/site/mopd/index.page", "crawl": true, "pathPrefix": "/site/mopd" },
   { "name": "DOF",  "url": "https://www.nyc.gov/site/finance/index.page", "crawl": true, "pathPrefix": "/site/finance" },
   { "name": "DOT",  "url": "https://www.nyc.gov/html/dot/html/home/home.shtml", "crawl": true, "pathPrefix": "/html/dot" },
   { "name": "NYC Aging", "url": "https://www.nyc.gov/site/dfta/index.page", "crawl": true, "pathPrefix": "/site/dfta" },
   { "name": "NYC 311", "url": "https://portal.311.nyc.gov/", "crawl": true },
-  { "name": "Aging Service Finder", "url": "https://a125-egovt.nyc.gov/AgingService/", "app": true },
-  { "name": "Aging Activities Finder", "url": "https://dftavirtualprogramfinder.cityofnewyork.us/", "app": true },
-  { "name": "DOE School Search", "url": "https://schoolsearch.schools.nyc/", "app": true },
+  { "name": "Aging Service Finder", "url": "https://a125-egovt.nyc.gov/AgingService/", "app": true, "retired": true },
+  { "name": "Aging Activities Finder", "url": "https://dftavirtualprogramfinder.cityofnewyork.us/", "app": true, "retired": true },
+  { "name": "DOE School Search", "url": "https://schoolsearch.schools.nyc/", "app": true, "retired": true },
   { "name": "Food Help Finder", "url": "https://finder.nyc.gov/foodhelp/", "app": true },
   { "name": "Accessibility Scanner", "url": "https://cityofnewyork.github.io/accessibility-nyc/", "pages": [
     "https://cityofnewyork.github.io/accessibility-nyc/",
@@ -19,7 +19,7 @@
     "https://cityofnewyork.github.io/accessibility-nyc/?site=OTI&view=pages",
     "https://cityofnewyork.github.io/accessibility-nyc/?page=https%3A%2F%2Fwww.nyc.gov%2Fcontent%2Foti%2Fpages%2Fhome"
   ] },
-  { "name": "Golden Set", "url": "https://www.nyc.gov", "pages": [
+  { "name": "Golden Set", "retired": true, "url": "https://www.nyc.gov", "pages": [
     "https://www.nyc.gov",
     "https://www.nyc.gov/main/events",
     "https://www.nyc.gov/main/services/snap-benefits",

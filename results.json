@@ -1,27 +1,28 @@
 {
-  "scanned_at": "2026-08-28T15:27:48.434Z",
+  "scanned_at": "2026-08-30T12:18:00.569Z",
   "wcag_target": "WCAG 2.2 AA",
   "engine": "axe-core (via @axe-core/puppeteer)",
   "sites": [
     {
       "name": "NYC.gov",
       "url": "https://www.nyc.gov",
-      "scanned_at": "2026-08-28T13:16:37.369Z",
-      "tier": "red",
+      "scanned_at": "2026-08-30T12:18:00.123Z",
+      "tier": "green",
       "counts": {
-        "critical": 5,
+        "critical": 0,
         "serious": 0,
         "moderate": 0,
         "minor": 0
       },
-      "total_violations": 5,
-      "distinct_rules": 1,
+      "total_violations": 0,
+      "distinct_rules": 0,
       "embed_violations": 0,
+      "suppressed_violations": 0,
       "embed_vendors": [],
       "pages": [
         {
           "url": "https://www.nyc.gov",
-          "final_url": "https://www.nyc.gov/main",
+          "final_url": "https://www.nyc.gov/main?site=%21",
           "tier": "green",
           "counts": {
             "critical": 0,
@@ -32,6 +33,7 @@
           "total_violations": 0,
           "distinct_rules": 0,
           "embed_violations": 0,
+          "suppressed_violations": 0,
           "embeds": [],
           "violations": [],
           "incomplete": [
@@ -51,7 +53,7 @@
             {
               "id": "color-contrast",
               "impact": "serious",
-              "nodes": 79,
+              "nodes": 81,
               "targets": [
                 [
                   ".cmp-language-navigation__action-button--language"
@@ -60,7 +62,7 @@
                   ".main-heading--subhead"
                 ],
                 [
-                  "#modal-trigger--friday-august-28-2026-m6RIzTBLNL > span"
+                  "#modal-trigger--sunday-august-30-2026-7KUFeOhXaV > span"
                 ]
               ]
             },
@@ -82,7 +84,7 @@
             "desktop",
             "mobile"
           ],
-          "scan_ms": 9075,
+          "scan_ms": 10596,
           "error": null
         },
         {
@@ -98,6 +100,7 @@
           "total_violations": 0,
           "distinct_rules": 0,
           "embed_violations": 0,
+          "suppressed_violations": 0,
           "embeds": [],
           "violations": [],
           "incomplete": [
@@ -116,7 +119,7 @@
                   [
                     "#search-interface > custom-search-box",
                     "atomic-search-box[redirection-url=\"/main/search\"]",
-                    "textarea[aria-controls=\"atomic-search-box-q1h4j-popup\"]"
+                    "textarea[aria-controls=\"atomic-search-box-ocpad-popup\"]"
                   ]
                 ]
               ]
@@ -152,7 +155,7 @@
             "desktop",
             "mobile"
           ],
-          "scan_ms": 6690,
+          "scan_ms": 6548,
           "error": null
         },
         {
@@ -168,6 +171,7 @@
           "total_violations": 0,
           "distinct_rules": 0,
           "embed_violations": 0,
+          "suppressed_violations": 0,
           "embeds": [],
           "violations": [],
           "incomplete": [
@@ -218,7 +222,7 @@
             "desktop",
             "mobile"
           ],
-          "scan_ms": 8263,
+          "scan_ms": 8752,
           "error": null
         },
         {
@@ -234,6 +238,7 @@
           "total_violations": 0,
           "distinct_rules": 0,
           "embed_violations": 0,
+          "suppressed_violations": 0,
           "embeds": [],
           "violations": [],
           "incomplete": [
@@ -284,49 +289,25 @@
             "desktop",
             "mobile"
           ],
-          "scan_ms": 10081,
+          "scan_ms": 10925,
           "error": null
         },
         {
           "url": "https://www.nyc.gov/main/services/snap-benefits",
           "final_url": "https://www.nyc.gov/main/services/snap-benefits",
-          "tier": "red",
+          "tier": "green",
           "counts": {
-            "critical": 1,
+            "critical": 0,
             "serious": 0,
             "moderate": 0,
             "minor": 0
           },
-          "total_violations": 1,
-          "distinct_rules": 1,
+          "total_violations": 0,
+          "distinct_rules": 0,
           "embed_violations": 0,
+          "suppressed_violations": 0,
           "embeds": [],
-          "violations": [
-            {
-              "id": "image-alt",
-              "impact": "critical",
-              "description": "Ensure <img> elements have alternative text or a role of none or presentation",
-              "help": "Images must have alternative text",
-              "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=axe-puppeteer",
-              "tags": [
-                "wcag2a",
-                "wcag111"
-              ],
-              "nodes": [
-                {
-                  "target": [
-                    "img[width=\"800\"]"
-                  ],
-                  "html": "<img src=\"/adobe/dynamicmedia/...\" srcset=\"/adobe/dynamicmedia/...\" loading=\"lazy\" class=\"cmp-image__image\" itemprop=\"contentUrl\" width=\"800\" height=\"533\">",
-                  "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
-                }
-              ],
-              "viewports": [
-                "desktop",
-                "mobile"
-              ]
-            }
-          ],
+          "violations": [],
           "incomplete": [
             {
               "id": "aria-valid-attr-value",
@@ -375,7 +356,7 @@
             "desktop",
             "mobile"
           ],
-          "scan_ms": 9679,
+          "scan_ms": 10785,
           "error": null
         },
         {
@@ -391,6 +372,7 @@
           "total_violations": 0,
           "distinct_rules": 0,
           "embed_violations": 0,
+          "suppressed_violations": 0,
           "embeds": [],
           "violations": [],
           "incomplete": [
@@ -416,7 +398,7 @@
                   ".cmp-language-navigation__action-button--language"
                 ],
                 [
-                  "#carousel-title-kuDOQJujg0"
+                  "#carousel-title-kAFeyZarMI"
                 ],
                 [
                   "li[data-si=\"0\"] > .carousel-slide-content > .carousel-slide-content--desc > .teaser.cmp-teaser--event > .cmp-teaser__content > .cmp-teaser__desc > div:nth-child(1) > .cmp-teaser__title > a"
@@ -441,70 +423,25 @@
             "desktop",
             "mobile"
           ],
-          "scan_ms": 7258,
+          "scan_ms": 9370,
           "error": null
         },
         {
           "url": "https://www.nyc.gov/main/your-government",
           "final_url": "https://www.nyc.gov/main/your-government",
-          "tier": "red",
+          "tier": "green",
           "counts": {
-            "critical": 4,
+            "critical": 0,
             "serious": 0,
             "moderate": 0,
             "minor": 0
           },
-          "total_violations": 4,
-          "distinct_rules": 1,
+          "total_violations": 0,
+          "distinct_rules": 0,
           "embed_violations": 0,
+          "suppressed_violations": 0,
           "embeds": [],
-          "violations": [
-            {
-              "id": "image-alt",
-              "impact": "critical",
-              "description": "Ensure <img> elements have alternative text or a role of none or presentation",
-              "help": "Images must have alternative text",
-              "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=axe-puppeteer",
-              "tags": [
-                "wcag2a",
-                "wcag111"
-              ],
-              "nodes": [
-                {
-                  "target": [
-                    "img[width=\"4032\"]"
-                  ],
-                  "html": "<img src=\"/adobe/dynamicmedia/...\" srcset=\"/adobe/dynamicmedia/...\" loading=\"lazy\" class=\"cmp-image__image\" itemprop=\"contentUrl\" width=\"4032\" height=\"3024\">",
-                  "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
-                },
-                {
-                  "target": [
-                    "img[width=\"1797\"]"
-                  ],
-                  "html": "<img src=\"/adobe/dynamicmedia/...\" srcset=\"/adobe/dynamicmedia/...\" loading=\"lazy\" class=\"cmp-image__image\" itemprop=\"contentUrl\" width=\"1797\" height=\"1380\" alt=\" \" title=\"Mark Levine\">",
-                  "failureSummary": "Fix all of the following:\n  Element has an alt attribute containing only a space character, which is not ignored by all screen readers"
-                },
-                {
-                  "target": [
-                    "img[width=\"1900\"]"
-                  ],
-                  "html": "<img src=\"/adobe/dynamicmedia/...\" srcset=\"/adobe/dynamicmedia/...\" loading=\"lazy\" class=\"cmp-image__image\" itemprop=\"contentUrl\" width=\"1900\" height=\"1267\">",
-                  "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
-                },
-                {
-                  "target": [
-                    "img[width=\"5616\"]"
-                  ],
-                  "html": "<img src=\"/adobe/dynamicmedia/...\" srcset=\"/adobe/dynamicmedia/...\" loading=\"lazy\" class=\"cmp-image__image\" itemprop=\"contentUrl\" width=\"5616\" height=\"3744\">",
-                  "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
-                }
-              ],
-              "viewports": [
-                "desktop",
-                "mobile"
-              ]
-            }
-          ],
+          "violations": [],
           "incomplete": [
             {
               "id": "aria-valid-attr-value",
@@ -553,7 +490,7 @@
             "desktop",
             "mobile"
           ],
-          "scan_ms": 8099,
+          "scan_ms": 9706,
           "error": null
         },
         {
@@ -569,6 +506,7 @@
           "total_violations": 0,
           "distinct_rules": 0,
           "embed_violations": 0,
+          "suppressed_violations": 0,
           "embeds": [],
           "violations": [],
           "incomplete": [
@@ -613,7 +551,7 @@
             "desktop",
             "mobile"
           ],
-          "scan_ms": 12303,
+          "scan_ms": 13762,
           "error": null
         },
         {
@@ -629,6 +567,7 @@
           "total_violations": 0,
           "distinct_rules": 0,
           "embed_violations": 0,
+          "suppressed_violations": 0,
           "embeds": [],
           "violations": [],
           "incomplete": [
@@ -679,7 +618,7 @@
             "desktop",
             "mobile"
           ],
-          "scan_ms": 7510,
+          "scan_ms": 8326,
           "error": null
         },
         {
@@ -695,6 +634,7 @@
           "total_violations": 0,
           "distinct_rules": 0,
           "embed_violations": 0,
+          "suppressed_violations": 0,
           "embeds": [],
           "violations": [],
           "incomplete": [
@@ -739,7 +679,7 @@
             "desktop",
             "mobile"
           ],
-          "scan_ms": 7203,
+          "scan_ms": 7948,
           "error": null
         },
         {
@@ -755,6 +695,7 @@
           "total_violations": 0,
           "distinct_rules": 0,
           "embed_violations": 0,
+          "suppressed_violations": 0,
           "embeds": [],
           "violations": [],
           "incomplete": [
@@ -805,7 +746,7 @@
             "desktop",
             "mobile"
           ],
-          "scan_ms": 9424,
+          "scan_ms": 10575,
           "error": null
         },
         {
@@ -821,6 +762,7 @@
           "total_violations": 0,
           "distinct_rules": 0,
           "embed_violations": 0,
+          "suppressed_violations": 0,
           "embeds": [],
           "violations": [],
           "incomplete": [
@@ -871,7 +813,7 @@
             "desktop",
             "mobile"
           ],
-          "scan_ms": 9113,
+          "scan_ms": 11953,
           "error": null
         },
         {
@@ -887,6 +829,7 @@
           "total_violations": 0,
           "distinct_rules": 0,
           "embed_violations": 0,
+          "suppressed_violations": 0,
           "embeds": [],
           "violations": [],
           "incomplete": [
@@ -937,7 +880,7 @@
             "desktop",
             "mobile"
           ],
-          "scan_ms": 4852,
+          "scan_ms": 6973,
           "error": null
         },
         {
@@ -953,6 +896,7 @@
           "total_violations": 0,
           "distinct_rules": 0,
           "embed_violations": 0,
+          "suppressed_violations": 0,
           "embeds": [],
           "violations": [],
           "incomplete": [
@@ -1016,7 +960,7 @@
             "desktop",
             "mobile"
           ],
-          "scan_ms": 14704,
+          "scan_ms": 14777,
           "error": null
         },
         {
@@ -1032,6 +976,7 @@
           "total_violations": 0,
           "distinct_rules": 0,
           "embed_violations": 0,
+          "suppressed_violations": 0,
           "embeds": [],
           "violations": [],
           "incomplete": [
@@ -1057,7 +1002,7 @@
                   ".cmp-language-navigation__action-button--language"
                 ],
                 [
-                  "#carousel-title-1nOnBcBhb2"
+                  "#carousel-title-P2xVyUUgkb"
                 ],
                 [
                   "li[data-si=\"0\"] > .carousel-slide-content > .carousel-slide-content--desc > .teaser.cmp-teaser--event > .cmp-teaser__content > .cmp-teaser__desc > div:nth-child(1) > .cmp-teaser__title > a"
@@ -1082,7 +1027,7 @@
             "desktop",
             "mobile"
           ],
-          "scan_ms": 7086,
+          "scan_ms": 8709,
           "error": null
         },
         {
@@ -1098,6 +1043,7 @@
           "total_violations": 0,
           "distinct_rules": 0,
           "embed_violations": 0,
+          "suppressed_violations": 0,
           "embeds": [],
           "violations": [],
           "incomplete": [
@@ -1145,7 +1091,7 @@
             "desktop",
             "mobile"
           ],
-          "scan_ms": 4209,
+          "scan_ms": 5176,
           "error": null
         },
         {
@@ -1161,6 +1107,7 @@
           "total_violations": 0,
           "distinct_rules": 0,
           "embed_violations": 0,
+          "suppressed_violations": 0,
           "embeds": [],
           "violations": [],
           "incomplete": [
@@ -1211,7 +1158,7 @@
             "desktop",
             "mobile"
           ],
-          "scan_ms": 6690,
+          "scan_ms": 7453,
           "error": null
         },
         {
@@ -1227,6 +1174,7 @@
           "total_violations": 0,
           "distinct_rules": 0,
           "embed_violations": 0,
+          "suppressed_violations": 0,
           "embeds": [],
           "violations": [],
           "incomplete": [
@@ -1271,7 +1219,7 @@
             "desktop",
             "mobile"
           ],
-          "scan_ms": 7320,
+          "scan_ms": 8133,
           "error": null
         },
         {
@@ -1287,6 +1235,7 @@
           "total_violations": 0,
           "distinct_rules": 0,
           "embed_violations": 0,
+          "suppressed_violations": 0,
           "embeds": [],
           "violations": [],
           "incomplete": [
@@ -1337,7 +1286,7 @@
             "desktop",
             "mobile"
           ],
-          "scan_ms": 13248,
+          "scan_ms": 15127,
           "error": null
         },
         {
@@ -1353,6 +1302,7 @@
           "total_violations": 0,
           "distinct_rules": 0,
           "embed_violations": 0,
+          "suppressed_violations": 0,
           "embeds": [],
           "violations": [],
           "incomplete": [
@@ -1403,7 +1353,7 @@
             "desktop",
             "mobile"
           ],
-          "scan_ms": 7331,
+          "scan_ms": 8819,
           "error": null
         },
         {
@@ -1419,6 +1369,7 @@
           "total_violations": 0,
           "distinct_rules": 0,
           "embed_violations": 0,
+          "suppressed_violations": 0,
           "embeds": [],
           "violations": [],
           "incomplete": [
@@ -1463,7 +1414,7 @@
             "desktop",
             "mobile"
           ],
-          "scan_ms": 7485,
+          "scan_ms": 8356,
           "error": null
         },
         {
@@ -1479,6 +1430,7 @@
           "total_violations": 0,
           "distinct_rules": 0,
           "embed_violations": 0,
+          "suppressed_violations": 0,
           "embeds": [],
           "violations": [],
           "incomplete": [
@@ -1529,11 +1481,11 @@
             "desktop",
             "mobile"
           ],
-          "scan_ms": 12803,
+          "scan_ms": 14624,
           "error": null
         }
       ],
-      "scan_ms": 190426,
+      "scan_ms": 217393,
       "error": null,
       "crawlComplete": true
     },
@@ -17602,7 +17554,7 @@
       "crawlComplete": true
     },
     {
-      "name": "Summer",
+      "name": "Summer in NYC",
       "url": "https://www.nyc.gov/content/summer/pages/",
       "scanned_at": "2026-08-28T15:25:50.775Z",
       "tier": "red",
@@ -182640,7 +182592,8 @@
       ],
       "scan_ms": 809,
       "error": null,
-      "crawlComplete": true
+      "crawlComplete": true,
+      "retired": true
     },
     {
       "name": "Aging Activities Finder",
@@ -182833,7 +182786,8 @@
       ],
       "scan_ms": 585,
       "error": null,
-      "crawlComplete": true
+      "crawlComplete": true,
+      "retired": true
     },
     {
       "name": "DOE School Search",
@@ -183067,7 +183021,8 @@
       ],
       "scan_ms": 1849,
       "error": null,
-      "crawlComplete": true
+      "crawlComplete": true,
+      "retired": true
     },
     {
       "name": "Food Help Finder",
@@ -187769,7 +187724,8 @@
       ],
       "scan_ms": 128481,
       "error": null,
-      "crawlComplete": true
+      "crawlComplete": true,
+      "retired": true
     }
   ]
 }

@@ -5196,7 +5196,7 @@
   },
   {
     "date": "2026-07-20T21:56:41.529Z",
-    "site": "Summer",
+    "site": "Summer in NYC",
     "pages": 8,
     "crawlComplete": true,
     "rules": [
@@ -5767,7 +5767,7 @@
   },
   {
     "date": "2026-07-24T11:20:29.821Z",
-    "site": "Summer",
+    "site": "Summer in NYC",
     "pages": 1,
     "crawlComplete": true,
     "rules": [
@@ -6461,7 +6461,7 @@
   },
   {
     "date": "2026-07-31T11:31:29.091Z",
-    "site": "Summer",
+    "site": "Summer in NYC",
     "pages": 1,
     "crawlComplete": true,
     "rules": [
@@ -7155,7 +7155,7 @@
   },
   {
     "date": "2026-08-07T10:59:48.520Z",
-    "site": "Summer",
+    "site": "Summer in NYC",
     "pages": 1,
     "crawlComplete": true,
     "rules": [
@@ -7799,7 +7799,7 @@
   },
   {
     "date": "2026-08-14T11:07:16.550Z",
-    "site": "Summer",
+    "site": "Summer in NYC",
     "pages": 1,
     "crawlComplete": true,
     "rules": [
@@ -8452,7 +8452,7 @@
   },
   {
     "date": "2026-08-21T11:57:32.544Z",
-    "site": "Summer",
+    "site": "Summer in NYC",
     "pages": 1,
     "crawlComplete": true,
     "rules": [
@@ -9080,7 +9080,7 @@
   },
   {
     "date": "2026-08-28T15:27:48.391Z",
-    "site": "Summer",
+    "site": "Summer in NYC",
     "pages": 1,
     "crawlComplete": true,
     "rules": [
@@ -9182,5 +9182,20 @@
         "count": 1
       }
     ]
+  },
+  {
+    "date": "2026-08-30T12:18:00.508Z",
+    "site": "NYC.gov",
+    "pages": 22,
+    "crawlComplete": true,
+    "viewports": [
+      "desktop",
+      "mobile"
+    ],
+    "settled": true,
+    "excludedEmbeds": [
+      "YouTube"
+    ],
+    "rules": []
   }
 ]

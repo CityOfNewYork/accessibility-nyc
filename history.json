@@ -10150,5 +10150,484 @@
       "YouTube"
     ],
     "rules": []
+  },
+  {
+    "date": "2026-09-18T11:53:37.414Z",
+    "site": "NYC.gov",
+    "pages": 30,
+    "crawlComplete": true,
+    "viewports": [
+      "desktop",
+      "mobile"
+    ],
+    "settled": true,
+    "excludedEmbeds": [
+      "YouTube"
+    ],
+    "rules": []
+  },
+  {
+    "date": "2026-09-18T11:53:37.414Z",
+    "site": "OTI",
+    "pages": 164,
+    "crawlComplete": true,
+    "viewports": [
+      "desktop",
+      "mobile"
+    ],
+    "settled": true,
+    "excludedEmbeds": [
+      "YouTube"
+    ],
+    "rules": [
+      {
+        "id": "role-img-alt",
+        "impact": "serious",
+        "count": 499
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 39
+      },
+      {
+        "id": "frame-title",
+        "impact": "serious",
+        "count": 2
+      },
+      {
+        "id": "link-name",
+        "impact": "serious",
+        "count": 2
+      },
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "count": 6
+      },
+      {
+        "id": "list",
+        "impact": "serious",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "date": "2026-09-18T11:53:37.414Z",
+    "site": "PIT Crew",
+    "pages": 1,
+    "crawlComplete": true,
+    "viewports": [
+      "desktop",
+      "mobile"
+    ],
+    "settled": true,
+    "excludedEmbeds": [
+      "YouTube"
+    ],
+    "rules": []
+  },
+  {
+    "date": "2026-09-18T11:53:37.414Z",
+    "site": "MOPD",
+    "pages": 160,
+    "crawlComplete": true,
+    "viewports": [
+      "desktop",
+      "mobile"
+    ],
+    "settled": true,
+    "excludedEmbeds": [
+      "YouTube"
+    ],
+    "rules": [
+      {
+        "id": "aria-hidden-focus",
+        "impact": "serious",
+        "count": 158
+      },
+      {
+        "id": "link-name",
+        "impact": "serious",
+        "count": 178
+      },
+      {
+        "id": "list",
+        "impact": "serious",
+        "count": 10
+      },
+      {
+        "id": "select-name",
+        "impact": "critical",
+        "count": 158
+      },
+      {
+        "id": "meta-viewport",
+        "impact": "moderate",
+        "count": 27
+      },
+      {
+        "id": "image-alt",
+        "impact": "critical",
+        "count": 1
+      },
+      {
+        "id": "frame-title",
+        "impact": "serious",
+        "count": 1
+      },
+      {
+        "id": "aria-allowed-attr",
+        "impact": "critical",
+        "count": 2
+      },
+      {
+        "id": "listitem",
+        "impact": "serious",
+        "count": 30
+      },
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "count": 6
+      }
+    ]
+  },
+  {
+    "date": "2026-09-18T11:53:37.414Z",
+    "site": "DOF",
+    "pages": 595,
+    "crawlComplete": true,
+    "viewports": [
+      "desktop",
+      "mobile"
+    ],
+    "settled": true,
+    "excludedEmbeds": [
+      "YouTube"
+    ],
+    "rules": [
+      {
+        "id": "aria-hidden-focus",
+        "impact": "serious",
+        "count": 549
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 57
+      },
+      {
+        "id": "link-name",
+        "impact": "serious",
+        "count": 581
+      },
+      {
+        "id": "meta-viewport",
+        "impact": "moderate",
+        "count": 210
+      },
+      {
+        "id": "image-alt",
+        "impact": "critical",
+        "count": 4
+      },
+      {
+        "id": "select-name",
+        "impact": "critical",
+        "count": 58
+      },
+      {
+        "id": "aria-allowed-attr",
+        "impact": "critical",
+        "count": 41
+      },
+      {
+        "id": "frame-title",
+        "impact": "serious",
+        "count": 22
+      },
+      {
+        "id": "meta-refresh",
+        "impact": "critical",
+        "count": 20
+      },
+      {
+        "id": "input-button-name",
+        "impact": "critical",
+        "count": 3
+      },
+      {
+        "id": "list",
+        "impact": "serious",
+        "count": 27
+      },
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "count": 1
+      },
+      {
+        "id": "html-has-lang",
+        "impact": "serious",
+        "count": 423
+      },
+      {
+        "id": "label",
+        "impact": "critical",
+        "count": 467
+      },
+      {
+        "id": "aria-prohibited-attr",
+        "impact": "serious",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "date": "2026-09-18T11:53:37.414Z",
+    "site": "DOT",
+    "pages": 319,
+    "crawlComplete": true,
+    "viewports": [
+      "desktop",
+      "mobile"
+    ],
+    "settled": true,
+    "excludedEmbeds": [
+      "YouTube"
+    ],
+    "rules": [
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "count": 6856
+      },
+      {
+        "id": "frame-title",
+        "impact": "serious",
+        "count": 16
+      },
+      {
+        "id": "list",
+        "impact": "serious",
+        "count": 35
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 38
+      },
+      {
+        "id": "nested-interactive",
+        "impact": "serious",
+        "count": 22
+      },
+      {
+        "id": "aria-hidden-focus",
+        "impact": "serious",
+        "count": 10
+      },
+      {
+        "id": "select-name",
+        "impact": "critical",
+        "count": 10
+      },
+      {
+        "id": "aria-prohibited-attr",
+        "impact": "serious",
+        "count": 10
+      },
+      {
+        "id": "link-name",
+        "impact": "serious",
+        "count": 7
+      },
+      {
+        "id": "image-alt",
+        "impact": "critical",
+        "count": 8
+      },
+      {
+        "id": "label",
+        "impact": "critical",
+        "count": 2
+      },
+      {
+        "id": "aria-input-field-name",
+        "impact": "serious",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "date": "2026-09-18T11:53:37.414Z",
+    "site": "NYC Aging",
+    "pages": 153,
+    "crawlComplete": true,
+    "viewports": [
+      "desktop",
+      "mobile"
+    ],
+    "settled": true,
+    "excludedEmbeds": [
+      "YouTube"
+    ],
+    "rules": [
+      {
+        "id": "aria-hidden-focus",
+        "impact": "serious",
+        "count": 148
+      },
+      {
+        "id": "link-name",
+        "impact": "serious",
+        "count": 200
+      },
+      {
+        "id": "list",
+        "impact": "serious",
+        "count": 11
+      },
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "count": 27
+      },
+      {
+        "id": "select-name",
+        "impact": "critical",
+        "count": 140
+      },
+      {
+        "id": "meta-viewport",
+        "impact": "moderate",
+        "count": 75
+      },
+      {
+        "id": "valid-lang",
+        "impact": "serious",
+        "count": 3
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 10
+      },
+      {
+        "id": "image-alt",
+        "impact": "critical",
+        "count": 1
+      },
+      {
+        "id": "frame-title",
+        "impact": "serious",
+        "count": 5
+      }
+    ]
+  },
+  {
+    "date": "2026-09-18T11:53:37.414Z",
+    "site": "NYC 311",
+    "pages": 8,
+    "crawlComplete": true,
+    "viewports": [
+      "desktop",
+      "mobile"
+    ],
+    "settled": true,
+    "excludedEmbeds": [
+      "YouTube"
+    ],
+    "rules": [
+      {
+        "id": "input-button-name",
+        "impact": "critical",
+        "count": 8
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 2
+      },
+      {
+        "id": "aria-required-children",
+        "impact": "critical",
+        "count": 1
+      },
+      {
+        "id": "aria-required-parent",
+        "impact": "critical",
+        "count": 8
+      },
+      {
+        "id": "listitem",
+        "impact": "serious",
+        "count": 3
+      },
+      {
+        "id": "link-in-text-block",
+        "impact": "serious",
+        "count": 2
+      },
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "count": 27
+      },
+      {
+        "id": "aria-allowed-attr",
+        "impact": "critical",
+        "count": 6
+      },
+      {
+        "id": "select-name",
+        "impact": "critical",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "date": "2026-09-18T11:53:37.414Z",
+    "site": "Accessibility Scanner",
+    "pages": 5,
+    "crawlComplete": true,
+    "viewports": [
+      "desktop",
+      "mobile"
+    ],
+    "settled": true,
+    "excludedEmbeds": [
+      "YouTube"
+    ],
+    "rules": []
+  },
+  {
+    "date": "2026-09-18T11:57:55.174Z",
+    "site": "Summer in NYC",
+    "pages": 8,
+    "crawlComplete": true,
+    "settled": true,
+    "excludedEmbeds": [
+      "YouTube"
+    ],
+    "rules": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "date": "2026-09-18T11:57:55.174Z",
+    "site": "Food Help Finder",
+    "pages": 1,
+    "crawlComplete": true,
+    "settled": true,
+    "excludedEmbeds": [
+      "YouTube"
+    ],
+    "rules": []
   }
 ]

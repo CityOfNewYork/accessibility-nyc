@@ -81,12 +81,24 @@ async function waitForState(page, expect, timeoutMs = 20_000) {
       const found = await page.$(expect.selector);
       if (found) return { ok: true, marker: await stateMarker(page) };
     }
+    // For apps whose h1 never changes between screens (Food Help Finder's is
+    // always "Food Help"), the route is what identifies the screen.
+    if (expect.path && new URL(page.url()).pathname === expect.path) {
+      return { ok: true, marker: await stateMarker(page) };
+    }
+    if (expect.button && (await handleByText(page, "button", expect.button))) {
+      return { ok: true, marker: await stateMarker(page) };
+    }
     if (Date.now() > deadline) {
       return {
         ok: false,
         marker: last,
         why: expect.h1
           ? `expected h1 matching ${expect.h1}, saw "${last}"`
+          : expect.path
+          ? `expected to be at ${expect.path}, was at ${new URL(page.url()).pathname}`
+          : expect.button
+          ? `expected a "${expect.button}" button, none appeared`
           : `expected an element matching ${expect.selector}, none appeared`,
       };
     }
@@ -187,8 +199,15 @@ function flowGap(gaps, message) {
   gaps.push(message);
 }
 
-// Roll per-state records up into a scan.js-shaped site object.
-function assembleSite(site, states, gaps) {
+// Roll per-state records up into a scan.js-shaped site object. A state that
+// was attempted but not scanned — the screen was not the one expected, or axe
+// failed on it — is a gap too: that screen went unchecked just the same as one
+// the walk never reached.
+function assembleSite(site, states, skipped) {
+  const gaps = [
+    ...skipped,
+    ...states.filter((s) => s.error).map((s) => `${s.label}: ${s.error}`),
+  ];
   const counts = states.reduce((acc, s) => addCounts(acc, s.counts), emptyCounts());
   return {
     name: site.name,
@@ -361,7 +380,9 @@ async function scanFoodHelpFinder(browser, site) {
     // ① Landing — map + sidebar with "What is Food Help NYC?" content.
     await page.goto(site.url, { waitUntil: "networkidle2", timeout: 60_000 });
     await sleep(4000); // ArcGIS map needs a beat to settle
-    states.push(await captureState(page, "Landing — map + intro"));
+    states.push(
+      await captureState(page, "Landing — map + intro", { path: "/foodhelp/" })
+    );
 
     // ② Locations list — typing an address + Enter routes to /foodhelp/locations
     //    with a real list of nearby pantries/kitchens. The Esri autocomplete
@@ -379,7 +400,9 @@ async function scanFoodHelpFinder(browser, site) {
       await page.keyboard.press("Enter");
       await sleep(5000);
       console.log(`     → searched "${term}", url now: ${page.url()}`);
-      states.push(await captureState(page, `Locations near "${term}"`));
+      states.push(
+        await captureState(page, `Locations near "${term}"`, { path: "/foodhelp/locations" })
+      );
     } else {
       flowGap(gaps, "address search box not found — skipping locations state");
     }
@@ -486,7 +509,7 @@ async function scanSummerFinder(browser, site) {
       }
     }
     states.push(
-      await captureState(page, "Splash — landing", { selector: "button" })
+      await captureState(page, "Splash — landing", { button: "Get Started" })
     );
 
     // ② Open the wizard. "Get Started" is a <button> with an onclick handler
@@ -501,6 +524,7 @@ async function scanSummerFinder(browser, site) {
     // ③ Walk the questionnaire. Each step advances on "Continue" (which works
     //    on the wizard's defaults); the final location step swaps that button
     //    for "See activities". Cap the loop so a UI change can't spin forever.
+    let prevPrompt = null;
     for (let step = 1; step <= 8; step++) {
       // Label each state by its visible prompt ("How old are you?", …); the h1
       // is a constant "Questionnaire", so pull the first meaningful heading.
@@ -515,7 +539,16 @@ async function scanSummerFinder(browser, site) {
               !/page footer|translate|adding activities/i.test(t)
           );
       });
-      states.push(await captureState(page, `Questionnaire — ${prompt || `step ${step}`}`));
+      // Every step shares the h1 and the URL, so the only sign that "Continue"
+      // did nothing is seeing the same question twice.
+      if (prompt && prompt === prevPrompt) {
+        flowGap(gaps, `"Continue" did not advance past "${prompt}" — later questionnaire steps not scanned`);
+        break;
+      }
+      prevPrompt = prompt;
+      states.push(
+        await captureState(page, `Questionnaire — ${prompt || `step ${step}`}`, { h1: /^Questionnaire$/i })
+      );
 
       const next = await handleByText(page, "button", "Continue");
       if (!next) break; // reached the final (location) step — no "Continue"

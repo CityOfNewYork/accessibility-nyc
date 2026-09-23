@@ -582,6 +582,7 @@ a:focus-visible {
 .tier-pill.tier-amber  { color: var(--tier-amber-bg);  background: var(--tier-amber-soft); }
 .tier-pill.tier-green  { color: var(--tier-green-bg);  background: var(--tier-green-soft); }
 .tier-pill.tier-error  { color: var(--tier-error-bg);  background: var(--tier-error-soft); }
+.tier-pill.tier-incomplete { color: var(--tier-error-bg); background: var(--tier-error-soft); }
 
 /* ---------- impact chip (overview impact-by-severity) ----------------- */
 

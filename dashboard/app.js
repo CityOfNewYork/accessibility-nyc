@@ -147,6 +147,7 @@
     orange: "Serious issues",
     yellow: "Some issues",
     green:  "Clean",
+    incomplete: "Incomplete scan",
     error:  "Scan error",
   };
   const tierClass = {
@@ -154,6 +155,7 @@
     orange: "tier-orange",
     yellow: "tier-amber",
     green:  "tier-green",
+    incomplete: "tier-incomplete",
     error:  "tier-error",
   };
 
@@ -396,7 +398,12 @@
   // trusted: scan.js used to write a counts-derived tier onto errored sites.
   function siteTier(s) {
     if (s.tier === "error" || s.error || siteScanError(s)) return "error";
-    return tierFromCounts(s.counts);
+    const tier = tierFromCounts(s.counts);
+    // "Clean" is a claim about every screen. When a finder's walk skipped some,
+    // the screens it did check can't back that claim up. Findings on the
+    // screens that were checked are real, so any other tier stands.
+    if (tier === "green" && (s.flow_gaps || []).length) return "incomplete";
+    return tier;
   }
 
   function pageTier(p) {
@@ -582,7 +589,7 @@
 
   function renderOverview() {
     const sites = data.sites;
-    const tiers = { red: 0, orange: 0, yellow: 0, green: 0, error: 0 };
+    const tiers = { red: 0, orange: 0, yellow: 0, green: 0, incomplete: 0, error: 0 };
     let totalIssues = 0, totalRules = 0;
     for (const s of sites) {
       tiers[siteTier(s)]++;
@@ -597,7 +604,12 @@
       summaryCell("Critical issues", String(tiers.red), null, "is-red"),
       summaryCell("Serious issues", String(tiers.orange), null, "is-orange"),
       summaryCell("Some issues", String(tiers.yellow), null, "is-amber"),
-      summaryCell("Clean", String(tiers.green), tiers.error ? `${tiers.error} scan error${tiers.error === 1 ? "" : "s"}` : null, "is-green"),
+      summaryCell("Clean", String(tiers.green),
+        [
+          tiers.incomplete ? `${tiers.incomplete} incomplete scan${tiers.incomplete === 1 ? "" : "s"}` : null,
+          tiers.error ? `${tiers.error} scan error${tiers.error === 1 ? "" : "s"}` : null,
+        ].filter(Boolean).join(" · ") || null,
+        "is-green"),
     );
 
     const headerRow = el("tr", {},
@@ -624,7 +636,8 @@
         el("td", {},
           el("a", { class: "site-name", href: link }, s.name),
           el("div", { class: "site-url" }, s.url),
-          (s.flow_gaps || []).length
+          // The tier pill already says so when there are no findings.
+          (s.flow_gaps || []).length && siteTier(s) !== "incomplete"
             ? el("div", { class: "site-incomplete" }, "Incomplete scan — some screens not reached")
             : null
         ),
@@ -1716,12 +1729,19 @@
         methodologyCallout(false),
         siteBanner,
         historyChart,
-        el("div", { class: "empty-state" },
-          el("p", { class: "empty-state-title" }, "No automated violations found"),
-          el("p", { class: "empty-state-body" },
-            "Floor check passed against WCAG 2.2 AA. Manual review and assistive-technology testing are still required to confirm full compliance — automated scanners detect only a portion of accessibility failures."
-          )
-        ),
+        gapsBanner
+          ? el("div", { class: "empty-state" },
+              el("p", { class: "empty-state-title" }, "No automated violations found on the screens checked"),
+              el("p", { class: "empty-state-body" },
+                "The screens listed above as not reached were not checked, so this is not a pass for the app as a whole."
+              )
+            )
+          : el("div", { class: "empty-state" },
+              el("p", { class: "empty-state-title" }, "No automated violations found"),
+              el("p", { class: "empty-state-body" },
+                "Floor check passed against WCAG 2.2 AA. Manual review and assistive-technology testing are still required to confirm full compliance — automated scanners detect only a portion of accessibility failures."
+              )
+            ),
         siteEmbedSection,
         siteSuppressedSection
       ].filter(Boolean));

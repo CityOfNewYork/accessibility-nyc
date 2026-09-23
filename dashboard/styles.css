@@ -238,6 +238,55 @@ a:focus-visible {
   max-width: 78ch;
 }
 
+/* Scan-coverage notice for a finder whose scripted walk skipped a step. Amber,
+   not red: it qualifies the result rather than scoring the site. */
+.flow-banner {
+  background: var(--tier-amber-soft);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--tier-amber-bg);
+  padding: 16px 22px;
+  margin: 0 0 28px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 22px;
+  align-items: start;
+}
+.flow-banner-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--tier-amber-bg);
+  white-space: nowrap;
+  padding-top: 3px;
+  border-right: 1px solid var(--rule);
+  padding-right: 22px;
+  align-self: stretch;
+}
+.flow-banner-body {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--ink);
+  max-width: 78ch;
+}
+.flow-banner-body p { margin: 0; }
+.flow-banner-body ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+@media (max-width: 640px) {
+  .flow-banner { grid-template-columns: 1fr; gap: 10px; }
+  .flow-banner-label { border-right: 0; padding-right: 0; }
+}
+.sites-table .site-incomplete {
+  color: var(--tier-amber-bg);
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
 /* Collapsed by default and visually subordinate to the counted findings —
    present for anyone who goes looking, never competing with the real score. */
 .embed-findings {

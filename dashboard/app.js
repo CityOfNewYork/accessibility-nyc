@@ -221,6 +221,26 @@
     );
   }
 
+  // Shown when a finder's scripted walk skipped a step (a button or search box
+  // it drives was not found). The states that were reached are real results,
+  // but the missing screens are not counted anywhere, so the site's totals —
+  // and its tier — describe only part of the app.
+  function flowGapsBanner(site) {
+    const gaps = site.flow_gaps || [];
+    if (!gaps.length) return null;
+    return el("aside", { class: "flow-banner" },
+      el("div", { class: "flow-banner-label" }, "Incomplete scan"),
+      el("div", { class: "flow-banner-body" },
+        el("p", {},
+          `The scanner could not complete ${gaps.length === 1 ? "one step" : `${gaps.length} steps`} of its walk through this app, ` +
+          `so the screens behind ${gaps.length === 1 ? "it" : "them"} were not checked. ` +
+          "The results below cover only the screens it reached."
+        ),
+        el("ul", {}, gaps.map((g) => el("li", {}, g)))
+      )
+    );
+  }
+
   // Site-level rollup of the excluded findings: one entry per rule, with every
   // page's nodes folded in, so the site view lists rules rather than repeating
   // the same YouTube finding once per page that carries a video.
@@ -603,7 +623,10 @@
       },
         el("td", {},
           el("a", { class: "site-name", href: link }, s.name),
-          el("div", { class: "site-url" }, s.url)
+          el("div", { class: "site-url" }, s.url),
+          (s.flow_gaps || []).length
+            ? el("div", { class: "site-incomplete" }, "Incomplete scan — some screens not reached")
+            : null
         ),
         el("td", {}, tierPill(siteTier(s))),
         el("td", { class: "numeric" }, String(numPages)),
@@ -1680,6 +1703,7 @@
     const embedVendorsHere = siteEmbedVendors(pages);
     const embedFindingsHere = siteEmbedFindings(pages);
     const siteBanner = embedBanner(embedVendorsHere, "site");
+    const gapsBanner = flowGapsBanner(site);
     const siteEmbedSection = embedFindingsSection(embedFindingsHere, site.url);
     const siteSuppressedSection = suppressedFindingsSection(siteSuppressedFindings(pages), site.url);
 
@@ -1688,6 +1712,7 @@
       // A site can pass its own floor check and still carry embed findings.
       // Both belong here: the clean result is real, and so is the advisory.
       app.replaceChildren(...[back, header,
+        gapsBanner,
         methodologyCallout(false),
         siteBanner,
         historyChart,
@@ -1724,7 +1749,7 @@
       ? `${site.distinct_rules} rule${site.distinct_rules === 1 ? "" : "s"} failed across ${numPages} pages · ${fmtNum(site.total_violations)} occurrence${site.total_violations === 1 ? "" : "s"}`
       : `${allViolations.length} rule${allViolations.length === 1 ? "" : "s"} failed · ${fmtNum(site.total_violations)} occurrence${site.total_violations === 1 ? "" : "s"}`;
 
-    const children = [back, header, methodologyCallout(false)];
+    const children = [back, header, gapsBanner, methodologyCallout(false)].filter(Boolean);
     if (siteBanner) children.push(siteBanner);
     if (historyChart) children.push(historyChart);
     children.push(el("div", { class: "section-eyebrow findings-head" },

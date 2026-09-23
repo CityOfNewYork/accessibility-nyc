@@ -178,8 +178,17 @@ function errorState(page, label, message, start) {
   };
 }
 
+// A step of the scripted walk that did not happen. A skipped state leaves no
+// page behind, so without a record the site simply reads as smaller — and,
+// when the skipped screen was the one with findings, cleaner. Recorded on the
+// site so the dashboard can say the scan was incomplete.
+function flowGap(gaps, message) {
+  console.log(`     ! ${message}`);
+  gaps.push(message);
+}
+
 // Roll per-state records up into a scan.js-shaped site object.
-function assembleSite(site, states) {
+function assembleSite(site, states, gaps) {
   const counts = states.reduce((acc, s) => addCounts(acc, s.counts), emptyCounts());
   return {
     name: site.name,
@@ -198,6 +207,7 @@ function assembleSite(site, states) {
     scan_ms: states.reduce((s, p) => s + p.scan_ms, 0),
     error: states.length > 0 && states.every((p) => p.error) ? states[0].error : null,
     crawlComplete: true,
+    flow_gaps: gaps,
   };
 }
 
@@ -234,6 +244,7 @@ async function scanServiceFinder(browser, site) {
   const page = await browser.newPage();
   await page.setViewport({ width: 1280, height: 900 });
   const states = [];
+  const gaps = [];
   try {
     // ① Landing — the search form itself.
     await page.goto(site.url, { waitUntil: "networkidle2", timeout: 60_000 });
@@ -249,7 +260,7 @@ async function scanServiceFinder(browser, site) {
       console.log(`     → results page: ${page.url()}`);
       states.push(await captureState(page, `Search results — ${browseFor}`));
     } else {
-      console.log(`     ! "${browseFor}" quick-link not found — skipping results state`);
+      flowGap(gaps, `"${browseFor}" quick-link not found — skipping results state`);
     }
 
     // ③ Service detail — first in-app result link on the results page.
@@ -274,14 +285,14 @@ async function scanServiceFinder(browser, site) {
       await sleep(1500);
       states.push(await captureState(page, "Service detail"));
     } else {
-      console.log("     ! no service-detail link found on results page");
+      flowGap(gaps, "no service-detail link found on results page");
     }
   } catch (err) {
-    console.log(`     ! Service Finder flow error: ${err.message}`);
+    flowGap(gaps, `Service Finder flow error: ${err.message}`);
   } finally {
     await page.close();
   }
-  return assembleSite(site, states);
+  return assembleSite(site, states, gaps);
 }
 
 // ---- DOE School Search: React SPA atop ArcGIS map --------------------------
@@ -290,6 +301,7 @@ async function scanSchoolSearch(browser, site) {
   const page = await browser.newPage();
   await page.setViewport({ width: 1280, height: 900 });
   const states = [];
+  const gaps = [];
   try {
     // ① Landing — map + sidebar with name search, Grade + Borough filters.
     await page.goto(site.url, { waitUntil: "networkidle2", timeout: 60_000 });
@@ -304,7 +316,7 @@ async function scanSchoolSearch(browser, site) {
       await sleep(2500);
       states.push(await captureState(page, "Schools list tab"));
     } else {
-      console.log("     ! Schools tab not found — skipping list state");
+      flowGap(gaps, "Schools tab not found — skipping list state");
     }
 
     // ③ Filtered results — set Borough=Manhattan and submit the filters form.
@@ -325,17 +337,17 @@ async function scanSchoolSearch(browser, site) {
         if (tab) { await tab.click().catch(() => {}); await sleep(1500); }
         states.push(await captureState(page, "Filtered — Manhattan schools"));
       } else {
-        console.log("     ! filters submit not found");
+        flowGap(gaps, "filters submit not found");
       }
     } catch (err) {
-      console.log(`     ! filter flow error: ${err.message}`);
+      flowGap(gaps, `filter flow error: ${err.message}`);
     }
   } catch (err) {
-    console.log(`     ! School Search flow error: ${err.message}`);
+    flowGap(gaps, `School Search flow error: ${err.message}`);
   } finally {
     await page.close();
   }
-  return assembleSite(site, states);
+  return assembleSite(site, states, gaps);
 }
 
 // ---- Food Help Finder: ArcGIS map + React sidebar at finder.nyc.gov -------
@@ -344,6 +356,7 @@ async function scanFoodHelpFinder(browser, site) {
   const page = await browser.newPage();
   await page.setViewport({ width: 1280, height: 900 });
   const states = [];
+  const gaps = [];
   try {
     // ① Landing — map + sidebar with "What is Food Help NYC?" content.
     await page.goto(site.url, { waitUntil: "networkidle2", timeout: 60_000 });
@@ -352,9 +365,13 @@ async function scanFoodHelpFinder(browser, site) {
 
     // ② Locations list — typing an address + Enter routes to /foodhelp/locations
     //    with a real list of nearby pantries/kitchens. The Esri autocomplete
-    //    accepts free-text + Enter without needing a suggestion click.
+    //    accepts free-text + Enter without needing a suggestion click. Its
+    //    <input> lives in the shadow root of a <calcite-autocomplete> (the Search
+    //    widget moved to Calcite components between the 2026-09-04 and
+    //    2026-09-11 scans, which broke the old #searchDiv-input selector), so
+    //    the lookup has to pierce it.
     const term = "Times Square, Manhattan";
-    const box = await page.$("#searchDiv-input");
+    const box = await page.$("#searchDiv calcite-autocomplete >>> input");
     if (box) {
       await box.click({ clickCount: 3 });
       await box.type(term, { delay: 30 });
@@ -364,14 +381,14 @@ async function scanFoodHelpFinder(browser, site) {
       console.log(`     → searched "${term}", url now: ${page.url()}`);
       states.push(await captureState(page, `Locations near "${term}"`));
     } else {
-      console.log("     ! address search box not found — skipping locations state");
+      flowGap(gaps, "address search box not found — skipping locations state");
     }
   } catch (err) {
-    console.log(`     ! Food Help Finder flow error: ${err.message}`);
+    flowGap(gaps, `Food Help Finder flow error: ${err.message}`);
   } finally {
     await page.close();
   }
-  return assembleSite(site, states);
+  return assembleSite(site, states, gaps);
 }
 
 // ---- Activities Finder: React SPA, content renders client-side -------------
@@ -380,6 +397,7 @@ async function scanActivitiesFinder(browser, site) {
   const page = await browser.newPage();
   await page.setViewport({ width: 1280, height: 900 });
   const states = [];
+  const gaps = [];
   try {
     // ① Landing — the SPA renders an event listing on load.
     await page.goto(site.url, { waitUntil: "networkidle2", timeout: 60_000 });
@@ -401,7 +419,7 @@ async function scanActivitiesFinder(browser, site) {
       console.log(`     → searched "${term}", url now: ${page.url()}`);
       states.push(await captureState(page, `Search results — "${term}"`));
     } else {
-      console.log("     ! search box not found — skipping search state");
+      flowGap(gaps, "search box not found — skipping search state");
     }
 
     // ③ Event detail — open the first "View Event Details".
@@ -417,14 +435,14 @@ async function scanActivitiesFinder(browser, site) {
       console.log(`     → event detail: ${page.url()}`);
       states.push(await captureState(page, "Event detail"));
     } else {
-      console.log("     ! no event-detail link found");
+      flowGap(gaps, "no event-detail link found");
     }
   } catch (err) {
-    console.log(`     ! Activities Finder flow error: ${err.message}`);
+    flowGap(gaps, `Activities Finder flow error: ${err.message}`);
   } finally {
     await page.close();
   }
-  return assembleSite(site, states);
+  return assembleSite(site, states, gaps);
 }
 
 // ---- Summer in NYC: client-side questionnaire wizard → activities map ------
@@ -448,6 +466,7 @@ async function scanSummerFinder(browser, site) {
   // scan.js does so we get the real app.
   await page.setUserAgent((await browser.userAgent()).replace("HeadlessChrome", "Chrome"));
   const states = [];
+  const gaps = [];
   try {
     // ① Splash — the marketing landing state, before the wizard opens.
     //    Once the screener has been completed, the app remembers and opens
@@ -463,7 +482,7 @@ async function scanSummerFinder(browser, site) {
         console.log("     · opened to the map (screener remembered) — resetting via the logo");
         await clickAndSettle(page, logo, 2500);
       } else {
-        console.log("     ! not on the splash and no logo button to reset with");
+        flowGap(gaps, "not on the splash and no logo button to reset with");
       }
     }
     states.push(
@@ -474,8 +493,8 @@ async function scanSummerFinder(browser, site) {
     //    (no href / navigation), so the URL never changes from here on.
     const start = await handleByText(page, "button", "Get Started");
     if (!start) {
-      console.log('     ! "Get Started" not found — only the splash was scanned');
-      return assembleSite(site, states);
+      flowGap(gaps, '"Get Started" not found — only the splash was scanned');
+      return assembleSite(site, states, gaps);
     }
     await clickAndSettle(page, start, 1800);
 
@@ -515,7 +534,7 @@ async function scanSummerFinder(browser, site) {
       await page.keyboard.press("Enter");
       await sleep(1500);
     } else {
-      console.log("     ! location search box not found — can't reach results");
+      flowGap(gaps, "location search box not found — can't reach results");
     }
     const see = await handleByText(page, "button", "See activities");
     if (see) {
@@ -547,13 +566,13 @@ async function scanSummerFinder(browser, site) {
         );
         await page.keyboard.press("Escape");
         if (!(await waitForGone(page, '[role="dialog"]'))) {
-          console.log(
-            "     ! filters dialog did not close — later states would be scanned behind it"
+          flowGap(gaps,
+            "filters dialog did not close — later states would be scanned behind it"
           );
         }
       } else {
-        console.log(
-          '     ! no "Filter activities" / "Filters" button — the filters state was NOT scanned'
+        flowGap(gaps,
+          'no "Filter activities" / "Filters" button — the filters state was NOT scanned'
         );
       }
 
@@ -569,19 +588,19 @@ async function scanSummerFinder(browser, site) {
           })
         );
       } else {
-        console.log(
-          '     ! no "View events near you" card — the expanded state was NOT scanned'
+        flowGap(gaps,
+          'no "View events near you" card — the expanded state was NOT scanned'
         );
       }
     } else {
-      console.log('     ! "See activities" not enabled — results state not reached');
+      flowGap(gaps, '"See activities" not enabled — results state not reached');
     }
   } catch (err) {
-    console.log(`     ! Summer finder flow error: ${err.message}`);
+    flowGap(gaps, `Summer finder flow error: ${err.message}`);
   } finally {
     await page.close();
   }
-  return assembleSite(site, states);
+  return assembleSite(site, states, gaps);
 }
 
 // ---- driver ----------------------------------------------------------------
@@ -650,7 +669,9 @@ async function main() {
     else r = await scanActivitiesFinder(browser, site);
     console.log(
       `   ── ${r.tier.toUpperCase()} ${r.total_violations} issues / ` +
-        `${r.distinct_rules} rules / ${r.pages.length} states scanned\n`
+        `${r.distinct_rules} rules / ${r.pages.length} states scanned` +
+        (r.flow_gaps.length ? ` — INCOMPLETE, ${r.flow_gaps.length} step(s) skipped` : "") +
+        "\n"
     );
     results.push(r);
   }
@@ -709,6 +730,22 @@ async function main() {
   );
   const totalPages = mergedSites.reduce((sum, r) => sum + (r.pages?.length || 1), 0);
   console.log(`Wrote ${mergedSites.length} site(s) / ${totalPages} page(s) to dashboard/results.js and results.json.`);
+
+  // A broken walk still exits 0 — the states it did reach are real results —
+  // but in Actions it surfaces as a warning annotation on the run summary
+  // rather than a line in a 2-hour log.
+  const incomplete = results.filter((r) => r.flow_gaps.length);
+  if (incomplete.length) {
+    console.log(`\nIncomplete finder scans (a site changed, or a flow step needs updating):`);
+    for (const r of incomplete) {
+      for (const g of r.flow_gaps) {
+        console.log(`  ${r.name}: ${g}`);
+        if (process.env.GITHUB_ACTIONS) {
+          console.log(`::warning title=Incomplete scan: ${r.name}::${g.replace(/\r?\n/g, " ")}`);
+        }
+      }
+    }
+  }
 }
 
 // Guarded the same way scan.js is, so importing this module — from a test, or

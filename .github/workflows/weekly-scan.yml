@@ -26,7 +26,9 @@ concurrency:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    # GitHub's ceiling for a hosted job. A full scan runs ~2.5h; a run killed
+    # at the limit publishes nothing, so leave the headroom.
+    timeout-minutes: 360
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

@@ -1,0 +1,1 @@
+window.READABILITY_DETAIL = {"ka":"KA-01595","longest":[{"text":"Call 911 to report organized crime or gang activity.","words":9}],"blocks":[{"k":"h","c":0,"t":"Call 911"},{"k":"p","c":0,"t":"Call 911 to report organized crime or gang activity.","s":["Call 911 to report organized crime or gang activity."]}],"unknown_hidden":[]};

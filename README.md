@@ -58,7 +58,7 @@ All three work — the dashboard loads its data via `<script src="results.js">` 
 npm test
 ```
 
-Runs five checks: `test/check-core-shared.js` fails the build if either scanner defines its own copy of a scoring rule instead of importing it from `scan-core.mjs` (see [Shared scoring rules](#shared-scoring-rules)), `test/check-merge.js` unit-tests the desktop/mobile viewport dedup (`mergeViewportViolations`), `test/check-embeds.js` unit-tests the third-party embed exclusion (findings inside a YouTube frame are never counted; findings on the `<iframe>` tag itself always are), `test/check-suppressions.js` unit-tests the verified-false-positive rules (required justification, mandatory expiry, narrow matching, fatal on a malformed file), and `test/check-engine.js` scans `test-fixtures/broken.html` (a deliberately broken page) asserting that axe catches the obvious violations — `image-alt`, `button-name`, `link-name`, `label`, `color-contrast`, `html-has-lang`. Useful for confirming the engine is wired up correctly after dependency upgrades.
+Runs six checks: `test/check-core-shared.js` fails the build if either scanner defines its own copy of a scoring rule instead of importing it from `scan-core.mjs` (see [Shared scoring rules](#shared-scoring-rules)), `test/check-merge.js` unit-tests the desktop/mobile viewport dedup (`mergeViewportViolations`), `test/check-embeds.js` unit-tests the third-party embed exclusion (findings inside a YouTube frame are never counted; findings on the `<iframe>` tag itself always are), `test/check-suppressions.js` unit-tests the verified-false-positive rules (required justification, mandatory expiry, narrow matching, fatal on a malformed file), `test/check-readability.js` pins the readability preview's formulas and text-preparation rules, and `test/check-engine.js` scans `test-fixtures/broken.html` (a deliberately broken page) asserting that axe catches the obvious violations — `image-alt`, `button-name`, `link-name`, `label`, `color-contrast`, `html-has-lang`. Useful for confirming the engine is wired up correctly after dependency upgrades.
 
 ## Shared scoring rules
 
@@ -152,6 +152,29 @@ Note that NYC currently runs three CMS schemes side-by-side:
 
 Different agencies have migrated at different times; if you get a `HTTP 404` during a scan, try another scheme.
 
+## Readability preview (NYC311 help articles)
+
+A separate, unlinked page (`dashboard/readability.html`) shows ARI and Flesch-Kincaid scores for every English article in the [NYC311 article index](https://portal.311.nyc.gov/all-articles/). Scores are shown as-is on a continuous color scale, with no targets or good/bad bands. **It is not part of the accessibility scan**: a readability score is a site-quality signal, not a WCAG 2.2 AA result (SC 3.1.5 Reading Level is Level AAA), so nothing from it reaches the tiers, counts, or history.
+
+```bash
+node check-readability.mjs                    # every article in the index (~25 min) → dashboard files
+node check-readability.mjs --sample           # the 10 articles in readability-articles.json, report only
+node check-readability.mjs --only=KA-02232    # specific articles, report only
+```
+
+Every run writes a review report to `readability-results.json` (gitignored): articles that couldn't load, articles with no prose, hidden elements that match no known accordion pattern, and the 20 highest ARI scores. Only a complete full run writes the dashboard files — `dashboard/readability-data.js` (scores for the overview) and one `dashboard/readability/<KA>.js` per article (its extracted text, for the details view). Detail files carry no timestamps, so an unchanged article produces no git change.
+
+The crawl is deliberately gentle on the portal: two tabs, a pause between requests, one retry, and it backs off and then stops if failures pile up. Pages load as HTML and stylesheets only; scripts, images, and fonts are blocked because the article text is server-rendered (blocking them changed no extracted text on the sample).
+
+- **Formulas:** Flesch-Kincaid Grade and the Automated Readability Index (ARI, the formula behind Hemingway Editor's grade). Both count only sentence length and word length.
+- **Text preparation is the part that matters** — online calculators disagree by many grade levels on the same raw text. The rules live in `readability-core.mjs` and are pinned by `test/check-readability.js`:
+  - only the article body (`#knowledgearticle .ka-content`) is read; portal chrome is not;
+  - collapsed accordion sections are included, since readers can expand them (most articles keep most of their text collapsed);
+  - every block-level element ends a sentence, so lists and link cards don't merge into one long sentence;
+  - headings, short unpunctuated labels, and service-request buttons are shown but not scored;
+  - non-English articles (the index also lists translations) are detected from their text and left out of the page.
+- The page shows the full extracted text for each article, so anyone can check exactly what was scored.
+
 ## Project layout
 
 ```
@@ -162,16 +185,22 @@ accessibility-nyc/
 ├── sites.json                 # editable URL list
 ├── suppressions.json          # verified false positives (see above)
 ├── results.json               # scanner output (also written as dashboard/results.js)
+├── check-readability.mjs      # NYC311 readability preview (separate from the scan)
+├── readability-core.mjs       # its text-extraction and scoring rules
+├── readability-articles.json  # sample list for --sample runs
 ├── dashboard/
 │   ├── index.html             # entry
 │   ├── app.js                 # overview / per-site / per-page views + search
 │   ├── styles.css
-│   └── results.js             # generated; window.SCAN_DATA = {...}
+│   ├── results.js             # generated; window.SCAN_DATA = {...}
+│   ├── readability.html       # readability preview (+ readability-app.js, .css, -data.js)
+│   └── readability/           # generated; one detail file per 311 article
 ├── test/
 │   ├── check-core-shared.js
 │   ├── check-embeds.js
 │   ├── check-engine.js
 │   ├── check-merge.js
+│   ├── check-readability.js
 │   └── check-suppressions.js
 ├── test-fixtures/
 │   └── broken.html

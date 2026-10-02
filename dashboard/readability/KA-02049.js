@@ -1,0 +1,1 @@
+window.READABILITY_DETAIL = {"ka":"KA-02049","longest":[{"text":"Call 911 to report sexual assault.","words":6}],"blocks":[{"k":"h","c":0,"t":"Call 911"},{"k":"p","c":0,"t":"Call 911 to report sexual assault.","s":["Call 911 to report sexual assault."]}],"unknown_hidden":[]};

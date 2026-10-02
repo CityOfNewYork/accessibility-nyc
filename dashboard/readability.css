@@ -1,0 +1,225 @@
+/* readability.css — styles for the NYC311 readability preview (readability.html).
+   Reuses the design tokens, table, and detail header from styles.css; the
+   grade shading and the extracted-text view are bespoke. */
+
+.rd-note {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink-muted);
+  margin: 0 0 22px;
+  max-width: 75ch;
+}
+.rd-warn {
+  color: var(--ink);
+  background: var(--tier-amber-soft);
+  border-left: 3px solid var(--tier-amber-bg);
+  padding: 10px 14px;
+}
+
+/* Sortable headers: a button that looks like the header text. */
+.rd-sort {
+  all: unset;
+  cursor: pointer;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+}
+.rd-sort:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+th[aria-sort] .rd-sort { color: var(--ink); }
+.rd-dash { color: var(--ink-subtle); }
+
+/* The table scrolls sideways on a phone instead of the page. */
+.rd-table-wrap { overflow-x: auto; }
+
+.rd-stats { grid-template-columns: repeat(4, auto); }
+.rd-stats .rd-grade { font-size: inherit; }
+
+.rd-section { margin-top: 2.25rem; }
+
+.rd-longest {
+  margin: 10px 0 0;
+  padding-left: 1.4em;
+  max-width: 80ch;
+}
+.rd-longest li {
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0 0 10px;
+}
+.rd-longest-n {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--ink-muted);
+  margin-right: 10px;
+}
+
+.rd-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  font-size: 12px;
+  color: var(--ink-muted);
+  margin: 0 0 14px;
+}
+.rd-legend > span { display: inline-flex; align-items: center; gap: 6px; }
+.rd-legend-collapsed {
+  display: inline-block;
+  width: 3px;
+  height: 14px;
+  background: var(--accent);
+}
+.rd-legend-label { color: var(--ink-subtle); }
+
+.rd-text {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  padding: 18px 22px;
+  max-width: 85ch;
+}
+.rd-block {
+  margin: 0 0 10px;
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+.rd-block:last-child { margin-bottom: 0; }
+.rd-collapsed {
+  border-left: 3px solid var(--accent);
+  padding-left: 12px;
+}
+.rd-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-subtle);
+}
+.rd-action { font-size: 13.5px; color: var(--ink-muted); }
+.rd-tag {
+  font-size: 10.5px;
+  color: var(--ink-subtle);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 1px 5px;
+  font-variant: small-caps;
+}
+
+/* ---- overview ---- */
+
+.rd-intro { margin: 0 0 22px; max-width: 70ch; }
+.rd-intro p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink);
+  margin: 0 0 14px;
+}
+
+/* The reading grade: one hue, deeper for a higher grade. No cutoffs. */
+.rd-grade {
+  display: inline-block;
+  min-width: 3.2em;
+  padding: 3px 8px;
+  border-radius: 3px;
+  text-align: center;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+}
+
+.rd-scale {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--ink-muted);
+}
+.rd-scale-bar { display: inline-flex; }
+.rd-scale-bar > span {
+  width: 30px;
+  padding: 2px 0;
+  text-align: center;
+  font-size: 11px;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.rd-table { font-size: 15px; }
+.rd-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--accent);
+}
+.rd-sub {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+.rd-sub a { color: var(--accent); }
+.rd-unscored { font-size: 13px; color: var(--ink-muted); }
+/* Rows aren't clickable as a whole: the title and Details are separate links. */
+.rd-table tbody tr { cursor: default; }
+
+.rd-detail-title a { color: inherit; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.rd-detail-title a:hover { color: var(--accent); }
+
+/* ---- search ---- */
+
+.rd-search {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin: 0 0 14px;
+}
+.rd-search label[for="rd-q"] {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.rd-search input[type="search"] {
+  flex: 0 1 320px;
+  min-width: 0;
+  font: inherit;
+  font-size: 15px;
+  padding: 7px 10px;
+  border: 1px solid var(--ink-subtle);
+  border-radius: 3px;
+  background: var(--surface);
+  color: var(--ink);
+}
+.rd-search input[type="search"]:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+/* Search box and filter share one height so they read as one control row. */
+.rd-search input[type="search"],
+.rd-filter { box-sizing: border-box; height: 40px; }
+
+/* Filter as an NYC Design System checkbox button: white with a grey outline,
+   light blue when on; the checkbox inside carries the state. */
+.rd-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px 0 12px;
+  border: 1px solid var(--ink-subtle);
+  border-radius: 3px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  user-select: none;
+}
+.rd-filter:hover { background: var(--accent-soft); }
+.rd-filter:has(input:checked) { background: var(--accent-soft); border-color: var(--accent); }
+.rd-filter:has(input:focus-visible) { outline: 2px dashed var(--accent); outline-offset: 2px; }
+.rd-filter input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+.rd-filter input:focus-visible { outline: none; }
+.rd-count {
+  font-size: 13px;
+  color: var(--ink-muted);
+  font-variant-numeric: tabular-nums;
+}

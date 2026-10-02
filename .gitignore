@@ -8,6 +8,8 @@ internal/
 # the JSON twin of dashboard/links-data.js (which is what the dashboard serves).
 link-manifest.json
 link-results.json
+# JSON twin of dashboard/readability-data.js.
+readability-results.json
 
 # One-off puppeteer probes written while working out how a specific site
 # behaves. They are throwaway by design; anything worth keeping moves into

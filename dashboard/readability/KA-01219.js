@@ -1,0 +1,1 @@
+window.READABILITY_DETAIL = {"ka":"KA-01219","longest":[{"text":"Call 911 to report stolen property.","words":6}],"blocks":[{"k":"h","c":0,"t":"Call 911"},{"k":"p","c":0,"t":"Call 911 to report stolen property.","s":["Call 911 to report stolen property."]}],"unknown_hidden":[]};

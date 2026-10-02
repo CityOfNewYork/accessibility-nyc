@@ -1,0 +1,1 @@
+window.READABILITY_DETAIL = {"ka":"KA-01548","longest":[{"text":"Call 911 to report a foul odor coming from an unknown source.","words":12}],"blocks":[{"k":"h","c":0,"t":"Call 911"},{"k":"p","c":0,"t":"Call 911 to report a foul odor coming from an unknown source.","s":["Call 911 to report a foul odor coming from an unknown source."]}],"unknown_hidden":[]};

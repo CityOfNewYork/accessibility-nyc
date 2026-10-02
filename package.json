@@ -8,12 +8,14 @@
     "scan": "node scan.js",
     "collect-links": "node scan.js --collect-links",
     "check-links": "node check-links.mjs",
+    "check-readability": "node check-readability.mjs",
     "dashboard": "npx --yes serve dashboard",
-    "test": "node test/check-core-shared.js && node test/check-merge.js && node test/check-embeds.js && node test/check-suppressions.js && node test/check-engine.js"
+    "test": "node test/check-core-shared.js && node test/check-merge.js && node test/check-embeds.js && node test/check-suppressions.js && node test/check-readability.js && node test/check-engine.js"
   },
   "dependencies": {
     "@axe-core/puppeteer": "^4.10.0",
-    "puppeteer": "^24.15.0"
+    "puppeteer": "^24.15.0",
+    "syllable": "^5.0.1"
   },
   "engines": {
     "node": ">=20"

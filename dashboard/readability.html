@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>NYC311 Readability (preview)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="readability.css" />
+</head>
+<body>
+  <div class="masthead-stripe" aria-hidden="true"></div>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="masthead-eyebrow">NYC · Office of Technology &amp; Innovation · Preview</div>
+      <div class="masthead-grid">
+        <div class="masthead-title-block">
+          <h1 class="masthead-title">NYC311 Readability</h1>
+          <p class="masthead-subtitle">Readability formula scores for NYC311 help articles.</p>
+        </div>
+        <dl class="masthead-meta">
+          <div><dt>Formulas</dt><dd>ARI · Flesch-Kincaid</dd></div>
+        </dl>
+      </div>
+    </div>
+  </header>
+
+  <main id="app" class="page">
+    <p class="loading" aria-busy="true">Loading readability results&hellip;</p>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer-inner">
+      <small id="footer-meta"></small>
+      <small>Readability preview &middot; not a WCAG conformance check</small>
+    </div>
+  </footer>
+
+  <script src="readability-data.js"></script>
+  <script src="readability-app.js"></script>
+</body>
+</html>

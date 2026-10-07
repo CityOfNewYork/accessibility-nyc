@@ -125,23 +125,14 @@
   let sort = { key: "ari", dir: -1 };
   let query = "";
 
-  // Very short articles swing hard on a few long words (two sentences about
-  // "workers' compensation" score ARI 15.6), so they would crowd the top of
-  // the sort. Hidden by default, one click to bring back. This is about how
-  // much the number can be trusted, not about the writing.
-  const SHORT_WORDS = 40;
-  let includeShort = false;
-  const isShort = (a) => a.scores != null && a.scores.words < SHORT_WORDS;
-
   function matches(a) {
-    if (!includeShort && isShort(a)) return false;
     if (!query) return true;
     return a.title.toLowerCase().includes(query) || a.ka.toLowerCase().includes(query);
   }
 
-  function sortedArticles() {
+  function sortArticles(list) {
     const col = COLUMNS.find((c) => c.key === sort.key);
-    return data.articles.filter(matches).sort((a, b) => {
+    return [...list].sort((a, b) => {
       const va = col.get(a), vb = col.get(b);
       // Unscored articles always sink to the bottom, whatever the direction.
       if (va == null && vb == null) return a.title.localeCompare(b.title);
@@ -187,20 +178,49 @@
           renderTable();
         },
       }),
-      // NYC Design System "checkbox button": a button-shaped filter whose box
-      // shows the current state while the label stays put.
-      el("label", { class: "rd-filter" },
-        el("input", {
-          type: "checkbox",
-          onchange: (e) => {
-            includeShort = e.target.checked;
-            renderTable();
-          },
-        }),
-        " Include short articles"
-      ),
-      countEl
+      countEl,
+      el("button", { type: "button", class: "rd-download", onclick: downloadCsv }, "Download all results (CSV)")
     );
+  }
+
+  // ---- export ---------------------------------------------------------------
+
+  // Every article (whatever the search box holds), in the table's current
+  // sort order. The KA number is the key for joining this to other article
+  // lists; the URL lets a spreadsheet link straight to the article.
+  const CSV_COLUMNS = [
+    ["KA number", (a) => a.ka],
+    ["Title", (a) => a.title],
+    ["URL", (a) => a.url],
+    ["ARI", (a) => a.scores?.ari],
+    ["Flesch-Kincaid", (a) => a.scores?.fk_grade],
+    ["Words", (a) => a.scores?.words],
+    ["Sentences", (a) => a.scores?.sentences],
+    ["Words per sentence", (a) => a.scores?.avg_sentence_words],
+    [`Sentences over ${data.long_sentence_words ?? 25} words`, (a) => a.scores?.long_sentences],
+    ["% of words in collapsed sections", (a) => a.scores?.collapsed_pct],
+    ["Status", (a) => (a.status === "scored" ? "Scored" : a.reason || a.status)],
+  ];
+
+  function csvCell(v) {
+    if (v == null) return "";
+    let s = String(v);
+    // Text starting with = + - @ would be run as a formula by spreadsheet apps.
+    if (typeof v === "string" && /^[=+\-@\t\r]/.test(s)) s = "'" + s;
+    return /[",\r\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+  }
+
+  function downloadCsv() {
+    const rows = [CSV_COLUMNS.map(([h]) => h), ...sortArticles(data.articles).map((a) => CSV_COLUMNS.map(([, get]) => get(a)))];
+    const csv = rows.map((r) => r.map(csvCell).join(",")).join("\r\n") + "\r\n";
+    // The byte-order mark tells Excel the file is UTF-8 (titles have curly quotes and accents).
+    const url = URL.createObjectURL(new Blob(["\uFEFF" + csv], { type: "text/csv;charset=utf-8" }));
+    const date = (data.checked_at || "").slice(0, 10);
+    const link = el("a", { href: url, download: `nyc311-readability${date ? "-" + date : ""}.csv` });
+    document.body.append(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
 
   function renderOverview() {
@@ -212,7 +232,7 @@
   }
 
   function renderTable() {
-    const list = sortedArticles();
+    const list = sortArticles(data.articles.filter(matches));
     countEl.textContent = `Showing ${fmtNum(list.length)} of ${fmtNum(data.articles.length)} articles`;
 
     const rows = list.map((a) => {
@@ -264,9 +284,7 @@
 
   function legend() {
     return el("div", { class: "rd-legend" },
-      el("span", {}, el("span", { class: "rd-legend-collapsed" }), "Hidden until the reader expands it"),
-      el("span", { class: "rd-legend-label" }, "Grey: heading or label, not scored"),
-      el("span", {}, el("span", { class: "rd-tag" }, "button"), " not scored")
+      el("span", {}, el("span", { class: "rd-legend-collapsed" }), "Hidden until the reader expands it")
     );
   }
 
@@ -314,7 +332,8 @@
     } else {
       app.append(el("p", { class: "rd-note" },
         "Both scores estimate a U.S. school grade level. ARI is the formula behind Hemingway Editor's grade. " +
-        (a.low_confidence ? `With only ${fmtNum(s.words)} words of prose, either grade is a rough estimate. ` : "") +
+        "All of the article's text is scored, and each heading, list item, and button counts as its own sentence. " +
+        (a.low_confidence ? `With only ${fmtNum(s.words)} words, either grade is a rough estimate. ` : "") +
         `${s.collapsed_pct}% of the scored words are in sections hidden until the reader expands them.`
       ));
 

@@ -170,10 +170,11 @@ The crawl is deliberately gentle on the portal: two tabs, a pause between reques
 - **Text preparation is the part that matters** — online calculators disagree by many grade levels on the same raw text. The rules live in `readability-core.mjs` and are pinned by `test/check-readability.js`:
   - only the article body (`#knowledgearticle .ka-content`) is read; portal chrome is not;
   - collapsed accordion sections are included, since readers can expand them (most articles keep most of their text collapsed);
-  - every block-level element ends a sentence, so lists and link cards don't merge into one long sentence;
-  - headings, short unpunctuated labels, and service-request buttons are shown but not scored;
+  - all of the body's text is scored, including headings, labels, list items, and service-request buttons;
+  - every block-level element ends a sentence, so each heading or list item counts as its own sentence and lists and link cards don't merge into one long sentence;
   - non-English articles (the index also lists translations) are detected from their text and left out of the page.
 - The page shows the full extracted text for each article, so anyone can check exactly what was scored.
+- "Download all results (CSV)" exports every article's scores, in the table's current sort order.
 
 ## Project layout
 

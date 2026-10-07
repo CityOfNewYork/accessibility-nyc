@@ -2,7 +2,8 @@
 // Pins the two formulas to hand-computed values, and pins the text-preparation
 // rules that decide what gets scored (where most readability tools disagree):
 // block boundaries end sentences, collapsed accordions are included, style
-// text and accordion glyphs are not, fragments and non-English aren't scored.
+// text and accordion glyphs are not, headings and list items are scored as
+// their own sentences, and non-English isn't scored.
 
 import puppeteer from "puppeteer";
 import {
@@ -86,12 +87,19 @@ check("extract: flex-laid-out spans split", find("Card title") && find("Card bod
 check("extract: action button tagged", find("Report a problem now.")?.k === "a");
 check("extract: unknown hidden element reported", unknownHidden.length === 1 && unknownHidden[0].cls === "mystery");
 
+// Every block is scored, and each heading, label, list item and button ends a
+// sentence, so the sentence count is the prose sentences plus one per fragment.
 const scored = scoreArticle(blocks);
-const scoredText = scored.blocks.filter((b) => b.k === "p").map((b) => b.t);
-check("score: list fragments not scored", !scoredText.includes("First list item without a period"));
-check("score: card title not scored", !scoredText.includes("Card title"));
-check("score: action not scored", !scoredText.includes("Report a problem now."));
+const scoredText = scored.blocks.map((b) => b.t);
+const allSentences = scored.blocks.flatMap((b) => b.s);
+check("score: list items scored, one sentence each",
+  allSentences.includes("First list item without a period") && allSentences.includes("Second list item without a period"));
+check("score: heading scored", allSentences.includes("Collapsed Heading"));
+check("score: card title scored", allSentences.includes("Card title"));
+check("score: action scored", allSentences.includes("Report a problem now."));
 check("score: collapsed prose scored", scoredText.includes("This sentence is hidden in a collapsed panel."));
+check("score: sentence count covers every block", scored.scores.sentences === allSentences.length && allSentences.length === 12);
+check("score: labels still marked for the text view", scored.blocks.find((b) => b.t === "Card title")?.k === "h");
 
 // (f) Detail files are deterministic: the same article content gives a
 // byte-identical file whatever order its fields arrived in, so an unchanged

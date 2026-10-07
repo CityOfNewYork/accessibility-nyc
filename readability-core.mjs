@@ -17,7 +17,7 @@ import { syllable } from "syllable";
 
 // Sentences longer than this are counted in long_sentences / long_pct.
 export const LONG_SENTENCE_WORDS = 25;
-// Below this many prose words a grade is too noisy to sort on; still shown, but flagged.
+// Below this many words a grade is too noisy to sort on; still shown, but flagged.
 export const MIN_RELIABLE_WORDS = 100;
 
 // Runs INSIDE the page (passed to page.evaluate), so it must be self-contained.
@@ -25,7 +25,7 @@ export const MIN_RELIABLE_WORDS = 100;
 // element, so a bulleted list or table never merges into one giant "sentence".
 // Uses textContent, not innerText: collapsed accordion sections are real
 // content a reader can expand, and innerText would silently drop them.
-//   k: "p" prose · "h" heading/label · "a" action button (only prose is scored;
+//   k: "p" prose · "h" heading/label · "a" action button (all are scored;
 //      scoreArticle() also demotes short unpunctuated prose fragments to "h")
 //   c: 1 if the text sits in a section that is collapsed by default
 // Returns { blocks, unknownHidden }, where unknownHidden lists hidden elements
@@ -195,20 +195,23 @@ export function scoreSentences(sentences) {
   };
 }
 
-// A short block with no sentence punctuation is a label, not a sentence: a
+// A short block with no sentence punctuation is a label rather than prose: a
 // link-card title, a table header, a list item like "Proof of identity".
+// Labels are scored like everything else, but kept out of the language guard.
 export const FRAGMENT_MAX_WORDS = 10;
 export function isFragment(text) {
   return !/[.!?:;]["'”’)]*$/.test(text.trim()) && words(text).length < FRAGMENT_MAX_WORDS;
 }
 
-// Score an article from extractBlocks() output. Prose blocks only: headings,
-// labels and action buttons are fragments that would drag both formulas toward
-// meaningless lows, but they are kept (unscored) for the extracted-text view.
+// Score an article from extractBlocks() output. Every block is scored: headings,
+// labels, list items and action buttons are text the reader reads, and since a
+// block boundary ends a sentence, each one counts as (at least) its own sentence.
+// The prose/label split (k) still matters for the language guard and the
+// extracted-text view.
 export function scoreArticle(blocks) {
   const out = blocks
     .map((b) => (b.k === "p" && isFragment(b.t) ? { ...b, k: "h" } : b))
-    .map((b) => (b.k === "p" ? { ...b, s: splitSentences(b.t) } : { ...b }));
+    .map((b) => ({ ...b, s: splitSentences(b.t) }));
   const prose = out.filter((b) => b.k === "p");
   // Language is judged on prose; an article with no prose falls back to all its text.
   const langText = prose.length ? prose.map((b) => b.t).join(" ") : out.map((b) => b.t).join(" ");
@@ -216,12 +219,12 @@ export function scoreArticle(blocks) {
   if (!looksEnglish(langText)) {
     return { status: "not-scored", reason_code: "non-english", reason: "Not English — these formulas only apply to English text.", blocks: out };
   }
-  const sentences = prose.flatMap((b) => b.s);
+  const sentences = out.flatMap((b) => b.s);
   const scores = scoreSentences(sentences);
   if (!scores) {
-    return { status: "not-scored", reason_code: "no-prose", reason: "No prose found in the article body.", blocks: out };
+    return { status: "not-scored", reason_code: "no-prose", reason: "No text found in the article body.", blocks: out };
   }
-  const collapsedWords = prose.filter((b) => b.c).reduce((n, b) => n + words(b.t).length, 0);
+  const collapsedWords = out.filter((b) => b.c).reduce((n, b) => n + words(b.t).length, 0);
   scores.collapsed_words = collapsedWords;
   scores.collapsed_pct = Math.round((100 * collapsedWords) / scores.words);
 

@@ -16,7 +16,7 @@
 // would silently drop articles from it, so those write the report alone.
 // Extraction and scoring rules live in readability-core.mjs.
 
-import { readFile, writeFile, readdir, unlink, mkdir } from "node:fs/promises";
+import { readFile, writeFile, appendFile, readdir, unlink, mkdir } from "node:fs/promises";
 import puppeteer from "puppeteer";
 import { extractBlocks, scoreArticle, detailJs, LONG_SENTENCE_WORDS, MIN_RELIABLE_WORDS } from "./readability-core.mjs";
 
@@ -245,6 +245,49 @@ function printReport(r) {
   for (const t of r.top_by_ari) console.log(`  ${String(t.ari).padStart(5)}  ${t.ka}  ${t.words}w  ${t.title}`);
 }
 
+// The same review as Markdown on the GitHub Actions run page ("Job Summary"),
+// so a scheduled run that publishes on its own still gets a human look.
+async function writeStepSummary(r, published) {
+  const file = process.env.GITHUB_STEP_SUMMARY;
+  if (!file) return;
+  const cell = (s) => String(s ?? "").replace(/\|/g, "\\|");
+  const link = (ka) => `[${ka}](${ARTICLE_URL}${ka})`;
+  const L = [`## Readability refresh — ${r.checked_at.slice(0, 10)}`, ""];
+  L.push(
+    `${r.counts.scored} scored · ${r.counts.no_prose} no prose · ${r.counts.non_english} non-English (excluded) · ` +
+      `${r.counts.error} couldn't load · ${r.minutes} min`,
+    "",
+    published ? "Dashboard files updated."
+      : r.partial ? "Listed articles only — dashboard untouched."
+      : "**Run incomplete — dashboard left unchanged.**",
+    ""
+  );
+  if (r.errors.length) {
+    L.push("### Couldn't load", "", "| Article | Title | Reason |", "|---|---|---|");
+    for (const e of r.errors) L.push(`| ${link(e.ka)} | ${cell(e.title)} | ${cell(e.reason)} |`);
+    L.push("");
+  }
+  if (r.no_prose.length) {
+    L.push("### No prose", "");
+    for (const e of r.no_prose) L.push(`- ${link(e.ka)} ${cell(e.title)}`);
+    L.push("");
+  }
+  if (r.unknown_hidden.length) {
+    L.push("### Hidden elements matching no known accordion pattern", "", "Review the extraction rules in `readability-core.mjs`.", "");
+    L.push("| Count | Pattern | Examples | Sample text |", "|---|---|---|---|");
+    for (const h of r.unknown_hidden) {
+      L.push(`| ${h.count} | \`${cell(h.pattern)}\` | ${h.articles.slice(0, 3).map(link).join(", ")} | ${cell(h.sample)} |`);
+    }
+    L.push("");
+  }
+  if (r.top_by_ari.length) {
+    L.push("### Highest ARI", "", "Check these are real long-sentence articles, not extraction artifacts.", "");
+    L.push("| ARI | FK | Words | Article | Title |", "|---|---|---|---|---|");
+    for (const t of r.top_by_ari) L.push(`| ${t.ari} | ${t.fk_grade} | ${t.words} | ${link(t.ka)} | ${cell(t.title)} |`);
+  }
+  await appendFile(file, L.join("\n") + "\n");
+}
+
 async function writeDashboard(articles, meta) {
   const summary = articles.map((a) => ({
     ka: a.ka,
@@ -353,6 +396,7 @@ async function main() {
   const report = buildReport(all, { ...meta, partial, aborted, minutes: minutes() });
   await writeFile(OUT_REPORT, JSON.stringify(report) + "\n");
   printReport(report);
+  await writeStepSummary(report, complete && !partial);
   console.log(`\nWrote ${OUT_REPORT} (${report.minutes} min this run).`);
 
   if (!complete) {

@@ -164,6 +164,8 @@ node check-readability.mjs --only=KA-02232    # specific articles, report only
 
 Every run writes a review report to `readability-results.json` (gitignored): articles that couldn't load, articles with no prose, hidden elements that match no known accordion pattern, and the 20 highest ARI scores. Only a complete full run writes the dashboard files — `dashboard/readability-data.js` (scores for the overview) and one `dashboard/readability/<KA>.js` per article (its extracted text, for the details view). Detail files carry no timestamps, so an unchanged article produces no git change.
 
+`.github/workflows/readability.yml` runs the full refresh every Friday at 08:17 UTC, an hour ahead of the accessibility scan. It commits whatever changed, redeploys the dashboard, and writes the review report to the run's summary page. It can also be started by hand from the Actions tab.
+
 The crawl is deliberately gentle on the portal: two tabs, a pause between requests, one retry, and it backs off and then stops if failures pile up. Pages load as HTML and stylesheets only; scripts, images, and fonts are blocked because the article text is server-rendered (blocking them changed no extracted text on the sample).
 
 - **Formulas:** Flesch-Kincaid Grade and the Automated Readability Index (ARI, the formula behind Hemingway Editor's grade). Both count only sentence length and word length.

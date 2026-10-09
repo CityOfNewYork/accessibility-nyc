@@ -1,0 +1,69 @@
+name: Weekly readability refresh
+
+# Re-scores every English NYC311 help article for the readability preview,
+# commits whatever changed back to main, then redeploys the dashboard. The
+# review report (load failures, unrecognized hidden elements, highest scores)
+# is written to the run's summary page. Separate from the accessibility scan:
+# readability is never folded into the WCAG results.
+
+on:
+  schedule:
+    # Fridays 08:17 UTC (~04:17 EDT / 03:17 EST) — an hour ahead of the weekly
+    # accessibility scan, so the ~25-min run is done before the scan takes the
+    # shared "pages" lock below. Odd minute to dodge top-of-hour congestion.
+    - cron: "17 8 * * 5"
+  workflow_dispatch:
+
+permissions:
+  contents: write # commit the refreshed readability data
+  pages: write # deploy the dashboard
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Exits non-zero on an incomplete run, having left the dashboard files
+      # untouched, so a failed run publishes nothing.
+      - name: Score articles
+        run: node check-readability.mjs
+
+      - name: Commit refreshed readability data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A dashboard/readability-data.js dashboard/readability
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Weekly readability: refresh NYC311 scores"
+          fi
+          # Pull even with nothing to commit, so the deploy below publishes
+          # main as it is now — not as it was when this job checked it out.
+          git pull --rebase origin main
+          git push
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dashboard
+      - id: deployment
+        uses: actions/deploy-pages@v4

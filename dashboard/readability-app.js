@@ -359,6 +359,13 @@
     setFooter();
   }
 
+  // The refresh date goes in the masthead, so it's in view on every page.
+  function setUpdated() {
+    const meta = document.getElementById("masthead-meta");
+    if (!meta || !data.checked_at) return;
+    meta.append(el("div", {}, el("dt", {}, "Last updated"), el("dd", {}, fmtDate(data.checked_at))));
+  }
+
   // ---- route ----------------------------------------------------------------
 
   function route() {
@@ -370,5 +377,6 @@
     renderOverview();
   }
 
+  setUpdated();
   route();
 })();

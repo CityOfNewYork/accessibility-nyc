@@ -91,11 +91,15 @@
 
   // ---- overview -------------------------------------------------------------
 
+  // Each formula's name links to a plain-language explainer of it.
+  const ARI_URL = "https://hemingwayapp.com/articles/readability/automated-readability-index";
+  const FK_URL = "https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests";
+
   function intro() {
     return el("div", { class: "rd-intro" },
       el("p", {},
-        el("strong", {}, "ARI"), " (Automated Readability Index, the formula behind Hemingway Editor's grade) and ",
-        el("strong", {}, "Flesch-Kincaid"), " are two published formulas. " +
+        el("a", { href: ARI_URL }, el("strong", {}, "ARI")), " (Automated Readability Index, the formula behind Hemingway Editor's grade) and ",
+        el("a", { href: FK_URL }, el("strong", {}, "Flesch-Kincaid")), " are two published formulas. " +
         "Each estimates a U.S. school grade level from sentence length and word length. " +
         "Neither measures jargon, layout, or whether readers can complete their task."
       ),

@@ -29,8 +29,23 @@
 th[aria-sort] .rd-sort { color: var(--ink); }
 .rd-dash { color: var(--ink-subtle); }
 
-/* The table scrolls sideways on a phone instead of the page. */
-.rd-table-wrap { overflow-x: auto; }
+/* The column headers stay at the top of the window while the list scrolls.
+   A collapsed table border scrolls away with the rows, so the header's
+   bottom rule is drawn as a shadow instead. */
+.rd-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-bottom: none;
+  box-shadow: inset 0 -1px 0 var(--rule);
+}
+
+/* Below ~700px the table no longer fits, so it scrolls sideways instead of
+   the page. A scrolling wrapper also traps the sticky header inside it, so
+   on those screens the header scrolls away with the rows. */
+@media (max-width: 720px) {
+  .rd-table-wrap { overflow-x: auto; }
+}
 
 .rd-stats { grid-template-columns: repeat(4, auto); }
 .rd-stats .rd-grade { font-size: inherit; }

@@ -5,9 +5,11 @@
 // text and accordion glyphs are not, headings and list items are scored as
 // their own sentences, and non-English isn't scored.
 
+import { readFileSync } from "node:fs";
 import puppeteer from "puppeteer";
 import {
   extractBlocks, splitSentences, scoreSentences, scoreArticle, looksEnglish, isFragment, detailJs,
+  PHONE, agencyTerms, agencyNameMatcher, withoutExcluded,
 } from "../readability-core.mjs";
 
 const failures = [];
@@ -109,6 +111,65 @@ check("score: labels still marked for the text view", scored.blocks.find((b) => 
   const two = { unknown_hidden: [], blocks: [{ s: ["A b c."], t: "A b c.", c: false, k: "p" }], scores: { ari: 1 }, longest: [{ words: 3, text: "A b c." }], status: "scored" };
   check("detail: byte-identical across field order", detailJs("KA-00001", one) === detailJs("KA-00001", two));
   check("detail: no timestamps or scores", !/checked_at|\d{4}-\d{2}-\d{2}T|"ari"/.test(detailJs("KA-00001", one)));
+}
+
+// (g) The second ARI: phone numbers and official agency names left out.
+{
+  const phones = (t) => t.match(PHONE) || [];
+  check("phone: digits, parentheses, vanity letters", phones(
+    "Call 212-NEW-YORK (212-639-9675), (718) 557-1399, (800) 577-TIPS, 1-877-RED-CROSS, or 212-POISONS."
+  ).length === 6);
+  check("phone: ZIP+4, room numbers and short codes stay", phones("New York, NY 10038-4648, Room 311. Call 911 or 988.").length === 0);
+
+  const orgs = [
+    { name: "Department of Consumer and Worker Protection", acronym: "DCWP", alternate_or_former_names: "Department of Consumer Affairs", alternate_or_former_acronyms: "DCA" },
+    { name: "Department of Health and Mental Hygiene", acronym: "DOHMH", alternate_or_former_names: "NYC Health;Health Department", alternate_or_former_acronyms: "DOH" },
+    { name: "Mayor's Office to Protect Tenants", acronym: "MOPT", alternate_or_former_names: null, alternate_or_former_acronyms: null },
+    { name: "New York City Law Department", acronym: "LAW", alternate_or_former_names: null, alternate_or_former_acronyms: "Law;Law Dept." },
+  ];
+  const terms = agencyTerms(orgs);
+  check("agency: alternates split on semicolons", terms.includes("NYC Health") && terms.includes("Health Department"));
+  check("agency: entries that mean something else in articles are skipped", !terms.includes("Law") && !terms.includes("DOH"));
+  const re = agencyNameMatcher(terms);
+  const cut = (s) => withoutExcluded(s, re);
+
+  const a = cut("Contact the Department of Consumer and Worker Protection (DCWP) or DCWP’s office.");
+  check("agency: name and acronym out, empty parentheses with them", a.text === "Contact the or office.");
+  check("agency: possessive taken with the name", a.removed.includes("DCWP’s"));
+  check("agency: overlapping list names merge", cut("The NYC Health Department inspects restaurants.").text === "The inspects restaurants.");
+  check("agency: ’ matches '", cut("The Mayor’s Office to Protect Tenants held hearings.").text === "The held hearings.");
+  check("agency: case-sensitive, whole words only", cut("Local Law 18 changed how departments of health work.").removed.length === 0);
+}
+
+// The hand-kept list: every agency says which level it is, its official name
+// and where that comes from, and its other forms; every form goes, whole,
+// ahead of any official-list name inside it.
+{
+  const { agencies } = JSON.parse(readFileSync(new URL("../readability-agency-names-extra.json", import.meta.url), "utf8"));
+  check("extra names: every agency has a level, official name, source, and other forms",
+    agencies.length > 0 && agencies.every((a) => ["City", "State", "Federal"].includes(a.level) && a.name && /^https:\/\//.test(a.source) && Array.isArray(a.also_written)));
+  const re = agencyNameMatcher([...agencies.flatMap((a) => [a.name, a.acronym, ...a.also_written]).filter(Boolean), "Department of Labor"]);
+  const r = withoutExcluded("Find the NY State Department of Labor's list, or ask the Federal Emergency Management Agency (FEMA), the EPA, or the NYC Commission on Human Rights.", re);
+  check("extra names: every form cut whole, possessive included",
+    r.text === "Find the list, or ask the , the , or the ." && r.removed.includes("NY State Department of Labor's"));
+}
+
+// Scoring: the second ARI drops what was cut, and a sentence that was only a
+// name drops out of the count; with nothing to cut, both ARIs agree.
+{
+  const re = agencyNameMatcher(["Department of Finance"]);
+  const blocks = [
+    { k: "h", c: 0, t: "Department of Finance" },
+    { k: "p", c: 0, t: "Pay your bill to the Department of Finance by mail. Call (212) 639-9675 for help." },
+  ];
+  const r = scoreArticle(blocks, { nameRe: re });
+  check("score: second ARI matches the cut text",
+    r.scores.ari_excl === scoreSentences(["Pay your bill to the by mail.", "Call for help."]).ari);
+  check("score: first ARI unchanged by the cut", r.scores.ari === scoreArticle(blocks).scores.ari);
+  check("score: what was cut is listed, most frequent first",
+    JSON.stringify(r.excluded) === JSON.stringify([{ t: "Department of Finance", n: 2 }, { t: "(212) 639-9675", n: 1 }]));
+  const plain = scoreArticle([{ k: "p", c: 0, t: "Bring two proofs of address to the office." }], { nameRe: re });
+  check("score: nothing to cut, both ARIs agree", plain.scores.ari_excl === plain.scores.ari && plain.excluded.length === 0);
 }
 
 if (failures.length) {

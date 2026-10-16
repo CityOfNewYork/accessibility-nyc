@@ -22,7 +22,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 2.6
    },
    "low_confidence": false
   },
@@ -41,7 +42,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 11,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 12.5
    },
    "low_confidence": false
   },
@@ -60,7 +62,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 7,
     "collapsed_words": 322,
-    "collapsed_pct": 76
+    "collapsed_pct": 76,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -79,7 +82,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 5,
     "collapsed_words": 1027,
-    "collapsed_pct": 84
+    "collapsed_pct": 84,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -98,7 +102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 298,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -117,7 +122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 4,
     "collapsed_words": 399,
-    "collapsed_pct": 80
+    "collapsed_pct": 80,
+    "ari_excl": 4.6
    },
    "low_confidence": false
   },
@@ -136,7 +142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 89,
-    "collapsed_pct": 21
+    "collapsed_pct": 21,
+    "ari_excl": 6.8
    },
    "low_confidence": false
   },
@@ -155,7 +162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 13.6
    },
    "low_confidence": true
   },
@@ -174,7 +182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 13,
     "collapsed_words": 280,
-    "collapsed_pct": 91
+    "collapsed_pct": 91,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -193,7 +202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.1
    },
    "low_confidence": true
   },
@@ -212,7 +222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 4,
     "collapsed_words": 519,
-    "collapsed_pct": 81
+    "collapsed_pct": 81,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -231,7 +242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 321,
-    "collapsed_pct": 69
+    "collapsed_pct": 69,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -250,7 +262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 478,
-    "collapsed_pct": 71
+    "collapsed_pct": 71,
+    "ari_excl": 5
    },
    "low_confidence": false
   },
@@ -269,7 +282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 6,
     "collapsed_words": 683,
-    "collapsed_pct": 79
+    "collapsed_pct": 79,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -288,7 +302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 492,
-    "collapsed_pct": 70
+    "collapsed_pct": 70,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -307,7 +322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 80,
-    "collapsed_pct": 36
+    "collapsed_pct": 36,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -326,7 +342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 444,
-    "collapsed_pct": 82
+    "collapsed_pct": 82,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -345,7 +362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 159,
-    "collapsed_pct": 33
+    "collapsed_pct": 33,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -364,7 +382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 73,
-    "collapsed_pct": 22
+    "collapsed_pct": 22,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -383,7 +402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.2
    },
    "low_confidence": true
   },
@@ -402,7 +422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.8
    },
    "low_confidence": true
   },
@@ -421,7 +442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 278,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -440,7 +462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.7
    },
    "low_confidence": false
   },
@@ -459,7 +482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 112,
-    "collapsed_pct": 79
+    "collapsed_pct": 79,
+    "ari_excl": 7.5
    },
    "low_confidence": false
   },
@@ -478,7 +502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 9,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.7
    },
    "low_confidence": false
   },
@@ -497,7 +522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.9
    },
    "low_confidence": true
   },
@@ -516,7 +542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 30,
-    "collapsed_pct": 10
+    "collapsed_pct": 10,
+    "ari_excl": 4.3
    },
    "low_confidence": false
   },
@@ -535,7 +562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 165,
-    "collapsed_pct": 77
+    "collapsed_pct": 77,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -554,7 +582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 84,
-    "collapsed_pct": 52
+    "collapsed_pct": 52,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -573,7 +602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 211,
-    "collapsed_pct": 81
+    "collapsed_pct": 81,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -592,7 +622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 241,
-    "collapsed_pct": 76
+    "collapsed_pct": 76,
+    "ari_excl": 7.8
    },
    "low_confidence": false
   },
@@ -611,7 +642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.4
    },
    "low_confidence": true
   },
@@ -630,7 +662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 95,
-    "collapsed_pct": 39
+    "collapsed_pct": 39,
+    "ari_excl": 8.5
    },
    "low_confidence": false
   },
@@ -649,7 +682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 166,
-    "collapsed_pct": 61
+    "collapsed_pct": 61,
+    "ari_excl": 3.8
    },
    "low_confidence": false
   },
@@ -668,7 +702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.3
    },
    "low_confidence": true
   },
@@ -687,7 +722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.7
    },
    "low_confidence": false
   },
@@ -706,7 +742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 5,
     "collapsed_words": 592,
-    "collapsed_pct": 83
+    "collapsed_pct": 83,
+    "ari_excl": 9.6
    },
    "low_confidence": false
   },
@@ -725,7 +762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.3
    },
    "low_confidence": true
   },
@@ -744,7 +782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 13,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.1
    },
    "low_confidence": false
   },
@@ -763,7 +802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 455,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -782,7 +822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 2,
     "collapsed_words": 823,
-    "collapsed_pct": 80
+    "collapsed_pct": 80,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -801,7 +842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.2
    },
    "low_confidence": true
   },
@@ -820,7 +862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 216,
-    "collapsed_pct": 74
+    "collapsed_pct": 74,
+    "ari_excl": 8.1
    },
    "low_confidence": false
   },
@@ -839,7 +882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 178,
-    "collapsed_pct": 90
+    "collapsed_pct": 90,
+    "ari_excl": 4.1
    },
    "low_confidence": false
   },
@@ -858,7 +902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 5,
     "collapsed_words": 655,
-    "collapsed_pct": 88
+    "collapsed_pct": 88,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -877,7 +922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 17,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.5
    },
    "low_confidence": true
   },
@@ -896,7 +942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.4
    },
    "low_confidence": true
   },
@@ -915,7 +962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 12,
     "collapsed_words": 239,
-    "collapsed_pct": 68
+    "collapsed_pct": 68,
+    "ari_excl": 8.1
    },
    "low_confidence": false
   },
@@ -934,7 +982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.5
    },
    "low_confidence": true
   },
@@ -953,7 +1002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 4,
     "collapsed_words": 598,
-    "collapsed_pct": 82
+    "collapsed_pct": 82,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -972,7 +1022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 2,
     "collapsed_words": 1256,
-    "collapsed_pct": 85
+    "collapsed_pct": 85,
+    "ari_excl": 4
    },
    "low_confidence": false
   },
@@ -991,7 +1042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -1010,7 +1062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6
    },
    "low_confidence": true
   },
@@ -1029,7 +1082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 11,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.4
    },
    "low_confidence": true
   },
@@ -1048,7 +1102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.7
    },
    "low_confidence": false
   },
@@ -1067,7 +1122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 2.8
    },
    "low_confidence": true
   },
@@ -1086,7 +1142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4
    },
    "low_confidence": true
   },
@@ -1105,7 +1162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.7
    },
    "low_confidence": true
   },
@@ -1124,7 +1182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 25,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 12
    },
    "low_confidence": true
   },
@@ -1143,7 +1202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 14,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.1
    },
    "low_confidence": true
   },
@@ -1162,7 +1222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 10,
     "collapsed_words": 228,
-    "collapsed_pct": 64
+    "collapsed_pct": 64,
+    "ari_excl": 6.6
    },
    "low_confidence": false
   },
@@ -1181,7 +1242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 11,
     "collapsed_words": 154,
-    "collapsed_pct": 51
+    "collapsed_pct": 51,
+    "ari_excl": 5
    },
    "low_confidence": false
   },
@@ -1200,7 +1262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 6,
     "collapsed_words": 171,
-    "collapsed_pct": 58
+    "collapsed_pct": 58,
+    "ari_excl": 4.2
    },
    "low_confidence": false
   },
@@ -1219,7 +1282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.3
    },
    "low_confidence": true
   },
@@ -1238,7 +1302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.1
    },
    "low_confidence": true
   },
@@ -1257,7 +1322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 295,
-    "collapsed_pct": 88
+    "collapsed_pct": 88,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -1276,7 +1342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.8
    },
    "low_confidence": true
   },
@@ -1295,7 +1362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 10,
     "long_pct": 7,
     "collapsed_words": 1397,
-    "collapsed_pct": 83
+    "collapsed_pct": 83,
+    "ari_excl": 9.3
    },
    "low_confidence": false
   },
@@ -1314,7 +1382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 8,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.2
    },
    "low_confidence": true
   },
@@ -1333,7 +1402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 4,
     "collapsed_words": 1303,
-    "collapsed_pct": 88
+    "collapsed_pct": 88,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -1352,7 +1422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.2
    },
    "low_confidence": false
   },
@@ -1371,7 +1442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 157,
-    "collapsed_pct": 58
+    "collapsed_pct": 58,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -1390,7 +1462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.2
    },
    "low_confidence": true
   },
@@ -1409,7 +1482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.8
    },
    "low_confidence": false
   },
@@ -1428,7 +1502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4
    },
    "low_confidence": true
   },
@@ -1447,7 +1522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.4
    },
    "low_confidence": true
   },
@@ -1466,7 +1542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.7
    },
    "low_confidence": true
   },
@@ -1485,7 +1562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 8,
     "collapsed_words": 217,
-    "collapsed_pct": 67
+    "collapsed_pct": 67,
+    "ari_excl": 8.2
    },
    "low_confidence": false
   },
@@ -1504,7 +1582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 17,
-    "collapsed_pct": 25
+    "collapsed_pct": 25,
+    "ari_excl": 7.6
    },
    "low_confidence": true
   },
@@ -1523,7 +1602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.4
    },
    "low_confidence": true
   },
@@ -1542,7 +1622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 20,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.3
    },
    "low_confidence": true
   },
@@ -1561,7 +1642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": -0.2
    },
    "low_confidence": true
   },
@@ -1580,7 +1662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 4,
     "collapsed_words": 230,
-    "collapsed_pct": 69
+    "collapsed_pct": 69,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -1599,7 +1682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 13,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.5
    },
    "low_confidence": true
   },
@@ -1618,7 +1702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.9
    },
    "low_confidence": true
   },
@@ -1637,7 +1722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 241,
-    "collapsed_pct": 85
+    "collapsed_pct": 85,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -1656,7 +1742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 7,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.5
    },
    "low_confidence": false
   },
@@ -1675,7 +1762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 91,
-    "collapsed_pct": 66
+    "collapsed_pct": 66,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -1694,7 +1782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 67,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.4
    },
    "low_confidence": true
   },
@@ -1713,7 +1802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.7
    },
    "low_confidence": true
   },
@@ -1732,7 +1822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -1751,7 +1842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -1770,7 +1862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 273,
-    "collapsed_pct": 74
+    "collapsed_pct": 74,
+    "ari_excl": 8.1
    },
    "low_confidence": false
   },
@@ -1789,7 +1882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.6
    },
    "low_confidence": true
   },
@@ -1808,7 +1902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.4
    },
    "low_confidence": false
   },
@@ -1827,7 +1922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 287,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 7.5
    },
    "low_confidence": false
   },
@@ -1846,7 +1942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 12,
     "collapsed_words": 288,
-    "collapsed_pct": 92
+    "collapsed_pct": 92,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -1865,7 +1962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -1884,7 +1982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 428,
-    "collapsed_pct": 76
+    "collapsed_pct": 76,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -1903,7 +2002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 155,
-    "collapsed_pct": 62
+    "collapsed_pct": 62,
+    "ari_excl": 3.6
    },
    "low_confidence": false
   },
@@ -1922,7 +2022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 3,
     "collapsed_words": 1054,
-    "collapsed_pct": 78
+    "collapsed_pct": 78,
+    "ari_excl": 4.5
    },
    "low_confidence": false
   },
@@ -1941,7 +2042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 64,
-    "collapsed_pct": 42
+    "collapsed_pct": 42,
+    "ari_excl": 4.1
    },
    "low_confidence": false
   },
@@ -1960,7 +2062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.9
    },
    "low_confidence": true
   },
@@ -1979,7 +2082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 5,
     "collapsed_words": 723,
-    "collapsed_pct": 84
+    "collapsed_pct": 84,
+    "ari_excl": 4.7
    },
    "low_confidence": false
   },
@@ -1998,7 +2102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 69,
-    "collapsed_pct": 79
+    "collapsed_pct": 79,
+    "ari_excl": 6.7
    },
    "low_confidence": true
   },
@@ -2017,7 +2122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 79,
-    "collapsed_pct": 46
+    "collapsed_pct": 46,
+    "ari_excl": 6.7
    },
    "low_confidence": false
   },
@@ -2036,7 +2142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 8,
     "collapsed_words": 414,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -2055,7 +2162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 216,
-    "collapsed_pct": 55
+    "collapsed_pct": 55,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -2074,7 +2182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 295,
-    "collapsed_pct": 68
+    "collapsed_pct": 68,
+    "ari_excl": 4.7
    },
    "low_confidence": false
   },
@@ -2093,7 +2202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -2112,7 +2222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 280,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -2131,7 +2242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 167,
-    "collapsed_pct": 52
+    "collapsed_pct": 52,
+    "ari_excl": 8.7
    },
    "low_confidence": false
   },
@@ -2150,7 +2262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 153,
-    "collapsed_pct": 76
+    "collapsed_pct": 76,
+    "ari_excl": 7.9
    },
    "low_confidence": false
   },
@@ -2169,7 +2282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 495,
-    "collapsed_pct": 78
+    "collapsed_pct": 78,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -2188,7 +2302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.4
    },
    "low_confidence": true
   },
@@ -2207,7 +2322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 168,
-    "collapsed_pct": 75
+    "collapsed_pct": 75,
+    "ari_excl": 8.1
    },
    "low_confidence": false
   },
@@ -2226,7 +2342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.4
    },
    "low_confidence": true
   },
@@ -2245,7 +2362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -2264,7 +2382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.8
    },
    "low_confidence": true
   },
@@ -2283,7 +2402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6
    },
    "low_confidence": true
   },
@@ -2302,7 +2422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 7,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.8
    },
    "low_confidence": false
   },
@@ -2321,7 +2442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.9
    },
    "low_confidence": true
   },
@@ -2340,7 +2462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 14,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.6
    },
    "low_confidence": true
   },
@@ -2359,7 +2482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 82,
-    "collapsed_pct": 55
+    "collapsed_pct": 55,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -2378,7 +2502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4
    },
    "low_confidence": false
   },
@@ -2397,7 +2522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.4
    },
    "low_confidence": true
   },
@@ -2416,7 +2542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 98,
-    "collapsed_pct": 56
+    "collapsed_pct": 56,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -2435,7 +2562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 7,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -2454,7 +2582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 42,
-    "collapsed_pct": 18
+    "collapsed_pct": 18,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -2473,7 +2602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 9,
     "long_pct": 7,
     "collapsed_words": 1340,
-    "collapsed_pct": 93
+    "collapsed_pct": 93,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -2492,7 +2622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 7,
     "collapsed_words": 198,
-    "collapsed_pct": 74
+    "collapsed_pct": 74,
+    "ari_excl": 8.3
    },
    "low_confidence": false
   },
@@ -2511,7 +2642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.9
    },
    "low_confidence": true
   },
@@ -2530,7 +2662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 4,
     "collapsed_words": 384,
-    "collapsed_pct": 73
+    "collapsed_pct": 73,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -2549,7 +2682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 33,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.2
    },
    "low_confidence": true
   },
@@ -2568,7 +2702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 14,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.7
    },
    "low_confidence": false
   },
@@ -2587,7 +2722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.5
    },
    "low_confidence": true
   },
@@ -2606,7 +2742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -2625,7 +2762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 14,
     "collapsed_words": 87,
-    "collapsed_pct": 29
+    "collapsed_pct": 29,
+    "ari_excl": 8
    },
    "low_confidence": false
   },
@@ -2644,7 +2782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 144,
-    "collapsed_pct": 62
+    "collapsed_pct": 62,
+    "ari_excl": 7.9
    },
    "low_confidence": false
   },
@@ -2663,7 +2802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4
    },
    "low_confidence": false
   },
@@ -2682,7 +2822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 40,
-    "collapsed_pct": 26
+    "collapsed_pct": 26,
+    "ari_excl": 3
    },
    "low_confidence": false
   },
@@ -2701,7 +2842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 190,
-    "collapsed_pct": 45
+    "collapsed_pct": 45,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -2720,7 +2862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -2739,7 +2882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 4,
     "collapsed_words": 509,
-    "collapsed_pct": 83
+    "collapsed_pct": 83,
+    "ari_excl": 7.7
    },
    "low_confidence": false
   },
@@ -2758,7 +2902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 37,
-    "collapsed_pct": 40
+    "collapsed_pct": 40,
+    "ari_excl": 6
    },
    "low_confidence": true
   },
@@ -2777,7 +2922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 234,
-    "collapsed_pct": 53
+    "collapsed_pct": 53,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -2796,7 +2942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.2
    },
    "low_confidence": true
   },
@@ -2815,7 +2962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 10,
     "collapsed_words": 163,
-    "collapsed_pct": 52
+    "collapsed_pct": 52,
+    "ari_excl": 11.8
    },
    "low_confidence": false
   },
@@ -2834,7 +2982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 43,
-    "collapsed_pct": 23
+    "collapsed_pct": 23,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -2853,7 +3002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 64,
-    "collapsed_pct": 30
+    "collapsed_pct": 30,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -2872,7 +3022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 283,
-    "collapsed_pct": 71
+    "collapsed_pct": 71,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -2891,7 +3042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 457,
-    "collapsed_pct": 88
+    "collapsed_pct": 88,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -2910,7 +3062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -2929,7 +3082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 9,
     "long_pct": 4,
     "collapsed_words": 2047,
-    "collapsed_pct": 92
+    "collapsed_pct": 92,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -2948,7 +3102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 243,
-    "collapsed_pct": 80
+    "collapsed_pct": 80,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -2967,7 +3122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 8,
     "long_pct": 2,
     "collapsed_words": 3279,
-    "collapsed_pct": 94
+    "collapsed_pct": 94,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -2986,7 +3142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -3005,7 +3162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 238,
-    "collapsed_pct": 79
+    "collapsed_pct": 79,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -3024,7 +3182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.6
    },
    "low_confidence": false
   },
@@ -3043,7 +3202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -3062,7 +3222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4
    },
    "low_confidence": false
   },
@@ -3081,7 +3242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.1
    },
    "low_confidence": true
   },
@@ -3100,7 +3262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 1237,
-    "collapsed_pct": 97
+    "collapsed_pct": 97,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -3119,7 +3282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 162,
-    "collapsed_pct": 80
+    "collapsed_pct": 80,
+    "ari_excl": 4.4
    },
    "low_confidence": false
   },
@@ -3138,7 +3302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 10,
     "collapsed_words": 88,
-    "collapsed_pct": 53
+    "collapsed_pct": 53,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -3157,7 +3322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -3176,7 +3342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 156,
-    "collapsed_pct": 68
+    "collapsed_pct": 68,
+    "ari_excl": 9.4
    },
    "low_confidence": false
   },
@@ -3195,7 +3362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 9,
     "collapsed_words": 275,
-    "collapsed_pct": 75
+    "collapsed_pct": 75,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -3214,7 +3382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.7
    },
    "low_confidence": true
   },
@@ -3233,7 +3402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 12,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.5
    },
    "low_confidence": false
   },
@@ -3252,7 +3422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 7,
     "collapsed_words": 176,
-    "collapsed_pct": 80
+    "collapsed_pct": 80,
+    "ari_excl": 4.8
    },
    "low_confidence": false
   },
@@ -3271,7 +3442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 23,
     "long_pct": 6,
     "collapsed_words": 3305,
-    "collapsed_pct": 94
+    "collapsed_pct": 94,
+    "ari_excl": 3.7
    },
    "low_confidence": false
   },
@@ -3290,7 +3462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 157,
-    "collapsed_pct": 37
+    "collapsed_pct": 37,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -3309,7 +3482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 605,
-    "collapsed_pct": 89
+    "collapsed_pct": 89,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -3328,7 +3502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.1
    },
    "low_confidence": true
   },
@@ -3347,7 +3522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.6
    },
    "low_confidence": true
   },
@@ -3366,7 +3542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 9,
     "collapsed_words": 259,
-    "collapsed_pct": 73
+    "collapsed_pct": 73,
+    "ari_excl": 7.5
    },
    "low_confidence": false
   },
@@ -3385,7 +3562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -3404,7 +3582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 9,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.3
    },
    "low_confidence": false
   },
@@ -3423,7 +3602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.4
    },
    "low_confidence": false
   },
@@ -3442,7 +3622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 279,
-    "collapsed_pct": 75
+    "collapsed_pct": 75,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -3461,7 +3642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 7,
     "collapsed_words": 147,
-    "collapsed_pct": 67
+    "collapsed_pct": 67,
+    "ari_excl": 8.3
    },
    "low_confidence": false
   },
@@ -3480,7 +3662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 705,
-    "collapsed_pct": 91
+    "collapsed_pct": 91,
+    "ari_excl": 6.8
    },
    "low_confidence": false
   },
@@ -3499,7 +3682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 128,
-    "collapsed_pct": 53
+    "collapsed_pct": 53,
+    "ari_excl": 9.4
    },
    "low_confidence": false
   },
@@ -3518,7 +3702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 9,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.4
    },
    "low_confidence": true
   },
@@ -3537,7 +3722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 50,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.4
    },
    "low_confidence": true
   },
@@ -3556,7 +3742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 50,
-    "collapsed_pct": 23
+    "collapsed_pct": 23,
+    "ari_excl": 8.2
    },
    "low_confidence": false
   },
@@ -3575,7 +3762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 4,
     "collapsed_words": 643,
-    "collapsed_pct": 72
+    "collapsed_pct": 72,
+    "ari_excl": 7.9
    },
    "low_confidence": false
   },
@@ -3594,7 +3782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -3613,7 +3802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5
    },
    "low_confidence": true
   },
@@ -3632,7 +3822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.7
    },
    "low_confidence": true
   },
@@ -3651,7 +3842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.7
    },
    "low_confidence": false
   },
@@ -3670,7 +3862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 29,
-    "collapsed_pct": 25
+    "collapsed_pct": 25,
+    "ari_excl": 3.7
    },
    "low_confidence": false
   },
@@ -3689,7 +3882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 7,
     "long_pct": 6,
     "collapsed_words": 844,
-    "collapsed_pct": 74
+    "collapsed_pct": 74,
+    "ari_excl": 7.8
    },
    "low_confidence": false
   },
@@ -3708,7 +3902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 64,
-    "collapsed_pct": 27
+    "collapsed_pct": 27,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -3727,7 +3922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 7,
     "collapsed_words": 596,
-    "collapsed_pct": 71
+    "collapsed_pct": 71,
+    "ari_excl": 8.8
    },
    "low_confidence": false
   },
@@ -3746,7 +3942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 221,
-    "collapsed_pct": 72
+    "collapsed_pct": 72,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -3765,7 +3962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.9
    },
    "low_confidence": true
   },
@@ -3784,7 +3982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 92,
-    "collapsed_pct": 42
+    "collapsed_pct": 42,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -3803,7 +4002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 302,
-    "collapsed_pct": 57
+    "collapsed_pct": 57,
+    "ari_excl": 3.1
    },
    "low_confidence": false
   },
@@ -3822,7 +4022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.7
    },
    "low_confidence": false
   },
@@ -3841,7 +4042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -3860,7 +4062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.6
    },
    "low_confidence": true
   },
@@ -3879,7 +4082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -3898,7 +4102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.2
    },
    "low_confidence": true
   },
@@ -3917,7 +4122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 8,
     "collapsed_words": 568,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 8.2
    },
    "low_confidence": false
   },
@@ -3936,7 +4142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 8,
     "collapsed_words": 84,
-    "collapsed_pct": 42
+    "collapsed_pct": 42,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -3955,7 +4162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 5,
     "collapsed_words": 338,
-    "collapsed_pct": 55
+    "collapsed_pct": 55,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -3974,7 +4182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 147,
-    "collapsed_pct": 47
+    "collapsed_pct": 47,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -3993,7 +4202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 168,
-    "collapsed_pct": 70
+    "collapsed_pct": 70,
+    "ari_excl": 2.4
    },
    "low_confidence": false
   },
@@ -4012,7 +4222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.7
    },
    "low_confidence": true
   },
@@ -4031,7 +4242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 2,
     "collapsed_words": 1275,
-    "collapsed_pct": 84
+    "collapsed_pct": 84,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -4050,7 +4262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.1
    },
    "low_confidence": true
   },
@@ -4069,7 +4282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 120,
-    "collapsed_pct": 63
+    "collapsed_pct": 63,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -4088,7 +4302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 9,
     "collapsed_words": 441,
-    "collapsed_pct": 68
+    "collapsed_pct": 68,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -4107,7 +4322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5
    },
    "low_confidence": true
   },
@@ -4126,7 +4342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.7
    },
    "low_confidence": false
   },
@@ -4145,7 +4362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 183,
-    "collapsed_pct": 69
+    "collapsed_pct": 69,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -4164,7 +4382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 3,
     "collapsed_words": 1306,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -4183,7 +4402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 414,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -4202,7 +4422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4
    },
    "low_confidence": true
   },
@@ -4221,7 +4442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 267,
-    "collapsed_pct": 75
+    "collapsed_pct": 75,
+    "ari_excl": 8
    },
    "low_confidence": false
   },
@@ -4240,7 +4462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 7,
     "collapsed_words": 240,
-    "collapsed_pct": 91
+    "collapsed_pct": 91,
+    "ari_excl": 9.4
    },
    "low_confidence": false
   },
@@ -4259,7 +4482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 93,
-    "collapsed_pct": 44
+    "collapsed_pct": 44,
+    "ari_excl": 5
    },
    "low_confidence": false
   },
@@ -4278,7 +4502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 15.1
    },
    "low_confidence": true
   },
@@ -4297,7 +4522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 164,
-    "collapsed_pct": 61
+    "collapsed_pct": 61,
+    "ari_excl": 6.6
    },
    "low_confidence": false
   },
@@ -4316,7 +4542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8
    },
    "low_confidence": true
   },
@@ -4335,7 +4562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 3,
     "collapsed_words": 530,
-    "collapsed_pct": 74
+    "collapsed_pct": 74,
+    "ari_excl": 7.5
    },
    "low_confidence": false
   },
@@ -4354,7 +4582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 2,
     "collapsed_words": 233,
-    "collapsed_pct": 48
+    "collapsed_pct": 48,
+    "ari_excl": 4.5
    },
    "low_confidence": false
   },
@@ -4373,7 +4602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 14,
     "long_pct": 4,
     "collapsed_words": 2522,
-    "collapsed_pct": 94
+    "collapsed_pct": 94,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -4392,7 +4622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.1
    },
    "low_confidence": true
   },
@@ -4411,7 +4642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 148,
-    "collapsed_pct": 59
+    "collapsed_pct": 59,
+    "ari_excl": 8.1
    },
    "low_confidence": false
   },
@@ -4430,7 +4662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 10,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.2
    },
    "low_confidence": true
   },
@@ -4449,7 +4682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 10,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.6
    },
    "low_confidence": false
   },
@@ -4468,7 +4702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 212,
-    "collapsed_pct": 63
+    "collapsed_pct": 63,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -4487,7 +4722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.2
    },
    "low_confidence": true
   },
@@ -4506,7 +4742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.8
    },
    "low_confidence": true
   },
@@ -4525,7 +4762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 2.3
    },
    "low_confidence": true
   },
@@ -4544,7 +4782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 7,
     "long_pct": 13,
     "collapsed_words": 586,
-    "collapsed_pct": 78
+    "collapsed_pct": 78,
+    "ari_excl": 9.9
    },
    "low_confidence": false
   },
@@ -4563,7 +4802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 106,
-    "collapsed_pct": 36
+    "collapsed_pct": 36,
+    "ari_excl": 8
    },
    "low_confidence": false
   },
@@ -4582,7 +4822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 84,
-    "collapsed_pct": 31
+    "collapsed_pct": 31,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -4601,7 +4842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.7
    },
    "low_confidence": true
   },
@@ -4620,7 +4862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 7,
     "collapsed_words": 7,
-    "collapsed_pct": 5
+    "collapsed_pct": 5,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -4639,7 +4882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 2,
     "collapsed_words": 961,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -4658,7 +4902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 157,
-    "collapsed_pct": 47
+    "collapsed_pct": 47,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -4677,7 +4922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.5
    },
    "low_confidence": true
   },
@@ -4696,7 +4942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -4715,7 +4962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 111,
-    "collapsed_pct": 63
+    "collapsed_pct": 63,
+    "ari_excl": 3.8
    },
    "low_confidence": false
   },
@@ -4734,7 +4982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 511,
-    "collapsed_pct": 69
+    "collapsed_pct": 69,
+    "ari_excl": 6.7
    },
    "low_confidence": false
   },
@@ -4753,7 +5002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.7
    },
    "low_confidence": true
   },
@@ -4772,7 +5022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.1
    },
    "low_confidence": true
   },
@@ -4791,7 +5042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 4,
     "collapsed_words": 920,
-    "collapsed_pct": 89
+    "collapsed_pct": 89,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -4810,7 +5062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 212,
-    "collapsed_pct": 50
+    "collapsed_pct": 50,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -4829,7 +5082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 2,
     "collapsed_words": 610,
-    "collapsed_pct": 80
+    "collapsed_pct": 80,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -4848,7 +5102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 7,
     "collapsed_words": 704,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 10.4
    },
    "low_confidence": false
   },
@@ -4867,7 +5122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 17,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.2
    },
    "low_confidence": false
   },
@@ -4886,7 +5142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 7,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -4905,7 +5162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 124,
-    "collapsed_pct": 36
+    "collapsed_pct": 36,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -4924,7 +5182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.3
    },
    "low_confidence": true
   },
@@ -4943,7 +5202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 467,
-    "collapsed_pct": 76
+    "collapsed_pct": 76,
+    "ari_excl": 8.9
    },
    "low_confidence": false
   },
@@ -4962,7 +5222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 481,
-    "collapsed_pct": 88
+    "collapsed_pct": 88,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -4981,7 +5242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 10,
     "long_pct": 5,
     "collapsed_words": 1566,
-    "collapsed_pct": 79
+    "collapsed_pct": 79,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -5000,7 +5262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.1
    },
    "low_confidence": true
   },
@@ -5019,7 +5282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 5,
     "collapsed_words": 808,
-    "collapsed_pct": 84
+    "collapsed_pct": 84,
+    "ari_excl": 8.2
    },
    "low_confidence": false
   },
@@ -5038,7 +5302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 371,
-    "collapsed_pct": 72
+    "collapsed_pct": 72,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -5057,7 +5322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 25,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.9
    },
    "low_confidence": false
   },
@@ -5076,7 +5342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -5095,7 +5362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 82,
-    "collapsed_pct": 32
+    "collapsed_pct": 32,
+    "ari_excl": 5
    },
    "low_confidence": false
   },
@@ -5114,7 +5382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 21,
     "collapsed_words": 140,
-    "collapsed_pct": 54
+    "collapsed_pct": 54,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -5133,7 +5402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 39,
-    "collapsed_pct": 24
+    "collapsed_pct": 24,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -5152,7 +5422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 157,
-    "collapsed_pct": 56
+    "collapsed_pct": 56,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -5171,7 +5442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.4
    },
    "low_confidence": true
   },
@@ -5190,7 +5462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 7,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -5209,7 +5482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 32,
-    "collapsed_pct": 20
+    "collapsed_pct": 20,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -5228,7 +5502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6
    },
    "low_confidence": true
   },
@@ -5247,7 +5522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 7,
     "collapsed_words": 57,
-    "collapsed_pct": 45
+    "collapsed_pct": 45,
+    "ari_excl": 5
    },
    "low_confidence": false
   },
@@ -5266,7 +5542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 92,
-    "collapsed_pct": 59
+    "collapsed_pct": 59,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -5285,7 +5562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 6,
     "collapsed_words": 473,
-    "collapsed_pct": 89
+    "collapsed_pct": 89,
+    "ari_excl": 8.9
    },
    "low_confidence": false
   },
@@ -5304,7 +5582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 100,
-    "collapsed_pct": 38
+    "collapsed_pct": 38,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -5323,7 +5602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 168,
-    "collapsed_pct": 43
+    "collapsed_pct": 43,
+    "ari_excl": 4.3
    },
    "low_confidence": false
   },
@@ -5342,7 +5622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.4
    },
    "low_confidence": false
   },
@@ -5361,7 +5642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 7,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.8
    },
    "low_confidence": false
   },
@@ -5380,7 +5662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 4,
     "collapsed_words": 169,
-    "collapsed_pct": 36
+    "collapsed_pct": 36,
+    "ari_excl": 7.9
    },
    "low_confidence": false
   },
@@ -5399,7 +5682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.8
    },
    "low_confidence": true
   },
@@ -5418,7 +5702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 64,
-    "collapsed_pct": 43
+    "collapsed_pct": 43,
+    "ari_excl": 4.4
    },
    "low_confidence": false
   },
@@ -5437,7 +5722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 5,
     "collapsed_words": 606,
-    "collapsed_pct": 85
+    "collapsed_pct": 85,
+    "ari_excl": 8.2
    },
    "low_confidence": false
   },
@@ -5456,7 +5742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 461,
-    "collapsed_pct": 82
+    "collapsed_pct": 82,
+    "ari_excl": 6.7
    },
    "low_confidence": false
   },
@@ -5475,7 +5762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.9
    },
    "low_confidence": true
   },
@@ -5494,7 +5782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.3
    },
    "low_confidence": true
   },
@@ -5513,7 +5802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.8
    },
    "low_confidence": true
   },
@@ -5532,7 +5822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.5
    },
    "low_confidence": true
   },
@@ -5551,7 +5842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 130,
-    "collapsed_pct": 52
+    "collapsed_pct": 52,
+    "ari_excl": 9.1
    },
    "low_confidence": false
   },
@@ -5570,7 +5862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.5
    },
    "low_confidence": true
   },
@@ -5589,7 +5882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 5,
     "collapsed_words": 257,
-    "collapsed_pct": 67
+    "collapsed_pct": 67,
+    "ari_excl": 8.7
    },
    "low_confidence": false
   },
@@ -5608,7 +5902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 85,
-    "collapsed_pct": 41
+    "collapsed_pct": 41,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -5627,7 +5922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 9,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -5646,7 +5942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 234,
-    "collapsed_pct": 55
+    "collapsed_pct": 55,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -5665,7 +5962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 12.3
    },
    "low_confidence": true
   },
@@ -5684,7 +5982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 250,
-    "collapsed_pct": 79
+    "collapsed_pct": 79,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -5703,7 +6002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 5,
     "collapsed_words": 538,
-    "collapsed_pct": 77
+    "collapsed_pct": 77,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -5722,7 +6022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 13,
     "long_pct": 5,
     "collapsed_words": 1893,
-    "collapsed_pct": 79
+    "collapsed_pct": 79,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -5741,7 +6042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 139,
-    "collapsed_pct": 66
+    "collapsed_pct": 66,
+    "ari_excl": 7.7
    },
    "low_confidence": false
   },
@@ -5760,7 +6062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 86,
-    "collapsed_pct": 43
+    "collapsed_pct": 43,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -5779,7 +6082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 55,
-    "collapsed_pct": 48
+    "collapsed_pct": 48,
+    "ari_excl": 8
    },
    "low_confidence": false
   },
@@ -5798,7 +6102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.6
    },
    "low_confidence": true
   },
@@ -5817,7 +6122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -5836,7 +6142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 19,
-    "collapsed_pct": 22
+    "collapsed_pct": 22,
+    "ari_excl": 7.5
    },
    "low_confidence": true
   },
@@ -5855,7 +6162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 91,
-    "collapsed_pct": 46
+    "collapsed_pct": 46,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -5874,7 +6182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.6
    },
    "low_confidence": true
   },
@@ -5893,7 +6202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.3
    },
    "low_confidence": true
   },
@@ -5912,7 +6222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 13,
     "collapsed_words": 37,
-    "collapsed_pct": 16
+    "collapsed_pct": 16,
+    "ari_excl": 8.7
    },
    "low_confidence": false
   },
@@ -5931,7 +6242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 8,
     "collapsed_words": 703,
-    "collapsed_pct": 92
+    "collapsed_pct": 92,
+    "ari_excl": 6.7
    },
    "low_confidence": false
   },
@@ -5950,7 +6262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 4,
     "collapsed_words": 820,
-    "collapsed_pct": 78
+    "collapsed_pct": 78,
+    "ari_excl": 8.8
    },
    "low_confidence": false
   },
@@ -5969,7 +6282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 8,
     "collapsed_words": 442,
-    "collapsed_pct": 89
+    "collapsed_pct": 89,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -5988,7 +6302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 14,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.5
    },
    "low_confidence": true
   },
@@ -6007,7 +6322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 11,
     "long_pct": 26,
     "collapsed_words": 581,
-    "collapsed_pct": 85
+    "collapsed_pct": 85,
+    "ari_excl": 9.8
    },
    "low_confidence": false
   },
@@ -6026,7 +6342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.7
    },
    "low_confidence": false
   },
@@ -6045,7 +6362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.8
    },
    "low_confidence": true
   },
@@ -6064,7 +6382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 8,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.9
    },
    "low_confidence": false
   },
@@ -6083,7 +6402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4
    },
    "low_confidence": true
   },
@@ -6102,7 +6422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 47,
-    "collapsed_pct": 26
+    "collapsed_pct": 26,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -6121,7 +6442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 127,
-    "collapsed_pct": 72
+    "collapsed_pct": 72,
+    "ari_excl": 7.5
    },
    "low_confidence": false
   },
@@ -6140,7 +6462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 4,
     "collapsed_words": 421,
-    "collapsed_pct": 82
+    "collapsed_pct": 82,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -6159,7 +6482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.7
    },
    "low_confidence": true
   },
@@ -6178,7 +6502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.6
    },
    "low_confidence": true
   },
@@ -6197,7 +6522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 3,
     "collapsed_words": 840,
-    "collapsed_pct": 83
+    "collapsed_pct": 83,
+    "ari_excl": 4.5
    },
    "low_confidence": false
   },
@@ -6216,7 +6542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.6
    },
    "low_confidence": true
   },
@@ -6235,7 +6562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 8,
     "collapsed_words": 371,
-    "collapsed_pct": 69
+    "collapsed_pct": 69,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -6254,7 +6582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 262,
-    "collapsed_pct": 62
+    "collapsed_pct": 62,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -6273,7 +6602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.2
    },
    "low_confidence": true
   },
@@ -6292,7 +6622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 1,
     "collapsed_words": 785,
-    "collapsed_pct": 82
+    "collapsed_pct": 82,
+    "ari_excl": 4.4
    },
    "low_confidence": false
   },
@@ -6311,7 +6642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 151,
-    "collapsed_pct": 76
+    "collapsed_pct": 76,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -6330,7 +6662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 174,
-    "collapsed_pct": 84
+    "collapsed_pct": 84,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -6349,7 +6682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 246,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -6368,7 +6702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.8
    },
    "low_confidence": true
   },
@@ -6387,7 +6722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 3,
     "collapsed_words": 618,
-    "collapsed_pct": 68
+    "collapsed_pct": 68,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -6406,7 +6742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 1.6
    },
    "low_confidence": true
   },
@@ -6425,7 +6762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 1.9
    },
    "low_confidence": true
   },
@@ -6444,7 +6782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 17,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.3
    },
    "low_confidence": true
   },
@@ -6463,7 +6802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 5,
     "collapsed_words": 1367,
-    "collapsed_pct": 92
+    "collapsed_pct": 92,
+    "ari_excl": 8.5
    },
    "low_confidence": false
   },
@@ -6482,7 +6822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 3,
     "collapsed_words": 1026,
-    "collapsed_pct": 90
+    "collapsed_pct": 90,
+    "ari_excl": 9.3
    },
    "low_confidence": false
   },
@@ -6501,7 +6842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5
    },
    "low_confidence": true
   },
@@ -6520,7 +6862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 2.4
    },
    "low_confidence": false
   },
@@ -6539,7 +6882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 58,
-    "collapsed_pct": 41
+    "collapsed_pct": 41,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -6558,7 +6902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.3
    },
    "low_confidence": true
   },
@@ -6577,7 +6922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.4
    },
    "low_confidence": true
   },
@@ -6596,7 +6942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.9
    },
    "low_confidence": true
   },
@@ -6615,7 +6962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 459,
-    "collapsed_pct": 61
+    "collapsed_pct": 61,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -6634,7 +6982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.9
    },
    "low_confidence": true
   },
@@ -6653,7 +7002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.2
    },
    "low_confidence": true
   },
@@ -6672,7 +7022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.2
    },
    "low_confidence": true
   },
@@ -6691,7 +7042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 322,
-    "collapsed_pct": 82
+    "collapsed_pct": 82,
+    "ari_excl": 6.8
    },
    "low_confidence": false
   },
@@ -6710,7 +7062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 2.4
    },
    "low_confidence": true
   },
@@ -6729,7 +7082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": -0.9
    },
    "low_confidence": true
   },
@@ -6748,7 +7102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 2.8
    },
    "low_confidence": true
   },
@@ -6767,7 +7122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.5
    },
    "low_confidence": true
   },
@@ -6786,7 +7142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.5
    },
    "low_confidence": true
   },
@@ -6805,7 +7162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 2,
     "collapsed_words": 1706,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -6824,7 +7182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 395,
-    "collapsed_pct": 89
+    "collapsed_pct": 89,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -6843,7 +7202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -6862,7 +7222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 8,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -6881,7 +7242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 47,
-    "collapsed_pct": 30
+    "collapsed_pct": 30,
+    "ari_excl": 5
    },
    "low_confidence": false
   },
@@ -6900,7 +7262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 8,
     "collapsed_words": 603,
-    "collapsed_pct": 88
+    "collapsed_pct": 88,
+    "ari_excl": 8.5
    },
    "low_confidence": false
   },
@@ -6919,7 +7282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.4
    },
    "low_confidence": true
   },
@@ -6938,7 +7302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.5
    },
    "low_confidence": true
   },
@@ -6957,7 +7322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.7
    },
    "low_confidence": true
   },
@@ -6976,7 +7342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.9
    },
    "low_confidence": true
   },
@@ -6995,7 +7362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.4
    },
    "low_confidence": true
   },
@@ -7014,7 +7382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 4,
     "collapsed_words": 452,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 3.5
    },
    "low_confidence": false
   },
@@ -7033,7 +7402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5
    },
    "low_confidence": false
   },
@@ -7052,7 +7422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 4,
     "collapsed_words": 1014,
-    "collapsed_pct": 89
+    "collapsed_pct": 89,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -7071,7 +7442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 2,
     "collapsed_words": 620,
-    "collapsed_pct": 81
+    "collapsed_pct": 81,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -7090,7 +7462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 5,
     "collapsed_words": 851,
-    "collapsed_pct": 71
+    "collapsed_pct": 71,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -7109,7 +7482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 3,
     "collapsed_words": 1127,
-    "collapsed_pct": 83
+    "collapsed_pct": 83,
+    "ari_excl": 4.5
    },
    "low_confidence": false
   },
@@ -7128,7 +7502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.2
    },
    "low_confidence": true
   },
@@ -7147,7 +7522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 9,
     "long_pct": 8,
     "collapsed_words": 1189,
-    "collapsed_pct": 92
+    "collapsed_pct": 92,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -7166,7 +7542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 12.1
    },
    "low_confidence": true
   },
@@ -7185,7 +7562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.1
    },
    "low_confidence": true
   },
@@ -7204,7 +7582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8
    },
    "low_confidence": true
   },
@@ -7223,7 +7602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 263,
-    "collapsed_pct": 79
+    "collapsed_pct": 79,
+    "ari_excl": 4.4
    },
    "low_confidence": false
   },
@@ -7242,7 +7622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.6
    },
    "low_confidence": false
   },
@@ -7261,7 +7642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 217,
-    "collapsed_pct": 76
+    "collapsed_pct": 76,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -7280,7 +7662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.5
    },
    "low_confidence": true
   },
@@ -7299,7 +7682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 13,
     "collapsed_words": 51,
-    "collapsed_pct": 57
+    "collapsed_pct": 57,
+    "ari_excl": 10.3
    },
    "low_confidence": true
   },
@@ -7318,7 +7702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 10,
     "long_pct": 6,
     "collapsed_words": 1729,
-    "collapsed_pct": 95
+    "collapsed_pct": 95,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -7337,7 +7722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 188,
-    "collapsed_pct": 48
+    "collapsed_pct": 48,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -7356,7 +7742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 222,
-    "collapsed_pct": 80
+    "collapsed_pct": 80,
+    "ari_excl": 9
    },
    "low_confidence": false
   },
@@ -7375,7 +7762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.9
    },
    "low_confidence": true
   },
@@ -7394,7 +7782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.7
    },
    "low_confidence": false
   },
@@ -7413,7 +7802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6
    },
    "low_confidence": true
   },
@@ -7432,7 +7822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 8,
     "collapsed_words": 94,
-    "collapsed_pct": 70
+    "collapsed_pct": 70,
+    "ari_excl": 9
    },
    "low_confidence": false
   },
@@ -7451,7 +7842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -7470,7 +7862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 6,
     "collapsed_words": 307,
-    "collapsed_pct": 93
+    "collapsed_pct": 93,
+    "ari_excl": 7.8
    },
    "low_confidence": false
   },
@@ -7489,7 +7882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 86,
-    "collapsed_pct": 44
+    "collapsed_pct": 44,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -7508,7 +7902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -7527,7 +7922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 9,
     "collapsed_words": 537,
-    "collapsed_pct": 84
+    "collapsed_pct": 84,
+    "ari_excl": 10.1
    },
    "low_confidence": false
   },
@@ -7546,7 +7942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 6,
     "collapsed_words": 684,
-    "collapsed_pct": 94
+    "collapsed_pct": 94,
+    "ari_excl": 8.1
    },
    "low_confidence": false
   },
@@ -7565,7 +7962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -7584,7 +7982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.5
    },
    "low_confidence": true
   },
@@ -7603,7 +8002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 8,
     "long_pct": 6,
     "collapsed_words": 1173,
-    "collapsed_pct": 77
+    "collapsed_pct": 77,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -7622,7 +8022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.6
    },
    "low_confidence": true
   },
@@ -7641,7 +8042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 13,
     "long_pct": 12,
     "collapsed_words": 987,
-    "collapsed_pct": 82
+    "collapsed_pct": 82,
+    "ari_excl": 5
    },
    "low_confidence": false
   },
@@ -7660,7 +8062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.5
    },
    "low_confidence": true
   },
@@ -7679,7 +8082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -7698,7 +8102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 9,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.7
    },
    "low_confidence": true
   },
@@ -7717,7 +8122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.8
    },
    "low_confidence": true
   },
@@ -7736,7 +8142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.4
    },
    "low_confidence": true
   },
@@ -7755,7 +8162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.5
    },
    "low_confidence": false
   },
@@ -7774,7 +8182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -7793,7 +8202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 25,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.2
    },
    "low_confidence": false
   },
@@ -7812,7 +8222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.1
    },
    "low_confidence": true
   },
@@ -7831,7 +8242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 278,
-    "collapsed_pct": 91
+    "collapsed_pct": 91,
+    "ari_excl": 9.8
    },
    "low_confidence": false
   },
@@ -7850,7 +8262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.7
    },
    "low_confidence": false
   },
@@ -7869,7 +8282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 280,
-    "collapsed_pct": 83
+    "collapsed_pct": 83,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -7888,7 +8302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 18,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.3
    },
    "low_confidence": false
   },
@@ -7907,7 +8322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -7926,7 +8342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.2
    },
    "low_confidence": true
   },
@@ -7945,7 +8362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.3
    },
    "low_confidence": true
   },
@@ -7964,7 +8382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.3
    },
    "low_confidence": true
   },
@@ -7983,7 +8402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 101,
-    "collapsed_pct": 58
+    "collapsed_pct": 58,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -8002,7 +8422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.6
    },
    "low_confidence": true
   },
@@ -8021,7 +8442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 4,
     "collapsed_words": 818,
-    "collapsed_pct": 74
+    "collapsed_pct": 74,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -8040,7 +8462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 385,
-    "collapsed_pct": 81
+    "collapsed_pct": 81,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -8059,7 +8482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 32,
-    "collapsed_pct": 12
+    "collapsed_pct": 12,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -8078,7 +8502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 605,
-    "collapsed_pct": 85
+    "collapsed_pct": 85,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -8097,7 +8522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 82,
-    "collapsed_pct": 63
+    "collapsed_pct": 63,
+    "ari_excl": 10
    },
    "low_confidence": false
   },
@@ -8116,7 +8542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 7,
     "long_pct": 10,
     "collapsed_words": 614,
-    "collapsed_pct": 79
+    "collapsed_pct": 79,
+    "ari_excl": 8.9
    },
    "low_confidence": false
   },
@@ -8135,7 +8562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 13.2
    },
    "low_confidence": false
   },
@@ -8154,7 +8582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.7
    },
    "low_confidence": true
   },
@@ -8173,7 +8602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.1
    },
    "low_confidence": true
   },
@@ -8192,7 +8622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 757,
-    "collapsed_pct": 82
+    "collapsed_pct": 82,
+    "ari_excl": 2.1
    },
    "low_confidence": false
   },
@@ -8211,7 +8642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.2
    },
    "low_confidence": true
   },
@@ -8230,7 +8662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 14,
     "collapsed_words": 407,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 7.5
    },
    "low_confidence": false
   },
@@ -8249,7 +8682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 11,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.8
    },
    "low_confidence": false
   },
@@ -8268,7 +8702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 8,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -8287,7 +8722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 210,
-    "collapsed_pct": 40
+    "collapsed_pct": 40,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -8306,7 +8742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 75,
-    "collapsed_pct": 78
+    "collapsed_pct": 78,
+    "ari_excl": 6.1
    },
    "low_confidence": true
   },
@@ -8325,7 +8762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 90,
-    "collapsed_pct": 44
+    "collapsed_pct": 44,
+    "ari_excl": 6.8
    },
    "low_confidence": false
   },
@@ -8344,7 +8782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 17,
     "long_pct": 9,
     "collapsed_words": 1866,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 7.9
    },
    "low_confidence": false
   },
@@ -8363,7 +8802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8
    },
    "low_confidence": false
   },
@@ -8382,7 +8822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 1,
     "collapsed_words": 2142,
-    "collapsed_pct": 93
+    "collapsed_pct": 93,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -8401,7 +8842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 268,
-    "collapsed_pct": 84
+    "collapsed_pct": 84,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -8420,7 +8862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 60,
-    "collapsed_pct": 31
+    "collapsed_pct": 31,
+    "ari_excl": 7.8
    },
    "low_confidence": false
   },
@@ -8439,7 +8882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 11,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8
    },
    "low_confidence": true
   },
@@ -8458,7 +8902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -8477,7 +8922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -8496,7 +8942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.3
    },
    "low_confidence": true
   },
@@ -8515,7 +8962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.2
    },
    "low_confidence": true
   },
@@ -8534,7 +8982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.4
    },
    "low_confidence": true
   },
@@ -8553,7 +9002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 298,
-    "collapsed_pct": 73
+    "collapsed_pct": 73,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -8572,7 +9022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 352,
-    "collapsed_pct": 73
+    "collapsed_pct": 73,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -8591,7 +9042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 7,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.2
    },
    "low_confidence": false
   },
@@ -8610,7 +9062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.9
    },
    "low_confidence": true
   },
@@ -8629,7 +9082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 17,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.8
    },
    "low_confidence": true
   },
@@ -8648,7 +9102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.3
    },
    "low_confidence": true
   },
@@ -8667,7 +9122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 189,
-    "collapsed_pct": 79
+    "collapsed_pct": 79,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -8686,7 +9142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 53,
-    "collapsed_pct": 25
+    "collapsed_pct": 25,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -8705,7 +9162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 9,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.9
    },
    "low_confidence": true
   },
@@ -8724,7 +9182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7
    },
    "low_confidence": true
   },
@@ -8743,7 +9202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 13,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.7
    },
    "low_confidence": false
   },
@@ -8762,7 +9222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 119,
-    "collapsed_pct": 57
+    "collapsed_pct": 57,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -8781,7 +9242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 34,
-    "collapsed_pct": 56
+    "collapsed_pct": 56,
+    "ari_excl": 6.2
    },
    "low_confidence": true
   },
@@ -8800,7 +9262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 0.4
    },
    "low_confidence": true
   },
@@ -8819,7 +9282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 0.8
    },
    "low_confidence": true
   },
@@ -8838,7 +9302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 7,
     "collapsed_words": 159,
-    "collapsed_pct": 75
+    "collapsed_pct": 75,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -8857,7 +9322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 9,
     "long_pct": 10,
     "collapsed_words": 889,
-    "collapsed_pct": 93
+    "collapsed_pct": 93,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -8876,7 +9342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 294,
-    "collapsed_pct": 80
+    "collapsed_pct": 80,
+    "ari_excl": 9.1
    },
    "low_confidence": false
   },
@@ -8895,7 +9362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 83,
-    "collapsed_pct": 35
+    "collapsed_pct": 35,
+    "ari_excl": 6.8
    },
    "low_confidence": false
   },
@@ -8914,7 +9382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.5
    },
    "low_confidence": true
   },
@@ -8933,7 +9402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 267,
-    "collapsed_pct": 82
+    "collapsed_pct": 82,
+    "ari_excl": 6.8
    },
    "low_confidence": false
   },
@@ -8952,7 +9422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.7
    },
    "low_confidence": true
   },
@@ -8971,7 +9442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 214,
-    "collapsed_pct": 61
+    "collapsed_pct": 61,
+    "ari_excl": 8.3
    },
    "low_confidence": false
   },
@@ -8990,7 +9462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.6
    },
    "low_confidence": true
   },
@@ -9009,7 +9482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.6
    },
    "low_confidence": true
   },
@@ -9028,7 +9502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.4
    },
    "low_confidence": true
   },
@@ -9047,7 +9522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 334,
-    "collapsed_pct": 69
+    "collapsed_pct": 69,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -9066,7 +9542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -9085,7 +9562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 6,
     "collapsed_words": 273,
-    "collapsed_pct": 66
+    "collapsed_pct": 66,
+    "ari_excl": 7.8
    },
    "low_confidence": false
   },
@@ -9104,7 +9582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 13,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.7
    },
    "low_confidence": true
   },
@@ -9123,7 +9602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9
    },
    "low_confidence": true
   },
@@ -9142,7 +9622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 13,
     "collapsed_words": 233,
-    "collapsed_pct": 69
+    "collapsed_pct": 69,
+    "ari_excl": 7.7
    },
    "low_confidence": false
   },
@@ -9161,7 +9642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 64,
-    "collapsed_pct": 34
+    "collapsed_pct": 34,
+    "ari_excl": 4.6
    },
    "low_confidence": false
   },
@@ -9180,7 +9662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 5,
     "collapsed_words": 353,
-    "collapsed_pct": 82
+    "collapsed_pct": 82,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -9199,7 +9682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 2,
     "collapsed_words": 1306,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -9218,7 +9702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 5,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -9237,7 +9722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 33,
-    "collapsed_pct": 22
+    "collapsed_pct": 22,
+    "ari_excl": 8.5
    },
    "low_confidence": false
   },
@@ -9256,7 +9742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 238,
-    "collapsed_pct": 57
+    "collapsed_pct": 57,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -9275,7 +9762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.1
    },
    "low_confidence": true
   },
@@ -9294,7 +9782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.4
    },
    "low_confidence": true
   },
@@ -9313,7 +9802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.2
    },
    "low_confidence": true
   },
@@ -9332,7 +9822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.5
    },
    "low_confidence": true
   },
@@ -9351,7 +9842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 13,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -9370,7 +9862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.8
    },
    "low_confidence": true
   },
@@ -9389,7 +9882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 25,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 12
    },
    "low_confidence": true
   },
@@ -9408,7 +9902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 465,
-    "collapsed_pct": 83
+    "collapsed_pct": 83,
+    "ari_excl": 4.6
    },
    "low_confidence": false
   },
@@ -9427,7 +9922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 660,
-    "collapsed_pct": 88
+    "collapsed_pct": 88,
+    "ari_excl": 3.5
    },
    "low_confidence": false
   },
@@ -9446,7 +9942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 12,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -9465,7 +9962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 320,
-    "collapsed_pct": 72
+    "collapsed_pct": 72,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -9484,7 +9982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 32,
-    "collapsed_pct": 14
+    "collapsed_pct": 14,
+    "ari_excl": 4.8
    },
    "low_confidence": false
   },
@@ -9503,7 +10002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 605,
-    "collapsed_pct": 91
+    "collapsed_pct": 91,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -9522,7 +10022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 824,
-    "collapsed_pct": 85
+    "collapsed_pct": 85,
+    "ari_excl": 4.7
    },
    "low_confidence": false
   },
@@ -9541,7 +10042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 7,
     "long_pct": 2,
     "collapsed_words": 2512,
-    "collapsed_pct": 90
+    "collapsed_pct": 90,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -9560,7 +10062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.6
    },
    "low_confidence": true
   },
@@ -9579,7 +10082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 25,
-    "collapsed_pct": 8
+    "collapsed_pct": 8,
+    "ari_excl": 7.5
    },
    "low_confidence": false
   },
@@ -9598,7 +10102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 605,
-    "collapsed_pct": 69
+    "collapsed_pct": 69,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -9617,7 +10122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 7,
     "long_pct": 10,
     "collapsed_words": 593,
-    "collapsed_pct": 70
+    "collapsed_pct": 70,
+    "ari_excl": 8.2
    },
    "low_confidence": false
   },
@@ -9636,7 +10142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 35,
-    "collapsed_pct": 29
+    "collapsed_pct": 29,
+    "ari_excl": 3.6
    },
    "low_confidence": false
   },
@@ -9655,7 +10162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 6,
     "collapsed_words": 85,
-    "collapsed_pct": 35
+    "collapsed_pct": 35,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -9674,7 +10182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 64,
-    "collapsed_pct": 37
+    "collapsed_pct": 37,
+    "ari_excl": 4.6
    },
    "low_confidence": false
   },
@@ -9693,7 +10202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 8,
     "collapsed_words": 75,
-    "collapsed_pct": 24
+    "collapsed_pct": 24,
+    "ari_excl": 8.7
    },
    "low_confidence": false
   },
@@ -9712,7 +10222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -9731,7 +10242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 5,
     "collapsed_words": 1044,
-    "collapsed_pct": 94
+    "collapsed_pct": 94,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -9750,7 +10262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 4,
     "collapsed_words": 541,
-    "collapsed_pct": 77
+    "collapsed_pct": 77,
+    "ari_excl": 6.6
    },
    "low_confidence": false
   },
@@ -9769,7 +10282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 8,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -9788,7 +10302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 62,
-    "collapsed_pct": 27
+    "collapsed_pct": 27,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -9807,7 +10322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.1
    },
    "low_confidence": true
   },
@@ -9826,7 +10342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -9845,7 +10362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.9
    },
    "low_confidence": true
   },
@@ -9864,7 +10382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.2
    },
    "low_confidence": true
   },
@@ -9883,7 +10402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 125,
-    "collapsed_pct": 66
+    "collapsed_pct": 66,
+    "ari_excl": 4.7
    },
    "low_confidence": false
   },
@@ -9902,7 +10422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.3
    },
    "low_confidence": true
   },
@@ -9921,7 +10442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.5
    },
    "low_confidence": true
   },
@@ -9940,7 +10462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 9,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 2.7
    },
    "low_confidence": true
   },
@@ -9959,7 +10482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 137,
-    "collapsed_pct": 49
+    "collapsed_pct": 49,
+    "ari_excl": 8.5
    },
    "low_confidence": false
   },
@@ -9978,7 +10502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 6,
     "collapsed_words": 51,
-    "collapsed_pct": 22
+    "collapsed_pct": 22,
+    "ari_excl": 2.9
    },
    "low_confidence": false
   },
@@ -9997,7 +10522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 5,
     "collapsed_words": 228,
-    "collapsed_pct": 82
+    "collapsed_pct": 82,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -10016,7 +10542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.4
    },
    "low_confidence": true
   },
@@ -10035,7 +10562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 137,
-    "collapsed_pct": 42
+    "collapsed_pct": 42,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -10054,7 +10582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 74,
-    "collapsed_pct": 49
+    "collapsed_pct": 49,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -10073,7 +10602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.9
    },
    "low_confidence": true
   },
@@ -10092,7 +10622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 163,
-    "collapsed_pct": 25
+    "collapsed_pct": 25,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -10111,7 +10642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 390,
-    "collapsed_pct": 84
+    "collapsed_pct": 84,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -10130,7 +10662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 3,
     "collapsed_words": 648,
-    "collapsed_pct": 75
+    "collapsed_pct": 75,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -10149,7 +10682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 13,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.6
    },
    "low_confidence": true
   },
@@ -10168,7 +10702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -10187,7 +10722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 14,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.8
    },
    "low_confidence": false
   },
@@ -10206,7 +10742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 4,
     "collapsed_words": 206,
-    "collapsed_pct": 46
+    "collapsed_pct": 46,
+    "ari_excl": 7.5
    },
    "low_confidence": false
   },
@@ -10225,7 +10762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 159,
-    "collapsed_pct": 55
+    "collapsed_pct": 55,
+    "ari_excl": 8.4
    },
    "low_confidence": false
   },
@@ -10244,7 +10782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 2.5
    },
    "low_confidence": true
   },
@@ -10263,7 +10802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.4
    },
    "low_confidence": true
   },
@@ -10282,7 +10822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.4
    },
    "low_confidence": true
   },
@@ -10301,7 +10842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.2
    },
    "low_confidence": true
   },
@@ -10320,7 +10862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 371,
-    "collapsed_pct": 70
+    "collapsed_pct": 70,
+    "ari_excl": 8.4
    },
    "low_confidence": false
   },
@@ -10339,7 +10882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 8,
     "collapsed_words": 259,
-    "collapsed_pct": 91
+    "collapsed_pct": 91,
+    "ari_excl": 8.4
    },
    "low_confidence": false
   },
@@ -10358,7 +10902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 8,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -10377,7 +10922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.5
    },
    "low_confidence": true
   },
@@ -10396,7 +10942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 11,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.8
    },
    "low_confidence": false
   },
@@ -10415,7 +10962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 147,
-    "collapsed_pct": 54
+    "collapsed_pct": 54,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -10434,7 +10982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 147,
-    "collapsed_pct": 52
+    "collapsed_pct": 52,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -10453,7 +11002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 119,
-    "collapsed_pct": 44
+    "collapsed_pct": 44,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -10472,7 +11022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 15,
     "long_pct": 5,
     "collapsed_words": 2533,
-    "collapsed_pct": 94
+    "collapsed_pct": 94,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -10491,7 +11042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 19,
     "long_pct": 6,
     "collapsed_words": 3100,
-    "collapsed_pct": 96
+    "collapsed_pct": 96,
+    "ari_excl": 6.8
    },
    "low_confidence": false
   },
@@ -10510,7 +11062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -10529,7 +11082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 365,
-    "collapsed_pct": 90
+    "collapsed_pct": 90,
+    "ari_excl": 6.8
    },
    "low_confidence": false
   },
@@ -10548,7 +11102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 1,
     "collapsed_words": 1011,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -10567,7 +11122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 11,
     "collapsed_words": 90,
-    "collapsed_pct": 45
+    "collapsed_pct": 45,
+    "ari_excl": 8.7
    },
    "low_confidence": false
   },
@@ -10586,7 +11142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 105,
-    "collapsed_pct": 64
+    "collapsed_pct": 64,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -10605,7 +11162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 305,
-    "collapsed_pct": 73
+    "collapsed_pct": 73,
+    "ari_excl": 5
    },
    "low_confidence": false
   },
@@ -10624,7 +11182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 2,
     "collapsed_words": 441,
-    "collapsed_pct": 76
+    "collapsed_pct": 76,
+    "ari_excl": 7.8
    },
    "low_confidence": false
   },
@@ -10643,7 +11202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 6,
     "collapsed_words": 116,
-    "collapsed_pct": 32
+    "collapsed_pct": 32,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -10662,7 +11222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.2
    },
    "low_confidence": true
   },
@@ -10681,7 +11242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 1,
     "collapsed_words": 1097,
-    "collapsed_pct": 84
+    "collapsed_pct": 84,
+    "ari_excl": 4
    },
    "low_confidence": false
   },
@@ -10700,7 +11262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 5,
     "collapsed_words": 359,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -10719,7 +11282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -10738,7 +11302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 130,
-    "collapsed_pct": 62
+    "collapsed_pct": 62,
+    "ari_excl": 8.8
    },
    "low_confidence": false
   },
@@ -10757,7 +11322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 4,
     "collapsed_words": 930,
-    "collapsed_pct": 92
+    "collapsed_pct": 92,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -10776,7 +11342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 2,
     "collapsed_words": 436,
-    "collapsed_pct": 65
+    "collapsed_pct": 65,
+    "ari_excl": 7.9
    },
    "low_confidence": false
   },
@@ -10795,7 +11362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.5
    },
    "low_confidence": true
   },
@@ -10814,7 +11382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 104,
-    "collapsed_pct": 78
+    "collapsed_pct": 78,
+    "ari_excl": 8
    },
    "low_confidence": false
   },
@@ -10833,7 +11402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 157,
-    "collapsed_pct": 49
+    "collapsed_pct": 49,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -10852,7 +11422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7
    },
    "low_confidence": true
   },
@@ -10871,7 +11442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.3
    },
    "low_confidence": true
   },
@@ -10890,7 +11462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 12,
     "collapsed_words": 84,
-    "collapsed_pct": 56
+    "collapsed_pct": 56,
+    "ari_excl": 9.1
    },
    "low_confidence": false
   },
@@ -10909,7 +11482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 89,
-    "collapsed_pct": 49
+    "collapsed_pct": 49,
+    "ari_excl": 3.4
    },
    "low_confidence": false
   },
@@ -10928,7 +11502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 30,
-    "collapsed_pct": 13
+    "collapsed_pct": 13,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -10947,7 +11522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.3
    },
    "low_confidence": true
   },
@@ -10966,7 +11542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.7
    },
    "low_confidence": true
   },
@@ -10985,7 +11562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.8
    },
    "low_confidence": false
   },
@@ -11004,7 +11582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 120,
-    "collapsed_pct": 72
+    "collapsed_pct": 72,
+    "ari_excl": 6.8
    },
    "low_confidence": false
   },
@@ -11023,7 +11602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.6
    },
    "low_confidence": true
   },
@@ -11042,7 +11622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.9
    },
    "low_confidence": false
   },
@@ -11061,7 +11642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 1.9
    },
    "low_confidence": true
   },
@@ -11080,7 +11662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3
    },
    "low_confidence": true
   },
@@ -11099,7 +11682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.2
    },
    "low_confidence": true
   },
@@ -11118,7 +11702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -11137,7 +11722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 157,
-    "collapsed_pct": 52
+    "collapsed_pct": 52,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -11156,7 +11742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.9
    },
    "low_confidence": true
   },
@@ -11175,7 +11762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 3,
     "collapsed_words": 795,
-    "collapsed_pct": 83
+    "collapsed_pct": 83,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -11194,7 +11782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 1,
     "collapsed_words": 781,
-    "collapsed_pct": 74
+    "collapsed_pct": 74,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -11213,7 +11802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.2
    },
    "low_confidence": true
   },
@@ -11232,7 +11822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 288,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 4.3
    },
    "low_confidence": false
   },
@@ -11251,7 +11842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -11270,7 +11862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 12.9
    },
    "low_confidence": true
   },
@@ -11289,7 +11882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 347,
-    "collapsed_pct": 67
+    "collapsed_pct": 67,
+    "ari_excl": 6.8
    },
    "low_confidence": false
   },
@@ -11308,7 +11902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.4
    },
    "low_confidence": true
   },
@@ -11327,7 +11922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 1.7
    },
    "low_confidence": true
   },
@@ -11346,7 +11942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 157,
-    "collapsed_pct": 48
+    "collapsed_pct": 48,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -11365,7 +11962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 12,
     "collapsed_words": 191,
-    "collapsed_pct": 93
+    "collapsed_pct": 93,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -11384,7 +11982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.2
    },
    "low_confidence": true
   },
@@ -11403,7 +12002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.8
    },
    "low_confidence": false
   },
@@ -11422,7 +12022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.3
    },
    "low_confidence": true
   },
@@ -11441,7 +12042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -11460,7 +12062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -11479,7 +12082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 158,
-    "collapsed_pct": 92
+    "collapsed_pct": 92,
+    "ari_excl": 8.7
    },
    "low_confidence": false
   },
@@ -11498,7 +12102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 13,
     "collapsed_words": 297,
-    "collapsed_pct": 70
+    "collapsed_pct": 70,
+    "ari_excl": 9.8
    },
    "low_confidence": false
   },
@@ -11517,7 +12122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.1
    },
    "low_confidence": true
   },
@@ -11536,7 +12142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 263,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 9.3
    },
    "low_confidence": false
   },
@@ -11555,7 +12162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 475,
-    "collapsed_pct": 84
+    "collapsed_pct": 84,
+    "ari_excl": 2.5
    },
    "low_confidence": false
   },
@@ -11574,7 +12182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 5,
     "collapsed_words": 836,
-    "collapsed_pct": 76
+    "collapsed_pct": 76,
+    "ari_excl": 5
    },
    "low_confidence": false
   },
@@ -11593,7 +12202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -11612,7 +12222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 25,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 12.2
    },
    "low_confidence": false
   },
@@ -11631,7 +12242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 321,
-    "collapsed_pct": 80
+    "collapsed_pct": 80,
+    "ari_excl": 6.7
    },
    "low_confidence": false
   },
@@ -11650,7 +12262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 13
    },
    "low_confidence": false
   },
@@ -11669,7 +12282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 14,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.7
    },
    "low_confidence": false
   },
@@ -11688,7 +12302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 8,
     "long_pct": 4,
     "collapsed_words": 1597,
-    "collapsed_pct": 82
+    "collapsed_pct": 82,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -11707,7 +12322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 227,
-    "collapsed_pct": 55
+    "collapsed_pct": 55,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -11726,7 +12342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.4
    },
    "low_confidence": true
   },
@@ -11745,7 +12362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 11,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.6
    },
    "low_confidence": true
   },
@@ -11764,7 +12382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 7,
     "collapsed_words": 44,
-    "collapsed_pct": 28
+    "collapsed_pct": 28,
+    "ari_excl": 9.9
    },
    "low_confidence": false
   },
@@ -11783,7 +12402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 2,
     "collapsed_words": 522,
-    "collapsed_pct": 76
+    "collapsed_pct": 76,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -11802,7 +12422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.6
    },
    "low_confidence": true
   },
@@ -11821,7 +12442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.8
    },
    "low_confidence": false
   },
@@ -11840,7 +12462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8
    },
    "low_confidence": false
   },
@@ -11859,7 +12482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.2
    },
    "low_confidence": true
   },
@@ -11878,7 +12502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 178,
-    "collapsed_pct": 70
+    "collapsed_pct": 70,
+    "ari_excl": 6.6
    },
    "low_confidence": false
   },
@@ -11897,7 +12522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 157,
-    "collapsed_pct": 54
+    "collapsed_pct": 54,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -11916,7 +12542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 2,
     "collapsed_words": 637,
-    "collapsed_pct": 88
+    "collapsed_pct": 88,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -11935,7 +12562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 9,
     "long_pct": 4,
     "collapsed_words": 2208,
-    "collapsed_pct": 94
+    "collapsed_pct": 94,
+    "ari_excl": 7.8
    },
    "low_confidence": false
   },
@@ -11954,7 +12582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.6
    },
    "low_confidence": true
   },
@@ -11973,7 +12602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 64,
-    "collapsed_pct": 40
+    "collapsed_pct": 40,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -11992,7 +12622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 13,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7
    },
    "low_confidence": true
   },
@@ -12011,7 +12642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.8
    },
    "low_confidence": true
   },
@@ -12030,7 +12662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8
    },
    "low_confidence": false
   },
@@ -12049,7 +12682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.3
    },
    "low_confidence": true
   },
@@ -12068,7 +12702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 544,
-    "collapsed_pct": 89
+    "collapsed_pct": 89,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -12087,7 +12722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6
    },
    "low_confidence": true
   },
@@ -12106,7 +12742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 3,
     "collapsed_words": 994,
-    "collapsed_pct": 90
+    "collapsed_pct": 90,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -12125,7 +12762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 630,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -12144,7 +12782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.6
    },
    "low_confidence": true
   },
@@ -12163,7 +12802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 523,
-    "collapsed_pct": 66
+    "collapsed_pct": 66,
+    "ari_excl": 7.9
    },
    "low_confidence": false
   },
@@ -12182,7 +12822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 605,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -12201,7 +12842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 32,
-    "collapsed_pct": 18
+    "collapsed_pct": 18,
+    "ari_excl": 4.5
    },
    "low_confidence": false
   },
@@ -12220,7 +12862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 182,
-    "collapsed_pct": 57
+    "collapsed_pct": 57,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -12239,7 +12882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.3
    },
    "low_confidence": true
   },
@@ -12258,7 +12902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 9,
     "collapsed_words": 461,
-    "collapsed_pct": 79
+    "collapsed_pct": 79,
+    "ari_excl": 7.5
    },
    "low_confidence": false
   },
@@ -12277,7 +12922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 59,
-    "collapsed_pct": 36
+    "collapsed_pct": 36,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -12296,7 +12942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 64,
-    "collapsed_pct": 47
+    "collapsed_pct": 47,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -12315,7 +12962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 5,
     "collapsed_words": 820,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 8
    },
    "low_confidence": false
   },
@@ -12334,7 +12982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.6
    },
    "low_confidence": false
   },
@@ -12353,7 +13002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.6
    },
    "low_confidence": true
   },
@@ -12372,7 +13022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.1
    },
    "low_confidence": true
   },
@@ -12391,7 +13042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 197,
-    "collapsed_pct": 58
+    "collapsed_pct": 58,
+    "ari_excl": 8.8
    },
    "low_confidence": false
   },
@@ -12410,7 +13062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 75,
-    "collapsed_pct": 33
+    "collapsed_pct": 33,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -12429,7 +13082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 87,
-    "collapsed_pct": 52
+    "collapsed_pct": 52,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -12448,7 +13102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 11,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.2
    },
    "low_confidence": false
   },
@@ -12467,7 +13122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 2,
     "collapsed_words": 581,
-    "collapsed_pct": 80
+    "collapsed_pct": 80,
+    "ari_excl": 6.7
    },
    "low_confidence": false
   },
@@ -12486,7 +13142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 14,
-    "collapsed_pct": 20
+    "collapsed_pct": 20,
+    "ari_excl": 8.4
    },
    "low_confidence": true
   },
@@ -12505,7 +13162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 11,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.9
    },
    "low_confidence": true
   },
@@ -12524,7 +13182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.2
    },
    "low_confidence": true
   },
@@ -12543,7 +13202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.8
    },
    "low_confidence": false
   },
@@ -12562,7 +13222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 201,
-    "collapsed_pct": 57
+    "collapsed_pct": 57,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -12581,7 +13242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.4
    },
    "low_confidence": true
   },
@@ -12600,7 +13262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 2,
     "collapsed_words": 627,
-    "collapsed_pct": 71
+    "collapsed_pct": 71,
+    "ari_excl": 6.7
    },
    "low_confidence": false
   },
@@ -12619,7 +13282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 231,
-    "collapsed_pct": 72
+    "collapsed_pct": 72,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -12638,7 +13302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 193,
-    "collapsed_pct": 71
+    "collapsed_pct": 71,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -12657,7 +13322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -12676,7 +13342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6
    },
    "low_confidence": true
   },
@@ -12695,7 +13362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.9
    },
    "low_confidence": true
   },
@@ -12714,7 +13382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.4
    },
    "low_confidence": true
   },
@@ -12733,7 +13402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 7,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.1
    },
    "low_confidence": true
   },
@@ -12752,7 +13422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.3
    },
    "low_confidence": true
   },
@@ -12771,7 +13442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 1.7
    },
    "low_confidence": true
   },
@@ -12790,7 +13462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.7
    },
    "low_confidence": true
   },
@@ -12809,7 +13482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 4,
     "collapsed_words": 459,
-    "collapsed_pct": 71
+    "collapsed_pct": 71,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -12828,7 +13502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 11,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.8
    },
    "low_confidence": true
   },
@@ -12847,7 +13522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 11,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.7
    },
    "low_confidence": false
   },
@@ -12866,7 +13542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 4,
     "collapsed_words": 132,
-    "collapsed_pct": 45
+    "collapsed_pct": 45,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -12885,7 +13562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 43,
-    "collapsed_pct": 22
+    "collapsed_pct": 22,
+    "ari_excl": 9.2
    },
    "low_confidence": false
   },
@@ -12904,7 +13582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 4,
     "collapsed_words": 831,
-    "collapsed_pct": 85
+    "collapsed_pct": 85,
+    "ari_excl": 7.9
    },
    "low_confidence": false
   },
@@ -12923,7 +13602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 139,
-    "collapsed_pct": 59
+    "collapsed_pct": 59,
+    "ari_excl": 4.7
    },
    "low_confidence": false
   },
@@ -12942,7 +13622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.2
    },
    "low_confidence": true
   },
@@ -12961,7 +13642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.7
    },
    "low_confidence": true
   },
@@ -12980,7 +13662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 230,
-    "collapsed_pct": 41
+    "collapsed_pct": 41,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -12999,7 +13682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.5
    },
    "low_confidence": true
   },
@@ -13018,7 +13702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 48,
-    "collapsed_pct": 28
+    "collapsed_pct": 28,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -13037,7 +13722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.2
    },
    "low_confidence": true
   },
@@ -13056,7 +13742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -13075,7 +13762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 21,
     "long_pct": 11,
     "collapsed_words": 1937,
-    "collapsed_pct": 92
+    "collapsed_pct": 92,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -13094,7 +13782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.3
    },
    "low_confidence": true
   },
@@ -13113,7 +13802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 7,
     "collapsed_words": 259,
-    "collapsed_pct": 78
+    "collapsed_pct": 78,
+    "ari_excl": 8
    },
    "low_confidence": false
   },
@@ -13132,7 +13822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 8,
     "collapsed_words": 597,
-    "collapsed_pct": 74
+    "collapsed_pct": 74,
+    "ari_excl": 8.2
    },
    "low_confidence": false
   },
@@ -13151,7 +13842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 273,
-    "collapsed_pct": 55
+    "collapsed_pct": 55,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -13170,7 +13862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 4,
     "collapsed_words": 286,
-    "collapsed_pct": 37
+    "collapsed_pct": 37,
+    "ari_excl": 6.7
    },
    "low_confidence": false
   },
@@ -13189,7 +13882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.2
    },
    "low_confidence": true
   },
@@ -13208,7 +13902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 224,
-    "collapsed_pct": 68
+    "collapsed_pct": 68,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -13227,7 +13922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.2
    },
    "low_confidence": true
   },
@@ -13246,7 +13942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 407,
-    "collapsed_pct": 88
+    "collapsed_pct": 88,
+    "ari_excl": 5
    },
    "low_confidence": false
   },
@@ -13265,7 +13962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.7
    },
    "low_confidence": false
   },
@@ -13284,7 +13982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 9,
     "collapsed_words": 402,
-    "collapsed_pct": 74
+    "collapsed_pct": 74,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -13303,7 +14002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 2,
     "collapsed_words": 567,
-    "collapsed_pct": 72
+    "collapsed_pct": 72,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -13322,7 +14022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 322,
-    "collapsed_pct": 63
+    "collapsed_pct": 63,
+    "ari_excl": 3.8
    },
    "low_confidence": false
   },
@@ -13341,7 +14042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -13360,7 +14062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.2
    },
    "low_confidence": true
   },
@@ -13379,7 +14082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.6
    },
    "low_confidence": false
   },
@@ -13398,7 +14102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -13417,7 +14122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 21,
-    "collapsed_pct": 18
+    "collapsed_pct": 18,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -13436,7 +14142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 13.5
    },
    "low_confidence": true
   },
@@ -13455,7 +14162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5
    },
    "low_confidence": false
   },
@@ -13474,7 +14182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.6
    },
    "low_confidence": true
   },
@@ -13493,7 +14202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 6,
     "collapsed_words": 263,
-    "collapsed_pct": 66
+    "collapsed_pct": 66,
+    "ari_excl": 8.3
    },
    "low_confidence": false
   },
@@ -13512,7 +14222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 2,
     "collapsed_words": 494,
-    "collapsed_pct": 79
+    "collapsed_pct": 79,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -13531,7 +14242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 97,
-    "collapsed_pct": 46
+    "collapsed_pct": 46,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -13550,7 +14262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 202,
-    "collapsed_pct": 88
+    "collapsed_pct": 88,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -13569,7 +14282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.2
    },
    "low_confidence": true
   },
@@ -13588,7 +14302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 278,
-    "collapsed_pct": 88
+    "collapsed_pct": 88,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -13607,7 +14322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 64,
-    "collapsed_pct": 22
+    "collapsed_pct": 22,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -13626,7 +14342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -13645,7 +14362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.6
    },
    "low_confidence": true
   },
@@ -13664,7 +14382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 121,
-    "collapsed_pct": 47
+    "collapsed_pct": 47,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -13683,7 +14402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 2.5
    },
    "low_confidence": true
   },
@@ -13702,7 +14422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.6
    },
    "low_confidence": false
   },
@@ -13721,7 +14442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 2,
     "collapsed_words": 348,
-    "collapsed_pct": 78
+    "collapsed_pct": 78,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -13740,7 +14462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 91,
-    "collapsed_pct": 55
+    "collapsed_pct": 55,
+    "ari_excl": 4.8
    },
    "low_confidence": false
   },
@@ -13759,7 +14482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 29,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -13778,7 +14502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 6,
     "collapsed_words": 395,
-    "collapsed_pct": 68
+    "collapsed_pct": 68,
+    "ari_excl": 7.8
    },
    "low_confidence": false
   },
@@ -13797,7 +14522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.5
    },
    "low_confidence": true
   },
@@ -13816,7 +14542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.4
    },
    "low_confidence": true
   },
@@ -13835,7 +14562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.2
    },
    "low_confidence": false
   },
@@ -13854,7 +14582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 85,
-    "collapsed_pct": 53
+    "collapsed_pct": 53,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -13873,7 +14602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": -3.5
    },
    "low_confidence": true
   },
@@ -13892,7 +14622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.6
    },
    "low_confidence": false
   },
@@ -13911,7 +14642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 140,
-    "collapsed_pct": 58
+    "collapsed_pct": 58,
+    "ari_excl": 3.7
    },
    "low_confidence": false
   },
@@ -13930,7 +14662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 239,
-    "collapsed_pct": 70
+    "collapsed_pct": 70,
+    "ari_excl": 3.8
    },
    "low_confidence": false
   },
@@ -13949,7 +14682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.6
    },
    "low_confidence": true
   },
@@ -13968,7 +14702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 237,
-    "collapsed_pct": 80
+    "collapsed_pct": 80,
+    "ari_excl": 7.8
    },
    "low_confidence": false
   },
@@ -13987,7 +14722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 11,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10
    },
    "low_confidence": false
   },
@@ -14006,7 +14742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 11,
     "collapsed_words": 175,
-    "collapsed_pct": 71
+    "collapsed_pct": 71,
+    "ari_excl": 9.1
    },
    "low_confidence": false
   },
@@ -14025,7 +14762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 5,
     "collapsed_words": 235,
-    "collapsed_pct": 75
+    "collapsed_pct": 75,
+    "ari_excl": 3
    },
    "low_confidence": false
   },
@@ -14044,7 +14782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 7,
     "collapsed_words": 615,
-    "collapsed_pct": 85
+    "collapsed_pct": 85,
+    "ari_excl": 7.9
    },
    "low_confidence": false
   },
@@ -14063,7 +14802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 103,
-    "collapsed_pct": 40
+    "collapsed_pct": 40,
+    "ari_excl": 8.3
    },
    "low_confidence": false
   },
@@ -14082,7 +14822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.6
    },
    "low_confidence": true
   },
@@ -14101,7 +14842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.8
    },
    "low_confidence": true
   },
@@ -14120,7 +14862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 64,
-    "collapsed_pct": 45
+    "collapsed_pct": 45,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -14139,7 +14882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.2
    },
    "low_confidence": true
   },
@@ -14158,7 +14902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.2
    },
    "low_confidence": true
   },
@@ -14177,7 +14922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -14196,7 +14942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.3
    },
    "low_confidence": true
   },
@@ -14215,7 +14962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 17,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.1
    },
    "low_confidence": true
   },
@@ -14234,7 +14982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 8,
     "collapsed_words": 146,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -14253,7 +15002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 360,
-    "collapsed_pct": 83
+    "collapsed_pct": 83,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -14272,7 +15022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6
    },
    "low_confidence": true
   },
@@ -14291,7 +15042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 10,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.7
    },
    "low_confidence": false
   },
@@ -14310,7 +15062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 690,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -14329,7 +15082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.4
    },
    "low_confidence": true
   },
@@ -14348,7 +15102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.3
    },
    "low_confidence": true
   },
@@ -14367,7 +15122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6
    },
    "low_confidence": true
   },
@@ -14386,7 +15142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 5,
     "collapsed_words": 304,
-    "collapsed_pct": 61
+    "collapsed_pct": 61,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -14405,7 +15162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 5,
     "collapsed_words": 345,
-    "collapsed_pct": 56
+    "collapsed_pct": 56,
+    "ari_excl": 8
    },
    "low_confidence": false
   },
@@ -14424,7 +15182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 48,
-    "collapsed_pct": 44
+    "collapsed_pct": 44,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -14443,7 +15202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.7
    },
    "low_confidence": false
   },
@@ -14462,7 +15222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.5
    },
    "low_confidence": true
   },
@@ -14481,7 +15242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 166,
-    "collapsed_pct": 70
+    "collapsed_pct": 70,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -14500,7 +15262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 423,
-    "collapsed_pct": 77
+    "collapsed_pct": 77,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -14519,7 +15282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 7,
     "collapsed_words": 726,
-    "collapsed_pct": 91
+    "collapsed_pct": 91,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -14538,7 +15302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 295,
-    "collapsed_pct": 74
+    "collapsed_pct": 74,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -14557,7 +15322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 85,
-    "collapsed_pct": 49
+    "collapsed_pct": 49,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -14576,7 +15342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.1
    },
    "low_confidence": true
   },
@@ -14595,7 +15362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 16,
-    "collapsed_pct": 13
+    "collapsed_pct": 13,
+    "ari_excl": 4.3
    },
    "low_confidence": false
   },
@@ -14614,7 +15382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 15,
     "collapsed_words": 166,
-    "collapsed_pct": 69
+    "collapsed_pct": 69,
+    "ari_excl": 8.1
    },
    "low_confidence": false
   },
@@ -14633,7 +15402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.7
    },
    "low_confidence": false
   },
@@ -14652,7 +15422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 2,
     "collapsed_words": 994,
-    "collapsed_pct": 94
+    "collapsed_pct": 94,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -14671,7 +15442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 13,
     "collapsed_words": 113,
-    "collapsed_pct": 29
+    "collapsed_pct": 29,
+    "ari_excl": 7.5
    },
    "low_confidence": false
   },
@@ -14690,7 +15462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 218,
-    "collapsed_pct": 76
+    "collapsed_pct": 76,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -14709,7 +15482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.5
    },
    "low_confidence": false
   },
@@ -14728,7 +15502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.6
    },
    "low_confidence": true
   },
@@ -14747,7 +15522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 10,
     "collapsed_words": 156,
-    "collapsed_pct": 95
+    "collapsed_pct": 95,
+    "ari_excl": 4.7
    },
    "low_confidence": false
   },
@@ -14766,7 +15542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 0.9
    },
    "low_confidence": true
   },
@@ -14785,7 +15562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 150,
-    "collapsed_pct": 50
+    "collapsed_pct": 50,
+    "ari_excl": 8.3
    },
    "low_confidence": false
   },
@@ -14804,7 +15582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 11,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.7
    },
    "low_confidence": true
   },
@@ -14823,7 +15602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 295,
-    "collapsed_pct": 67
+    "collapsed_pct": 67,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -14842,7 +15622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.2
    },
    "low_confidence": true
   },
@@ -14861,7 +15642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 25,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.3
    },
    "low_confidence": true
   },
@@ -14880,7 +15662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.7
    },
    "low_confidence": true
   },
@@ -14899,7 +15682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 9,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.8
    },
    "low_confidence": true
   },
@@ -14918,7 +15702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 29,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 12.4
    },
    "low_confidence": false
   },
@@ -14937,7 +15722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.2
    },
    "low_confidence": true
   },
@@ -14956,7 +15742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.9
    },
    "low_confidence": true
   },
@@ -14975,7 +15762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 439,
-    "collapsed_pct": 77
+    "collapsed_pct": 77,
+    "ari_excl": 4.8
    },
    "low_confidence": false
   },
@@ -14994,7 +15782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 157,
-    "collapsed_pct": 50
+    "collapsed_pct": 50,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -15013,7 +15802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.7
    },
    "low_confidence": true
   },
@@ -15032,7 +15822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 157,
-    "collapsed_pct": 46
+    "collapsed_pct": 46,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -15051,7 +15842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.6
    },
    "low_confidence": true
   },
@@ -15070,7 +15862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 157,
-    "collapsed_pct": 56
+    "collapsed_pct": 56,
+    "ari_excl": 4.4
    },
    "low_confidence": false
   },
@@ -15089,7 +15882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 430,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -15108,7 +15902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 157,
-    "collapsed_pct": 51
+    "collapsed_pct": 51,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -15127,7 +15922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.7
    },
    "low_confidence": true
   },
@@ -15146,7 +15942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 11,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.3
    },
    "low_confidence": true
   },
@@ -15165,7 +15962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 64,
-    "collapsed_pct": 37
+    "collapsed_pct": 37,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -15184,7 +15982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 2,
     "collapsed_words": 724,
-    "collapsed_pct": 85
+    "collapsed_pct": 85,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -15203,7 +16002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.2
    },
    "low_confidence": false
   },
@@ -15222,7 +16022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 64,
-    "collapsed_pct": 41
+    "collapsed_pct": 41,
+    "ari_excl": 4.5
    },
    "low_confidence": false
   },
@@ -15241,7 +16042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.5
    },
    "low_confidence": true
   },
@@ -15260,7 +16062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 2.3
    },
    "low_confidence": true
   },
@@ -15279,7 +16082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 18,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.6
    },
    "low_confidence": false
   },
@@ -15298,7 +16102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.8
    },
    "low_confidence": true
   },
@@ -15317,7 +16122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 8,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.2
    },
    "low_confidence": false
   },
@@ -15336,7 +16142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 7,
     "collapsed_words": 257,
-    "collapsed_pct": 69
+    "collapsed_pct": 69,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -15355,7 +16162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 207,
-    "collapsed_pct": 54
+    "collapsed_pct": 54,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -15374,7 +16182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 40,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.8
    },
    "low_confidence": true
   },
@@ -15393,7 +16202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 4,
     "collapsed_words": 262,
-    "collapsed_pct": 66
+    "collapsed_pct": 66,
+    "ari_excl": 8
    },
    "low_confidence": false
   },
@@ -15412,7 +16222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 32,
-    "collapsed_pct": 15
+    "collapsed_pct": 15,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -15431,7 +16242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 6,
     "collapsed_words": 64,
-    "collapsed_pct": 22
+    "collapsed_pct": 22,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -15450,7 +16262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 9,
     "long_pct": 10,
     "collapsed_words": 812,
-    "collapsed_pct": 85
+    "collapsed_pct": 85,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -15469,7 +16282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.1
    },
    "low_confidence": true
   },
@@ -15488,7 +16302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 3,
     "collapsed_words": 807,
-    "collapsed_pct": 74
+    "collapsed_pct": 74,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -15507,7 +16322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -15526,7 +16342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.1
    },
    "low_confidence": true
   },
@@ -15545,7 +16362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 5,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.6
    },
    "low_confidence": false
   },
@@ -15564,7 +16382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.8
    },
    "low_confidence": true
   },
@@ -15583,7 +16402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 239,
-    "collapsed_pct": 52
+    "collapsed_pct": 52,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -15602,7 +16422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 1.5
    },
    "low_confidence": true
   },
@@ -15621,7 +16442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 126,
-    "collapsed_pct": 58
+    "collapsed_pct": 58,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -15640,7 +16462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.7
    },
    "low_confidence": false
   },
@@ -15659,7 +16482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.3
    },
    "low_confidence": true
   },
@@ -15678,7 +16502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 4,
     "collapsed_words": 1079,
-    "collapsed_pct": 85
+    "collapsed_pct": 85,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -15697,7 +16522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 41,
-    "collapsed_pct": 18
+    "collapsed_pct": 18,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -15716,7 +16542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.7
    },
    "low_confidence": false
   },
@@ -15735,7 +16562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.9
    },
    "low_confidence": true
   },
@@ -15754,7 +16582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 354,
-    "collapsed_pct": 81
+    "collapsed_pct": 81,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -15773,7 +16602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.3
    },
    "low_confidence": true
   },
@@ -15792,7 +16622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -15811,7 +16642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 13,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -15830,7 +16662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.8
    },
    "low_confidence": true
   },
@@ -15849,7 +16682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -15868,7 +16702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 5,
     "collapsed_words": 142,
-    "collapsed_pct": 59
+    "collapsed_pct": 59,
+    "ari_excl": 10.8
    },
    "low_confidence": false
   },
@@ -15887,7 +16722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.4
    },
    "low_confidence": true
   },
@@ -15906,7 +16742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -15925,7 +16762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.7
    },
    "low_confidence": false
   },
@@ -15944,7 +16782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.2
    },
    "low_confidence": false
   },
@@ -15963,7 +16802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.5
    },
    "low_confidence": true
   },
@@ -15982,7 +16822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": -0.2
    },
    "low_confidence": true
   },
@@ -16001,7 +16842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 203,
-    "collapsed_pct": 77
+    "collapsed_pct": 77,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -16020,7 +16862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 104,
-    "collapsed_pct": 52
+    "collapsed_pct": 52,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -16039,7 +16882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 10,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11
    },
    "low_confidence": true
   },
@@ -16058,7 +16902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.5
    },
    "low_confidence": true
   },
@@ -16077,7 +16922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 20,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.1
    },
    "low_confidence": true
   },
@@ -16096,7 +16942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 10,
     "collapsed_words": 277,
-    "collapsed_pct": 72
+    "collapsed_pct": 72,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -16115,7 +16962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.9
    },
    "low_confidence": true
   },
@@ -16134,7 +16982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.3
    },
    "low_confidence": true
   },
@@ -16153,7 +17002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 20,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.1
    },
    "low_confidence": true
   },
@@ -16172,7 +17022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.7
    },
    "low_confidence": true
   },
@@ -16191,7 +17042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 8,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10
    },
    "low_confidence": false
   },
@@ -16210,7 +17062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9
    },
    "low_confidence": true
   },
@@ -16229,7 +17082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 203,
-    "collapsed_pct": 66
+    "collapsed_pct": 66,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -16248,7 +17102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.4
    },
    "low_confidence": true
   },
@@ -16267,7 +17122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 12,
     "collapsed_words": 149,
-    "collapsed_pct": 58
+    "collapsed_pct": 58,
+    "ari_excl": 9.1
    },
    "low_confidence": false
   },
@@ -16286,7 +17142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 25,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.5
    },
    "low_confidence": true
   },
@@ -16305,7 +17162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 1.5
    },
    "low_confidence": true
   },
@@ -16324,7 +17182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 8,
     "collapsed_words": 119,
-    "collapsed_pct": 59
+    "collapsed_pct": 59,
+    "ari_excl": 4.8
    },
    "low_confidence": false
   },
@@ -16343,7 +17202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 11,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.7
    },
    "low_confidence": false
   },
@@ -16362,7 +17222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 2,
     "collapsed_words": 1091,
-    "collapsed_pct": 93
+    "collapsed_pct": 93,
+    "ari_excl": 8.4
    },
    "low_confidence": false
   },
@@ -16381,7 +17242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8
    },
    "low_confidence": false
   },
@@ -16400,7 +17262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 202,
-    "collapsed_pct": 61
+    "collapsed_pct": 61,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -16419,7 +17282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 398,
-    "collapsed_pct": 76
+    "collapsed_pct": 76,
+    "ari_excl": 7.5
    },
    "low_confidence": false
   },
@@ -16438,7 +17302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 350,
-    "collapsed_pct": 75
+    "collapsed_pct": 75,
+    "ari_excl": 7.9
    },
    "low_confidence": false
   },
@@ -16457,7 +17322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11
    },
    "low_confidence": true
   },
@@ -16476,7 +17342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 8,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.4
    },
    "low_confidence": false
   },
@@ -16495,7 +17362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 55,
-    "collapsed_pct": 35
+    "collapsed_pct": 35,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -16514,7 +17382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 483,
-    "collapsed_pct": 93
+    "collapsed_pct": 93,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -16533,7 +17402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.4
    },
    "low_confidence": true
   },
@@ -16552,7 +17422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.1
    },
    "low_confidence": true
   },
@@ -16571,7 +17442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 271,
-    "collapsed_pct": 75
+    "collapsed_pct": 75,
+    "ari_excl": 4.8
    },
    "low_confidence": false
   },
@@ -16590,7 +17462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 443,
-    "collapsed_pct": 68
+    "collapsed_pct": 68,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -16609,7 +17482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 4,
     "collapsed_words": 253,
-    "collapsed_pct": 53
+    "collapsed_pct": 53,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -16628,7 +17502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 5,
     "collapsed_words": 416,
-    "collapsed_pct": 80
+    "collapsed_pct": 80,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -16647,7 +17522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 6,
     "collapsed_words": 283,
-    "collapsed_pct": 74
+    "collapsed_pct": 74,
+    "ari_excl": 8
    },
    "low_confidence": false
   },
@@ -16666,7 +17542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 7,
     "collapsed_words": 800,
-    "collapsed_pct": 73
+    "collapsed_pct": 73,
+    "ari_excl": 9
    },
    "low_confidence": false
   },
@@ -16685,7 +17562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7
    },
    "low_confidence": true
   },
@@ -16704,7 +17582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 64,
-    "collapsed_pct": 41
+    "collapsed_pct": 41,
+    "ari_excl": 5
    },
    "low_confidence": false
   },
@@ -16723,7 +17602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 562,
-    "collapsed_pct": 96
+    "collapsed_pct": 96,
+    "ari_excl": 4.5
    },
    "low_confidence": false
   },
@@ -16742,7 +17622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.7
    },
    "low_confidence": true
   },
@@ -16761,7 +17642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 9,
     "long_pct": 8,
     "collapsed_words": 1007,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -16780,7 +17662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 17,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.5
    },
    "low_confidence": false
   },
@@ -16799,7 +17682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.5
    },
    "low_confidence": true
   },
@@ -16818,7 +17702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 282,
-    "collapsed_pct": 89
+    "collapsed_pct": 89,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -16837,7 +17722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 159,
-    "collapsed_pct": 85
+    "collapsed_pct": 85,
+    "ari_excl": 8
    },
    "low_confidence": false
   },
@@ -16856,7 +17742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.8
    },
    "low_confidence": true
   },
@@ -16875,7 +17762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.1
    },
    "low_confidence": false
   },
@@ -16894,7 +17782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 155,
-    "collapsed_pct": 72
+    "collapsed_pct": 72,
+    "ari_excl": 7.8
    },
    "low_confidence": false
   },
@@ -16913,7 +17802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 307,
-    "collapsed_pct": 72
+    "collapsed_pct": 72,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -16932,7 +17822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.2
    },
    "low_confidence": true
   },
@@ -16951,7 +17842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 4,
     "collapsed_words": 378,
-    "collapsed_pct": 72
+    "collapsed_pct": 72,
+    "ari_excl": 6.6
    },
    "low_confidence": false
   },
@@ -16970,7 +17862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.5
    },
    "low_confidence": true
   },
@@ -16989,7 +17882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 2.6
    },
    "low_confidence": true
   },
@@ -17008,7 +17902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 325,
-    "collapsed_pct": 71
+    "collapsed_pct": 71,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -17027,7 +17922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 168,
-    "collapsed_pct": 50
+    "collapsed_pct": 50,
+    "ari_excl": 3.8
    },
    "low_confidence": false
   },
@@ -17046,7 +17942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 269,
-    "collapsed_pct": 81
+    "collapsed_pct": 81,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -17065,7 +17962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.6
    },
    "low_confidence": true
   },
@@ -17084,7 +17982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 10,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.4
    },
    "low_confidence": true
   },
@@ -17103,7 +18002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 8,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.4
    },
    "low_confidence": true
   },
@@ -17122,7 +18022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 4,
     "collapsed_words": 446,
-    "collapsed_pct": 96
+    "collapsed_pct": 96,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -17141,7 +18042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 353,
-    "collapsed_pct": 78
+    "collapsed_pct": 78,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -17160,7 +18062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 240,
-    "collapsed_pct": 81
+    "collapsed_pct": 81,
+    "ari_excl": 4.5
    },
    "low_confidence": false
   },
@@ -17179,7 +18082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 5,
     "collapsed_words": 157,
-    "collapsed_pct": 39
+    "collapsed_pct": 39,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -17198,7 +18102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 157,
-    "collapsed_pct": 39
+    "collapsed_pct": 39,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -17217,7 +18122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 3,
     "collapsed_words": 792,
-    "collapsed_pct": 75
+    "collapsed_pct": 75,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -17236,7 +18142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 125,
-    "collapsed_pct": 70
+    "collapsed_pct": 70,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -17255,7 +18162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.7
    },
    "low_confidence": true
   },
@@ -17274,7 +18182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.1
    },
    "low_confidence": true
   },
@@ -17293,7 +18202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.9
    },
    "low_confidence": true
   },
@@ -17312,7 +18222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 264,
-    "collapsed_pct": 90
+    "collapsed_pct": 90,
+    "ari_excl": 8.2
    },
    "low_confidence": false
   },
@@ -17331,7 +18242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.3
    },
    "low_confidence": false
   },
@@ -17350,7 +18262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 34,
-    "collapsed_pct": 21
+    "collapsed_pct": 21,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -17369,7 +18282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 9,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.6
    },
    "low_confidence": false
   },
@@ -17388,7 +18302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 7,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -17407,7 +18322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 226,
-    "collapsed_pct": 64
+    "collapsed_pct": 64,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -17426,7 +18342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 4,
     "collapsed_words": 560,
-    "collapsed_pct": 76
+    "collapsed_pct": 76,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -17445,7 +18362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 8,
     "collapsed_words": 574,
-    "collapsed_pct": 70
+    "collapsed_pct": 70,
+    "ari_excl": 6.6
    },
    "low_confidence": false
   },
@@ -17464,7 +18382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 6,
     "collapsed_words": 449,
-    "collapsed_pct": 77
+    "collapsed_pct": 77,
+    "ari_excl": 7.9
    },
    "low_confidence": false
   },
@@ -17483,7 +18402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 265,
-    "collapsed_pct": 70
+    "collapsed_pct": 70,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -17502,7 +18422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 13,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -17521,7 +18442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.1
    },
    "low_confidence": false
   },
@@ -17540,7 +18462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 335,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 6.7
    },
    "low_confidence": false
   },
@@ -17559,7 +18482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -17578,7 +18502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 3,
     "collapsed_words": 1349,
-    "collapsed_pct": 83
+    "collapsed_pct": 83,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -17597,7 +18522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 10,
     "collapsed_words": 45,
-    "collapsed_pct": 27
+    "collapsed_pct": 27,
+    "ari_excl": 8.2
    },
    "low_confidence": false
   },
@@ -17616,7 +18542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.9
    },
    "low_confidence": false
   },
@@ -17635,7 +18562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 5,
     "collapsed_words": 324,
-    "collapsed_pct": 60
+    "collapsed_pct": 60,
+    "ari_excl": 8.2
    },
    "low_confidence": false
   },
@@ -17654,7 +18582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 25,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.1
    },
    "low_confidence": true
   },
@@ -17673,7 +18602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 157,
-    "collapsed_pct": 52
+    "collapsed_pct": 52,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -17692,7 +18622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 605,
-    "collapsed_pct": 93
+    "collapsed_pct": 93,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -17711,7 +18642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 627,
-    "collapsed_pct": 91
+    "collapsed_pct": 91,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -17730,7 +18662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 148,
-    "collapsed_pct": 54
+    "collapsed_pct": 54,
+    "ari_excl": 3.6
    },
    "low_confidence": false
   },
@@ -17749,7 +18682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 13,
     "collapsed_words": 271,
-    "collapsed_pct": 83
+    "collapsed_pct": 83,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -17768,7 +18702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.6
    },
    "low_confidence": true
   },
@@ -17787,7 +18722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 295,
-    "collapsed_pct": 82
+    "collapsed_pct": 82,
+    "ari_excl": 5
    },
    "low_confidence": false
   },
@@ -17806,7 +18742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 9,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -17825,7 +18762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 8,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.6
    },
    "low_confidence": true
   },
@@ -17844,7 +18782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 146,
-    "collapsed_pct": 50
+    "collapsed_pct": 50,
+    "ari_excl": 6.7
    },
    "low_confidence": false
   },
@@ -17863,7 +18802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 6,
     "collapsed_words": 587,
-    "collapsed_pct": 79
+    "collapsed_pct": 79,
+    "ari_excl": 6.8
    },
    "low_confidence": false
   },
@@ -17882,7 +18822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 605,
-    "collapsed_pct": 85
+    "collapsed_pct": 85,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -17901,7 +18842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 5,
     "collapsed_words": 634,
-    "collapsed_pct": 84
+    "collapsed_pct": 84,
+    "ari_excl": 4.2
    },
    "low_confidence": false
   },
@@ -17920,7 +18862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.7
    },
    "low_confidence": false
   },
@@ -17939,7 +18882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 515,
-    "collapsed_pct": 75
+    "collapsed_pct": 75,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -17958,7 +18902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.5
    },
    "low_confidence": false
   },
@@ -17977,7 +18922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 10,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.3
    },
    "low_confidence": false
   },
@@ -17996,7 +18942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 11,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.6
    },
    "low_confidence": false
   },
@@ -18015,7 +18962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 343,
-    "collapsed_pct": 66
+    "collapsed_pct": 66,
+    "ari_excl": 8.2
    },
    "low_confidence": false
   },
@@ -18034,7 +18982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -18053,7 +19002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -18072,7 +19022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -18091,7 +19042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 7,
     "collapsed_words": 384,
-    "collapsed_pct": 73
+    "collapsed_pct": 73,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -18110,7 +19062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8
    },
    "low_confidence": true
   },
@@ -18129,7 +19082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 843,
-    "collapsed_pct": 84
+    "collapsed_pct": 84,
+    "ari_excl": 8.1
    },
    "low_confidence": false
   },
@@ -18148,7 +19102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 4,
     "collapsed_words": 551,
-    "collapsed_pct": 68
+    "collapsed_pct": 68,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -18167,7 +19122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 7,
     "long_pct": 11,
     "collapsed_words": 558,
-    "collapsed_pct": 84
+    "collapsed_pct": 84,
+    "ari_excl": 7.8
    },
    "low_confidence": false
   },
@@ -18186,7 +19142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 8,
     "long_pct": 9,
     "collapsed_words": 881,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 6.7
    },
    "low_confidence": false
   },
@@ -18205,7 +19162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -18224,7 +19182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 9,
     "long_pct": 12,
     "collapsed_words": 794,
-    "collapsed_pct": 85
+    "collapsed_pct": 85,
+    "ari_excl": 9.5
    },
    "low_confidence": false
   },
@@ -18243,7 +19202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 379,
-    "collapsed_pct": 69
+    "collapsed_pct": 69,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -18262,7 +19222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 7,
     "collapsed_words": 284,
-    "collapsed_pct": 92
+    "collapsed_pct": 92,
+    "ari_excl": 8.2
    },
    "low_confidence": false
   },
@@ -18281,7 +19242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.6
    },
    "low_confidence": true
   },
@@ -18300,7 +19262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4
    },
    "low_confidence": true
   },
@@ -18319,7 +19282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 129,
-    "collapsed_pct": 79
+    "collapsed_pct": 79,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -18338,7 +19302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 93,
-    "collapsed_pct": 52
+    "collapsed_pct": 52,
+    "ari_excl": 9
    },
    "low_confidence": false
   },
@@ -18357,7 +19322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.6
    },
    "low_confidence": true
   },
@@ -18376,7 +19342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 3,
     "collapsed_words": 1076,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -18395,7 +19362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 4,
     "collapsed_words": 1193,
-    "collapsed_pct": 92
+    "collapsed_pct": 92,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -18414,7 +19382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 11,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.6
    },
    "low_confidence": false
   },
@@ -18433,7 +19402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 221,
-    "collapsed_pct": 74
+    "collapsed_pct": 74,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -18452,7 +19422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 11,
     "collapsed_words": 364,
-    "collapsed_pct": 78
+    "collapsed_pct": 78,
+    "ari_excl": 8.3
    },
    "low_confidence": false
   },
@@ -18471,7 +19442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 583,
-    "collapsed_pct": 72
+    "collapsed_pct": 72,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -18490,7 +19462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 4,
     "collapsed_words": 934,
-    "collapsed_pct": 88
+    "collapsed_pct": 88,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -18509,7 +19482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 10,
     "long_pct": 11,
     "collapsed_words": 739,
-    "collapsed_pct": 74
+    "collapsed_pct": 74,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -18528,7 +19502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 10,
     "long_pct": 8,
     "collapsed_words": 1109,
-    "collapsed_pct": 75
+    "collapsed_pct": 75,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -18547,7 +19522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 7,
     "long_pct": 5,
     "collapsed_words": 1425,
-    "collapsed_pct": 88
+    "collapsed_pct": 88,
+    "ari_excl": 8
    },
    "low_confidence": false
   },
@@ -18566,7 +19542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 452,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -18585,7 +19562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 4,
     "collapsed_words": 520,
-    "collapsed_pct": 74
+    "collapsed_pct": 74,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -18604,7 +19582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 20,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.7
    },
    "low_confidence": false
   },
@@ -18623,7 +19602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 5,
     "collapsed_words": 1204,
-    "collapsed_pct": 92
+    "collapsed_pct": 92,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -18642,7 +19622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 8,
     "long_pct": 5,
     "collapsed_words": 1162,
-    "collapsed_pct": 85
+    "collapsed_pct": 85,
+    "ari_excl": 8.4
    },
    "low_confidence": false
   },
@@ -18661,7 +19642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 7,
     "collapsed_words": 201,
-    "collapsed_pct": 61
+    "collapsed_pct": 61,
+    "ari_excl": 9
    },
    "low_confidence": false
   },
@@ -18680,7 +19662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 75,
-    "collapsed_pct": 36
+    "collapsed_pct": 36,
+    "ari_excl": 8.7
    },
    "low_confidence": false
   },
@@ -18699,7 +19682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 67,
-    "collapsed_pct": 37
+    "collapsed_pct": 37,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -18718,7 +19702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -18737,7 +19722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.7
    },
    "low_confidence": true
   },
@@ -18756,7 +19742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 150,
-    "collapsed_pct": 55
+    "collapsed_pct": 55,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -18775,7 +19762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 523,
-    "collapsed_pct": 71
+    "collapsed_pct": 71,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -18794,7 +19782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 7,
     "long_pct": 19,
     "collapsed_words": 442,
-    "collapsed_pct": 82
+    "collapsed_pct": 82,
+    "ari_excl": 8.5
    },
    "low_confidence": false
   },
@@ -18813,7 +19802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 6,
     "collapsed_words": 803,
-    "collapsed_pct": 88
+    "collapsed_pct": 88,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -18832,7 +19822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 11,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.4
    },
    "low_confidence": true
   },
@@ -18851,7 +19842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 5,
     "collapsed_words": 666,
-    "collapsed_pct": 78
+    "collapsed_pct": 78,
+    "ari_excl": 8.8
    },
    "low_confidence": false
   },
@@ -18870,7 +19862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 89,
-    "collapsed_pct": 32
+    "collapsed_pct": 32,
+    "ari_excl": 9.5
    },
    "low_confidence": false
   },
@@ -18889,7 +19882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 7,
     "collapsed_words": 633,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -18908,7 +19902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 34,
-    "collapsed_pct": 31
+    "collapsed_pct": 31,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -18927,7 +19922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 64,
-    "collapsed_pct": 37
+    "collapsed_pct": 37,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -18946,7 +19942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 8,
     "long_pct": 7,
     "collapsed_words": 1320,
-    "collapsed_pct": 89
+    "collapsed_pct": 89,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -18965,7 +19962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 2,
     "collapsed_words": 1205,
-    "collapsed_pct": 92
+    "collapsed_pct": 92,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -18984,7 +19982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 202,
-    "collapsed_pct": 73
+    "collapsed_pct": 73,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -19003,7 +20002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -19022,7 +20022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 4,
     "collapsed_words": 620,
-    "collapsed_pct": 89
+    "collapsed_pct": 89,
+    "ari_excl": 8.1
    },
    "low_confidence": false
   },
@@ -19041,7 +20042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.7
    },
    "low_confidence": true
   },
@@ -19060,7 +20062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 615,
-    "collapsed_pct": 78
+    "collapsed_pct": 78,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -19079,7 +20082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 615,
-    "collapsed_pct": 78
+    "collapsed_pct": 78,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -19098,7 +20102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.1
    },
    "low_confidence": true
   },
@@ -19117,7 +20122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -19136,7 +20142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 2,
     "collapsed_words": 526,
-    "collapsed_pct": 83
+    "collapsed_pct": 83,
+    "ari_excl": 4.3
    },
    "low_confidence": false
   },
@@ -19155,7 +20162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 144,
-    "collapsed_pct": 79
+    "collapsed_pct": 79,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -19174,7 +20182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 201,
-    "collapsed_pct": 60
+    "collapsed_pct": 60,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -19193,7 +20202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 45,
-    "collapsed_pct": 30
+    "collapsed_pct": 30,
+    "ari_excl": 12.4
    },
    "low_confidence": false
   },
@@ -19212,7 +20222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 9,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.6
    },
    "low_confidence": true
   },
@@ -19231,7 +20242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 1.4
    },
    "low_confidence": true
   },
@@ -19250,7 +20262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.6
    },
    "low_confidence": true
   },
@@ -19269,7 +20282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 11,
     "collapsed_words": 336,
-    "collapsed_pct": 95
+    "collapsed_pct": 95,
+    "ari_excl": 8.4
    },
    "low_confidence": false
   },
@@ -19288,7 +20302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 107,
-    "collapsed_pct": 49
+    "collapsed_pct": 49,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -19307,7 +20322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 2.7
    },
    "low_confidence": true
   },
@@ -19326,7 +20342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.6
    },
    "low_confidence": true
   },
@@ -19345,7 +20362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 159,
-    "collapsed_pct": 70
+    "collapsed_pct": 70,
+    "ari_excl": 7.8
    },
    "low_confidence": false
   },
@@ -19364,7 +20382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 4,
     "collapsed_words": 220,
-    "collapsed_pct": 49
+    "collapsed_pct": 49,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -19383,7 +20402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 6,
     "collapsed_words": 457,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 8
    },
    "low_confidence": false
   },
@@ -19402,7 +20422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.8
    },
    "low_confidence": true
   },
@@ -19421,7 +20442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -19440,7 +20462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.4
    },
    "low_confidence": true
   },
@@ -19459,7 +20482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 29,
-    "collapsed_pct": 30
+    "collapsed_pct": 30,
+    "ari_excl": 8.8
    },
    "low_confidence": true
   },
@@ -19478,7 +20502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.8
    },
    "low_confidence": true
   },
@@ -19497,7 +20522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -19516,7 +20542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.2
    },
    "low_confidence": true
   },
@@ -19535,7 +20562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.4
    },
    "low_confidence": true
   },
@@ -19554,7 +20582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 4,
     "collapsed_words": 1046,
-    "collapsed_pct": 95
+    "collapsed_pct": 95,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -19573,7 +20602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 1,
     "collapsed_words": 997,
-    "collapsed_pct": 95
+    "collapsed_pct": 95,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -19592,7 +20622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 222,
-    "collapsed_pct": 83
+    "collapsed_pct": 83,
+    "ari_excl": 9.1
    },
    "low_confidence": false
   },
@@ -19611,7 +20642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.8
    },
    "low_confidence": true
   },
@@ -19630,7 +20662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 10,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.4
    },
    "low_confidence": false
   },
@@ -19649,7 +20682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 129,
-    "collapsed_pct": 58
+    "collapsed_pct": 58,
+    "ari_excl": 4.8
    },
    "low_confidence": false
   },
@@ -19668,7 +20702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 7,
     "collapsed_words": 813,
-    "collapsed_pct": 97
+    "collapsed_pct": 97,
+    "ari_excl": 7.7
    },
    "low_confidence": false
   },
@@ -19687,7 +20722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 17,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.4
    },
    "low_confidence": true
   },
@@ -19706,7 +20742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.5
    },
    "low_confidence": true
   },
@@ -19725,7 +20762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.1
    },
    "low_confidence": false
   },
@@ -19744,7 +20782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 600,
-    "collapsed_pct": 83
+    "collapsed_pct": 83,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -19763,7 +20802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -19782,7 +20822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 10,
     "collapsed_words": 48,
-    "collapsed_pct": 49
+    "collapsed_pct": 49,
+    "ari_excl": 6.2
    },
    "low_confidence": true
   },
@@ -19801,7 +20842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 58,
-    "collapsed_pct": 41
+    "collapsed_pct": 41,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -19820,7 +20862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 139,
-    "collapsed_pct": 89
+    "collapsed_pct": 89,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -19839,7 +20882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 17,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.9
    },
    "low_confidence": true
   },
@@ -19858,7 +20902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 11,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.8
    },
    "low_confidence": true
   },
@@ -19877,7 +20922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 13,
     "collapsed_words": 86,
-    "collapsed_pct": 44
+    "collapsed_pct": 44,
+    "ari_excl": 9.3
    },
    "low_confidence": false
   },
@@ -19896,7 +20942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 157,
-    "collapsed_pct": 43
+    "collapsed_pct": 43,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -19915,7 +20962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 69,
-    "collapsed_pct": 67
+    "collapsed_pct": 67,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -19934,7 +20982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 157,
-    "collapsed_pct": 50
+    "collapsed_pct": 50,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -19953,7 +21002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 8,
     "collapsed_words": 826,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -19972,7 +21022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 305,
-    "collapsed_pct": 80
+    "collapsed_pct": 80,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -19991,7 +21042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 4,
     "collapsed_words": 415,
-    "collapsed_pct": 69
+    "collapsed_pct": 69,
+    "ari_excl": 8.3
    },
    "low_confidence": false
   },
@@ -20010,7 +21062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 140,
-    "collapsed_pct": 82
+    "collapsed_pct": 82,
+    "ari_excl": 6.6
    },
    "low_confidence": false
   },
@@ -20029,7 +21082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 342,
-    "collapsed_pct": 77
+    "collapsed_pct": 77,
+    "ari_excl": 8.5
    },
    "low_confidence": false
   },
@@ -20048,7 +21102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 11,
     "collapsed_words": 80,
-    "collapsed_pct": 46
+    "collapsed_pct": 46,
+    "ari_excl": 8.4
    },
    "low_confidence": false
   },
@@ -20067,7 +21122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 11,
     "collapsed_words": 425,
-    "collapsed_pct": 64
+    "collapsed_pct": 64,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -20086,7 +21142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.7
    },
    "low_confidence": false
   },
@@ -20105,7 +21162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8
    },
    "low_confidence": false
   },
@@ -20124,7 +21182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 75,
-    "collapsed_pct": 60
+    "collapsed_pct": 60,
+    "ari_excl": 4.8
    },
    "low_confidence": false
   },
@@ -20143,7 +21202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 552,
-    "collapsed_pct": 90
+    "collapsed_pct": 90,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -20162,7 +21222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -20181,7 +21242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -20200,7 +21262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 118,
-    "collapsed_pct": 52
+    "collapsed_pct": 52,
+    "ari_excl": 4.2
    },
    "low_confidence": false
   },
@@ -20219,7 +21282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.1
    },
    "low_confidence": true
   },
@@ -20238,7 +21302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.3
    },
    "low_confidence": true
   },
@@ -20257,7 +21322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 9,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -20276,7 +21342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 9,
     "collapsed_words": 401,
-    "collapsed_pct": 92
+    "collapsed_pct": 92,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -20295,7 +21362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 373,
-    "collapsed_pct": 82
+    "collapsed_pct": 82,
+    "ari_excl": 4.3
    },
    "low_confidence": false
   },
@@ -20314,7 +21382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 13,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.9
    },
    "low_confidence": true
   },
@@ -20333,7 +21402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 28,
     "long_pct": 11,
     "collapsed_words": 2859,
-    "collapsed_pct": 93
+    "collapsed_pct": 93,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -20352,7 +21422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5
    },
    "low_confidence": true
   },
@@ -20371,7 +21442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 148,
-    "collapsed_pct": 49
+    "collapsed_pct": 49,
+    "ari_excl": 6.8
    },
    "low_confidence": false
   },
@@ -20390,7 +21462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -20409,7 +21482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 9,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.4
    },
    "low_confidence": false
   },
@@ -20428,7 +21502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 106,
-    "collapsed_pct": 48
+    "collapsed_pct": 48,
+    "ari_excl": 6.6
    },
    "low_confidence": false
   },
@@ -20447,7 +21522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 6,
     "collapsed_words": 405,
-    "collapsed_pct": 83
+    "collapsed_pct": 83,
+    "ari_excl": 4.3
    },
    "low_confidence": false
   },
@@ -20466,7 +21542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 429,
-    "collapsed_pct": 68
+    "collapsed_pct": 68,
+    "ari_excl": 7.7
    },
    "low_confidence": false
   },
@@ -20485,7 +21562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 271,
-    "collapsed_pct": 76
+    "collapsed_pct": 76,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -20504,7 +21582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 152,
-    "collapsed_pct": 73
+    "collapsed_pct": 73,
+    "ari_excl": 7.5
    },
    "low_confidence": false
   },
@@ -20523,7 +21602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -20542,7 +21622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 2.3
    },
    "low_confidence": true
   },
@@ -20561,7 +21642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.4
    },
    "low_confidence": false
   },
@@ -20580,7 +21662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 64,
-    "collapsed_pct": 37
+    "collapsed_pct": 37,
+    "ari_excl": 9
    },
    "low_confidence": false
   },
@@ -20599,7 +21682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 55,
-    "collapsed_pct": 38
+    "collapsed_pct": 38,
+    "ari_excl": 8
    },
    "low_confidence": false
   },
@@ -20618,7 +21702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 605,
-    "collapsed_pct": 90
+    "collapsed_pct": 90,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -20637,7 +21722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 32,
-    "collapsed_pct": 19
+    "collapsed_pct": 19,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -20656,7 +21742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 605,
-    "collapsed_pct": 93
+    "collapsed_pct": 93,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -20675,7 +21762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 13,
     "collapsed_words": 289,
-    "collapsed_pct": 75
+    "collapsed_pct": 75,
+    "ari_excl": 8.6
    },
    "low_confidence": false
   },
@@ -20694,7 +21782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 17,
     "collapsed_words": 289,
-    "collapsed_pct": 85
+    "collapsed_pct": 85,
+    "ari_excl": 9.1
    },
    "low_confidence": false
   },
@@ -20713,7 +21802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 19,
     "collapsed_words": 289,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 9.8
    },
    "low_confidence": false
   },
@@ -20732,7 +21822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.8
    },
    "low_confidence": true
   },
@@ -20751,7 +21842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 115,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 3.9
    },
    "low_confidence": false
   },
@@ -20770,7 +21862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.1
    },
    "low_confidence": true
   },
@@ -20789,7 +21882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.3
    },
    "low_confidence": true
   },
@@ -20808,7 +21902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 8,
     "collapsed_words": 414,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 4.3
    },
    "low_confidence": false
   },
@@ -20827,7 +21922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.1
    },
    "low_confidence": false
   },
@@ -20846,7 +21942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.2
    },
    "low_confidence": true
   },
@@ -20865,7 +21962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6
    },
    "low_confidence": true
   },
@@ -20884,7 +21982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 7,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.3
    },
    "low_confidence": true
   },
@@ -20903,7 +22002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.6
    },
    "low_confidence": true
   },
@@ -20922,7 +22022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 20,
     "long_pct": 9,
     "collapsed_words": 2275,
-    "collapsed_pct": 89
+    "collapsed_pct": 89,
+    "ari_excl": 5
    },
    "low_confidence": false
   },
@@ -20941,7 +22042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.5
    },
    "low_confidence": true
   },
@@ -20960,7 +22062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 30,
-    "collapsed_pct": 15
+    "collapsed_pct": 15,
+    "ari_excl": 9.9
    },
    "low_confidence": false
   },
@@ -20979,7 +22082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 7,
     "long_pct": 7,
     "collapsed_words": 620,
-    "collapsed_pct": 80
+    "collapsed_pct": 80,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -20998,7 +22102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 5,
     "collapsed_words": 494,
-    "collapsed_pct": 88
+    "collapsed_pct": 88,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -21017,7 +22122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 39,
-    "collapsed_pct": 47
+    "collapsed_pct": 47,
+    "ari_excl": 5.3
    },
    "low_confidence": true
   },
@@ -21036,7 +22142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.1
    },
    "low_confidence": true
   },
@@ -21055,7 +22162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": -0.7
    },
    "low_confidence": true
   },
@@ -21074,7 +22182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 20,
-    "collapsed_pct": 27
+    "collapsed_pct": 27,
+    "ari_excl": 4.9
    },
    "low_confidence": true
   },
@@ -21093,7 +22202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 242,
-    "collapsed_pct": 48
+    "collapsed_pct": 48,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -21112,7 +22222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 312,
-    "collapsed_pct": 78
+    "collapsed_pct": 78,
+    "ari_excl": 6.7
    },
    "low_confidence": false
   },
@@ -21131,7 +22242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 1135,
-    "collapsed_pct": 90
+    "collapsed_pct": 90,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -21150,7 +22262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 23,
-    "collapsed_pct": 12
+    "collapsed_pct": 12,
+    "ari_excl": 4.6
    },
    "low_confidence": false
   },
@@ -21169,7 +22282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 4,
     "collapsed_words": 1237,
-    "collapsed_pct": 90
+    "collapsed_pct": 90,
+    "ari_excl": 6.6
    },
    "low_confidence": false
   },
@@ -21188,7 +22302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.4
    },
    "low_confidence": true
   },
@@ -21207,7 +22322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.7
    },
    "low_confidence": true
   },
@@ -21226,7 +22342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 251,
-    "collapsed_pct": 53
+    "collapsed_pct": 53,
+    "ari_excl": 4.7
    },
    "low_confidence": false
   },
@@ -21245,7 +22362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 94,
-    "collapsed_pct": 33
+    "collapsed_pct": 33,
+    "ari_excl": 7.9
    },
    "low_confidence": false
   },
@@ -21264,7 +22382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.7
    },
    "low_confidence": false
   },
@@ -21283,7 +22402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 14.3
    },
    "low_confidence": true
   },
@@ -21302,7 +22422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 5,
     "collapsed_words": 104,
-    "collapsed_pct": 29
+    "collapsed_pct": 29,
+    "ari_excl": 6.7
    },
    "low_confidence": false
   },
@@ -21321,7 +22442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.2
    },
    "low_confidence": false
   },
@@ -21340,7 +22462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 30,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 12.3
    },
    "low_confidence": false
   },
@@ -21359,7 +22482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 558,
-    "collapsed_pct": 79
+    "collapsed_pct": 79,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -21378,7 +22502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 3,
     "collapsed_words": 785,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -21397,7 +22522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 200,
-    "collapsed_pct": 75
+    "collapsed_pct": 75,
+    "ari_excl": 7.5
    },
    "low_confidence": false
   },
@@ -21416,7 +22542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 25,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.7
    },
    "low_confidence": true
   },
@@ -21435,7 +22562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -21454,7 +22582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.9
    },
    "low_confidence": true
   },
@@ -21473,7 +22602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.1
    },
    "low_confidence": true
   },
@@ -21492,7 +22622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.1
    },
    "low_confidence": true
   },
@@ -21511,7 +22642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 79,
-    "collapsed_pct": 38
+    "collapsed_pct": 38,
+    "ari_excl": 10.8
    },
    "low_confidence": false
   },
@@ -21530,7 +22662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 7,
     "collapsed_words": 350,
-    "collapsed_pct": 92
+    "collapsed_pct": 92,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -21549,7 +22682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.2
    },
    "low_confidence": true
   },
@@ -21568,7 +22702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 14,
-    "collapsed_pct": 18
+    "collapsed_pct": 18,
+    "ari_excl": 9.7
    },
    "low_confidence": true
   },
@@ -21587,7 +22722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 2,
     "collapsed_words": 429,
-    "collapsed_pct": 58
+    "collapsed_pct": 58,
+    "ari_excl": 6.6
    },
    "low_confidence": false
   },
@@ -21606,7 +22742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 1,
     "collapsed_words": 1159,
-    "collapsed_pct": 89
+    "collapsed_pct": 89,
+    "ari_excl": 8.1
    },
    "low_confidence": false
   },
@@ -21625,7 +22762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.2
    },
    "low_confidence": true
   },
@@ -21644,7 +22782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 236,
-    "collapsed_pct": 83
+    "collapsed_pct": 83,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -21663,7 +22802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.6
    },
    "low_confidence": false
   },
@@ -21682,7 +22822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -21701,7 +22842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.5
    },
    "low_confidence": false
   },
@@ -21720,7 +22862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.3
    },
    "low_confidence": true
   },
@@ -21739,7 +22882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.8
    },
    "low_confidence": true
   },
@@ -21758,7 +22902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -21777,7 +22922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 7,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.4
    },
    "low_confidence": true
   },
@@ -21796,7 +22942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 7,
     "long_pct": 7,
     "collapsed_words": 1013,
-    "collapsed_pct": 93
+    "collapsed_pct": 93,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -21815,7 +22962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 14,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -21834,7 +22982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.9
    },
    "low_confidence": true
   },
@@ -21853,7 +23002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.8
    },
    "low_confidence": true
   },
@@ -21872,7 +23022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 104,
-    "collapsed_pct": 45
+    "collapsed_pct": 45,
+    "ari_excl": 9.2
    },
    "low_confidence": false
   },
@@ -21891,7 +23042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 475,
-    "collapsed_pct": 71
+    "collapsed_pct": 71,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -21910,7 +23062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 89,
-    "collapsed_pct": 71
+    "collapsed_pct": 71,
+    "ari_excl": 2.9
    },
    "low_confidence": false
   },
@@ -21929,7 +23082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 53,
-    "collapsed_pct": 26
+    "collapsed_pct": 26,
+    "ari_excl": 9.1
    },
    "low_confidence": false
   },
@@ -21948,7 +23102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 8,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 12.5
    },
    "low_confidence": false
   },
@@ -21967,7 +23122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.6
    },
    "low_confidence": true
   },
@@ -21986,7 +23142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 64,
-    "collapsed_pct": 32
+    "collapsed_pct": 32,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -22005,7 +23162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 288,
-    "collapsed_pct": 69
+    "collapsed_pct": 69,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -22024,7 +23182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5
    },
    "low_confidence": true
   },
@@ -22043,7 +23202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 4,
     "collapsed_words": 669,
-    "collapsed_pct": 91
+    "collapsed_pct": 91,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -22062,7 +23222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.6
    },
    "low_confidence": true
   },
@@ -22081,7 +23242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 4,
     "collapsed_words": 993,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -22100,7 +23262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.9
    },
    "low_confidence": true
   },
@@ -22119,7 +23282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 796,
-    "collapsed_pct": 88
+    "collapsed_pct": 88,
+    "ari_excl": 8.4
    },
    "low_confidence": false
   },
@@ -22138,7 +23302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.5
    },
    "low_confidence": true
   },
@@ -22157,7 +23322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -22176,7 +23342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 306,
-    "collapsed_pct": 74
+    "collapsed_pct": 74,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -22195,7 +23362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 157,
-    "collapsed_pct": 55
+    "collapsed_pct": 55,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -22214,7 +23382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 12,
     "collapsed_words": 93,
-    "collapsed_pct": 26
+    "collapsed_pct": 26,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -22233,7 +23402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 189,
-    "collapsed_pct": 74
+    "collapsed_pct": 74,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -22252,7 +23422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 283,
-    "collapsed_pct": 81
+    "collapsed_pct": 81,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -22271,7 +23442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.5
    },
    "low_confidence": true
   },
@@ -22290,7 +23462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.2
    },
    "low_confidence": true
   },
@@ -22309,7 +23482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 263,
-    "collapsed_pct": 85
+    "collapsed_pct": 85,
+    "ari_excl": 4
    },
    "low_confidence": false
   },
@@ -22328,7 +23502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 330,
-    "collapsed_pct": 72
+    "collapsed_pct": 72,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -22347,7 +23522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 204,
-    "collapsed_pct": 56
+    "collapsed_pct": 56,
+    "ari_excl": 10.2
    },
    "low_confidence": false
   },
@@ -22366,7 +23542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.7
    },
    "low_confidence": true
   },
@@ -22385,7 +23562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.1
    },
    "low_confidence": true
   },
@@ -22404,7 +23582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 17,
     "collapsed_words": 148,
-    "collapsed_pct": 57
+    "collapsed_pct": 57,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -22423,7 +23602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5
    },
    "low_confidence": true
   },
@@ -22442,7 +23622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.6
    },
    "low_confidence": true
   },
@@ -22461,7 +23642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 10,
     "long_pct": 18,
     "collapsed_words": 661,
-    "collapsed_pct": 75
+    "collapsed_pct": 75,
+    "ari_excl": 10.6
    },
    "low_confidence": false
   },
@@ -22480,7 +23662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.5
    },
    "low_confidence": false
   },
@@ -22499,7 +23682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.2
    },
    "low_confidence": true
   },
@@ -22518,7 +23702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 15,
-    "collapsed_pct": 21
+    "collapsed_pct": 21,
+    "ari_excl": 9.1
    },
    "low_confidence": true
   },
@@ -22537,7 +23722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -22556,7 +23742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.8
    },
    "low_confidence": true
   },
@@ -22575,7 +23762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 176,
-    "collapsed_pct": 65
+    "collapsed_pct": 65,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -22594,7 +23782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 611,
-    "collapsed_pct": 78
+    "collapsed_pct": 78,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -22613,7 +23802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5
    },
    "low_confidence": true
   },
@@ -22632,7 +23822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 14,
-    "collapsed_pct": 24
+    "collapsed_pct": 24,
+    "ari_excl": 1.1
    },
    "low_confidence": true
   },
@@ -22651,7 +23842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 4,
     "collapsed_words": 399,
-    "collapsed_pct": 83
+    "collapsed_pct": 83,
+    "ari_excl": 6.6
    },
    "low_confidence": false
   },
@@ -22670,7 +23862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.3
    },
    "low_confidence": false
   },
@@ -22689,7 +23882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 4,
     "collapsed_words": 249,
-    "collapsed_pct": 64
+    "collapsed_pct": 64,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -22708,7 +23902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.5
    },
    "low_confidence": true
   },
@@ -22727,7 +23922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.6
    },
    "low_confidence": true
   },
@@ -22746,7 +23942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 0.8
    },
    "low_confidence": true
   },
@@ -22765,7 +23962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.6
    },
    "low_confidence": true
   },
@@ -22784,7 +23982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 49,
-    "collapsed_pct": 36
+    "collapsed_pct": 36,
+    "ari_excl": 8.8
    },
    "low_confidence": false
   },
@@ -22803,7 +24002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 9,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.9
    },
    "low_confidence": false
   },
@@ -22822,7 +24022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 128,
-    "collapsed_pct": 41
+    "collapsed_pct": 41,
+    "ari_excl": 8.7
    },
    "low_confidence": false
   },
@@ -22841,7 +24042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 54,
-    "collapsed_pct": 55
+    "collapsed_pct": 55,
+    "ari_excl": 8.5
    },
    "low_confidence": true
   },
@@ -22860,7 +24062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.9
    },
    "low_confidence": true
   },
@@ -22879,7 +24082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -22898,7 +24102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 22,
-    "collapsed_pct": 11
+    "collapsed_pct": 11,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -22917,7 +24122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.7
    },
    "low_confidence": true
   },
@@ -22936,7 +24142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 157,
-    "collapsed_pct": 58
+    "collapsed_pct": 58,
+    "ari_excl": 5
    },
    "low_confidence": false
   },
@@ -22955,7 +24162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 2,
     "collapsed_words": 615,
-    "collapsed_pct": 83
+    "collapsed_pct": 83,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -22974,7 +24182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 12,
     "collapsed_words": 208,
-    "collapsed_pct": 90
+    "collapsed_pct": 90,
+    "ari_excl": 10.3
    },
    "low_confidence": false
   },
@@ -22993,7 +24202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.1
    },
    "low_confidence": false
   },
@@ -23012,7 +24222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 2.3
    },
    "low_confidence": true
   },
@@ -23031,7 +24242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 9,
     "long_pct": 7,
     "collapsed_words": 1435,
-    "collapsed_pct": 93
+    "collapsed_pct": 93,
+    "ari_excl": 8.3
    },
    "low_confidence": false
   },
@@ -23050,7 +24262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 5,
     "collapsed_words": 149,
-    "collapsed_pct": 53
+    "collapsed_pct": 53,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -23069,7 +24282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -23088,7 +24302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 266,
-    "collapsed_pct": 70
+    "collapsed_pct": 70,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -23107,7 +24322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.9
    },
    "low_confidence": true
   },
@@ -23126,7 +24342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 4,
     "collapsed_words": 266,
-    "collapsed_pct": 68
+    "collapsed_pct": 68,
+    "ari_excl": 4.6
    },
    "low_confidence": false
   },
@@ -23145,7 +24362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 7,
     "long_pct": 14,
     "collapsed_words": 289,
-    "collapsed_pct": 53
+    "collapsed_pct": 53,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -23164,7 +24382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 107,
-    "collapsed_pct": 60
+    "collapsed_pct": 60,
+    "ari_excl": 5
    },
    "low_confidence": false
   },
@@ -23183,7 +24402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 266,
-    "collapsed_pct": 68
+    "collapsed_pct": 68,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -23202,7 +24422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 5,
     "collapsed_words": 302,
-    "collapsed_pct": 57
+    "collapsed_pct": 57,
+    "ari_excl": 6.7
    },
    "low_confidence": false
   },
@@ -23221,7 +24442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 5,
     "collapsed_words": 337,
-    "collapsed_pct": 51
+    "collapsed_pct": 51,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -23240,7 +24462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 252,
-    "collapsed_pct": 77
+    "collapsed_pct": 77,
+    "ari_excl": 4.8
    },
    "low_confidence": false
   },
@@ -23259,7 +24482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 9,
     "long_pct": 16,
     "collapsed_words": 592,
-    "collapsed_pct": 78
+    "collapsed_pct": 78,
+    "ari_excl": 8.7
    },
    "low_confidence": false
   },
@@ -23278,7 +24502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 107,
-    "collapsed_pct": 53
+    "collapsed_pct": 53,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -23297,7 +24522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 266,
-    "collapsed_pct": 72
+    "collapsed_pct": 72,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -23316,7 +24542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 107,
-    "collapsed_pct": 45
+    "collapsed_pct": 45,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -23335,7 +24562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.7
    },
    "low_confidence": true
   },
@@ -23354,7 +24582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 266,
-    "collapsed_pct": 61
+    "collapsed_pct": 61,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -23373,7 +24602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 107,
-    "collapsed_pct": 41
+    "collapsed_pct": 41,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -23392,7 +24622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 107,
-    "collapsed_pct": 66
+    "collapsed_pct": 66,
+    "ari_excl": 4.2
    },
    "low_confidence": false
   },
@@ -23411,7 +24642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 107,
-    "collapsed_pct": 44
+    "collapsed_pct": 44,
+    "ari_excl": 4.6
    },
    "low_confidence": false
   },
@@ -23430,7 +24662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 107,
-    "collapsed_pct": 59
+    "collapsed_pct": 59,
+    "ari_excl": 4.4
    },
    "low_confidence": false
   },
@@ -23449,7 +24682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 107,
-    "collapsed_pct": 35
+    "collapsed_pct": 35,
+    "ari_excl": 3.7
    },
    "low_confidence": false
   },
@@ -23468,7 +24702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 113,
-    "collapsed_pct": 75
+    "collapsed_pct": 75,
+    "ari_excl": 4.5
    },
    "low_confidence": false
   },
@@ -23487,7 +24722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 2,
     "collapsed_words": 521,
-    "collapsed_pct": 67
+    "collapsed_pct": 67,
+    "ari_excl": 4.7
    },
    "low_confidence": false
   },
@@ -23506,7 +24742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 9,
     "long_pct": 10,
     "collapsed_words": 770,
-    "collapsed_pct": 82
+    "collapsed_pct": 82,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -23525,7 +24762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 2,
     "collapsed_words": 878,
-    "collapsed_pct": 89
+    "collapsed_pct": 89,
+    "ari_excl": 8.1
    },
    "low_confidence": false
   },
@@ -23544,7 +24782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 59,
-    "collapsed_pct": 30
+    "collapsed_pct": 30,
+    "ari_excl": 10.6
    },
    "low_confidence": false
   },
@@ -23563,7 +24802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 295,
-    "collapsed_pct": 84
+    "collapsed_pct": 84,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -23582,7 +24822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.3
    },
    "low_confidence": true
   },
@@ -23601,7 +24842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 8,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -23620,7 +24862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 428,
-    "collapsed_pct": 62
+    "collapsed_pct": 62,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -23639,7 +24882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.3
    },
    "low_confidence": false
   },
@@ -23658,7 +24902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -23677,7 +24922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.5
    },
    "low_confidence": true
   },
@@ -23696,7 +24942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.5
    },
    "low_confidence": true
   },
@@ -23715,7 +24962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 202,
-    "collapsed_pct": 47
+    "collapsed_pct": 47,
+    "ari_excl": 4.3
    },
    "low_confidence": false
   },
@@ -23734,7 +24982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 7,
     "collapsed_words": 342,
-    "collapsed_pct": 68
+    "collapsed_pct": 68,
+    "ari_excl": 10.3
    },
    "low_confidence": false
   },
@@ -23753,7 +25002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 1,
     "collapsed_words": 1943,
-    "collapsed_pct": 92
+    "collapsed_pct": 92,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -23772,7 +25022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 238,
-    "collapsed_pct": 69
+    "collapsed_pct": 69,
+    "ari_excl": 6.7
    },
    "low_confidence": false
   },
@@ -23791,7 +25042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -23810,7 +25062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 92,
-    "collapsed_pct": 31
+    "collapsed_pct": 31,
+    "ari_excl": 8.9
    },
    "low_confidence": false
   },
@@ -23829,7 +25082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 9,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -23848,7 +25102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7
    },
    "low_confidence": true
   },
@@ -23867,7 +25122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.2
    },
    "low_confidence": false
   },
@@ -23886,7 +25142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 1143,
-    "collapsed_pct": 93
+    "collapsed_pct": 93,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -23905,7 +25162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -23924,7 +25182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 90,
-    "collapsed_pct": 46
+    "collapsed_pct": 46,
+    "ari_excl": 9.3
    },
    "low_confidence": false
   },
@@ -23943,7 +25202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 17,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.3
    },
    "low_confidence": true
   },
@@ -23962,7 +25222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.7
    },
    "low_confidence": true
   },
@@ -23981,7 +25242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 65,
-    "collapsed_pct": 55
+    "collapsed_pct": 55,
+    "ari_excl": 6.7
    },
    "low_confidence": false
   },
@@ -24000,7 +25262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 138,
-    "collapsed_pct": 61
+    "collapsed_pct": 61,
+    "ari_excl": 4.8
    },
    "low_confidence": false
   },
@@ -24019,7 +25282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.2
    },
    "low_confidence": true
   },
@@ -24038,7 +25302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.6
    },
    "low_confidence": true
   },
@@ -24057,7 +25322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 24,
-    "collapsed_pct": 38
+    "collapsed_pct": 38,
+    "ari_excl": 9.5
    },
    "low_confidence": true
   },
@@ -24076,7 +25342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 112,
-    "collapsed_pct": 54
+    "collapsed_pct": 54,
+    "ari_excl": 4.5
    },
    "low_confidence": false
   },
@@ -24095,7 +25362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 38,
-    "collapsed_pct": 20
+    "collapsed_pct": 20,
+    "ari_excl": 9.6
    },
    "low_confidence": false
   },
@@ -24114,7 +25382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.7
    },
    "low_confidence": false
   },
@@ -24133,7 +25402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 8,
     "collapsed_words": 224,
-    "collapsed_pct": 67
+    "collapsed_pct": 67,
+    "ari_excl": 8.4
    },
    "low_confidence": false
   },
@@ -24152,7 +25422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 6,
     "collapsed_words": 111,
-    "collapsed_pct": 39
+    "collapsed_pct": 39,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -24171,7 +25442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 123,
-    "collapsed_pct": 61
+    "collapsed_pct": 61,
+    "ari_excl": 4.5
    },
    "low_confidence": false
   },
@@ -24190,7 +25462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 3,
     "collapsed_words": 904,
-    "collapsed_pct": 79
+    "collapsed_pct": 79,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -24209,7 +25482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 5,
     "collapsed_words": 535,
-    "collapsed_pct": 81
+    "collapsed_pct": 81,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -24228,7 +25502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 33,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.5
    },
    "low_confidence": true
   },
@@ -24247,7 +25522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.1
    },
    "low_confidence": true
   },
@@ -24266,7 +25542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 7,
     "collapsed_words": 265,
-    "collapsed_pct": 85
+    "collapsed_pct": 85,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -24285,7 +25562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 377,
-    "collapsed_pct": 71
+    "collapsed_pct": 71,
+    "ari_excl": 8.1
    },
    "low_confidence": false
   },
@@ -24304,7 +25582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 13,
     "collapsed_words": 55,
-    "collapsed_pct": 32
+    "collapsed_pct": 32,
+    "ari_excl": 8.1
    },
    "low_confidence": false
   },
@@ -24323,7 +25602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 25,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.4
    },
    "low_confidence": true
   },
@@ -24342,7 +25622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.1
    },
    "low_confidence": false
   },
@@ -24361,7 +25642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 7,
     "collapsed_words": 311,
-    "collapsed_pct": 71
+    "collapsed_pct": 71,
+    "ari_excl": 9.2
    },
    "low_confidence": false
   },
@@ -24380,7 +25662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -24399,7 +25682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 3,
     "collapsed_words": 385,
-    "collapsed_pct": 60
+    "collapsed_pct": 60,
+    "ari_excl": 4.7
    },
    "low_confidence": false
   },
@@ -24418,7 +25702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.4
    },
    "low_confidence": false
   },
@@ -24437,7 +25722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -24456,7 +25742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.5
    },
    "low_confidence": true
   },
@@ -24475,7 +25762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 650,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -24494,7 +25782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 7,
     "collapsed_words": 369,
-    "collapsed_pct": 71
+    "collapsed_pct": 71,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -24513,7 +25802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.7
    },
    "low_confidence": false
   },
@@ -24532,7 +25822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 74,
-    "collapsed_pct": 64
+    "collapsed_pct": 64,
+    "ari_excl": 16.5
    },
    "low_confidence": false
   },
@@ -24551,7 +25842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 136,
-    "collapsed_pct": 56
+    "collapsed_pct": 56,
+    "ari_excl": 10.5
    },
    "low_confidence": false
   },
@@ -24570,7 +25862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.2
    },
    "low_confidence": false
   },
@@ -24589,7 +25882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.8
    },
    "low_confidence": true
   },
@@ -24608,7 +25902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.8
    },
    "low_confidence": true
   },
@@ -24627,7 +25922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 134,
-    "collapsed_pct": 54
+    "collapsed_pct": 54,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -24646,7 +25942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.2
    },
    "low_confidence": true
   },
@@ -24665,7 +25962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 196,
-    "collapsed_pct": 71
+    "collapsed_pct": 71,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -24684,7 +25982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.8
    },
    "low_confidence": true
   },
@@ -24703,7 +26002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -24722,7 +26022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.1
    },
    "low_confidence": false
   },
@@ -24741,7 +26042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 341,
-    "collapsed_pct": 88
+    "collapsed_pct": 88,
+    "ari_excl": 7.7
    },
    "low_confidence": false
   },
@@ -24760,7 +26062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 128,
-    "collapsed_pct": 42
+    "collapsed_pct": 42,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -24779,7 +26082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 182,
-    "collapsed_pct": 58
+    "collapsed_pct": 58,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -24798,7 +26102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.6
    },
    "low_confidence": true
   },
@@ -24817,7 +26122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 14,
-    "collapsed_pct": 9
+    "collapsed_pct": 9,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -24836,7 +26142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 318,
-    "collapsed_pct": 80
+    "collapsed_pct": 80,
+    "ari_excl": 9.5
    },
    "low_confidence": false
   },
@@ -24855,7 +26162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 278,
-    "collapsed_pct": 53
+    "collapsed_pct": 53,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -24874,7 +26182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.8
    },
    "low_confidence": true
   },
@@ -24893,7 +26202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 580,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -24912,7 +26222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 370,
-    "collapsed_pct": 71
+    "collapsed_pct": 71,
+    "ari_excl": 4.5
    },
    "low_confidence": false
   },
@@ -24931,7 +26242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 67,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.6
    },
    "low_confidence": true
   },
@@ -24950,7 +26262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 2.7
    },
    "low_confidence": true
   },
@@ -24969,7 +26282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 5,
     "collapsed_words": 688,
-    "collapsed_pct": 94
+    "collapsed_pct": 94,
+    "ari_excl": 7.5
    },
    "low_confidence": false
   },
@@ -24988,7 +26302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 551,
-    "collapsed_pct": 85
+    "collapsed_pct": 85,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -25007,7 +26322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 4,
     "collapsed_words": 752,
-    "collapsed_pct": 82
+    "collapsed_pct": 82,
+    "ari_excl": 7.8
    },
    "low_confidence": false
   },
@@ -25026,7 +26342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 4,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.8
    },
    "low_confidence": false
   },
@@ -25045,7 +26362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 169,
-    "collapsed_pct": 80
+    "collapsed_pct": 80,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -25064,7 +26382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 436,
-    "collapsed_pct": 88
+    "collapsed_pct": 88,
+    "ari_excl": 8.9
    },
    "low_confidence": false
   },
@@ -25083,7 +26402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 398,
-    "collapsed_pct": 72
+    "collapsed_pct": 72,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -25102,7 +26422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5
    },
    "low_confidence": true
   },
@@ -25121,7 +26442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 278,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -25140,7 +26462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 254,
-    "collapsed_pct": 73
+    "collapsed_pct": 73,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -25159,7 +26482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 551,
-    "collapsed_pct": 77
+    "collapsed_pct": 77,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -25178,7 +26502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6
    },
    "low_confidence": true
   },
@@ -25197,7 +26522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 43,
-    "collapsed_pct": 24
+    "collapsed_pct": 24,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -25216,7 +26542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 43,
-    "collapsed_pct": 22
+    "collapsed_pct": 22,
+    "ari_excl": 7.8
    },
    "low_confidence": false
   },
@@ -25235,7 +26562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 7,
-    "collapsed_pct": 3
+    "collapsed_pct": 3,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -25254,7 +26582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.9
    },
    "low_confidence": true
   },
@@ -25273,7 +26602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 167,
-    "collapsed_pct": 47
+    "collapsed_pct": 47,
+    "ari_excl": 3.9
    },
    "low_confidence": false
   },
@@ -25292,7 +26622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 1,
     "collapsed_words": 1631,
-    "collapsed_pct": 96
+    "collapsed_pct": 96,
+    "ari_excl": 7.9
    },
    "low_confidence": false
   },
@@ -25311,7 +26642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 14,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9
    },
    "low_confidence": true
   },
@@ -25330,7 +26662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 8,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.7
    },
    "low_confidence": false
   },
@@ -25349,7 +26682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 103,
-    "collapsed_pct": 42
+    "collapsed_pct": 42,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -25368,7 +26702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 10,
     "long_pct": 10,
     "collapsed_words": 815,
-    "collapsed_pct": 78
+    "collapsed_pct": 78,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -25387,7 +26722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 9,
     "long_pct": 6,
     "collapsed_words": 1411,
-    "collapsed_pct": 84
+    "collapsed_pct": 84,
+    "ari_excl": 7.7
    },
    "low_confidence": false
   },
@@ -25406,7 +26742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 2,
     "collapsed_words": 796,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -25425,7 +26762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 10,
     "long_pct": 10,
     "collapsed_words": 1170,
-    "collapsed_pct": 91
+    "collapsed_pct": 91,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -25444,7 +26782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3
    },
    "low_confidence": true
   },
@@ -25463,7 +26802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 8,
     "collapsed_words": 615,
-    "collapsed_pct": 76
+    "collapsed_pct": 76,
+    "ari_excl": 6.6
    },
    "low_confidence": false
   },
@@ -25482,7 +26822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 11,
     "long_pct": 8,
     "collapsed_words": 1221,
-    "collapsed_pct": 84
+    "collapsed_pct": 84,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -25501,7 +26842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 68,
     "long_pct": 10,
     "collapsed_words": 7344,
-    "collapsed_pct": 96
+    "collapsed_pct": 96,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -25520,7 +26862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 7,
     "long_pct": 28,
     "collapsed_words": 215,
-    "collapsed_pct": 47
+    "collapsed_pct": 47,
+    "ari_excl": 10.6
    },
    "low_confidence": false
   },
@@ -25539,7 +26882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 8,
     "long_pct": 8,
     "collapsed_words": 761,
-    "collapsed_pct": 74
+    "collapsed_pct": 74,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -25558,7 +26902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 33,
     "long_pct": 8,
     "collapsed_words": 4439,
-    "collapsed_pct": 92
+    "collapsed_pct": 92,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -25577,7 +26922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 266,
-    "collapsed_pct": 71
+    "collapsed_pct": 71,
+    "ari_excl": 4.4
    },
    "low_confidence": false
   },
@@ -25596,7 +26942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 24,
     "long_pct": 6,
     "collapsed_words": 3954,
-    "collapsed_pct": 93
+    "collapsed_pct": 93,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -25615,7 +26962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 13,
     "long_pct": 10,
     "collapsed_words": 1286,
-    "collapsed_pct": 89
+    "collapsed_pct": 89,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -25634,7 +26982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 5,
     "collapsed_words": 987,
-    "collapsed_pct": 83
+    "collapsed_pct": 83,
+    "ari_excl": 6.7
    },
    "low_confidence": false
   },
@@ -25653,7 +27002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 9,
     "long_pct": 11,
     "collapsed_words": 743,
-    "collapsed_pct": 69
+    "collapsed_pct": 69,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -25672,7 +27022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 20,
     "long_pct": 12,
     "collapsed_words": 1930,
-    "collapsed_pct": 92
+    "collapsed_pct": 92,
+    "ari_excl": 6.6
    },
    "low_confidence": false
   },
@@ -25691,7 +27042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 320,
-    "collapsed_pct": 59
+    "collapsed_pct": 59,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -25710,7 +27062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 205,
-    "collapsed_pct": 78
+    "collapsed_pct": 78,
+    "ari_excl": 6.6
    },
    "low_confidence": false
   },
@@ -25729,7 +27082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.7
    },
    "low_confidence": true
   },
@@ -25748,7 +27102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -25767,7 +27122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.4
    },
    "low_confidence": false
   },
@@ -25786,7 +27142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 54,
-    "collapsed_pct": 39
+    "collapsed_pct": 39,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -25805,7 +27162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 295,
-    "collapsed_pct": 81
+    "collapsed_pct": 81,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -25824,7 +27182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 17,
     "collapsed_words": 116,
-    "collapsed_pct": 38
+    "collapsed_pct": 38,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -25843,7 +27202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 50,
-    "collapsed_pct": 19
+    "collapsed_pct": 19,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -25862,7 +27222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 157,
-    "collapsed_pct": 48
+    "collapsed_pct": 48,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -25881,7 +27242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 605,
-    "collapsed_pct": 91
+    "collapsed_pct": 91,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -25900,7 +27262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 64,
-    "collapsed_pct": 76
+    "collapsed_pct": 76,
+    "ari_excl": 2.7
    },
    "low_confidence": true
   },
@@ -25919,7 +27282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 11,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -25938,7 +27302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 2.7
    },
    "low_confidence": true
   },
@@ -25957,7 +27322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 17,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.4
    },
    "low_confidence": true
   },
@@ -25976,7 +27342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 17,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.8
    },
    "low_confidence": true
   },
@@ -25995,7 +27362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -26014,7 +27382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.6
    },
    "low_confidence": false
   },
@@ -26033,7 +27402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -26052,7 +27422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.8
    },
    "low_confidence": false
   },
@@ -26071,7 +27442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 173,
-    "collapsed_pct": 71
+    "collapsed_pct": 71,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -26090,7 +27462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 463,
-    "collapsed_pct": 64
+    "collapsed_pct": 64,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -26109,7 +27482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 2,
     "collapsed_words": 782,
-    "collapsed_pct": 84
+    "collapsed_pct": 84,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -26128,7 +27502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 157,
-    "collapsed_pct": 48
+    "collapsed_pct": 48,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -26147,7 +27522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 605,
-    "collapsed_pct": 89
+    "collapsed_pct": 89,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -26166,7 +27542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 66,
-    "collapsed_pct": 30
+    "collapsed_pct": 30,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -26185,7 +27562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 125,
-    "collapsed_pct": 35
+    "collapsed_pct": 35,
+    "ari_excl": 8.8
    },
    "low_confidence": false
   },
@@ -26204,7 +27582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 8,
     "long_pct": 9,
     "collapsed_words": 864,
-    "collapsed_pct": 84
+    "collapsed_pct": 84,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -26223,7 +27602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 614,
-    "collapsed_pct": 91
+    "collapsed_pct": 91,
+    "ari_excl": 8.5
    },
    "low_confidence": false
   },
@@ -26242,7 +27622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 9,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.6
    },
    "low_confidence": false
   },
@@ -26261,7 +27642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 295,
-    "collapsed_pct": 81
+    "collapsed_pct": 81,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -26280,7 +27662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.8
    },
    "low_confidence": false
   },
@@ -26299,7 +27682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 295,
-    "collapsed_pct": 83
+    "collapsed_pct": 83,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -26318,7 +27702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 290,
-    "collapsed_pct": 74
+    "collapsed_pct": 74,
+    "ari_excl": 4.8
    },
    "low_confidence": false
   },
@@ -26337,7 +27722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 285,
-    "collapsed_pct": 84
+    "collapsed_pct": 84,
+    "ari_excl": 4.5
    },
    "low_confidence": false
   },
@@ -26356,7 +27742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 295,
-    "collapsed_pct": 83
+    "collapsed_pct": 83,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -26375,7 +27762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 77,
-    "collapsed_pct": 52
+    "collapsed_pct": 52,
+    "ari_excl": 4
    },
    "low_confidence": false
   },
@@ -26394,7 +27782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": -1.8
    },
    "low_confidence": true
   },
@@ -26413,7 +27802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 62,
-    "collapsed_pct": 23
+    "collapsed_pct": 23,
+    "ari_excl": 7.5
    },
    "low_confidence": false
   },
@@ -26432,7 +27822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 13,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.8
    },
    "low_confidence": true
   },
@@ -26451,7 +27842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 163,
-    "collapsed_pct": 58
+    "collapsed_pct": 58,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -26470,7 +27862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.7
    },
    "low_confidence": true
   },
@@ -26489,7 +27882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 242,
-    "collapsed_pct": 76
+    "collapsed_pct": 76,
+    "ari_excl": 7.5
    },
    "low_confidence": false
   },
@@ -26508,7 +27902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.5
    },
    "low_confidence": true
   },
@@ -26527,7 +27922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.3
    },
    "low_confidence": false
   },
@@ -26546,7 +27942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -26565,7 +27962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 108,
-    "collapsed_pct": 46
+    "collapsed_pct": 46,
+    "ari_excl": 8.8
    },
    "low_confidence": false
   },
@@ -26584,7 +27982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 64,
-    "collapsed_pct": 22
+    "collapsed_pct": 22,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -26603,7 +28002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 13,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.5
    },
    "low_confidence": true
   },
@@ -26622,7 +28022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.1
    },
    "low_confidence": false
   },
@@ -26641,7 +28042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 7,
     "collapsed_words": 546,
-    "collapsed_pct": 72
+    "collapsed_pct": 72,
+    "ari_excl": 6.6
    },
    "low_confidence": false
   },
@@ -26660,7 +28062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 48,
-    "collapsed_pct": 21
+    "collapsed_pct": 21,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -26679,7 +28082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 5,
     "collapsed_words": 223,
-    "collapsed_pct": 65
+    "collapsed_pct": 65,
+    "ari_excl": 9
    },
    "low_confidence": false
   },
@@ -26698,7 +28102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.3
    },
    "low_confidence": true
   },
@@ -26717,7 +28122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8
    },
    "low_confidence": true
   },
@@ -26736,7 +28142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 64,
-    "collapsed_pct": 41
+    "collapsed_pct": 41,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -26755,7 +28162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.1
    },
    "low_confidence": true
   },
@@ -26774,7 +28182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 142,
-    "collapsed_pct": 72
+    "collapsed_pct": 72,
+    "ari_excl": 4.8
    },
    "low_confidence": false
   },
@@ -26793,7 +28202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.2
    },
    "low_confidence": false
   },
@@ -26812,7 +28222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -26831,7 +28242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 127,
-    "collapsed_pct": 79
+    "collapsed_pct": 79,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -26850,7 +28262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.6
    },
    "low_confidence": true
   },
@@ -26869,7 +28282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 5,
     "collapsed_words": 542,
-    "collapsed_pct": 65
+    "collapsed_pct": 65,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -26888,7 +28302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 0.7
    },
    "low_confidence": true
   },
@@ -26907,7 +28322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.6
    },
    "low_confidence": true
   },
@@ -26926,7 +28342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.8
    },
    "low_confidence": true
   },
@@ -26945,7 +28362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.9
    },
    "low_confidence": false
   },
@@ -26964,7 +28382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 7,
     "collapsed_words": 384,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 4.7
    },
    "low_confidence": false
   },
@@ -26983,7 +28402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 417,
-    "collapsed_pct": 80
+    "collapsed_pct": 80,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -27002,7 +28422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 17,
     "collapsed_words": 74,
-    "collapsed_pct": 43
+    "collapsed_pct": 43,
+    "ari_excl": 10.5
    },
    "low_confidence": false
   },
@@ -27021,7 +28442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 6,
     "collapsed_words": 131,
-    "collapsed_pct": 45
+    "collapsed_pct": 45,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -27040,7 +28462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 615,
-    "collapsed_pct": 74
+    "collapsed_pct": 74,
+    "ari_excl": 3.3
    },
    "low_confidence": false
   },
@@ -27059,7 +28482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 168,
-    "collapsed_pct": 81
+    "collapsed_pct": 81,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -27078,7 +28502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 157,
-    "collapsed_pct": 58
+    "collapsed_pct": 58,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -27097,7 +28522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 50,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.1
    },
    "low_confidence": true
   },
@@ -27116,7 +28542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 438,
-    "collapsed_pct": 96
+    "collapsed_pct": 96,
+    "ari_excl": 7.8
    },
    "low_confidence": false
   },
@@ -27135,7 +28562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 280,
-    "collapsed_pct": 68
+    "collapsed_pct": 68,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -27154,7 +28582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 54,
-    "collapsed_pct": 31
+    "collapsed_pct": 31,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -27173,7 +28602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 33,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.6
    },
    "low_confidence": true
   },
@@ -27192,7 +28622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.8
    },
    "low_confidence": true
   },
@@ -27211,7 +28642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 145,
-    "collapsed_pct": 49
+    "collapsed_pct": 49,
+    "ari_excl": 8
    },
    "low_confidence": false
   },
@@ -27230,7 +28662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -27249,7 +28682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 370,
-    "collapsed_pct": 80
+    "collapsed_pct": 80,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -27268,7 +28702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 6,
     "collapsed_words": 288,
-    "collapsed_pct": 79
+    "collapsed_pct": 79,
+    "ari_excl": 4.7
    },
    "low_confidence": false
   },
@@ -27287,7 +28722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 10,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -27306,7 +28742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 7,
     "long_pct": 10,
     "collapsed_words": 641,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -27325,7 +28762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -27344,7 +28782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 817,
-    "collapsed_pct": 96
+    "collapsed_pct": 96,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -27363,7 +28802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 65,
-    "collapsed_pct": 47
+    "collapsed_pct": 47,
+    "ari_excl": 4.7
    },
    "low_confidence": false
   },
@@ -27382,7 +28822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 90,
-    "collapsed_pct": 46
+    "collapsed_pct": 46,
+    "ari_excl": 8.6
    },
    "low_confidence": false
   },
@@ -27401,7 +28842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 3,
     "collapsed_words": 1237,
-    "collapsed_pct": 81
+    "collapsed_pct": 81,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -27420,7 +28862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.6
    },
    "low_confidence": true
   },
@@ -27439,7 +28882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.3
    },
    "low_confidence": true
   },
@@ -27458,7 +28902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 295,
-    "collapsed_pct": 83
+    "collapsed_pct": 83,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -27477,7 +28922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.6
    },
    "low_confidence": true
   },
@@ -27496,7 +28942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 14,
     "collapsed_words": 52,
-    "collapsed_pct": 64
+    "collapsed_pct": 64,
+    "ari_excl": 6.9
    },
    "low_confidence": true
   },
@@ -27515,7 +28962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 342,
-    "collapsed_pct": 82
+    "collapsed_pct": 82,
+    "ari_excl": 4.8
    },
    "low_confidence": false
   },
@@ -27534,7 +28982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 157,
-    "collapsed_pct": 46
+    "collapsed_pct": 46,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -27553,7 +29002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 34,
-    "collapsed_pct": 37
+    "collapsed_pct": 37,
+    "ari_excl": 11.6
    },
    "low_confidence": true
   },
@@ -27572,7 +29022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 195,
-    "collapsed_pct": 59
+    "collapsed_pct": 59,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -27591,7 +29042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.2
    },
    "low_confidence": true
   },
@@ -27610,7 +29062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 157,
-    "collapsed_pct": 46
+    "collapsed_pct": 46,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -27629,7 +29082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.2
    },
    "low_confidence": true
   },
@@ -27648,7 +29102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 10,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -27667,7 +29122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.5
    },
    "low_confidence": true
   },
@@ -27686,7 +29142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 17,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.8
    },
    "low_confidence": true
   },
@@ -27705,7 +29162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 125,
-    "collapsed_pct": 53
+    "collapsed_pct": 53,
+    "ari_excl": 5
    },
    "low_confidence": false
   },
@@ -27724,7 +29182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 605,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -27743,7 +29202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 605,
-    "collapsed_pct": 88
+    "collapsed_pct": 88,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -27762,7 +29222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7
    },
    "low_confidence": true
   },
@@ -27781,7 +29242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 215,
-    "collapsed_pct": 93
+    "collapsed_pct": 93,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -27800,7 +29262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -27819,7 +29282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 11,
     "long_pct": 3,
     "collapsed_words": 2695,
-    "collapsed_pct": 95
+    "collapsed_pct": 95,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -27838,7 +29302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 8,
     "long_pct": 12,
     "collapsed_words": 732,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -27857,7 +29322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.2
    },
    "low_confidence": true
   },
@@ -27876,7 +29342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 4,
     "collapsed_words": 412,
-    "collapsed_pct": 81
+    "collapsed_pct": 81,
+    "ari_excl": 6.7
    },
    "low_confidence": false
   },
@@ -27895,7 +29362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.2
    },
    "low_confidence": true
   },
@@ -27914,7 +29382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 8,
     "long_pct": 7,
     "collapsed_words": 921,
-    "collapsed_pct": 78
+    "collapsed_pct": 78,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -27933,7 +29402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 7,
     "collapsed_words": 473,
-    "collapsed_pct": 84
+    "collapsed_pct": 84,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -27952,7 +29422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 8,
     "long_pct": 9,
     "collapsed_words": 843,
-    "collapsed_pct": 77
+    "collapsed_pct": 77,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -27971,7 +29442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 13,
     "long_pct": 8,
     "collapsed_words": 1544,
-    "collapsed_pct": 93
+    "collapsed_pct": 93,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -27990,7 +29462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 11,
     "long_pct": 7,
     "collapsed_words": 1545,
-    "collapsed_pct": 94
+    "collapsed_pct": 94,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -28009,7 +29482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 40,
     "long_pct": 10,
     "collapsed_words": 4454,
-    "collapsed_pct": 97
+    "collapsed_pct": 97,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -28028,7 +29502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 6,
     "collapsed_words": 266,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -28047,7 +29522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 7,
     "collapsed_words": 491,
-    "collapsed_pct": 76
+    "collapsed_pct": 76,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -28066,7 +29542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 32,
     "long_pct": 9,
     "collapsed_words": 4206,
-    "collapsed_pct": 96
+    "collapsed_pct": 96,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -28085,7 +29562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 27,
     "long_pct": 12,
     "collapsed_words": 2546,
-    "collapsed_pct": 96
+    "collapsed_pct": 96,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -28104,7 +29582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 18,
     "long_pct": 7,
     "collapsed_words": 2557,
-    "collapsed_pct": 95
+    "collapsed_pct": 95,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -28123,7 +29602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 14,
     "long_pct": 13,
     "collapsed_words": 1148,
-    "collapsed_pct": 88
+    "collapsed_pct": 88,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -28142,7 +29622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 242,
-    "collapsed_pct": 74
+    "collapsed_pct": 74,
+    "ari_excl": 2.3
    },
    "low_confidence": false
   },
@@ -28161,7 +29642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 230,
-    "collapsed_pct": 67
+    "collapsed_pct": 67,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -28180,7 +29662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 37,
     "long_pct": 10,
     "collapsed_words": 4684,
-    "collapsed_pct": 95
+    "collapsed_pct": 95,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -28199,7 +29682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 15,
     "long_pct": 7,
     "collapsed_words": 2150,
-    "collapsed_pct": 91
+    "collapsed_pct": 91,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -28218,7 +29702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 14,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.1
    },
    "low_confidence": true
   },
@@ -28237,7 +29722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 13.7
    },
    "low_confidence": true
   },
@@ -28256,7 +29742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 2,
     "collapsed_words": 504,
-    "collapsed_pct": 60
+    "collapsed_pct": 60,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -28275,7 +29762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 2.7
    },
    "low_confidence": false
   },
@@ -28294,7 +29782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 189,
-    "collapsed_pct": 77
+    "collapsed_pct": 77,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -28313,7 +29802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 157,
-    "collapsed_pct": 58
+    "collapsed_pct": 58,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -28332,7 +29822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -28351,7 +29842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 8,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -28370,7 +29862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 125,
-    "collapsed_pct": 42
+    "collapsed_pct": 42,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -28389,7 +29882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 537,
-    "collapsed_pct": 82
+    "collapsed_pct": 82,
+    "ari_excl": 7.5
    },
    "low_confidence": false
   },
@@ -28408,7 +29902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.2
    },
    "low_confidence": false
   },
@@ -28427,7 +29922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 11,
     "collapsed_words": 137,
-    "collapsed_pct": 36
+    "collapsed_pct": 36,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -28446,7 +29942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.4
    },
    "low_confidence": true
   },
@@ -28465,7 +29962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -28484,7 +29982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 182,
-    "collapsed_pct": 75
+    "collapsed_pct": 75,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -28503,7 +30002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 48,
-    "collapsed_pct": 55
+    "collapsed_pct": 55,
+    "ari_excl": 5.1
    },
    "low_confidence": true
   },
@@ -28522,7 +30022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.3
    },
    "low_confidence": true
   },
@@ -28541,7 +30042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.5
    },
    "low_confidence": false
   },
@@ -28560,7 +30062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.6
    },
    "low_confidence": true
   },
@@ -28579,7 +30082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.1
    },
    "low_confidence": true
   },
@@ -28598,7 +30102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 27,
     "collapsed_words": 147,
-    "collapsed_pct": 50
+    "collapsed_pct": 50,
+    "ari_excl": 8.5
    },
    "low_confidence": false
   },
@@ -28617,7 +30122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 300,
-    "collapsed_pct": 85
+    "collapsed_pct": 85,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -28636,7 +30142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 133,
-    "collapsed_pct": 51
+    "collapsed_pct": 51,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -28655,7 +30162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 278,
-    "collapsed_pct": 39
+    "collapsed_pct": 39,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -28674,7 +30182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.5
    },
    "low_confidence": false
   },
@@ -28693,7 +30202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10
    },
    "low_confidence": true
   },
@@ -28712,7 +30222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 280,
-    "collapsed_pct": 88
+    "collapsed_pct": 88,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -28731,7 +30242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 12.1
    },
    "low_confidence": true
   },
@@ -28750,7 +30262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.7
    },
    "low_confidence": true
   },
@@ -28769,7 +30282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 90,
-    "collapsed_pct": 36
+    "collapsed_pct": 36,
+    "ari_excl": 7.8
    },
    "low_confidence": false
   },
@@ -28788,7 +30302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 27,
     "collapsed_words": 76,
-    "collapsed_pct": 39
+    "collapsed_pct": 39,
+    "ari_excl": 12.3
    },
    "low_confidence": false
   },
@@ -28807,7 +30322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 10,
     "collapsed_words": 101,
-    "collapsed_pct": 48
+    "collapsed_pct": 48,
+    "ari_excl": 8.3
    },
    "low_confidence": false
   },
@@ -28826,7 +30342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -28845,7 +30362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 761,
-    "collapsed_pct": 93
+    "collapsed_pct": 93,
+    "ari_excl": 3.9
    },
    "low_confidence": false
   },
@@ -28864,7 +30382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -28883,7 +30402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 115,
-    "collapsed_pct": 47
+    "collapsed_pct": 47,
+    "ari_excl": 8.9
    },
    "low_confidence": false
   },
@@ -28902,7 +30422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 14,
     "long_pct": 11,
     "collapsed_words": 1483,
-    "collapsed_pct": 93
+    "collapsed_pct": 93,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -28921,7 +30442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 16,
     "long_pct": 11,
     "collapsed_words": 1523,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -28940,7 +30462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 157,
-    "collapsed_pct": 31
+    "collapsed_pct": 31,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -28959,7 +30482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 17,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.5
    },
    "low_confidence": true
   },
@@ -28978,7 +30502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 12,
     "long_pct": 17,
     "collapsed_words": 812,
-    "collapsed_pct": 97
+    "collapsed_pct": 97,
+    "ari_excl": 9.8
    },
    "low_confidence": false
   },
@@ -28997,7 +30522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 442,
-    "collapsed_pct": 77
+    "collapsed_pct": 77,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -29016,7 +30542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 2,
     "collapsed_words": 2113,
-    "collapsed_pct": 89
+    "collapsed_pct": 89,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -29035,7 +30562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 17,
     "collapsed_words": 28,
-    "collapsed_pct": 32
+    "collapsed_pct": 32,
+    "ari_excl": 9.7
    },
    "low_confidence": true
   },
@@ -29054,7 +30582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 2
    },
    "low_confidence": true
   },
@@ -29073,7 +30602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 114,
-    "collapsed_pct": 37
+    "collapsed_pct": 37,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -29092,7 +30622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 25,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.3
    },
    "low_confidence": true
   },
@@ -29111,7 +30642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.1
    },
    "low_confidence": false
   },
@@ -29130,7 +30662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 23,
     "collapsed_words": 337,
-    "collapsed_pct": 90
+    "collapsed_pct": 90,
+    "ari_excl": 9.9
    },
    "low_confidence": false
   },
@@ -29149,7 +30682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 37,
     "long_pct": 7,
     "collapsed_words": 4568,
-    "collapsed_pct": 96
+    "collapsed_pct": 96,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -29168,7 +30702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 21,
     "long_pct": 9,
     "collapsed_words": 2179,
-    "collapsed_pct": 91
+    "collapsed_pct": 91,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -29187,7 +30722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 21,
     "long_pct": 7,
     "collapsed_words": 2893,
-    "collapsed_pct": 94
+    "collapsed_pct": 94,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -29206,7 +30742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 18,
     "long_pct": 6,
     "collapsed_words": 2894,
-    "collapsed_pct": 93
+    "collapsed_pct": 93,
+    "ari_excl": 7.8
    },
    "low_confidence": false
   },
@@ -29225,7 +30762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 27,
     "long_pct": 10,
     "collapsed_words": 2959,
-    "collapsed_pct": 95
+    "collapsed_pct": 95,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -29244,7 +30782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 9,
     "collapsed_words": 110,
-    "collapsed_pct": 25
+    "collapsed_pct": 25,
+    "ari_excl": 8.8
    },
    "low_confidence": false
   },
@@ -29263,7 +30802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 6,
     "collapsed_words": 594,
-    "collapsed_pct": 64
+    "collapsed_pct": 64,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -29282,7 +30822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.7
    },
    "low_confidence": true
   },
@@ -29301,7 +30842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.4
    },
    "low_confidence": false
   },
@@ -29320,7 +30862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 33,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.4
    },
    "low_confidence": true
   },
@@ -29339,7 +30882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -29358,7 +30902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 13,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.2
    },
    "low_confidence": false
   },
@@ -29377,7 +30922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 8,
     "long_pct": 6,
     "collapsed_words": 1363,
-    "collapsed_pct": 95
+    "collapsed_pct": 95,
+    "ari_excl": 8.5
    },
    "low_confidence": false
   },
@@ -29396,7 +30942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 5,
     "collapsed_words": 513,
-    "collapsed_pct": 77
+    "collapsed_pct": 77,
+    "ari_excl": 8.1
    },
    "low_confidence": false
   },
@@ -29415,7 +30962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 32,
-    "collapsed_pct": 13
+    "collapsed_pct": 13,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -29434,7 +30982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.3
    },
    "low_confidence": true
   },
@@ -29453,7 +31002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 9,
     "long_pct": 6,
     "collapsed_words": 1316,
-    "collapsed_pct": 80
+    "collapsed_pct": 80,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -29472,7 +31022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 8,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.7
    },
    "low_confidence": false
   },
@@ -29491,7 +31042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.3
    },
    "low_confidence": false
   },
@@ -29510,7 +31062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.1
    },
    "low_confidence": true
   },
@@ -29529,7 +31082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 137,
-    "collapsed_pct": 38
+    "collapsed_pct": 38,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -29548,7 +31102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.7
    },
    "low_confidence": false
   },
@@ -29567,7 +31122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 598,
-    "collapsed_pct": 90
+    "collapsed_pct": 90,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -29586,7 +31142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 25,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.6
    },
    "low_confidence": true
   },
@@ -29605,7 +31162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 6,
     "collapsed_words": 449,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 8.3
    },
    "low_confidence": false
   },
@@ -29624,7 +31182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 125,
-    "collapsed_pct": 59
+    "collapsed_pct": 59,
+    "ari_excl": 6.7
    },
    "low_confidence": false
   },
@@ -29643,7 +31202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.6
    },
    "low_confidence": true
   },
@@ -29662,7 +31222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.4
    },
    "low_confidence": false
   },
@@ -29681,7 +31242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.8
    },
    "low_confidence": true
   },
@@ -29700,7 +31262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 103,
-    "collapsed_pct": 39
+    "collapsed_pct": 39,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -29719,7 +31282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 13,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.9
    },
    "low_confidence": false
   },
@@ -29738,7 +31302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 10,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.2
    },
    "low_confidence": true
   },
@@ -29757,7 +31322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 8,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.2
    },
    "low_confidence": false
   },
@@ -29776,7 +31342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 280,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -29795,7 +31362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.4
    },
    "low_confidence": true
   },
@@ -29814,7 +31382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 33,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.7
    },
    "low_confidence": true
   },
@@ -29833,7 +31402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 8,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.7
    },
    "low_confidence": true
   },
@@ -29852,7 +31422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.5
    },
    "low_confidence": true
   },
@@ -29871,7 +31442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 479,
-    "collapsed_pct": 72
+    "collapsed_pct": 72,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -29890,7 +31462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 305,
-    "collapsed_pct": 79
+    "collapsed_pct": 79,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -29909,7 +31482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -29928,7 +31502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 431,
-    "collapsed_pct": 68
+    "collapsed_pct": 68,
+    "ari_excl": 5
    },
    "low_confidence": false
   },
@@ -29947,7 +31522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 330,
-    "collapsed_pct": 65
+    "collapsed_pct": 65,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -29966,7 +31542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 9,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -29985,7 +31562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 16,
     "collapsed_words": 216,
-    "collapsed_pct": 57
+    "collapsed_pct": 57,
+    "ari_excl": 8.4
    },
    "low_confidence": false
   },
@@ -30004,7 +31582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 20,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.4
    },
    "low_confidence": false
   },
@@ -30023,7 +31602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.3
    },
    "low_confidence": true
   },
@@ -30042,7 +31622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.2
    },
    "low_confidence": true
   },
@@ -30061,7 +31642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 7,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -30080,7 +31662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.1
    },
    "low_confidence": false
   },
@@ -30099,7 +31682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 235,
-    "collapsed_pct": 59
+    "collapsed_pct": 59,
+    "ari_excl": 4.7
    },
    "low_confidence": false
   },
@@ -30118,7 +31702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 66,
-    "collapsed_pct": 58
+    "collapsed_pct": 58,
+    "ari_excl": 10
    },
    "low_confidence": false
   },
@@ -30137,7 +31722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.2
    },
    "low_confidence": false
   },
@@ -30156,7 +31742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 64,
-    "collapsed_pct": 37
+    "collapsed_pct": 37,
+    "ari_excl": 4.5
    },
    "low_confidence": false
   },
@@ -30175,7 +31762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 306,
-    "collapsed_pct": 66
+    "collapsed_pct": 66,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -30194,7 +31782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 157,
-    "collapsed_pct": 58
+    "collapsed_pct": 58,
+    "ari_excl": 5
    },
    "low_confidence": false
   },
@@ -30213,7 +31802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 605,
-    "collapsed_pct": 92
+    "collapsed_pct": 92,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -30232,7 +31822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 6,
     "collapsed_words": 119,
-    "collapsed_pct": 32
+    "collapsed_pct": 32,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -30251,7 +31842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.7
    },
    "low_confidence": true
   },
@@ -30270,7 +31862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 250,
-    "collapsed_pct": 60
+    "collapsed_pct": 60,
+    "ari_excl": 8.7
    },
    "low_confidence": false
   },
@@ -30289,7 +31882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.8
    },
    "low_confidence": true
   },
@@ -30308,7 +31902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 521,
-    "collapsed_pct": 81
+    "collapsed_pct": 81,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -30327,7 +31922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.1
    },
    "low_confidence": true
   },
@@ -30346,7 +31942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 12.8
    },
    "low_confidence": true
   },
@@ -30365,7 +31962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -30384,7 +31982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.6
    },
    "low_confidence": true
   },
@@ -30403,7 +32002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 73,
-    "collapsed_pct": 45
+    "collapsed_pct": 45,
+    "ari_excl": 9.1
    },
    "low_confidence": false
   },
@@ -30422,7 +32022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 58,
-    "collapsed_pct": 43
+    "collapsed_pct": 43,
+    "ari_excl": 4.3
    },
    "low_confidence": false
   },
@@ -30441,7 +32042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 144,
-    "collapsed_pct": 58
+    "collapsed_pct": 58,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -30460,7 +32062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 149,
-    "collapsed_pct": 62
+    "collapsed_pct": 62,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -30479,7 +32082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6
    },
    "low_confidence": true
   },
@@ -30498,7 +32102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 59,
-    "collapsed_pct": 38
+    "collapsed_pct": 38,
+    "ari_excl": 6.6
    },
    "low_confidence": false
   },
@@ -30517,7 +32122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 50,
-    "collapsed_pct": 54
+    "collapsed_pct": 54,
+    "ari_excl": 7.3
    },
    "low_confidence": true
   },
@@ -30536,7 +32142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.6
    },
    "low_confidence": true
   },
@@ -30555,7 +32162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.7
    },
    "low_confidence": true
   },
@@ -30574,7 +32182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 101,
-    "collapsed_pct": 61
+    "collapsed_pct": 61,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -30593,7 +32202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 13,
     "collapsed_words": 160,
-    "collapsed_pct": 52
+    "collapsed_pct": 52,
+    "ari_excl": 7.5
    },
    "low_confidence": false
   },
@@ -30612,7 +32222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 38,
-    "collapsed_pct": 48
+    "collapsed_pct": 48,
+    "ari_excl": 7.9
    },
    "low_confidence": true
   },
@@ -30631,7 +32242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 85,
-    "collapsed_pct": 48
+    "collapsed_pct": 48,
+    "ari_excl": 9.1
    },
    "low_confidence": false
   },
@@ -30650,7 +32262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -30669,7 +32282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 14,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9
    },
    "low_confidence": true
   },
@@ -30688,7 +32302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 8,
     "collapsed_words": 88,
-    "collapsed_pct": 61
+    "collapsed_pct": 61,
+    "ari_excl": 8.1
    },
    "low_confidence": false
   },
@@ -30707,7 +32322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.1
    },
    "low_confidence": true
   },
@@ -30726,7 +32342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.8
    },
    "low_confidence": true
   },
@@ -30745,7 +32362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 189,
-    "collapsed_pct": 66
+    "collapsed_pct": 66,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -30764,7 +32382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 317,
-    "collapsed_pct": 95
+    "collapsed_pct": 95,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -30783,7 +32402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.9
    },
    "low_confidence": true
   },
@@ -30802,7 +32422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 7,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.5
    },
    "low_confidence": false
   },
@@ -30821,7 +32442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.4
    },
    "low_confidence": true
   },
@@ -30840,7 +32462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 167,
-    "collapsed_pct": 62
+    "collapsed_pct": 62,
+    "ari_excl": 9.9
    },
    "low_confidence": false
   },
@@ -30859,7 +32482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.4
    },
    "low_confidence": true
   },
@@ -30878,7 +32502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -30897,7 +32522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 13,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.8
    },
    "low_confidence": true
   },
@@ -30916,7 +32542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 7,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5
    },
    "low_confidence": true
   },
@@ -30935,7 +32562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 8,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -30954,7 +32582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 14,
     "long_pct": 8,
     "collapsed_words": 1718,
-    "collapsed_pct": 92
+    "collapsed_pct": 92,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -30973,7 +32602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.3
    },
    "low_confidence": true
   },
@@ -30992,7 +32622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 99,
-    "collapsed_pct": 48
+    "collapsed_pct": 48,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -31011,7 +32642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 41,
-    "collapsed_pct": 17
+    "collapsed_pct": 17,
+    "ari_excl": 8
    },
    "low_confidence": false
   },
@@ -31030,7 +32662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.5
    },
    "low_confidence": true
   },
@@ -31049,7 +32682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 408,
-    "collapsed_pct": 71
+    "collapsed_pct": 71,
+    "ari_excl": 8.5
    },
    "low_confidence": false
   },
@@ -31068,7 +32702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.2
    },
    "low_confidence": true
   },
@@ -31087,7 +32722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 154,
-    "collapsed_pct": 65
+    "collapsed_pct": 65,
+    "ari_excl": 3.7
    },
    "low_confidence": false
   },
@@ -31106,7 +32742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 157,
-    "collapsed_pct": 59
+    "collapsed_pct": 59,
+    "ari_excl": 5
    },
    "low_confidence": false
   },
@@ -31125,7 +32762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 605,
-    "collapsed_pct": 93
+    "collapsed_pct": 93,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -31144,7 +32782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 52,
-    "collapsed_pct": 78
+    "collapsed_pct": 78,
+    "ari_excl": 6.6
    },
    "low_confidence": true
   },
@@ -31163,7 +32802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -31182,7 +32822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 605,
-    "collapsed_pct": 94
+    "collapsed_pct": 94,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -31201,7 +32842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 605,
-    "collapsed_pct": 85
+    "collapsed_pct": 85,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -31220,7 +32862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 121,
-    "collapsed_pct": 60
+    "collapsed_pct": 60,
+    "ari_excl": 6.8
    },
    "low_confidence": false
   },
@@ -31239,7 +32882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 17,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.8
    },
    "low_confidence": true
   },
@@ -31258,7 +32902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.7
    },
    "low_confidence": true
   },
@@ -31277,7 +32922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 8,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.2
    },
    "low_confidence": true
   },
@@ -31296,7 +32942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 409,
-    "collapsed_pct": 69
+    "collapsed_pct": 69,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -31315,7 +32962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 605,
-    "collapsed_pct": 91
+    "collapsed_pct": 91,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -31334,7 +32982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 70,
-    "collapsed_pct": 60
+    "collapsed_pct": 60,
+    "ari_excl": 7.9
    },
    "low_confidence": false
   },
@@ -31353,7 +33002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 15,
     "long_pct": 5,
     "collapsed_words": 2452,
-    "collapsed_pct": 96
+    "collapsed_pct": 96,
+    "ari_excl": 6.7
    },
    "low_confidence": false
   },
@@ -31372,7 +33022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 20,
     "long_pct": 7,
     "collapsed_words": 3143,
-    "collapsed_pct": 97
+    "collapsed_pct": 97,
+    "ari_excl": 6.7
    },
    "low_confidence": false
   },
@@ -31391,7 +33042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 52,
-    "collapsed_pct": 22
+    "collapsed_pct": 22,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -31410,7 +33062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 20,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.2
    },
    "low_confidence": true
   },
@@ -31429,7 +33082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.8
    },
    "low_confidence": true
   },
@@ -31448,7 +33102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.8
    },
    "low_confidence": true
   },
@@ -31467,7 +33122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 210,
-    "collapsed_pct": 51
+    "collapsed_pct": 51,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -31486,7 +33142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 40,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.4
    },
    "low_confidence": true
   },
@@ -31505,7 +33162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.6
    },
    "low_confidence": true
   },
@@ -31524,7 +33182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 4,
     "collapsed_words": 574,
-    "collapsed_pct": 69
+    "collapsed_pct": 69,
+    "ari_excl": 7.8
    },
    "low_confidence": false
   },
@@ -31543,7 +33202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 7,
     "collapsed_words": 492,
-    "collapsed_pct": 67
+    "collapsed_pct": 67,
+    "ari_excl": 8.7
    },
    "low_confidence": false
   },
@@ -31562,7 +33222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 11,
     "long_pct": 10,
     "collapsed_words": 1183,
-    "collapsed_pct": 93
+    "collapsed_pct": 93,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -31581,7 +33242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 345,
-    "collapsed_pct": 64
+    "collapsed_pct": 64,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -31600,7 +33262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 10,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.8
    },
    "low_confidence": false
   },
@@ -31619,7 +33282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 318,
-    "collapsed_pct": 63
+    "collapsed_pct": 63,
+    "ari_excl": 9
    },
    "low_confidence": false
   },
@@ -31638,7 +33302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 12,
     "collapsed_words": 112,
-    "collapsed_pct": 25
+    "collapsed_pct": 25,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -31657,7 +33322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 40,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 12.9
    },
    "low_confidence": true
   },
@@ -31676,7 +33342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.5
    },
    "low_confidence": true
   },
@@ -31695,7 +33362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 311,
-    "collapsed_pct": 63
+    "collapsed_pct": 63,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -31714,7 +33382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -31733,7 +33402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 1.2
    },
    "low_confidence": true
   },
@@ -31752,7 +33422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.7
    },
    "low_confidence": true
   },
@@ -31771,7 +33442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 182,
-    "collapsed_pct": 62
+    "collapsed_pct": 62,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -31790,7 +33462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.7
    },
    "low_confidence": false
   },
@@ -31809,7 +33482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 187,
-    "collapsed_pct": 63
+    "collapsed_pct": 63,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -31828,7 +33502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 7,
     "collapsed_words": 86,
-    "collapsed_pct": 67
+    "collapsed_pct": 67,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -31847,7 +33522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.9
    },
    "low_confidence": true
   },
@@ -31866,7 +33542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 14,
     "collapsed_words": 123,
-    "collapsed_pct": 26
+    "collapsed_pct": 26,
+    "ari_excl": 8.3
    },
    "low_confidence": false
   },
@@ -31885,7 +33562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 14,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.9
    },
    "low_confidence": true
   },
@@ -31904,7 +33582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.3
    },
    "low_confidence": true
   },
@@ -31923,7 +33602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.7
    },
    "low_confidence": true
   },
@@ -31942,7 +33622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.1
    },
    "low_confidence": true
   },
@@ -31961,7 +33642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 174,
-    "collapsed_pct": 68
+    "collapsed_pct": 68,
+    "ari_excl": 8.4
    },
    "low_confidence": false
   },
@@ -31980,7 +33662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.6
    },
    "low_confidence": false
   },
@@ -31999,7 +33682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 13,
     "collapsed_words": 434,
-    "collapsed_pct": 74
+    "collapsed_pct": 74,
+    "ari_excl": 8.6
    },
    "low_confidence": false
   },
@@ -32018,7 +33702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.7
    },
    "low_confidence": true
   },
@@ -32037,7 +33722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 8,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.9
    },
    "low_confidence": false
   },
@@ -32056,7 +33742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 7,
     "collapsed_words": 32,
-    "collapsed_pct": 24
+    "collapsed_pct": 24,
+    "ari_excl": 2.9
    },
    "low_confidence": false
   },
@@ -32075,7 +33762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 19,
     "collapsed_words": 153,
-    "collapsed_pct": 36
+    "collapsed_pct": 36,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -32094,7 +33782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 45,
-    "collapsed_pct": 35
+    "collapsed_pct": 35,
+    "ari_excl": 5
    },
    "low_confidence": false
   },
@@ -32113,7 +33802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 64,
-    "collapsed_pct": 37
+    "collapsed_pct": 37,
+    "ari_excl": 4.8
    },
    "low_confidence": false
   },
@@ -32132,7 +33822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 387,
-    "collapsed_pct": 78
+    "collapsed_pct": 78,
+    "ari_excl": 4.6
    },
    "low_confidence": false
   },
@@ -32151,7 +33842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.1
    },
    "low_confidence": true
   },
@@ -32170,7 +33862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.1
    },
    "low_confidence": true
   },
@@ -32189,7 +33882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 4,
     "collapsed_words": 721,
-    "collapsed_pct": 80
+    "collapsed_pct": 80,
+    "ari_excl": 7.8
    },
    "low_confidence": false
   },
@@ -32208,7 +33902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.7
    },
    "low_confidence": true
   },
@@ -32227,7 +33922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 607,
-    "collapsed_pct": 90
+    "collapsed_pct": 90,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -32246,7 +33942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 605,
-    "collapsed_pct": 93
+    "collapsed_pct": 93,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -32265,7 +33962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 103,
-    "collapsed_pct": 62
+    "collapsed_pct": 62,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -32284,7 +33982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 2.5
    },
    "low_confidence": true
   },
@@ -32303,7 +34002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 14,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11
    },
    "low_confidence": true
   },
@@ -32322,7 +34022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.5
    },
    "low_confidence": false
   },
@@ -32341,7 +34042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.7
    },
    "low_confidence": true
   },
@@ -32360,7 +34062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 171,
-    "collapsed_pct": 71
+    "collapsed_pct": 71,
+    "ari_excl": 10.5
    },
    "low_confidence": false
   },
@@ -32379,7 +34082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.7
    },
    "low_confidence": true
   },
@@ -32398,7 +34102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9
    },
    "low_confidence": true
   },
@@ -32417,7 +34122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 333,
-    "collapsed_pct": 74
+    "collapsed_pct": 74,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -32436,7 +34142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -32455,7 +34162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.1
    },
    "low_confidence": true
   },
@@ -32474,7 +34182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.4
    },
    "low_confidence": true
   },
@@ -32493,7 +34202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 8,
     "collapsed_words": 201,
-    "collapsed_pct": 79
+    "collapsed_pct": 79,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -32512,7 +34222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 119,
-    "collapsed_pct": 42
+    "collapsed_pct": 42,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -32531,7 +34242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.8
    },
    "low_confidence": true
   },
@@ -32550,7 +34262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.1
    },
    "low_confidence": true
   },
@@ -32569,7 +34282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.6
    },
    "low_confidence": true
   },
@@ -32588,7 +34302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 458,
-    "collapsed_pct": 71
+    "collapsed_pct": 71,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -32607,7 +34322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 48,
-    "collapsed_pct": 34
+    "collapsed_pct": 34,
+    "ari_excl": 7.9
    },
    "low_confidence": false
   },
@@ -32626,7 +34342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 2,
     "collapsed_words": 1796,
-    "collapsed_pct": 82
+    "collapsed_pct": 82,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -32645,7 +34362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 1303,
-    "collapsed_pct": 95
+    "collapsed_pct": 95,
+    "ari_excl": 4.6
    },
    "low_confidence": false
   },
@@ -32664,7 +34382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 169,
-    "collapsed_pct": 67
+    "collapsed_pct": 67,
+    "ari_excl": 4.8
    },
    "low_confidence": false
   },
@@ -32683,7 +34402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 191,
-    "collapsed_pct": 76
+    "collapsed_pct": 76,
+    "ari_excl": 6.8
    },
    "low_confidence": false
   },
@@ -32702,7 +34422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 6,
     "collapsed_words": 352,
-    "collapsed_pct": 92
+    "collapsed_pct": 92,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -32721,7 +34442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 2,
     "collapsed_words": 1008,
-    "collapsed_pct": 84
+    "collapsed_pct": 84,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -32740,7 +34462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 581,
-    "collapsed_pct": 93
+    "collapsed_pct": 93,
+    "ari_excl": 7.5
    },
    "low_confidence": false
   },
@@ -32759,7 +34482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.2
    },
    "low_confidence": false
   },
@@ -32778,7 +34502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 2,
     "collapsed_words": 650,
-    "collapsed_pct": 69
+    "collapsed_pct": 69,
+    "ari_excl": 4.5
    },
    "low_confidence": false
   },
@@ -32797,7 +34522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 4,
     "collapsed_words": 630,
-    "collapsed_pct": 78
+    "collapsed_pct": 78,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -32816,7 +34542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 33,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 13.3
    },
    "low_confidence": true
   },
@@ -32835,7 +34562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -32854,7 +34582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 60,
-    "collapsed_pct": 44
+    "collapsed_pct": 44,
+    "ari_excl": 10.6
    },
    "low_confidence": false
   },
@@ -32873,7 +34602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 13,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.9
    },
    "low_confidence": true
   },
@@ -32892,7 +34622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 8,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.5
    },
    "low_confidence": true
   },
@@ -32911,7 +34642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.2
    },
    "low_confidence": true
   },
@@ -32930,7 +34662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 2,
     "collapsed_words": 777,
-    "collapsed_pct": 90
+    "collapsed_pct": 90,
+    "ari_excl": 7.5
    },
    "low_confidence": false
   },
@@ -32949,7 +34682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.8
    },
    "low_confidence": true
   },
@@ -32968,7 +34702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 50,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 14.2
    },
    "low_confidence": true
   },
@@ -32987,7 +34722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 7,
     "long_pct": 18,
     "collapsed_words": 448,
-    "collapsed_pct": 81
+    "collapsed_pct": 81,
+    "ari_excl": 8
    },
    "low_confidence": false
   },
@@ -33006,7 +34742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 9,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.8
    },
    "low_confidence": false
   },
@@ -33025,7 +34762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -33044,7 +34782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 24,
-    "collapsed_pct": 23
+    "collapsed_pct": 23,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -33063,7 +34802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.7
    },
    "low_confidence": true
   },
@@ -33082,7 +34822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 233,
-    "collapsed_pct": 62
+    "collapsed_pct": 62,
+    "ari_excl": 8
    },
    "low_confidence": false
   },
@@ -33101,7 +34842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -33120,7 +34862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.8
    },
    "low_confidence": false
   },
@@ -33139,7 +34882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 16,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.3
    },
    "low_confidence": false
   },
@@ -33158,7 +34902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 18,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.4
    },
    "low_confidence": true
   },
@@ -33177,7 +34922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 7,
     "long_pct": 2,
     "collapsed_words": 1684,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -33196,7 +34942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 511,
-    "collapsed_pct": 77
+    "collapsed_pct": 77,
+    "ari_excl": 8.1
    },
    "low_confidence": false
   },
@@ -33215,7 +34962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 1.9
    },
    "low_confidence": true
   },
@@ -33234,7 +34982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 254,
-    "collapsed_pct": 59
+    "collapsed_pct": 59,
+    "ari_excl": 5
    },
    "low_confidence": false
   },
@@ -33253,7 +35002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.3
    },
    "low_confidence": true
   },
@@ -33272,7 +35022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.5
    },
    "low_confidence": false
   },
@@ -33291,7 +35042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 8,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -33310,7 +35062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 7,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.9
    },
    "low_confidence": false
   },
@@ -33329,7 +35082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.2
    },
    "low_confidence": true
   },
@@ -33348,7 +35102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 64,
-    "collapsed_pct": 42
+    "collapsed_pct": 42,
+    "ari_excl": 4.6
    },
    "low_confidence": false
   },
@@ -33367,7 +35122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.3
    },
    "low_confidence": true
   },
@@ -33386,7 +35142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.9
    },
    "low_confidence": true
   },
@@ -33405,7 +35162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.6
    },
    "low_confidence": true
   },
@@ -33424,7 +35182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 291,
-    "collapsed_pct": 59
+    "collapsed_pct": 59,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -33443,7 +35202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4
    },
    "low_confidence": true
   },
@@ -33462,7 +35222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4
    },
    "low_confidence": true
   },
@@ -33481,7 +35242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.5
    },
    "low_confidence": true
   },
@@ -33500,7 +35262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 242,
-    "collapsed_pct": 49
+    "collapsed_pct": 49,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -33519,7 +35282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 3,
     "collapsed_words": 1090,
-    "collapsed_pct": 84
+    "collapsed_pct": 84,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -33538,7 +35302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -33557,7 +35322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 2.7
    },
    "low_confidence": true
   },
@@ -33576,7 +35342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 8,
     "collapsed_words": 104,
-    "collapsed_pct": 62
+    "collapsed_pct": 62,
+    "ari_excl": 10
    },
    "low_confidence": false
   },
@@ -33595,7 +35362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 2,
     "collapsed_words": 1039,
-    "collapsed_pct": 90
+    "collapsed_pct": 90,
+    "ari_excl": 4.8
    },
    "low_confidence": false
   },
@@ -33614,7 +35382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 2.8
    },
    "low_confidence": true
   },
@@ -33633,7 +35402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 2,
     "collapsed_words": 646,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 4.5
    },
    "low_confidence": false
   },
@@ -33652,7 +35422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.6
    },
    "low_confidence": true
   },
@@ -33671,7 +35442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.6
    },
    "low_confidence": false
   },
@@ -33690,7 +35462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 157,
-    "collapsed_pct": 43
+    "collapsed_pct": 43,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -33709,7 +35482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 1.8
    },
    "low_confidence": true
   },
@@ -33728,7 +35502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 0.8
    },
    "low_confidence": true
   },
@@ -33747,7 +35522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 605,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -33766,7 +35542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 8,
     "long_pct": 28,
     "collapsed_words": 214,
-    "collapsed_pct": 43
+    "collapsed_pct": 43,
+    "ari_excl": 11.8
    },
    "low_confidence": false
   },
@@ -33785,7 +35562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 6,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -33804,7 +35582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 14,
     "collapsed_words": 42,
-    "collapsed_pct": 22
+    "collapsed_pct": 22,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -33823,7 +35602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 280,
-    "collapsed_pct": 60
+    "collapsed_pct": 60,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -33842,7 +35622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 605,
-    "collapsed_pct": 92
+    "collapsed_pct": 92,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -33861,7 +35642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 178,
-    "collapsed_pct": 47
+    "collapsed_pct": 47,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -33880,7 +35662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 11,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.1
    },
    "low_confidence": false
   },
@@ -33899,7 +35682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 157,
-    "collapsed_pct": 31
+    "collapsed_pct": 31,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -33918,7 +35702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 14,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.7
    },
    "low_confidence": true
   },
@@ -33937,7 +35722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 14,
     "collapsed_words": 180,
-    "collapsed_pct": 41
+    "collapsed_pct": 41,
+    "ari_excl": 9.1
    },
    "low_confidence": false
   },
@@ -33956,7 +35742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 422,
-    "collapsed_pct": 80
+    "collapsed_pct": 80,
+    "ari_excl": 4.3
    },
    "low_confidence": false
   },
@@ -33975,7 +35762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.8
    },
    "low_confidence": true
   },
@@ -33994,7 +35782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.3
    },
    "low_confidence": true
   },
@@ -34013,7 +35802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.2
    },
    "low_confidence": false
   },
@@ -34032,7 +35822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 105,
-    "collapsed_pct": 49
+    "collapsed_pct": 49,
+    "ari_excl": 9.9
    },
    "low_confidence": false
   },
@@ -34051,7 +35842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.4
    },
    "low_confidence": true
   },
@@ -34070,7 +35862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.9
    },
    "low_confidence": true
   },
@@ -34089,7 +35882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.5
    },
    "low_confidence": true
   },
@@ -34108,7 +35902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.9
    },
    "low_confidence": true
   },
@@ -34127,7 +35922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 14,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 13.2
    },
    "low_confidence": true
   },
@@ -34146,7 +35942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.6
    },
    "low_confidence": true
   },
@@ -34165,7 +35962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 222,
-    "collapsed_pct": 73
+    "collapsed_pct": 73,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -34184,7 +35982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.8
    },
    "low_confidence": false
   },
@@ -34203,7 +36002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.1
    },
    "low_confidence": true
   },
@@ -34222,7 +36022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.1
    },
    "low_confidence": false
   },
@@ -34241,7 +36042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.7
    },
    "low_confidence": true
   },
@@ -34260,7 +36062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.4
    },
    "low_confidence": true
   },
@@ -34279,7 +36082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.9
    },
    "low_confidence": false
   },
@@ -34298,7 +36102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -34317,7 +36122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 332,
-    "collapsed_pct": 79
+    "collapsed_pct": 79,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -34336,7 +36142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 2.4
    },
    "low_confidence": true
   },
@@ -34355,7 +36162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 321,
-    "collapsed_pct": 65
+    "collapsed_pct": 65,
+    "ari_excl": 4.7
    },
    "low_confidence": false
   },
@@ -34374,7 +36182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 25,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.2
    },
    "low_confidence": true
   },
@@ -34393,7 +36202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10
    },
    "low_confidence": false
   },
@@ -34412,7 +36222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 473,
-    "collapsed_pct": 85
+    "collapsed_pct": 85,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -34431,7 +36242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -34450,7 +36262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.5
    },
    "low_confidence": true
   },
@@ -34469,7 +36282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 43,
-    "collapsed_pct": 24
+    "collapsed_pct": 24,
+    "ari_excl": 10.5
    },
    "low_confidence": false
   },
@@ -34488,7 +36302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 694,
-    "collapsed_pct": 90
+    "collapsed_pct": 90,
+    "ari_excl": 9.3
    },
    "low_confidence": false
   },
@@ -34507,7 +36322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 17,
     "collapsed_words": 100,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 9.6
    },
    "low_confidence": false
   },
@@ -34526,7 +36342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 54,
-    "collapsed_pct": 61
+    "collapsed_pct": 61,
+    "ari_excl": 8.8
    },
    "low_confidence": true
   },
@@ -34545,7 +36362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 140,
-    "collapsed_pct": 60
+    "collapsed_pct": 60,
+    "ari_excl": 4.7
    },
    "low_confidence": false
   },
@@ -34564,7 +36382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 25,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9
    },
    "low_confidence": false
   },
@@ -34583,7 +36402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 17,
     "collapsed_words": 287,
-    "collapsed_pct": 68
+    "collapsed_pct": 68,
+    "ari_excl": 9.5
    },
    "low_confidence": false
   },
@@ -34602,7 +36422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 4,
     "collapsed_words": 431,
-    "collapsed_pct": 79
+    "collapsed_pct": 79,
+    "ari_excl": 8.3
    },
    "low_confidence": false
   },
@@ -34621,7 +36442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -34640,7 +36462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 25,
     "collapsed_words": 96,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 9.2
    },
    "low_confidence": false
   },
@@ -34659,7 +36482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 7,
     "long_pct": 9,
     "collapsed_words": 752,
-    "collapsed_pct": 78
+    "collapsed_pct": 78,
+    "ari_excl": 7.8
    },
    "low_confidence": false
   },
@@ -34678,7 +36502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 432,
-    "collapsed_pct": 71
+    "collapsed_pct": 71,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -34697,7 +36522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 24,
-    "collapsed_pct": 21
+    "collapsed_pct": 21,
+    "ari_excl": 7.8
    },
    "low_confidence": false
   },
@@ -34716,7 +36542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 379,
-    "collapsed_pct": 78
+    "collapsed_pct": 78,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -34735,7 +36562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.8
    },
    "low_confidence": true
   },
@@ -34754,7 +36582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 197,
-    "collapsed_pct": 52
+    "collapsed_pct": 52,
+    "ari_excl": 9.7
    },
    "low_confidence": false
   },
@@ -34773,7 +36602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 44,
-    "collapsed_pct": 25
+    "collapsed_pct": 25,
+    "ari_excl": 2.4
    },
    "low_confidence": false
   },
@@ -34792,7 +36622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 324,
-    "collapsed_pct": 85
+    "collapsed_pct": 85,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -34811,7 +36642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 1.8
    },
    "low_confidence": true
   },
@@ -34830,7 +36662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 1.8
    },
    "low_confidence": true
   },
@@ -34849,7 +36682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.7
    },
    "low_confidence": true
   },
@@ -34868,7 +36702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.3
    },
    "low_confidence": true
   },
@@ -34887,7 +36722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.1
    },
    "low_confidence": true
   },
@@ -34906,7 +36742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -34925,7 +36762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 13,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.5
    },
    "low_confidence": true
   },
@@ -34944,7 +36782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 523,
-    "collapsed_pct": 82
+    "collapsed_pct": 82,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -34963,7 +36802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -34982,7 +36822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.7
    },
    "low_confidence": false
   },
@@ -35001,7 +36842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 280,
-    "collapsed_pct": 81
+    "collapsed_pct": 81,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -35020,7 +36862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.3
    },
    "low_confidence": true
   },
@@ -35039,7 +36882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.7
    },
    "low_confidence": false
   },
@@ -35058,7 +36902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 452,
-    "collapsed_pct": 97
+    "collapsed_pct": 97,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -35077,7 +36922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.2
    },
    "low_confidence": true
   },
@@ -35096,7 +36942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 11,
     "collapsed_words": 82,
-    "collapsed_pct": 49
+    "collapsed_pct": 49,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -35115,7 +36962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 5,
     "collapsed_words": 395,
-    "collapsed_pct": 92
+    "collapsed_pct": 92,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -35134,7 +36982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 4,
     "collapsed_words": 1174,
-    "collapsed_pct": 85
+    "collapsed_pct": 85,
+    "ari_excl": 6.8
    },
    "low_confidence": false
   },
@@ -35153,7 +37002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 11,
     "collapsed_words": 372,
-    "collapsed_pct": 85
+    "collapsed_pct": 85,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -35172,7 +37022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 232,
-    "collapsed_pct": 52
+    "collapsed_pct": 52,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -35191,7 +37042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -35210,7 +37062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 98,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 7.8
    },
    "low_confidence": false
   },
@@ -35229,7 +37082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 7,
     "collapsed_words": 377,
-    "collapsed_pct": 52
+    "collapsed_pct": 52,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -35248,7 +37102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.6
    },
    "low_confidence": true
   },
@@ -35267,7 +37122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 8,
     "collapsed_words": 531,
-    "collapsed_pct": 72
+    "collapsed_pct": 72,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -35286,7 +37142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 279,
-    "collapsed_pct": 74
+    "collapsed_pct": 74,
+    "ari_excl": 8.1
    },
    "low_confidence": false
   },
@@ -35305,7 +37162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 482,
-    "collapsed_pct": 69
+    "collapsed_pct": 69,
+    "ari_excl": 4.3
    },
    "low_confidence": false
   },
@@ -35324,7 +37182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 25,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.7
    },
    "low_confidence": true
   },
@@ -35343,7 +37202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.9
    },
    "low_confidence": true
   },
@@ -35362,7 +37222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.2
    },
    "low_confidence": true
   },
@@ -35381,7 +37242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 17,
     "long_pct": 7,
     "collapsed_words": 2385,
-    "collapsed_pct": 94
+    "collapsed_pct": 94,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -35400,7 +37262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 23,
     "long_pct": 6,
     "collapsed_words": 2824,
-    "collapsed_pct": 91
+    "collapsed_pct": 91,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -35419,7 +37282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.1
    },
    "low_confidence": true
   },
@@ -35438,7 +37302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 8,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.3
    },
    "low_confidence": true
   },
@@ -35457,7 +37322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 44,
-    "collapsed_pct": 21
+    "collapsed_pct": 21,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -35476,7 +37342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 37,
-    "collapsed_pct": 19
+    "collapsed_pct": 19,
+    "ari_excl": 7.2
    },
    "low_confidence": false
   },
@@ -35495,7 +37362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.4
    },
    "low_confidence": true
   },
@@ -35514,7 +37382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11
    },
    "low_confidence": true
   },
@@ -35533,7 +37402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 6,
     "collapsed_words": 113,
-    "collapsed_pct": 46
+    "collapsed_pct": 46,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -35552,7 +37422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 4,
     "collapsed_words": 182,
-    "collapsed_pct": 58
+    "collapsed_pct": 58,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -35571,7 +37442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 17,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.7
    },
    "low_confidence": true
   },
@@ -35590,7 +37462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.1
    },
    "low_confidence": true
   },
@@ -35609,7 +37482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 8,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.6
    },
    "low_confidence": true
   },
@@ -35628,7 +37502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 9,
     "long_pct": 12,
     "collapsed_words": 465,
-    "collapsed_pct": 57
+    "collapsed_pct": 57,
+    "ari_excl": 9.1
    },
    "low_confidence": false
   },
@@ -35647,7 +37522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 17,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.5
    },
    "low_confidence": true
   },
@@ -35666,7 +37542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 255,
-    "collapsed_pct": 56
+    "collapsed_pct": 56,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -35685,7 +37562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.6
    },
    "low_confidence": true
   },
@@ -35704,7 +37582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.9
    },
    "low_confidence": true
   },
@@ -35723,7 +37602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 17,
-    "collapsed_pct": 24
+    "collapsed_pct": 24,
+    "ari_excl": 6.2
    },
    "low_confidence": true
   },
@@ -35742,7 +37622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.1
    },
    "low_confidence": true
   },
@@ -35761,7 +37642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 20,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.2
    },
    "low_confidence": true
   },
@@ -35780,7 +37662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.1
    },
    "low_confidence": true
   },
@@ -35799,7 +37682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 280,
-    "collapsed_pct": 75
+    "collapsed_pct": 75,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -35818,7 +37702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 605,
-    "collapsed_pct": 81
+    "collapsed_pct": 81,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -35837,7 +37722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 17,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 11.4
    },
    "low_confidence": false
   },
@@ -35856,7 +37742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.9
    },
    "low_confidence": true
   },
@@ -35875,7 +37762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 605,
-    "collapsed_pct": 89
+    "collapsed_pct": 89,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -35894,7 +37782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 130,
-    "collapsed_pct": 39
+    "collapsed_pct": 39,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -35913,7 +37802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 605,
-    "collapsed_pct": 91
+    "collapsed_pct": 91,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -35932,7 +37822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 8,
     "collapsed_words": 62,
-    "collapsed_pct": 49
+    "collapsed_pct": 49,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -35951,7 +37842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -35970,7 +37862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 178,
-    "collapsed_pct": 84
+    "collapsed_pct": 84,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -35989,7 +37882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.3
    },
    "low_confidence": true
   },
@@ -36008,7 +37902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 2,
     "collapsed_words": 682,
-    "collapsed_pct": 81
+    "collapsed_pct": 81,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -36027,7 +37922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 4,
     "collapsed_words": 1090,
-    "collapsed_pct": 92
+    "collapsed_pct": 92,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -36046,7 +37942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 157,
-    "collapsed_pct": 45
+    "collapsed_pct": 45,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -36065,7 +37962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 157,
-    "collapsed_pct": 53
+    "collapsed_pct": 53,
+    "ari_excl": 4.7
    },
    "low_confidence": false
   },
@@ -36084,7 +37982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.1
    },
    "low_confidence": true
   },
@@ -36103,7 +38002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 627,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -36122,7 +38022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 4,
     "collapsed_words": 685,
-    "collapsed_pct": 74
+    "collapsed_pct": 74,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -36141,7 +38042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 605,
-    "collapsed_pct": 94
+    "collapsed_pct": 94,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -36160,7 +38062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 8,
     "long_pct": 11,
     "collapsed_words": 754,
-    "collapsed_pct": 79
+    "collapsed_pct": 79,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -36179,7 +38082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 3,
     "collapsed_words": 913,
-    "collapsed_pct": 67
+    "collapsed_pct": 67,
+    "ari_excl": 5.1
    },
    "low_confidence": false
   },
@@ -36198,7 +38102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 5,
     "collapsed_words": 414,
-    "collapsed_pct": 65
+    "collapsed_pct": 65,
+    "ari_excl": 4.8
    },
    "low_confidence": false
   },
@@ -36217,7 +38122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 12,
     "collapsed_words": 77,
-    "collapsed_pct": 41
+    "collapsed_pct": 41,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -36236,7 +38142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 157,
-    "collapsed_pct": 47
+    "collapsed_pct": 47,
+    "ari_excl": 4.8
    },
    "low_confidence": false
   },
@@ -36255,7 +38162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.7
    },
    "low_confidence": true
   },
@@ -36274,7 +38182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -36293,7 +38202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 7,
     "collapsed_words": 74,
-    "collapsed_pct": 37
+    "collapsed_pct": 37,
+    "ari_excl": 10.2
    },
    "low_confidence": false
   },
@@ -36312,7 +38222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.5
    },
    "low_confidence": true
   },
@@ -36331,7 +38242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 158,
-    "collapsed_pct": 63
+    "collapsed_pct": 63,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -36350,7 +38262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.4
    },
    "low_confidence": false
   },
@@ -36369,7 +38282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.1
    },
    "low_confidence": true
   },
@@ -36388,7 +38302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 301,
-    "collapsed_pct": 71
+    "collapsed_pct": 71,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -36407,7 +38322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 10,
     "collapsed_words": 545,
-    "collapsed_pct": 88
+    "collapsed_pct": 88,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -36426,7 +38342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 2,
     "collapsed_words": 735,
-    "collapsed_pct": 91
+    "collapsed_pct": 91,
+    "ari_excl": 8
    },
    "low_confidence": false
   },
@@ -36445,7 +38362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 4,
     "collapsed_words": 164,
-    "collapsed_pct": 43
+    "collapsed_pct": 43,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -36464,7 +38382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.8
    },
    "low_confidence": true
   },
@@ -36483,7 +38402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.1
    },
    "low_confidence": true
   },
@@ -36502,7 +38422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.2
    },
    "low_confidence": true
   },
@@ -36521,7 +38442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 170,
-    "collapsed_pct": 65
+    "collapsed_pct": 65,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -36540,7 +38462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 6,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.2
    },
    "low_confidence": false
   },
@@ -36559,7 +38482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 159,
-    "collapsed_pct": 72
+    "collapsed_pct": 72,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -36578,7 +38502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 508,
-    "collapsed_pct": 65
+    "collapsed_pct": 65,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -36597,7 +38522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 4,
     "collapsed_words": 612,
-    "collapsed_pct": 79
+    "collapsed_pct": 79,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -36616,7 +38542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 9,
     "long_pct": 6,
     "collapsed_words": 1506,
-    "collapsed_pct": 94
+    "collapsed_pct": 94,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -36635,7 +38562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 8,
     "long_pct": 5,
     "collapsed_words": 1576,
-    "collapsed_pct": 96
+    "collapsed_pct": 96,
+    "ari_excl": 8.2
    },
    "low_confidence": false
   },
@@ -36654,7 +38582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 13,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9
    },
    "low_confidence": false
   },
@@ -36673,7 +38602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 32,
-    "collapsed_pct": 23
+    "collapsed_pct": 23,
+    "ari_excl": 5
    },
    "low_confidence": false
   },
@@ -36692,7 +38622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.8
    },
    "low_confidence": true
   },
@@ -36711,7 +38642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.7
    },
    "low_confidence": true
   },
@@ -36730,7 +38662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.8
    },
    "low_confidence": false
   },
@@ -36749,7 +38682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 15,
     "collapsed_words": 58,
-    "collapsed_pct": 32
+    "collapsed_pct": 32,
+    "ari_excl": 8
    },
    "low_confidence": false
   },
@@ -36768,7 +38702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 15,
     "collapsed_words": 477,
-    "collapsed_pct": 78
+    "collapsed_pct": 78,
+    "ari_excl": 8.9
    },
    "low_confidence": false
   },
@@ -36787,7 +38722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 157,
-    "collapsed_pct": 41
+    "collapsed_pct": 41,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -36806,7 +38742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 99,
-    "collapsed_pct": 41
+    "collapsed_pct": 41,
+    "ari_excl": 7.9
    },
    "low_confidence": false
   },
@@ -36825,7 +38762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 4,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -36844,7 +38782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 7,
     "long_pct": 9,
     "collapsed_words": 731,
-    "collapsed_pct": 84
+    "collapsed_pct": 84,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -36863,7 +38802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.2
    },
    "low_confidence": true
   },
@@ -36882,7 +38822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 8,
     "long_pct": 8,
     "collapsed_words": 936,
-    "collapsed_pct": 92
+    "collapsed_pct": 92,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -36901,7 +38842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.6
    },
    "low_confidence": true
   },
@@ -36920,7 +38862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 4,
     "collapsed_words": 711,
-    "collapsed_pct": 95
+    "collapsed_pct": 95,
+    "ari_excl": 7
    },
    "low_confidence": false
   },
@@ -36939,7 +38882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 255,
-    "collapsed_pct": 84
+    "collapsed_pct": 84,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -36958,7 +38902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 285,
-    "collapsed_pct": 81
+    "collapsed_pct": 81,
+    "ari_excl": 4.6
    },
    "low_confidence": false
   },
@@ -36977,7 +38922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.2
    },
    "low_confidence": true
   },
@@ -36996,7 +38942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 4,
     "collapsed_words": 230,
-    "collapsed_pct": 58
+    "collapsed_pct": 58,
+    "ari_excl": 8.2
    },
    "low_confidence": false
   },
@@ -37015,7 +38962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 177,
-    "collapsed_pct": 64
+    "collapsed_pct": 64,
+    "ari_excl": 7.9
    },
    "low_confidence": false
   },
@@ -37034,7 +38982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 17,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.6
    },
    "low_confidence": true
   },
@@ -37053,7 +39002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 6,
     "collapsed_words": 721,
-    "collapsed_pct": 87
+    "collapsed_pct": 87,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -37072,7 +39022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7
    },
    "low_confidence": true
   },
@@ -37091,7 +39042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 5,
     "collapsed_words": 368,
-    "collapsed_pct": 85
+    "collapsed_pct": 85,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -37110,7 +39062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 158,
-    "collapsed_pct": 40
+    "collapsed_pct": 40,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -37129,7 +39082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 203,
-    "collapsed_pct": 89
+    "collapsed_pct": 89,
+    "ari_excl": 9.3
    },
    "low_confidence": false
   },
@@ -37148,7 +39102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.7
    },
    "low_confidence": true
   },
@@ -37167,7 +39122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.7
    },
    "low_confidence": true
   },
@@ -37186,7 +39142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.4
    },
    "low_confidence": true
   },
@@ -37205,7 +39162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 25,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.9
    },
    "low_confidence": true
   },
@@ -37224,7 +39182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.2
    },
    "low_confidence": true
   },
@@ -37243,7 +39202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 150,
-    "collapsed_pct": 69
+    "collapsed_pct": 69,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -37262,7 +39222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -37281,7 +39242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.6
    },
    "low_confidence": false
   },
@@ -37300,7 +39262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.6
    },
    "low_confidence": false
   },
@@ -37319,7 +39282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 245,
-    "collapsed_pct": 61
+    "collapsed_pct": 61,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -37338,7 +39302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 157,
-    "collapsed_pct": 59
+    "collapsed_pct": 59,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -37357,7 +39322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 6,
     "collapsed_words": 434,
-    "collapsed_pct": 73
+    "collapsed_pct": 73,
+    "ari_excl": 4.8
    },
    "low_confidence": false
   },
@@ -37376,7 +39342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.4
    },
    "low_confidence": false
   },
@@ -37395,7 +39362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.8
    },
    "low_confidence": true
   },
@@ -37414,7 +39382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 175,
-    "collapsed_pct": 71
+    "collapsed_pct": 71,
+    "ari_excl": 2.8
    },
    "low_confidence": false
   },
@@ -37433,7 +39402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 5,
     "collapsed_words": 586,
-    "collapsed_pct": 66
+    "collapsed_pct": 66,
+    "ari_excl": 6.2
    },
    "low_confidence": false
   },
@@ -37452,7 +39422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.5
    },
    "low_confidence": true
   },
@@ -37471,7 +39442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 7,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.5
    },
    "low_confidence": false
   },
@@ -37490,7 +39462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 78,
-    "collapsed_pct": 35
+    "collapsed_pct": 35,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -37509,7 +39482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 254,
-    "collapsed_pct": 89
+    "collapsed_pct": 89,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -37528,7 +39502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 144,
-    "collapsed_pct": 72
+    "collapsed_pct": 72,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -37547,7 +39522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.1
    },
    "low_confidence": true
   },
@@ -37566,7 +39542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 3,
     "collapsed_words": 463,
-    "collapsed_pct": 70
+    "collapsed_pct": 70,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -37585,7 +39562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.4
    },
    "low_confidence": false
   },
@@ -37604,7 +39582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 130,
-    "collapsed_pct": 68
+    "collapsed_pct": 68,
+    "ari_excl": 9.3
    },
    "low_confidence": false
   },
@@ -37623,7 +39602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 62,
-    "collapsed_pct": 30
+    "collapsed_pct": 30,
+    "ari_excl": 6.1
    },
    "low_confidence": false
   },
@@ -37642,7 +39622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 104,
-    "collapsed_pct": 81
+    "collapsed_pct": 81,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -37661,7 +39642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 112,
-    "collapsed_pct": 81
+    "collapsed_pct": 81,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -37680,7 +39662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.1
    },
    "low_confidence": true
   },
@@ -37699,7 +39682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 12,
     "long_pct": 5,
     "collapsed_words": 2241,
-    "collapsed_pct": 95
+    "collapsed_pct": 95,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -37718,7 +39702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.8
    },
    "low_confidence": true
   },
@@ -37737,7 +39722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -37756,7 +39742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 151,
-    "collapsed_pct": 76
+    "collapsed_pct": 76,
+    "ari_excl": 7.9
    },
    "low_confidence": false
   },
@@ -37775,7 +39762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.4
    },
    "low_confidence": false
   },
@@ -37794,7 +39782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.4
    },
    "low_confidence": true
   },
@@ -37813,7 +39802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.6
    },
    "low_confidence": true
   },
@@ -37832,7 +39822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 6,
     "collapsed_words": 589,
-    "collapsed_pct": 76
+    "collapsed_pct": 76,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -37851,7 +39842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 10,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -37870,7 +39862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 14,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.8
    },
    "low_confidence": true
   },
@@ -37889,7 +39882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 18,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8
    },
    "low_confidence": false
   },
@@ -37908,7 +39902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 7,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.2
    },
    "low_confidence": false
   },
@@ -37927,7 +39922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9
    },
    "low_confidence": true
   },
@@ -37946,7 +39942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 171,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 8.2
    },
    "low_confidence": false
   },
@@ -37965,7 +39962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 56,
-    "collapsed_pct": 41
+    "collapsed_pct": 41,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -37984,7 +39982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.9
    },
    "low_confidence": true
   },
@@ -38003,7 +40002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.5
    },
    "low_confidence": true
   },
@@ -38022,7 +40022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 55,
-    "collapsed_pct": 29
+    "collapsed_pct": 29,
+    "ari_excl": 5.7
    },
    "low_confidence": false
   },
@@ -38041,7 +40042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 95,
-    "collapsed_pct": 62
+    "collapsed_pct": 62,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -38060,7 +40062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 56,
-    "collapsed_pct": 44
+    "collapsed_pct": 44,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -38079,7 +40082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 39,
-    "collapsed_pct": 28
+    "collapsed_pct": 28,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -38098,7 +40102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 16,
     "long_pct": 11,
     "collapsed_words": 1144,
-    "collapsed_pct": 88
+    "collapsed_pct": 88,
+    "ari_excl": 5
    },
    "low_confidence": false
   },
@@ -38117,7 +40122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 267,
-    "collapsed_pct": 70
+    "collapsed_pct": 70,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -38136,7 +40142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 80,
-    "collapsed_pct": 52
+    "collapsed_pct": 52,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -38155,7 +40162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 390,
-    "collapsed_pct": 76
+    "collapsed_pct": 76,
+    "ari_excl": 4.4
    },
    "low_confidence": false
   },
@@ -38174,7 +40182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 9,
     "long_pct": 5,
     "collapsed_words": 1751,
-    "collapsed_pct": 92
+    "collapsed_pct": 92,
+    "ari_excl": 8.1
    },
    "low_confidence": false
   },
@@ -38193,7 +40202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.4
    },
    "low_confidence": false
   },
@@ -38212,7 +40222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.3
    },
    "low_confidence": true
   },
@@ -38231,7 +40242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 295,
-    "collapsed_pct": 86
+    "collapsed_pct": 86,
+    "ari_excl": 5
    },
    "low_confidence": false
   },
@@ -38250,7 +40262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 22,
-    "collapsed_pct": 32
+    "collapsed_pct": 32,
+    "ari_excl": 6
    },
    "low_confidence": true
   },
@@ -38269,7 +40282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 5,
     "long_pct": 7,
     "collapsed_words": 558,
-    "collapsed_pct": 72
+    "collapsed_pct": 72,
+    "ari_excl": 6.8
    },
    "low_confidence": false
   },
@@ -38288,7 +40302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 4,
     "collapsed_words": 508,
-    "collapsed_pct": 71
+    "collapsed_pct": 71,
+    "ari_excl": 3.7
    },
    "low_confidence": false
   },
@@ -38307,7 +40322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 1,
     "collapsed_words": 1062,
-    "collapsed_pct": 91
+    "collapsed_pct": 91,
+    "ari_excl": 5
    },
    "low_confidence": false
   },
@@ -38326,7 +40342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 2,
     "collapsed_words": 700,
-    "collapsed_pct": 79
+    "collapsed_pct": 79,
+    "ari_excl": 5.8
    },
    "low_confidence": false
   },
@@ -38345,7 +40362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 6,
     "long_pct": 7,
     "collapsed_words": 518,
-    "collapsed_pct": 67
+    "collapsed_pct": 67,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -38364,7 +40382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.6
    },
    "low_confidence": false
   },
@@ -38383,7 +40402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.2
    },
    "low_confidence": true
   },
@@ -38402,7 +40422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.1
    },
    "low_confidence": true
   },
@@ -38421,7 +40442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.3
    },
    "low_confidence": true
   },
@@ -38440,7 +40462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 2.1
    },
    "low_confidence": true
   },
@@ -38459,7 +40482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 11,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.1
    },
    "low_confidence": true
   },
@@ -38478,7 +40502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 8,
     "long_pct": 6,
     "collapsed_words": 1449,
-    "collapsed_pct": 92
+    "collapsed_pct": 92,
+    "ari_excl": 7.4
    },
    "low_confidence": false
   },
@@ -38497,7 +40522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.9
    },
    "low_confidence": true
   },
@@ -38516,7 +40542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.8
    },
    "low_confidence": false
   },
@@ -38535,7 +40562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 6,
     "collapsed_words": 346,
-    "collapsed_pct": 63
+    "collapsed_pct": 63,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -38554,7 +40582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 4,
     "long_pct": 12,
     "collapsed_words": 258,
-    "collapsed_pct": 66
+    "collapsed_pct": 66,
+    "ari_excl": 6.6
    },
    "low_confidence": false
   },
@@ -38573,7 +40602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -38592,7 +40622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.2
    },
    "low_confidence": true
   },
@@ -38611,7 +40642,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 7,
     "collapsed_words": 87,
-    "collapsed_pct": 34
+    "collapsed_pct": 34,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -38630,7 +40662,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.3
    },
    "low_confidence": true
   },
@@ -38649,7 +40682,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 6,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.3
    },
    "low_confidence": false
   },
@@ -38668,7 +40702,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.2
    },
    "low_confidence": true
   },
@@ -38687,7 +40722,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 5,
     "collapsed_words": 208,
-    "collapsed_pct": 78
+    "collapsed_pct": 78,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -38706,7 +40742,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -38725,7 +40762,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 20,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.8
    },
    "low_confidence": false
   },
@@ -38744,7 +40782,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.1
    },
    "low_confidence": true
   },
@@ -38763,7 +40802,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 280,
-    "collapsed_pct": 81
+    "collapsed_pct": 81,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -38782,7 +40822,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -38801,7 +40842,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.5
    },
    "low_confidence": false
   },
@@ -38820,7 +40862,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 9,
     "collapsed_words": 111,
-    "collapsed_pct": 49
+    "collapsed_pct": 49,
+    "ari_excl": 6
    },
    "low_confidence": false
   },
@@ -38839,7 +40882,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.6
    },
    "low_confidence": false
   },
@@ -38858,7 +40902,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 2,
     "collapsed_words": 178,
-    "collapsed_pct": 53
+    "collapsed_pct": 53,
+    "ari_excl": 6.3
    },
    "low_confidence": false
   },
@@ -38877,7 +40922,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 0.6
    },
    "low_confidence": true
   },
@@ -38896,7 +40942,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 64,
-    "collapsed_pct": 55
+    "collapsed_pct": 55,
+    "ari_excl": 6.6
    },
    "low_confidence": false
   },
@@ -38915,7 +40962,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 2.9
    },
    "low_confidence": true
   },
@@ -38934,7 +40982,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.3
    },
    "low_confidence": false
   },
@@ -38953,7 +41002,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 17,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 10.2
    },
    "low_confidence": true
   },
@@ -38972,7 +41022,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.4
    },
    "low_confidence": true
   },
@@ -38991,7 +41042,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.6
    },
    "low_confidence": false
   },
@@ -39010,7 +41062,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 7,
     "collapsed_words": 170,
-    "collapsed_pct": 56
+    "collapsed_pct": 56,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -39029,7 +41082,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 3.9
    },
    "low_confidence": true
   },
@@ -39048,7 +41102,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 1,
     "collapsed_words": 447,
-    "collapsed_pct": 84
+    "collapsed_pct": 84,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -39067,7 +41122,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 219,
-    "collapsed_pct": 52
+    "collapsed_pct": 52,
+    "ari_excl": 9.9
    },
    "low_confidence": false
   },
@@ -39086,7 +41142,8 @@ window.READABILITY_DATA = {
     "long_sentences": 13,
     "long_pct": 9,
     "collapsed_words": 1665,
-    "collapsed_pct": 90
+    "collapsed_pct": 90,
+    "ari_excl": 9
    },
    "low_confidence": false
   },
@@ -39105,7 +41162,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 6.1
    },
    "low_confidence": true
   },
@@ -39124,7 +41182,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9
    },
    "low_confidence": true
   },
@@ -39143,7 +41202,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.8
    },
    "low_confidence": true
   },
@@ -39162,7 +41222,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 6,
     "collapsed_words": 181,
-    "collapsed_pct": 45
+    "collapsed_pct": 45,
+    "ari_excl": 6.9
    },
    "low_confidence": false
   },
@@ -39181,7 +41242,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 4.8
    },
    "low_confidence": false
   },
@@ -39200,7 +41262,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 194,
-    "collapsed_pct": 84
+    "collapsed_pct": 84,
+    "ari_excl": 8.2
    },
    "low_confidence": false
   },
@@ -39219,7 +41282,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 270,
-    "collapsed_pct": 66
+    "collapsed_pct": 66,
+    "ari_excl": 5.4
    },
    "low_confidence": false
   },
@@ -39238,7 +41302,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 68,
-    "collapsed_pct": 59
+    "collapsed_pct": 59,
+    "ari_excl": 9.1
    },
    "low_confidence": false
   },
@@ -39257,7 +41322,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 8.7
    },
    "low_confidence": true
   },
@@ -39276,7 +41342,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.2
    },
    "low_confidence": true
   },
@@ -39295,7 +41362,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 29,
-    "collapsed_pct": 17
+    "collapsed_pct": 17,
+    "ari_excl": 7.1
    },
    "low_confidence": false
   },
@@ -39314,7 +41382,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 284,
-    "collapsed_pct": 85
+    "collapsed_pct": 85,
+    "ari_excl": 4.9
    },
    "low_confidence": false
   },
@@ -39333,7 +41402,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.2
    },
    "low_confidence": true
   },
@@ -39352,7 +41422,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 50,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7.6
    },
    "low_confidence": true
   },
@@ -39371,7 +41442,8 @@ window.READABILITY_DATA = {
     "long_sentences": 3,
     "long_pct": 7,
     "collapsed_words": 183,
-    "collapsed_pct": 42
+    "collapsed_pct": 42,
+    "ari_excl": 9.2
    },
    "low_confidence": false
   },
@@ -39390,7 +41462,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 9.2
    },
    "low_confidence": true
   },
@@ -39409,7 +41482,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 6,
     "collapsed_words": 239,
-    "collapsed_pct": 68
+    "collapsed_pct": 68,
+    "ari_excl": 10.5
    },
    "low_confidence": false
   },
@@ -39428,7 +41502,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 2.2
    },
    "low_confidence": true
   },
@@ -39447,7 +41522,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 6,
     "collapsed_words": 102,
-    "collapsed_pct": 36
+    "collapsed_pct": 36,
+    "ari_excl": 5.5
    },
    "low_confidence": false
   },
@@ -39466,7 +41542,8 @@ window.READABILITY_DATA = {
     "long_sentences": 2,
     "long_pct": 3,
     "collapsed_words": 453,
-    "collapsed_pct": 95
+    "collapsed_pct": 95,
+    "ari_excl": 7.7
    },
    "low_confidence": false
   },
@@ -39485,7 +41562,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 5.2
    },
    "low_confidence": false
   },
@@ -39504,7 +41582,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 186,
-    "collapsed_pct": 82
+    "collapsed_pct": 82,
+    "ari_excl": 8
    },
    "low_confidence": false
   },
@@ -39523,7 +41602,8 @@ window.READABILITY_DATA = {
     "long_sentences": 1,
     "long_pct": 3,
     "collapsed_words": 59,
-    "collapsed_pct": 20
+    "collapsed_pct": 20,
+    "ari_excl": 5.9
    },
    "low_confidence": false
   },
@@ -39542,7 +41622,8 @@ window.READABILITY_DATA = {
     "long_sentences": 0,
     "long_pct": 0,
     "collapsed_words": 0,
-    "collapsed_pct": 0
+    "collapsed_pct": 0,
+    "ari_excl": 7
    },
    "low_confidence": true
   }

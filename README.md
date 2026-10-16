@@ -154,17 +154,18 @@ Different agencies have migrated at different times; if you get a `HTTP 404` dur
 
 ## Readability preview (NYC311 help articles)
 
-A separate, unlinked page (`dashboard/readability.html`) shows ARI and Flesch-Kincaid scores for every English article in the [NYC311 article index](https://portal.311.nyc.gov/all-articles/). Scores are shown as-is on a continuous color scale, with no targets or good/bad bands. **It is not part of the accessibility scan**: a readability score is a site-quality signal, not a WCAG 2.2 AA result (SC 3.1.5 Reading Level is Level AAA), so nothing from it reaches the tiers, counts, or history.
+A separate, unlinked page (`dashboard/readability.html`) shows ARI and Flesch-Kincaid scores for every English article in the [NYC311 article index](https://portal.311.nyc.gov/all-articles/), plus a second ARI with agency names and phone numbers left out. Scores are shown as-is on a continuous color scale, with no targets or good/bad bands. **It is not part of the accessibility scan**: a readability score is a site-quality signal, not a WCAG 2.2 AA result (SC 3.1.5 Reading Level is Level AAA), so nothing from it reaches the tiers, counts, or history.
 
 ```bash
 node check-readability.mjs                    # every article in the index (~25 min) → dashboard files
 node check-readability.mjs --sample           # the 10 articles in readability-articles.json, report only
 node check-readability.mjs --only=KA-02232    # specific articles, report only
+node check-readability.mjs --rescore          # re-score the published text with the current rules, no portal visits
 ```
 
 Every run writes a review report to `readability-results.json` (gitignored): articles that couldn't load, articles with no prose, hidden elements that match no known accordion pattern, and the 20 highest ARI scores. Only a complete full run writes the dashboard files — `dashboard/readability-data.js` (scores for the overview) and one `dashboard/readability/<KA>.js` per article (its extracted text, for the details view). Detail files carry no timestamps, so an unchanged article produces no git change.
 
-`.github/workflows/readability.yml` runs the full refresh every Friday at 08:17 UTC, an hour ahead of the accessibility scan. It commits whatever changed, redeploys the dashboard, and writes the review report to the run's summary page. It can also be started by hand from the Actions tab.
+`.github/workflows/readability.yml` runs the full refresh every Friday at 08:17 UTC, an hour ahead of the accessibility scan. It commits whatever changed (including the saved agency list), redeploys the dashboard, and writes the review report to the run's summary page. It can also be started by hand from the Actions tab.
 
 The crawl is deliberately gentle on the portal: two tabs, a pause between requests, one retry, and it backs off and then stops if failures pile up. Pages load as HTML and stylesheets only; scripts, images, and fonts are blocked because the article text is server-rendered (blocking them changed no extracted text on the sample).
 
@@ -175,6 +176,10 @@ The crawl is deliberately gentle on the portal: two tabs, a pause between reques
   - all of the body's text is scored, including headings, labels, list items, and service-request buttons;
   - every block-level element ends a sentence, so each heading or list item counts as its own sentence and lists and link cards don't merge into one long sentence;
   - non-English articles (the index also lists translations) are detected from their text and left out of the page.
+- **ARI without agency names & phone numbers** scores the same text with both left out, since writers can't shorten either. Each article's details list exactly what was left out.
+  - City names come from the [NYC Agencies and Governance Organizations](https://data.cityofnewyork.us/City-Government/NYC-Agencies-and-Governance-Organizations/t3jq-9nkf) list on NYC Open Data, fetched each run and saved in `readability-agency-names.json` (the saved copy is used if the fetch fails). `AGENCY_NAME_SKIP` in `readability-core.mjs` lists the entries that mean something else in the articles.
+  - `readability-agency-names-extra.json` is kept by hand: State and federal agencies the articles name, each with its official name, acronym, and every other way the articles write it, and City names the articles write differently from the official list. A short form is listed only if every use of it in the articles means that agency.
+  - Phone numbers are ten digits with an area code, in digits or letters ("(800) 577-TIPS"). Bare 311, 911, and 988 stay in.
 - The page shows the full extracted text for each article, so anyone can check exactly what was scored.
 - "Download all results (CSV)" exports every article's scores, in the table's current sort order.
 
@@ -191,6 +196,8 @@ accessibility-nyc/
 ├── check-readability.mjs      # NYC311 readability preview (separate from the scan)
 ├── readability-core.mjs       # its text-extraction and scoring rules
 ├── readability-articles.json  # sample list for --sample runs
+├── readability-agency-names.json        # generated; the City's official agency list, saved each run
+├── readability-agency-names-extra.json  # agency names kept by hand (State, federal, and City variants)
 ├── dashboard/
 │   ├── index.html             # entry
 │   ├── app.js                 # overview / per-site / per-page views + search

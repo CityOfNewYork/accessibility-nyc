@@ -195,6 +195,78 @@ export function scoreSentences(sentences) {
   };
 }
 
+// ---- the second ARI: agency names and phone numbers left out ----------------
+// A writer can't shorten an agency's official name or a phone number, so the
+// second ARI scores the same sentences with both taken out. The first ARI
+// stays the full text, which is what Hemingway Editor scores.
+
+// Phone numbers: ten digits with an area code, written with separators, in
+// digits or letters ("212-639-9675", "(800) 577-TIPS", "1-877-RED-CROSS").
+// Bare three-digit numbers (311, 911, 988) stay in: in 311's articles the
+// same digits are also room numbers and street addresses, and a three-character
+// word barely moves ARI.
+export const PHONE = /(?<![\w-])(?:\+?1[-. ])?(?:\(\d{3}\)\s?|\d{3}[-. ])(?:(?:\d{3}|[A-Z]{3})[-. ](?:\d{4}|[A-Z]{4,})|[A-Z]{7})(?![\w-])/g;
+
+// Agency names come from the City's official list, "NYC Agencies and
+// Governance Organizations" on NYC Open Data (saved in
+// readability-agency-names.json): each organization's name, acronym, and
+// alternate or former names and acronyms. A few entries mean something else
+// in 311's articles (checked against every article's text), so they stay in:
+export const AGENCY_NAME_SKIP = new Set([
+  "311", // NYC311's acronym; also room numbers and addresses ("Room 311")
+  "Law", // the Law Department's alternate acronym; also the names of laws ("Local Law 18")
+  "STAR", // Sales Tax Asset Receivable Corporation; also the State's School Tax Relief program
+  "PEP", // Panel on Educational Policy; also post-exposure prophylaxis, an HIV medicine
+  "FRC", // Domestic Violence Fatality Review Committee; also Family Resource Center
+  "DOH", // the Health Department's alternate acronym; also the State Department of Health
+  "Parks", // NYC Parks' alternate acronym; also the plain word ("Areas for Dogs in Parks")
+  "Equal Employment Opportunity", // the Equal Employment Practices Commission's alternate name; also the requirement ("Equal Employment Opportunity (EEO) requirements")
+  "CSC", // Civil Service Commission; also a company name ("CSC Wireless, LLC")
+]);
+
+// Every name and acronym an organization in the list goes by.
+export function agencyTerms(orgs) {
+  const split = (v) => (v || "").split(";");
+  return orgs.flatMap((o) => [o.name, o.acronym, ...split(o.alternate_or_former_names), ...split(o.alternate_or_former_acronyms)])
+    .map((t) => (t || "").trim())
+    .filter((t) => t && !AGENCY_NAME_SKIP.has(t));
+}
+
+// One pattern for all the names: exact, case-sensitive, whole words, ' and ’
+// alike, possessive 's included. It finds the longest name starting at each
+// position (inside a lookahead, so matches can overlap); withoutExcluded()
+// merges overlaps, so "NYC Health Department" goes whole although the list
+// has only "NYC Health" and "Health Department".
+export function agencyNameMatcher(terms) {
+  const unique = [...new Set(terms)].sort((a, b) => b.length - a.length);
+  if (!unique.length) return null;
+  const esc = (t) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/['’]/g, "['’]");
+  return new RegExp(`(?<![\\p{L}\\p{N}])(?=((?:${unique.map(esc).join("|")})(?:['’]s)?)(?![\\p{L}\\p{N}]))`, "gu");
+}
+
+// A sentence with phone numbers and agency names taken out, and what was taken.
+// An acronym left in empty parentheses takes the parentheses with it.
+export function withoutExcluded(sentence, nameRe) {
+  const removed = [];
+  let text = sentence.replace(PHONE, (m) => { removed.push(m); return " "; });
+  if (nameRe) {
+    const spans = [];
+    nameRe.lastIndex = 0;
+    for (let m; (m = nameRe.exec(text)); nameRe.lastIndex = m.index + 1) {
+      const start = m.index, end = m.index + m[1].length;
+      const last = spans[spans.length - 1];
+      if (last && start <= last[1]) last[1] = Math.max(last[1], end);
+      else spans.push([start, end]);
+    }
+    for (const [start, end] of spans.reverse()) {
+      removed.push(text.slice(start, end));
+      text = text.slice(0, start) + " " + text.slice(end);
+    }
+  }
+  text = text.replace(/\(\s*\)/g, " ").replace(/\s+/g, " ").trim();
+  return { text, removed };
+}
+
 // A short block with no sentence punctuation is a label rather than prose: a
 // link-card title, a table header, a list item like "Proof of identity".
 // Labels are scored like everything else, but kept out of the language guard.
@@ -207,8 +279,9 @@ export function isFragment(text) {
 // labels, list items and action buttons are text the reader reads, and since a
 // block boundary ends a sentence, each one counts as (at least) its own sentence.
 // The prose/label split (k) still matters for the language guard and the
-// extracted-text view.
-export function scoreArticle(blocks) {
+// extracted-text view. `nameRe` (from agencyNameMatcher) adds agency names to
+// what the second ARI leaves out; phone numbers are always left out of it.
+export function scoreArticle(blocks, { nameRe = null } = {}) {
   const out = blocks
     .map((b) => (b.k === "p" && isFragment(b.t) ? { ...b, k: "h" } : b))
     .map((b) => ({ ...b, s: splitSentences(b.t) }));
@@ -228,6 +301,19 @@ export function scoreArticle(blocks) {
   scores.collapsed_words = collapsedWords;
   scores.collapsed_pct = Math.round((100 * collapsedWords) / scores.words);
 
+  // A sentence left with no words (a heading that was only a name) drops out.
+  const kept = [];
+  const removed = new Map();
+  for (const s of sentences) {
+    const r = withoutExcluded(s, nameRe);
+    if (words(r.text).length) kept.push(r.text);
+    for (const t of r.removed) removed.set(t, (removed.get(t) || 0) + 1);
+  }
+  scores.ari_excl = scoreSentences(kept)?.ari ?? null;
+  const excluded = [...removed]
+    .map(([t, n]) => ({ t, n }))
+    .sort((a, b) => b.n - a.n || (a.t < b.t ? -1 : a.t > b.t ? 1 : 0));
+
   const longest = sentences
     .map((s) => ({ text: s, words: words(s).length }))
     .sort((a, b) => b.words - a.words)
@@ -238,6 +324,7 @@ export function scoreArticle(blocks) {
     low_confidence: scores.words < MIN_RELIABLE_WORDS,
     scores,
     longest,
+    excluded,
     blocks: out,
   };
 }
@@ -254,6 +341,7 @@ export function detailJs(ka, article) {
   const detail = {
     ka,
     longest: (article.longest || []).map((l) => ({ text: l.text, words: l.words })),
+    excluded: (article.excluded || []).map((e) => ({ t: e.t, n: e.n })),
     blocks: (article.blocks || []).map(block),
     unknown_hidden: (article.unknown_hidden || []).map((h) => ({ tag: h.tag, id: h.id ?? null, cls: h.cls ?? null, text: h.text })),
   };

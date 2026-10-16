@@ -6,6 +6,7 @@
 //   node check-readability.mjs --sample           # the articles in readability-articles.json (report only)
 //   node check-readability.mjs --only=KA-02232,…  # specific articles (report only)
 //   node check-readability.mjs --resume           # finish an interrupted full run
+//   node check-readability.mjs --rescore          # re-score the published text with today's rules (no portal visits)
 //
 // Like check-links.mjs, this is deliberately separate from the accessibility
 // scan. A readability score is a site-quality signal, NOT a WCAG conformance
@@ -18,7 +19,9 @@
 
 import { readFile, writeFile, appendFile, readdir, unlink, mkdir } from "node:fs/promises";
 import puppeteer from "puppeteer";
-import { extractBlocks, scoreArticle, detailJs, LONG_SENTENCE_WORDS, MIN_RELIABLE_WORDS } from "./readability-core.mjs";
+import {
+  extractBlocks, scoreArticle, detailJs, agencyTerms, agencyNameMatcher, LONG_SENTENCE_WORDS, MIN_RELIABLE_WORDS,
+} from "./readability-core.mjs";
 
 const INDEX_URL = "https://portal.311.nyc.gov/all-articles/";
 const ARTICLE_URL = "https://portal.311.nyc.gov/article/?kanumber=";
@@ -26,6 +29,19 @@ const SAMPLE_LIST = "readability-articles.json";
 const OUT_JS = "dashboard/readability-data.js";
 const OUT_DETAIL_DIR = "dashboard/readability";
 const OUT_REPORT = "readability-results.json";
+
+// The City's official list of agencies and offices (NYC Open Data, published
+// by OTI), for the second ARI, which leaves agency names out. Each run fetches
+// the current list and saves it; if the fetch fails, the saved copy is used.
+const AGENCY_DATASET = "https://data.cityofnewyork.us/City-Government/NYC-Agencies-and-Governance-Organizations/t3jq-9nkf";
+const AGENCY_API = "https://data.cityofnewyork.us/resource/t3jq-9nkf.json" +
+  "?$select=name,acronym,alternate_or_former_names,alternate_or_former_acronyms&$order=name&$limit=5000";
+const AGENCY_FILE = "readability-agency-names.json";
+// Agency names the official list doesn't cover, kept by hand: State and
+// federal agencies (each one's official name, acronym, and every other way
+// the articles write it), and City names the articles write differently from
+// the list. Left out of the second ARI along with the official list's names.
+const EXTRA_AGENCY_FILE = "readability-agency-names-extra.json";
 
 // The article body. Everything outside it — lookup modals, the survey popup,
 // the "Was this information helpful?" form — is portal chrome.
@@ -50,6 +66,30 @@ const BACKOFF_MS = 60_000;
 
 const KA_RE = /^KA-\d+$/;
 
+// Set once in main() from the agency lists; used by every scoreArticle() call.
+let nameRe = null;
+
+async function loadAgencyNames() {
+  try {
+    const res = await fetch(AGENCY_API, { signal: AbortSignal.timeout(30_000) });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const orgs = (await res.json()).map((o) => ({
+      name: o.name ?? null,
+      acronym: o.acronym ?? null,
+      alternate_or_former_names: o.alternate_or_former_names ?? null,
+      alternate_or_former_acronyms: o.alternate_or_former_acronyms ?? null,
+    }));
+    if (orgs.length < 100) throw new Error(`only ${orgs.length} organizations returned`);
+    // No timestamp in the file, so an unchanged list rewrites it byte for byte.
+    await writeFile(AGENCY_FILE, JSON.stringify({ source: AGENCY_DATASET, organizations: orgs }, null, 1) + "\n");
+    console.log(`Agency names: ${orgs.length} organizations from NYC Open Data.`);
+    return orgs;
+  } catch (err) {
+    console.error(`Agency names: couldn't fetch the list (${err.message}); using the copy saved in ${AGENCY_FILE}.`);
+    return JSON.parse(await readFile(AGENCY_FILE, "utf8")).organizations;
+  }
+}
+
 async function preparePage(browser, ua) {
   const page = await browser.newPage();
   await page.setUserAgent(ua);
@@ -66,6 +106,7 @@ function parseArgs() {
     only: only ? only.slice(7).split(",").map((s) => s.trim()).filter(Boolean) : null,
     sample: process.argv.includes("--sample"),
     resume: process.argv.includes("--resume"),
+    rescore: process.argv.includes("--rescore"),
   };
 }
 
@@ -90,7 +131,7 @@ async function scoreOne(page, ka) {
   const title = (await page.title()).replace(/\s*·\s*NYC311\s*$/, "").trim();
   const extracted = await page.evaluate(extractBlocks, ROOT);
   if (!extracted) throw new Error("article body not found on the page");
-  return { title, ...scoreArticle(extracted.blocks), unknown_hidden: extracted.unknownHidden };
+  return { title, ...scoreArticle(extracted.blocks, { nameRe }), unknown_hidden: extracted.unknownHidden };
 }
 
 // Chrome itself can die during a long run (~2,000 navigations). Those
@@ -315,8 +356,30 @@ async function writeDashboard(articles, meta) {
   console.log(`Wrote ${OUT_JS} and ${keep.size} detail file(s) in ${OUT_DETAIL_DIR}/` + (removed ? ` (removed ${removed} stale).` : "."));
 }
 
+// --rescore: apply rule changes in readability-core.mjs to the text the last
+// full run published, without visiting the portal. The data keeps that run's
+// date, since the text is from then. Articles that failed to load stay as they were.
+async function rescore() {
+  const src = await readFile(OUT_JS, "utf8");
+  const { articles, ...meta } = JSON.parse(src.slice(src.indexOf("{"), src.lastIndexOf("}") + 1));
+  const out = [];
+  for (const a of articles) {
+    if (a.status === "error") { out.push(a); continue; }
+    const d = await readFile(`${OUT_DETAIL_DIR}/${a.ka}.js`, "utf8");
+    const { blocks, unknown_hidden } = JSON.parse(d.slice(d.indexOf("{"), d.lastIndexOf("}") + 1));
+    out.push({ ka: a.ka, url: a.url, title: a.title, ...scoreArticle(blocks, { nameRe }), unknown_hidden });
+  }
+  console.log(`Re-scored ${out.length} articles from the text saved ${meta.checked_at}.`);
+  await writeDashboard(out, meta);
+}
+
 async function main() {
   const args = parseArgs();
+  const extra = JSON.parse(await readFile(EXTRA_AGENCY_FILE, "utf8")).agencies
+    .flatMap((a) => [a.name, a.acronym, ...a.also_written]).filter(Boolean);
+  nameRe = agencyNameMatcher([...agencyTerms(await loadAgencyNames()), ...extra]);
+  if (args.rescore) return rescore();
+
   const first = await launch();
   // nyc.gov properties serve a different template to headless user agents;
   // present as regular Chrome, same as scan.js.
@@ -348,7 +411,7 @@ async function main() {
       for (const a of last.articles || []) {
         if (a.status === "error" || !a.blocks) continue;
         const { ka, url, title, unknown_hidden } = a;
-        prior.set(ka, { ka, url, title, ...scoreArticle(a.blocks), unknown_hidden });
+        prior.set(ka, { ka, url, title, ...scoreArticle(a.blocks, { nameRe }), unknown_hidden });
       }
     } catch {
       console.log(`No ${OUT_REPORT} to resume from — starting fresh.`);

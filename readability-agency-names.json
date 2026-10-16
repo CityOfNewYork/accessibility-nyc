@@ -1,0 +1,1847 @@
+{
+ "source": "https://data.cityofnewyork.us/City-Government/NYC-Agencies-and-Governance-Organizations/t3jq-9nkf",
+ "organizations": [
+  {
+   "name": "Administration for Children's Services",
+   "acronym": "ACS",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Advisory Council for the NYC Civil Court Housing Part",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Advisory Council on Procurement Lobbying",
+   "acronym": "ACPL",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "American Museum of Natural History",
+   "acronym": "AMNH",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Animal Care Centers of NYC",
+   "acronym": "ACC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Archival Review Board",
+   "acronym": "ARB",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Archives, Reference and Research Advisory Board",
+   "acronym": "ARRAB",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Audit Committee",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Banking Commission",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Board of Correction",
+   "acronym": "BOC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Board of Education Retirement System",
+   "acronym": "BERS",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Board of Elections",
+   "acronym": "BOE",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Board of Health",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Board of Standards and Appeals",
+   "acronym": "BSA",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Borough Boards",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Bronx County Historical Society",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Bronx County Public Administrator",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Bronx District Attorney's Office",
+   "acronym": null,
+   "alternate_or_former_names": "Bronx County District Attorney's Office",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Bronx Museum of the Arts",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Brooklyn Academy of Music",
+   "acronym": "BAM",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Brooklyn Botanic Garden",
+   "acronym": "BBG",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Brooklyn Bridge Park Corporation",
+   "acronym": "BBP",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Brooklyn Children's Museum",
+   "acronym": "BCM",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Brooklyn District Attorney's Office",
+   "acronym": null,
+   "alternate_or_former_names": "Kings County District Attorney's Office",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Brooklyn Museum",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Brooklyn Navy Yard Development Corporation",
+   "acronym": "BNYDC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Brooklyn Public Library",
+   "acronym": "BPL",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Build NYC Resource Corporation",
+   "acronym": null,
+   "alternate_or_former_names": "Build NYC",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Business Integrity Commission",
+   "acronym": "BIC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Campaign Finance Board",
+   "acronym": "CFB",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Carnegie Hall",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Catskill Watershed Corporation",
+   "acronym": "CWC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Center for Brooklyn History",
+   "acronym": "CBH",
+   "alternate_or_former_names": "Brooklyn Historical Society",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Center for Innovation through Data Intelligence",
+   "acronym": "CIDI",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Central Park Conservancy",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Charter Revision Commission",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Chief Counsel to the Mayor and City Hall",
+   "acronym": null,
+   "alternate_or_former_names": "Office of the Chief Counsel to the Mayor",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Chief of Staff to the Mayor",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "City Commission on Human Rights",
+   "acronym": "CCHR",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "City Planning Commission",
+   "acronym": "CPC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "City University Construction Fund",
+   "acronym": "CUCF",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "City University of New York",
+   "acronym": "CUNY",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Civic Engagement Commission",
+   "acronym": "CEC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Civilian Complaint Review Board",
+   "acronym": "CCRB",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Civil Service Commission",
+   "acronym": "CSC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Commission on Gender Equity",
+   "acronym": "CGE",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Commission on Racial Equity",
+   "acronym": "CORE",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Commission to Combat Police Corruption",
+   "acronym": "CCPC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Community Action Board at the NYC Department of Youth and Community Development",
+   "acronym": "CAB",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Community Boards",
+   "acronym": "CB",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Community Services Board",
+   "acronym": "CSB",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Conflicts of Interest Board",
+   "acronym": "COIB",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Convention Center Development Corporation",
+   "acronym": "CCDC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Convention Center Operating Corporation (Javits)",
+   "acronym": "NYCCOC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Council for Airport Opportunity",
+   "acronym": "CAO",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Cultural Affairs Advisory Commission",
+   "acronym": "CAAC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Cultural Institutions Retirement System",
+   "acronym": "CIRS",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Cyber Command",
+   "acronym": null,
+   "alternate_or_former_names": "NYC Cyber Command",
+   "alternate_or_former_acronyms": "NYC3"
+  },
+  {
+   "name": "Department for the Aging",
+   "acronym": "NYC AGING",
+   "alternate_or_former_names": "NYC Aging",
+   "alternate_or_former_acronyms": "DFTA"
+  },
+  {
+   "name": "Department of Buildings",
+   "acronym": "DOB",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Department of City Planning",
+   "acronym": "DCP",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Department of Citywide Administrative Services",
+   "acronym": "DCAS",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Department of Consumer and Worker Protection",
+   "acronym": "DCWP",
+   "alternate_or_former_names": "Department of Consumer Affairs",
+   "alternate_or_former_acronyms": "DCA"
+  },
+  {
+   "name": "Department of Correction",
+   "acronym": "DOC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Department of Cultural Affairs",
+   "acronym": "DCLA",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Department of Design and Construction",
+   "acronym": "DDC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Department of Environmental Protection",
+   "acronym": "DEP",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Department of Finance",
+   "acronym": "DOF",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Department of Health and Mental Hygiene",
+   "acronym": "DOHMH",
+   "alternate_or_former_names": "NYC Health;Health Department",
+   "alternate_or_former_acronyms": "DOH"
+  },
+  {
+   "name": "Department of Homeless Services",
+   "acronym": "DHS",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Department of Housing Preservation and Development",
+   "acronym": "HPD",
+   "alternate_or_former_names": "Housing Preservation and Development",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Department of Investigation",
+   "acronym": "DOI",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Department of Parks and Recreation",
+   "acronym": "DPR",
+   "alternate_or_former_names": "NYC Parks",
+   "alternate_or_former_acronyms": "Parks"
+  },
+  {
+   "name": "Department of Probation",
+   "acronym": "DOP",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Department of Records and Information Services",
+   "acronym": "DORIS",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": "DoRIS"
+  },
+  {
+   "name": "Department of Small Business Services",
+   "acronym": "SBS",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Department of Social Services",
+   "acronym": "DSS",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Department of Veterans' Services",
+   "acronym": "DVS",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Department of Youth and Community Development",
+   "acronym": "DYCD",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Deputy Mayor for Community Safety",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Deputy Mayor for Economic Justice",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Deputy Mayor for Health and Human Services",
+   "acronym": "DMHHS",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Deputy Mayor for Housing and Planning",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Deputy Mayor for Operations",
+   "acronym": "DMOPS",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Domestic Violence Fatality Review Committee",
+   "acronym": "FRC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Economic Development Corporation",
+   "acronym": "NYCEDC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Economic Development Corporation Life Sciences Advisory Council",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Educational Construction Fund",
+   "acronym": "ECF",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "El Museo del Barrio",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Environmental Control Board",
+   "acronym": "ECB",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Equal Employment Practices Commission",
+   "acronym": "EEPC",
+   "alternate_or_former_names": "Equal Employment Opportunity",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Financial Information Services Agency",
+   "acronym": "FISA",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Fire Department of the City of New York",
+   "acronym": "FDNY",
+   "alternate_or_former_names": "Fire Department",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Fire Department Pension Fund and Related Funds",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "First Deputy Mayor",
+   "acronym": "FDM",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Flushing Council on Culture and the Arts / Flushing Town Hall",
+   "acronym": null,
+   "alternate_or_former_names": "Flushing Town Hall",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Flushing Meadows Corona Park Alliance",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Forest Park Trust",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Fund for Public Schools",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Get Stuff Built Advisory Board",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Gracie Mansion Conservancy",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Greenbelt Conservancy",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Green Economy Advisory Council",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "GrowNYC",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "HIV/AIDS Services Advisory Board",
+   "acronym": "HASA",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "HIV Planning Council",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Housing Development Corporation",
+   "acronym": "NYC HDC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Hudson River Park Trust",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Hudson Yards Infrastructure Corporation",
+   "acronym": "HYIC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Human Resources Administration",
+   "acronym": "HRA",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Independent Budget Office",
+   "acronym": "IBO",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Industrial Development Agency",
+   "acronym": "NYCIDA",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Jamaica Bay - Rockaway Parks Conservancy, Inc.",
+   "acronym": "JBRPC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Jamaica Center for Arts and Learning",
+   "acronym": "JCAL",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Jazz at Lincoln Center",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Juvenile Justice Advisory Board",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Kings County Public Administrator",
+   "acronym": "KCPA",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Land Development Corporation",
+   "acronym": "NYCLDC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Landmarks Preservation Commission",
+   "acronym": "LPC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Lincoln Center Theater",
+   "acronym": "LCT",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Lower Manhattan Development Corporation",
+   "acronym": "LMDC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Manhattan District Attorney's Office",
+   "acronym": null,
+   "alternate_or_former_names": "New York County District Attorney's Office",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Advance Team",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Advisory Committee on the Judiciary",
+   "acronym": "MACJ",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Committee on City Marshals",
+   "acronym": "MCCM",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Fund to Advance New York City",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office - Correspondence",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office - Director of Communications",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office for Childcare and Early Childhood Education",
+   "acronym": "OCCECE",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office for Economic Opportunity",
+   "acronym": "NYC OPPORTUNITY",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office for International Affairs",
+   "acronym": "IA",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office for Nonprofit Services",
+   "acronym": "MONS",
+   "alternate_or_former_names": "Office of not-for-profit organization services;Mayor's Office of Nonprofits",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office for People with Disabilities",
+   "acronym": "MOPD",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office for Prevention of Hate Crimes",
+   "acronym": "OPHC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Administrative Services",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Animal Welfare",
+   "acronym": "MOAW",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Appointments",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Citywide Events Coordination and Management",
+   "acronym": "CECM",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Climate and Environmental Justice",
+   "acronym": "MOCEJ",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Community Mental Health",
+   "acronym": "OCMH",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": "OCMH"
+  },
+  {
+   "name": "Mayor's Office of Community Safety",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Contract Services",
+   "acronym": "MOCS",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Criminal Justice",
+   "acronym": "MOCJ",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Deed Theft Prevention",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Environmental Coordination",
+   "acronym": "MOEC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Environmental Remediation",
+   "acronym": "OER",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Equity and Racial Justice",
+   "acronym": "MOERJ",
+   "alternate_or_former_names": "Mayor's Office of Equity",
+   "alternate_or_former_acronyms": "MOE"
+  },
+  {
+   "name": "Mayor's Office of Ethnic and Community Media",
+   "acronym": "MOECM",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Faith-Based and Community Partnerships",
+   "acronym": "OFCP",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Food Policy",
+   "acronym": "MOFP",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Housing Recovery Operations",
+   "acronym": "HRO",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Immigrant Affairs",
+   "acronym": "MOIA",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of LGBTQIA+ Affairs",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Management and Budget",
+   "acronym": "OMB",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Mass Engagement",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Media and Entertainment",
+   "acronym": "MOME",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Minority and Women-Owned Business Enterprises",
+   "acronym": "MWBE",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": "Office of M/WBE"
+  },
+  {
+   "name": "Mayor's Office of Municipal Services Assessment",
+   "acronym": "MSA",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Operations",
+   "acronym": "OPS",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Pensions and Investments",
+   "acronym": "MOPI",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Policy and Planning",
+   "acronym": null,
+   "alternate_or_former_names": "Mayor's Office of Policy and Planning and Delivery",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Risk Management and Compliance",
+   "acronym": "MORMC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Rodent Mitigation",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Special Enforcement",
+   "acronym": "OSE",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": "AJC"
+  },
+  {
+   "name": "Mayor's Office of Special Projects and Community Events",
+   "acronym": "MOSPCE",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Sports, Wellness and Recreation",
+   "acronym": "MOSWR",
+   "alternate_or_former_names": "Mayor's Office of Sports and Recreation",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Strategic Partnerships",
+   "acronym": "OSP",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Talent and Workforce Development",
+   "acronym": "NYC Talent",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of the Utility Consumer Advocate",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Urban Agriculture",
+   "acronym": "MOUA",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Worker Power",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office of Youth Employment",
+   "acronym": "MOYE",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office - Press Office",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office - Senior Advisor for Policy and Strategy",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office to Combat Antisemitism",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office to End Domestic and Gender-Based Violence",
+   "acronym": "ENDGBV",
+   "alternate_or_former_names": "Mayor's Office to Combat Domestic Violence",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office to Prevent Gun Violence",
+   "acronym": "OPGV",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Office to Protect Tenants",
+   "acronym": "MOPT",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Mayor's Public Engagement Unit",
+   "acronym": "PEU",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Metropolitan Museum of Art",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Metropolitan Transportation Authority",
+   "acronym": "MTA",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "MoMA PS1",
+   "acronym": "MOMA PS1",
+   "alternate_or_former_names": "PS 1 Contemporary Art Center",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Municipal Division of Transitional Services",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Museum of Jewish Heritage",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Museum of Modern Art",
+   "acronym": "MoMA",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Museum of the City of New York",
+   "acronym": "MCNY",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Museum of the Moving Image",
+   "acronym": "MoMI",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "MWBE Advisory Board",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "National September 11 Memorial and Museum",
+   "acronym": null,
+   "alternate_or_former_names": "World Trade Center Memorial Foundation;9/11 Memorial & Museum",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York Botanical Garden",
+   "acronym": "NYBG",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York City Ballet",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York City Center",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York City Children's Cabinet",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York City Council",
+   "acronym": "NYCC",
+   "alternate_or_former_names": "City Council",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York City Department of Sanitation",
+   "acronym": "DSNY",
+   "alternate_or_former_names": "Department of Sanitation;NYC Sanitation",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York City Department of Transportation",
+   "acronym": "NYC DOT",
+   "alternate_or_former_names": "Department of Transportation",
+   "alternate_or_former_acronyms": "DOT"
+  },
+  {
+   "name": "New York City Districting Commission",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York City Emergency Management",
+   "acronym": "NYCEM",
+   "alternate_or_former_names": "NYC Emergency Management;Office of Emergency Management",
+   "alternate_or_former_acronyms": "OEM"
+  },
+  {
+   "name": "New York City Employee Retirement System",
+   "acronym": "NYCERS",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York City Housing Authority",
+   "acronym": "NYCHA",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York City Housing Authority Board",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York City Law Department",
+   "acronym": "LAW",
+   "alternate_or_former_names": "Law Department;Office of the Corporation Counsel",
+   "alternate_or_former_acronyms": "Law;Law Dept."
+  },
+  {
+   "name": "New York City Loft Board",
+   "acronym": "LOFT",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York City Municipal Water Finance Authority",
+   "acronym": "NYW",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York City Office of the Actuary",
+   "acronym": "NYCOA",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York City Panel on Climate Change",
+   "acronym": "NPCC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York City Police Department",
+   "acronym": "NYPD",
+   "alternate_or_former_names": "Police Department",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York City Police Pension Fund",
+   "acronym": "PPF",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York City Public Housing Preservation Trust",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York City Public Schools",
+   "acronym": "NYCPS",
+   "alternate_or_former_names": "Department of Education;NYC Public Schools",
+   "alternate_or_former_acronyms": "DOE"
+  },
+  {
+   "name": "New York City School Bus Umbrella Services, Inc.",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York City School Support Services",
+   "acronym": "NYCSSS",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York City Tax Commission",
+   "acronym": "TAXCOMM",
+   "alternate_or_former_names": "Tax Commission;NYC Tax Commission",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York City Taxi and Limousine Commission",
+   "acronym": "TLC",
+   "alternate_or_former_names": "Taxi and Limousine Commission",
+   "alternate_or_former_acronyms": "NYC TLC"
+  },
+  {
+   "name": "New York City Tourism + Conventions",
+   "acronym": null,
+   "alternate_or_former_names": "NYC & Company",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York City Transitional Finance Authority",
+   "acronym": "TFA",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York City Transit Riders Council",
+   "acronym": "NYCTRC",
+   "alternate_or_former_names": "New York City Transit Authority Advisory Council",
+   "alternate_or_former_acronyms": "NYCTAAC"
+  },
+  {
+   "name": "New York City Water Board",
+   "acronym": "NYWB",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York City Watershed Protection and Partnership Council",
+   "acronym": "WPPC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York City Young Men's Initiative",
+   "acronym": "YMI",
+   "alternate_or_former_names": "Young Men's Initiative",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York County Public Administrator",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York Hall of Science",
+   "acronym": "NYSCI",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "New York Public Library",
+   "acronym": "NYPL",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Nonprofit Advisory Council",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "NYC311",
+   "acronym": "311",
+   "alternate_or_former_names": "311",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "NYC Health + Hospitals",
+   "acronym": "H+H",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "NYC HER Future",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "NYC Service",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Office Conversion Accelerator",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Office of Administrative Tax Appeals",
+   "acronym": "OATA",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Office of Administrative Trials and Hearings",
+   "acronym": "OATH",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Office of Capital Project Development",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Office of Collective Bargaining",
+   "acronym": "OCB",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Office of Community Hiring",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Office of Creative Communications",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Office of Data Analytics",
+   "acronym": "ODA",
+   "alternate_or_former_names": "Mayor's Office of Data Analytics",
+   "alternate_or_former_acronyms": "MODA"
+  },
+  {
+   "name": "Office of Healthcare Accountability",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Office of Information Privacy",
+   "acronym": "OIP",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": "MOIP"
+  },
+  {
+   "name": "Office of Intergovernmental Affairs",
+   "acronym": "MOIGA",
+   "alternate_or_former_names": "Mayor's Office of Office of Intergovernmental Affairs",
+   "alternate_or_former_acronyms": "IGA"
+  },
+  {
+   "name": "Office of Labor Relations",
+   "acronym": "OLR",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Office of Nightlife",
+   "acronym": "ONL",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Office of Payroll Administration",
+   "acronym": "OPA",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Office of Scheduling and Executive Operations",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Office of Technology and Innovation",
+   "acronym": "OTI",
+   "alternate_or_former_names": "Department of Information Technology and Telecommunications",
+   "alternate_or_former_acronyms": "DoITT"
+  },
+  {
+   "name": "Office of the Administrative Justice Coordinator",
+   "acronym": "AJC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Office of the Borough President of Brooklyn",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Office of the Borough President of Manhattan",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Office of the Borough President of Queens",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Office of the Borough President of Staten Island",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Office of the Borough President of The Bronx",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Office of the Chief Medical Examiner",
+   "acronym": "OCME",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Office of the City Clerk",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Office of the Inspector General for the NYPD",
+   "acronym": "OIG-NYPD",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": "OIGNYPD"
+  },
+  {
+   "name": "Office of the Mayor",
+   "acronym": "OM",
+   "alternate_or_former_names": "Office of the Mayor of the City of New York;Mayor's Office",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Office of the New York City Comptroller",
+   "acronym": null,
+   "alternate_or_former_names": "Comptroller",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Office of the Public Advocate",
+   "acronym": "PUB ADV",
+   "alternate_or_former_names": "Office of the Public Advocate for the City of New York;Public Advocate",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Office of the Public Realm",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Office of the Special Narcotics Prosecutor",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Panel on Educational Policy",
+   "acronym": "PEP",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Pay Equity Cabinet",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Perelman Performing Arts Center",
+   "acronym": "PACNYC",
+   "alternate_or_former_names": "World Trade Center Performing Arts Center;PAC NYC",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Primary Care Development Corporation",
+   "acronym": "PCDC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Procurement Policy Board",
+   "acronym": "PPB",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Prospect Park Alliance",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Public Administrator of Queens County",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Public Design Commission",
+   "acronym": "PDC",
+   "alternate_or_former_names": "Art Commission",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Public Theater",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Queens Botanical Garden",
+   "acronym": "QBG",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Queens District Attorney's Office",
+   "acronym": null,
+   "alternate_or_former_names": "Queens County District Attorney's Office",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Queens Museum",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Queens Public Library",
+   "acronym": "QPL",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Queens Theatre in the Park",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Randall's Island Park Alliance",
+   "acronym": "RIPA",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Rent Guidelines Board",
+   "acronym": "RGB",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Residential Mortgage Insurance Corporation",
+   "acronym": "REMIC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Richmond County Public Administrator",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Roosevelt Island Operating Corporation",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Sales Tax Asset Receivable Corporation",
+   "acronym": "STAR",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "School Construction Authority",
+   "acronym": "SCA",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Senior Advisory Council",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Sheriff",
+   "acronym": null,
+   "alternate_or_former_names": "NYC Sheriff",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Snug Harbor Cultural Center and Botanical Garden",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Special Commissioner of Investigation for the New York City School District",
+   "acronym": "SCI",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Staten Island Children's Museum",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Staten Island District Attorney's Office",
+   "acronym": null,
+   "alternate_or_former_names": "Richmond County District Attorney's Office",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Staten Island Historical Society",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Staten Island Museum",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Staten Island Zoological Society",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Street Harassment Prevention Advisory Board",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Studio Museum in Harlem",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Taskforce on Racial Inclusion and Equity",
+   "acronym": "TRIE",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Tax Appeals Tribunal",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Teachers' Retirement System of City of New York",
+   "acronym": "TRS",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Three Quarter Housing Task Force",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Tobacco Settlement Asset Securitization Corporation",
+   "acronym": "TSASC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Trust for Cultural Resources",
+   "acronym": "TCR",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Trust for Governors Island",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "United Nations Development Corporation",
+   "acronym": "UNDC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Unity Project",
+   "acronym": "UP",
+   "alternate_or_former_names": "NYC Unity Project",
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Veterans Advisory Board",
+   "acronym": "VAB",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Voter Assistance Advisory Committee",
+   "acronym": "VAAC",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Wave Hill",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Weeksville Heritage Center",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Wildlife Conservation Society",
+   "acronym": "WCS",
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Workforce Development Board",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Workforce Development Council",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  },
+  {
+   "name": "Youth Board",
+   "acronym": null,
+   "alternate_or_former_names": null,
+   "alternate_or_former_acronyms": null
+  }
+ ]
+}

@@ -1,0 +1,87 @@
+{
+ "about": "Agency names the City's official list (readability-agency-names.json) doesn't cover, kept by hand. The second ARI leaves them out, in every article, along with the names on the official list. City: ways the articles write a City agency's name that the official list lacks. State and federal: the agencies named in the 100 NYC311 articles with the highest ARI on Oct 16, 2026, each with its official name and acronym (source) and every other way the articles write it, including its offices. A short form is listed only if every use of it in the articles means that agency.",
+ "agencies": [
+  {
+   "level": "City",
+   "name": "City Commission on Human Rights",
+   "acronym": "CCHR",
+   "source": "https://data.cityofnewyork.us/City-Government/NYC-Agencies-and-Governance-Organizations/t3jq-9nkf",
+   "also_written": ["NYC Commission on Human Rights", "Commission on Human Rights", "Human Rights Commission"]
+  },
+  {
+   "level": "State",
+   "name": "New York State Education Department",
+   "acronym": "NYSED",
+   "source": "https://www.nysed.gov/",
+   "also_written": [
+    "NYS Education Department",
+    "State Education Department",
+    "Office of the Professions",
+    "New York State Office of the Professions",
+    "Office of the Professions Professional Discipline",
+    "Office of Professions",
+    "NYSED Office of Professions",
+    "Office of Professional Discipline",
+    "New York State Office of Professional Discipline",
+    "NYSED Office of Professional Discipline",
+    "OPD"
+   ]
+  },
+  {
+   "level": "State",
+   "name": "New York State Department of Labor",
+   "acronym": "NYSDOL",
+   "source": "https://dol.ny.gov/",
+   "also_written": ["NY State Department of Labor"]
+  },
+  {
+   "level": "State",
+   "name": "New York State Division of Human Rights",
+   "acronym": "DHR",
+   "source": "https://data.ny.gov/d/kjw8-pupa",
+   "also_written": ["Division of Human Rights"]
+  },
+  {
+   "level": "Federal",
+   "name": "Federal Emergency Management Agency",
+   "acronym": "FEMA",
+   "source": "https://www.fema.gov/about",
+   "also_written": []
+  },
+  {
+   "level": "Federal",
+   "name": "U.S. Equal Employment Opportunity Commission",
+   "acronym": "EEOC",
+   "source": "https://www.eeoc.gov/",
+   "also_written": ["United States Equal Employment Opportunity Commission", "Equal Employment Opportunity Commission"]
+  },
+  {
+   "level": "Federal",
+   "name": "U.S. Department of Commerce",
+   "acronym": null,
+   "source": "https://www.usa.gov/agencies/u-s-department-of-commerce",
+   "also_written": ["United States Department of Commerce", "Department of Commerce"]
+  },
+  {
+   "level": "Federal",
+   "name": "International Trade Administration",
+   "acronym": "ITA",
+   "source": "https://www.trade.gov/",
+   "also_written": ["International Trade Administration Trade Information Center", "Trade Information Center"]
+  },
+  {
+   "level": "Federal",
+   "name": "U.S. Environmental Protection Agency",
+   "acronym": "EPA",
+   "source": "https://www.epa.gov/",
+   "also_written": [
+    "United States Environmental Protection Agency",
+    "US Environmental Protection Agency",
+    "Environmental Protection Agency",
+    "U.S. EPA",
+    "Environmental Protection Agency Office of Research and Development",
+    "Office of Research and Development"
+   ]
+  }
+ ]
+}

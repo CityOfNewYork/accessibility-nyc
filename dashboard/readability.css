@@ -40,17 +40,46 @@ th[aria-sort] .rd-sort { color: var(--ink); }
   box-shadow: inset 0 -1px 0 var(--rule);
 }
 
-/* Below ~700px the table no longer fits, so it scrolls sideways instead of
+/* A long header wraps instead of widening its column. */
+.rd-table thead th.rd-th-wrap { white-space: normal; min-width: 9em; line-height: 1.35; }
+
+/* Below ~790px the table no longer fits, so it scrolls sideways instead of
    the page. A scrolling wrapper also traps the sticky header inside it, so
    on those screens the header scrolls away with the rows. */
-@media (max-width: 720px) {
+@media (max-width: 800px) {
   .rd-table-wrap { overflow-x: auto; }
 }
 
-.rd-stats { grid-template-columns: repeat(4, auto); }
+.rd-stats { grid-template-columns: repeat(5, auto); }
+.rd-stats .rd-stat-long .detail-header-stat-lbl { max-width: 12em; line-height: 1.35; }
+/* Five stats don't fit across a phone: three to a row. */
+@media (max-width: 640px) {
+  .rd-stats { grid-template-columns: repeat(3, auto); row-gap: 16px; }
+  .rd-stats > div { min-width: 0; padding: 0 12px; }
+  .rd-stats > div:nth-child(3n+1) { padding-left: 0; }
+  .rd-stats > div:nth-child(3n) { border-right: none; }
+}
 .rd-stats .rd-grade { font-size: inherit; }
 
 .rd-section { margin-top: 2.25rem; }
+
+.rd-excluded {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  max-width: 85ch;
+}
+.rd-excluded li {
+  font-size: 13.5px;
+  padding: 2px 8px;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: var(--surface);
+}
+.rd-excluded-n { color: var(--ink-muted); font-variant-numeric: tabular-nums; }
 
 .rd-longest {
   margin: 10px 0 0;

@@ -119,6 +119,7 @@
 
   const COLUMNS = [
     { key: "title", label: "Article", get: (a) => a.title.toLowerCase(), numeric: false },
+    { key: "ari_excl", label: "ARI without agency names & phone numbers", get: (a) => a.scores?.ari_excl, numeric: true, wrap: true },
     { key: "ari", label: "ARI", get: (a) => a.scores?.ari, numeric: true },
     { key: "fk", label: "Flesch-Kincaid", get: (a) => a.scores?.fk_grade, numeric: true },
     { key: "words", label: "Words", get: (a) => a.scores?.words, numeric: true },
@@ -150,7 +151,7 @@
     const active = sort.key === col.key;
     const arrow = active ? (sort.dir === 1 ? " ▲" : " ▼") : "";
     return el("th", {
-      class: col.numeric ? "numeric" : null,
+      class: [col.numeric && "numeric", col.wrap && "rd-th-wrap"].filter(Boolean).join(" ") || null,
       "aria-sort": active ? (sort.dir === 1 ? "ascending" : "descending") : null,
     },
       el("button", {
@@ -196,6 +197,7 @@
     ["KA number", (a) => a.ka],
     ["Title", (a) => a.title],
     ["URL", (a) => a.url],
+    ["ARI without agency names and phone numbers", (a) => a.scores?.ari_excl],
     ["ARI", (a) => a.scores?.ari],
     ["Flesch-Kincaid", (a) => a.scores?.fk_grade],
     ["Words", (a) => a.scores?.words],
@@ -250,7 +252,8 @@
             el("a", { href: `?ka=${encodeURIComponent(a.ka)}`, "aria-label": `Details for ${a.title}` }, "Details")
           )
         ),
-        el("td", { class: "numeric" }, s ? gradeChip(s.ari) : el("span", { class: "rd-unscored" }, a.status === "error" ? "Couldn't load" : "Not scored")),
+        el("td", { class: "numeric" }, s ? (s.ari_excl != null ? gradeChip(s.ari_excl) : dash()) : el("span", { class: "rd-unscored" }, a.status === "error" ? "Couldn't load" : "Not scored")),
+        el("td", { class: "numeric" }, s ? gradeChip(s.ari) : dash()),
         el("td", { class: "numeric" }, s ? gradeChip(s.fk_grade) : dash()),
         el("td", { class: "numeric" }, s ? fmtNum(s.words) : dash()),
         el("td", { class: "numeric" }, s ? fmtGrade(s.avg_sentence_words) : dash())
@@ -269,8 +272,8 @@
 
   // ---- per-article details --------------------------------------------------
 
-  function statCell(value, label) {
-    return el("div", {},
+  function statCell(value, label, cls = null) {
+    return el("div", { class: cls },
       el("div", { class: "detail-header-stat-num" }, value),
       el("div", { class: "detail-header-stat-lbl" }, label)
     );
@@ -323,6 +326,7 @@
         ),
         s
           ? el("div", { class: "detail-header-stats rd-stats" },
+              s.ari_excl != null ? statCell(gradeChip(s.ari_excl), "ARI without agency names & phone numbers", "rd-stat-long") : null,
               statCell(gradeChip(s.ari), "ARI"),
               statCell(gradeChip(s.fk_grade), "Flesch-Kincaid"),
               statCell(fmtNum(s.words), "Words"),
@@ -340,6 +344,15 @@
         (a.low_confidence ? `With only ${fmtNum(s.words)} words, either grade is a rough estimate. ` : "") +
         `${s.collapsed_pct}% of the scored words are in sections hidden until the reader expands them.`
       ));
+
+      if (a.excluded) {
+        app.append(section("Agency names and phone numbers left out",
+          a.excluded.length
+            ? el("ul", { class: "rd-excluded" },
+                a.excluded.map((e) => el("li", {}, e.t, e.n > 1 ? el("span", { class: "rd-excluded-n" }, ` ×${e.n}`) : null)))
+            : el("p", { class: "rd-note" }, "No agency names or phone numbers in this article, so both ARI scores are the same.")
+        ));
+      }
 
       if (a.longest?.length) {
         app.append(section("Longest sentences",

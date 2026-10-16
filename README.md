@@ -154,7 +154,7 @@ Different agencies have migrated at different times; if you get a `HTTP 404` dur
 
 ## Readability preview (NYC311 help articles)
 
-A separate, unlinked page (`dashboard/readability.html`) shows ARI and Flesch-Kincaid scores for every English article in the [NYC311 article index](https://portal.311.nyc.gov/all-articles/), plus a second ARI with agency names and phone numbers left out. Scores are shown as-is on a continuous color scale, with no targets or good/bad bands. **It is not part of the accessibility scan**: a readability score is a site-quality signal, not a WCAG 2.2 AA result (SC 3.1.5 Reading Level is Level AAA), so nothing from it reaches the tiers, counts, or history.
+A separate, unlinked page (`dashboard/readability.html`) shows ARI and Flesch-Kincaid scores for every English article in the [NYC311 article index](https://portal.311.nyc.gov/all-articles/), plus a second ARI with agency names and phone numbers left out. Scores are shown as-is on a single-hue color scale, with no targets or good/bad bands; grades of 8 and up have white text on a darker shade, and every grade keeps at least 4.5:1 contrast. **It is not part of the accessibility scan**: a readability score is a site-quality signal, not a WCAG 2.2 AA result (SC 3.1.5 Reading Level is Level AAA), so nothing from it reaches the tiers, counts, or history.
 
 ```bash
 node check-readability.mjs                    # every article in the index (~25 min) → dashboard files

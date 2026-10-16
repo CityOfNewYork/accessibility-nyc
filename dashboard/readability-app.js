@@ -4,8 +4,9 @@
 // reading-grade estimate for NYC311 help articles, NOT the accessibility scan.
 //
 // No good/bad bands on purpose: the page reports what the formulas measure
-// without judging it. Both scores are shown as-is, on a continuous single-hue
-// scale (deeper = higher grade) with no cutoffs, targets, or red/green valence.
+// without judging it. Scores are shown as-is, on a single-hue scale (deeper =
+// higher grade) with no targets or red/green valence. Text is white from
+// grade 8 up.
 //
 // View routing: `?ka=<KA number>` shows one article's details; otherwise the
 // overview. No router, no framework — plain DOM building, reusing styles.css.
@@ -48,35 +49,32 @@
     return;
   }
 
-  // Continuous shading: the grade maps linearly onto the tint's strength over a
-  // fixed span (not this dataset's min–max, which would exaggerate small gaps
-  // and shift between runs). Grades outside the span just take the end shade.
+  // Shading: the grade maps linearly onto the tint's strength over a fixed
+  // span (not this dataset's min–max, which would exaggerate small gaps and
+  // shift between runs). Grades outside the span just take the end shade.
   const SHADE_FROM = 4;
   const SHADE_TO = 16;
   // One hue (blue), varying only lightness from pale to deep, so every step
-  // reads as the same color getting stronger. Text flips to white wherever
-  // that has the better contrast, so every shade stays legible.
-  const HUE = 214, SAT = 0.62, L_LIGHT = 0.95, L_DARK = 0.2;
+  // reads as the same color getting stronger. Text is white from grade 8 up
+  // and dark below it, so the lightness steps down at 8: every shade below
+  // is light enough for dark text, and every shade from 8 up dark enough for
+  // white, at 4.5:1 contrast or more (WCAG AA).
+  const WHITE_FROM = 8;
+  const HUE = 214, SAT = 0.62;
+  const L_LIGHT = 0.95, L_BELOW_WHITE = 0.55, L_AT_WHITE = 0.48, L_DARK = 0.2;
   function hslToRgb(h, s, l) {
     const k = (n) => (n + h / 30) % 12;
     const a = s * Math.min(l, 1 - l);
     const f = (n) => l - a * Math.max(-1, Math.min(k(n) - 3, 9 - k(n), 1));
     return [f(0), f(8), f(4)].map((v) => Math.round(v * 255));
   }
-  const luminance = (rgb) => {
-    const [r, g, b] = rgb.map((v) => {
-      v /= 255;
-      return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4;
-    });
-    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
-  };
-  const INK_L = luminance([20, 23, 26]); // --ink
+  const between = (from, to, t) => from + (to - from) * Math.min(1, Math.max(0, t));
   function shadeStyle(grade) {
-    const t = Math.min(1, Math.max(0, (grade - SHADE_FROM) / (SHADE_TO - SHADE_FROM)));
-    const rgb = hslToRgb(HUE, SAT, L_LIGHT + (L_DARK - L_LIGHT) * t);
-    const L = luminance(rgb);
-    const text = 1.05 / (L + 0.05) > (L + 0.05) / (INK_L + 0.05) ? "#ffffff" : "#14171a";
-    return `background: rgb(${rgb.join(", ")}); color: ${text};`;
+    const white = grade >= WHITE_FROM;
+    const l = white
+      ? between(L_AT_WHITE, L_DARK, (grade - WHITE_FROM) / (SHADE_TO - WHITE_FROM))
+      : between(L_LIGHT, L_BELOW_WHITE, (grade - SHADE_FROM) / (WHITE_FROM - SHADE_FROM));
+    return `background: rgb(${hslToRgb(HUE, SAT, l).join(", ")}); color: ${white ? "#ffffff" : "#14171a"};`;
   }
   const gradeChip = (grade) => el("span", { class: "rd-grade", style: shadeStyle(grade) }, fmtGrade(grade));
 
